@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "anthony-albanese",
+  "name": "Anthony Albanese",
+  "title": "Prime Minister of Australia",
+  "factionId": "australia",
+  "mbtiType": "ISFJ",
+  "mbtiDichotomyScores": {
+    "EI": 58,
+    "SN": 35,
+    "TF": 62,
+    "JP": 30
+  },
+  "psychology": {
+    "decisionStyle": "consensus",
+    "stressResponse": "delegate",
+    "riskTolerance": 35,
+    "paranoia": 30,
+    "narcissism": 25,
+    "pragmatism": 75,
+    "patience": 70,
+    "vengefulIndex": 20,
+    "charisma": 45,
+    "empathy": 60,
+    "ideologicalRigidity": 30,
+    "corruptibility": 15
+  },
+  "motivations": {
+    "primary": "security",
+    "secondary": "legacy",
+    "fear": "irrelevance"
+  },
+  "powerBase": {
+    "source": "party",
+    "consolidation": 60,
+    "legitimacy": 75,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 20,
+    "scandals": [
+      "Cost-of-living crisis management criticism",
+      "Housing affordability pressure"
+    ],
+    "internalOpposition": 35,
+    "externalPressure": 45
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "us-president",
+      "modifier": 20,
+      "reason": "AUKUS alliance and Five Eyes intelligence partnership"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": -15,
+      "reason": "Trade disputes, diplomatic tensions over Pacific influence"
+    },
+    {
+      "targetLeaderId": "narendra-modi",
+      "modifier": 10,
+      "reason": "Quad partnership and Indo-Pacific security alignment"
+    }
+  ],
+  "biography": "Anthony Albanese, Australia's 31st Prime Minister, rose from public housing in inner Sydney to lead the Australian Labor Party to government. His ISFJ temperament manifests as steady, detail-oriented governance focused on pragmatic coalition-building rather than grand ideological gestures. He navigates Australia's delicate position between its primary security ally (the United States via AUKUS) and its largest trading partner (China), while managing domestic priorities around climate policy, indigenous reconciliation, and cost-of-living pressures.",
+  "tags": [
+    "middle-power",
+    "democratic",
+    "AUKUS",
+    "Five-Eyes",
+    "Quad",
+    "resource-exporter",
+    "Pacific-influence"
+  ]
+}

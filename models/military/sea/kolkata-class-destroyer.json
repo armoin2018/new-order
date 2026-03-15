@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "kolkata-class-destroyer",
+  "name": "Kolkata-class Destroyer",
+  "category": "sea",
+  "subcategory": "destroyer",
+  "description": "India's most advanced indigenously designed guided missile destroyer featuring the MF-STAR active phased array radar and BrahMos supersonic anti-ship missiles.",
+  "nation": "India",
+  "purchaseCost": 80,
+  "maintenanceCostPerTurn": 8,
+  "attackPower": 65,
+  "defensePower": 60,
+  "range": 24,
+  "speed": 4,
+  "buildTime": 10,
+  "stealthRating": 20,
+  "crewRequirement": 250,
+  "operationalLifespan": 35,
+  "techRequirements": {
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "brahmos-strike",
+      "name": "BrahMos Supersonic Missiles",
+      "description": "16 BrahMos missiles travel at Mach 2.8, giving enemy ships minimal reaction time against incoming salvos.",
+      "modifier": { "attackPower": 12 }
+    },
+    {
+      "abilityId": "mf-star-radar",
+      "name": "MF-STAR AESA Radar",
+      "description": "Israeli-derived active phased array radar provides 360-degree surveillance and fire control capability.",
+      "modifier": { "defensePower": 8 }
+    }
+  ],
+  "tags": ["destroyer", "indigenous", "supersonic-missile", "indian-navy"]
+}

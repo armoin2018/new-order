@@ -1,0 +1,16 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/engine/index.ts", "src/data/types/index.ts"],
+  "out": "docs/api",
+  "name": "New Order — API Reference",
+  "readme": "README.md",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "includeVersion": true,
+  "skipErrorChecking": true,
+  "navigationLinks": {
+    "GitHub": "https://github.com/your-org/NewOrder",
+    "Requirements": ".project/REQUIREMENTS.md"
+  },
+  "tsconfig": "tsconfig.app.json"
+}

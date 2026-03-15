@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "network-intrusion-detection",
+  "name": "Network Intrusion Detection/Prevention System",
+  "category": "cyber-defense",
+  "subcategory": "network-security",
+  "description": "Deep packet inspection and network traffic analysis system deployed at national network boundaries and critical infrastructure nodes. Detects and blocks malicious traffic, command-and-control communications, and data exfiltration attempts.",
+  "nation": null,
+  "purchaseCost": 35,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 5,
+  "defensePower": 60,
+  "range": 8,
+  "speed": 0,
+  "buildTime": 5,
+  "stealthRating": 15,
+  "crewRequirement": 40,
+  "operationalLifespan": 12,
+  "techRequirements": {
+    "cyber": 25,
+    "semiconductors": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "deep-packet-inspection",
+      "name": "Deep Packet Inspection",
+      "description": "Analyzes network traffic at the application layer, identifying malicious payloads hidden in legitimate-looking communications.",
+      "modifier": { "defensePower": 12 }
+    },
+    {
+      "abilityId": "c2-blocking",
+      "name": "C2 Channel Blocking",
+      "description": "Identifies and severs command-and-control channels used by adversary malware, cutting off attacker access to compromised systems.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["cyber", "defensive", "ids-ips", "network-security"]
+}

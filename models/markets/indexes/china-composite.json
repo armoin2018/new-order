@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "china-composite",
+  "indexName": "China Composite Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Broad composite index tracking all major Chinese economic sectors including defense, energy, technology, finance, consumer goods, healthcare, infrastructure, and mining.",
+  "constituentTickers": [
+    { "tickerId": "cn-defense", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-energy", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-technology", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-finance", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-consumer", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-healthcare", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-infrastructure", "exchangeId": "sse", "weight": 0.125 },
+    { "tickerId": "cn-mining", "exchangeId": "sse", "weight": 0.125 }
+  ]
+}

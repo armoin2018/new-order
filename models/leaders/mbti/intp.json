@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "INTP",
+  "typeName": "The Logician",
+  "cognitiveStack": ["Ti", "Ne", "Si", "Fe"],
+  "strengthDomains": [
+    "analytical modeling",
+    "unconventional strategy",
+    "technology assessment"
+  ],
+  "blindSpots": [
+    "emotional intelligence in coalitions",
+    "decisive action under time pressure",
+    "public communications"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": -10,
+  "adaptability": 55,
+  "leadershipStyle": "analytical",
+  "diplomaticApproach": "principled",
+  "conflictResponse": "compromise",
+  "gameplayModifiers": {
+    "alliancePreference": -10,
+    "noveltyPreference": 25,
+    "outcomeTypeWeight": {
+      "measurable": 15,
+      "humanitarian": -10,
+      "legitimacy": -5
+    },
+    "commitmentTiming": -25
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "artificial-general-intelligence",
+  "name": "Artificial General Intelligence",
+  "domain": "ai",
+  "secondaryDomains": ["quantum", "cyber", "biotech", "semiconductors", "space"],
+  "description": "Achieves human-level artificial general intelligence capable of reasoning, learning, and adapting across all cognitive domains. Represents a civilizational inflection point with cascading effects across every technology domain and geopolitical balance.",
+  "tier": 5,
+  "researchCost": 500,
+  "researchDurationTurns": 24,
+  "impactLevel": "paradigm-shift",
+  "prerequisites": [
+    { "techId": "natural-language-processing", "minimumLevel": 1 },
+    { "techId": "predictive-analytics-military", "minimumLevel": 1 },
+    { "techId": "neuromorphic-computing", "minimumLevel": 1 }
+  ],
+  "domainLevelRequirement": {
+    "ai": 60,
+    "semiconductors": 40
+  },
+  "effects": {
+    "domainBoosts": {
+      "ai": 30,
+      "cyber": 15,
+      "biotech": 10,
+      "quantum": 10,
+      "semiconductors": 10,
+      "space": 5
+    },
+    "militaryModifiers": {
+      "attackBonus": 20,
+      "defenseBonus": 20
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 5.0,
+      "tradeEfficiencyBonus": 3.0,
+      "revenueMultiplier": 1.5
+    },
+    "socialModifiers": {
+      "stabilityBonus": -10,
+      "softPowerBonus": 15,
+      "educationBonus": 10
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 100
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "quantum-supremacy",
+      "bonusDescription": "Quantum-enhanced AGI achieves superhuman optimization across all domains",
+      "bonusMultiplier": 2.0
+    },
+    {
+      "partnerTechId": "autonomous-weapons-ai",
+      "bonusDescription": "AGI-driven weapons systems achieve near-perfect battlefield awareness",
+      "bonusMultiplier": 1.5
+    }
+  ],
+  "tags": ["agi", "paradigm-shift", "existential", "singularity", "dual-use", "civilization"]
+}

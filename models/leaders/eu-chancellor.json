@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "eu-chancellor",
+  "name": "EU Chancellor",
+  "title": "Chancellor of the European Federation",
+  "factionId": "eu",
+  "mbtiType": "ENFJ",
+  "mbtiDichotomyScores": {
+    "EI": 25,
+    "SN": 70,
+    "TF": 68,
+    "JP": 20
+  },
+  "psychology": {
+    "decisionStyle": "consensus",
+    "stressResponse": "delegate",
+    "riskTolerance": 35,
+    "paranoia": 30,
+    "narcissism": 40,
+    "pragmatism": 65,
+    "patience": 75,
+    "vengefulIndex": 15,
+    "charisma": 78,
+    "empathy": 80,
+    "ideologicalRigidity": 30,
+    "corruptibility": 20
+  },
+  "motivations": {
+    "primary": "prosperity",
+    "secondary": "reform",
+    "fear": "economic-collapse"
+  },
+  "powerBase": {
+    "source": "popular",
+    "consolidation": 45,
+    "legitimacy": 75,
+    "succession": "clear"
+  },
+  "vulnerabilities": {
+    "health": 20,
+    "scandals": ["Internal EU member-state disagreements", "Migration policy divisions"],
+    "internalOpposition": 60,
+    "externalPressure": 55
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "us-president",
+      "modifier": 20,
+      "reason": "Transatlantic alliance and shared democratic values"
+    },
+    {
+      "targetLeaderId": "fumio-kishida",
+      "modifier": 15,
+      "reason": "Like-minded democracies with trade and climate cooperation"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": -30,
+      "reason": "Russian aggression as existential security threat to Europe"
+    }
+  ],
+  "biography": "A consensus-builder representing the collective leadership of the European Federation, the EU Chancellor navigates the delicate balance of 27 member states with competing interests. Their ENFJ temperament drives a diplomatic, values-driven approach emphasizing multilateralism, climate action, and economic integration. Institutional constraints make bold unilateral action nearly impossible.",
+  "tags": ["major-power", "democratic", "status-quo", "multilateral", "economic-bloc", "climate-leader"]
+}

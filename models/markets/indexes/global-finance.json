@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "global-finance",
+  "indexName": "Global Finance Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Tracks global financial sector performance weighted by market depth",
+  "constituentTickers": [
+    { "tickerId": "us-finance", "exchangeId": "nyse", "weight": 0.32 },
+    { "tickerId": "eu-finance", "exchangeId": "euronext", "weight": 0.26 },
+    { "tickerId": "jp-finance", "exchangeId": "tse", "weight": 0.16 },
+    { "tickerId": "cn-finance", "exchangeId": "sse", "weight": 0.15 },
+    { "tickerId": "ru-finance", "exchangeId": "moex", "weight": 0.06 },
+    { "tickerId": "ir-finance", "exchangeId": "tedpix", "weight": 0.05 }
+  ]
+}

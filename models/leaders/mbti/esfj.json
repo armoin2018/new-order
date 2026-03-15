@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ESFJ",
+  "typeName": "The Consul",
+  "cognitiveStack": ["Fe", "Si", "Ne", "Ti"],
+  "strengthDomains": [
+    "social harmony maintenance",
+    "coalition loyalty",
+    "public welfare programs"
+  ],
+  "blindSpots": [
+    "strategic detachment",
+    "making unpopular decisions",
+    "analytical objectivity under stress"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 20,
+  "adaptability": 35,
+  "leadershipStyle": "servant",
+  "diplomaticApproach": "relational",
+  "conflictResponse": "accommodate",
+  "gameplayModifiers": {
+    "alliancePreference": 25,
+    "noveltyPreference": -15,
+    "outcomeTypeWeight": {
+      "measurable": -5,
+      "humanitarian": 25,
+      "legitimacy": 15
+    },
+    "commitmentTiming": 15
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "christianity-protestant",
+  "name": "Protestant Christianity",
+  "parentTradition": "christianity",
+  "description": "Diverse family of Christian denominations emerging from the 16th-century Reformation, emphasizing individual faith, biblical authority, and the priesthood of all believers. Includes Baptist, Methodist, Lutheran, Pentecostal, and evangelical movements. Historically associated with capitalism, democratic governance, and educational advancement.",
+  "adherentsGlobalPercent": 11.6,
+  "socialCohesionModifier": 12,
+  "politicalInfluence": "moderate",
+  "demographicTrend": "growing",
+  "interReligiousTensions": [
+    { "targetReligionId": "christianity-catholic", "tensionLevel": "tolerant", "historicalBasis": "Post-Reformation reconciliation" },
+    { "targetReligionId": "islam-sunni", "tensionLevel": "wary", "historicalBasis": "Geopolitical friction and missionary competition" },
+    { "targetReligionId": "secular-atheism", "tensionLevel": "wary", "historicalBasis": "Culture war tensions" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 8,
+    "reformResistance": 20,
+    "educationAttitude": "pro-education",
+    "scienceAttitude": "selective",
+    "theocracyPotential": 15,
+    "martyrdomFactor": 20,
+    "charityModifier": 15
+  },
+  "tags": ["christian", "reformation", "evangelical", "diverse-denominations", "western"]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "pandemic-early-warning",
+  "name": "Pandemic Early Warning System",
+  "domain": "biotech",
+  "secondaryDomains": ["ai", "cyber"],
+  "description": "Builds global biosurveillance network integrating genomic sequencing, wastewater monitoring, hospital reporting, and AI-driven anomaly detection to identify pandemic threats months before traditional detection methods.",
+  "tier": 2,
+  "researchCost": 110,
+  "researchDurationTurns": 7,
+  "impactLevel": "significant",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "biotech": 8,
+      "ai": 2
+    },
+    "socialModifiers": {
+      "stabilityBonus": 6,
+      "softPowerBonus": 5
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "unrestricted",
+    "espionageValue": 15
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "mrna-vaccine-platform",
+      "bonusDescription": "Early detection feeds directly into rapid vaccine development pipeline",
+      "bonusMultiplier": 1.35
+    },
+    {
+      "partnerTechId": "bioweapon-defense",
+      "bonusDescription": "Early warning network detects both natural and engineered biological threats",
+      "bonusMultiplier": 1.3
+    }
+  ],
+  "tags": ["biosurveillance", "pandemic", "early-warning", "genomic", "wastewater", "global-health"]
+}

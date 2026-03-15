@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "judaism",
+  "name": "Judaism",
+  "description": "One of the oldest monotheistic religions, originating in the ancient Near East. Central to Jewish identity are the Torah, Talmud, covenant with God, and the Land of Israel. Encompasses Orthodox, Conservative, Reform, and secular Jewish identities. Despite small global numbers, outsized influence in academia, finance, law, media, and technology.",
+  "adherentsGlobalPercent": 0.2,
+  "socialCohesionModifier": 20,
+  "politicalInfluence": "significant",
+  "demographicTrend": "stable",
+  "interReligiousTensions": [
+    { "targetReligionId": "islam-sunni", "tensionLevel": "hostile", "historicalBasis": "Israeli-Palestinian conflict, regional wars" },
+    { "targetReligionId": "islam-shia", "tensionLevel": "hostile", "historicalBasis": "Iranian-Israeli confrontation" },
+    { "targetReligionId": "christianity-protestant", "tensionLevel": "tolerant", "historicalBasis": "Evangelical-Zionist alliance, historical antisemitism" },
+    { "targetReligionId": "christianity-catholic", "tensionLevel": "tolerant", "historicalBasis": "Post-Holocaust reconciliation, Nostra Aetate" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 10,
+    "reformResistance": 40,
+    "educationAttitude": "pro-education",
+    "scienceAttitude": "pro-science",
+    "theocracyPotential": 35,
+    "martyrdomFactor": 60,
+    "charityModifier": 20
+  },
+  "tags": ["abrahamic", "monotheistic", "diaspora", "pro-education", "high-cohesion"]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "f-35a-lightning",
+  "name": "F-35A Lightning II",
+  "category": "air",
+  "subcategory": "fighter",
+  "description": "Fifth-generation multirole stealth fighter designed for air superiority, ground attack, and ISR missions. The backbone of US and allied tactical airpower.",
+  "nation": "USA",
+  "purchaseCost": 55,
+  "maintenanceCostPerTurn": 6,
+  "attackPower": 78,
+  "defensePower": 55,
+  "range": 18,
+  "speed": 7,
+  "buildTime": 6,
+  "stealthRating": 80,
+  "crewRequirement": 1,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "ai": 30,
+    "semiconductors": 40
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "sensor-fusion",
+      "name": "Sensor Fusion",
+      "description": "Integrates data from all onboard sensors into a unified tactical picture, granting +15% situational awareness in combat.",
+      "modifier": { "attackPower": 10 }
+    },
+    {
+      "abilityId": "vtol-variant",
+      "name": "STOVL Capability",
+      "description": "B-variant enables short takeoff and vertical landing from austere bases or amphibious ships.",
+      "modifier": { "range": -2 }
+    }
+  ],
+  "tags": ["stealth", "multirole", "5th-gen", "nato"]
+}

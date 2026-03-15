@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ISFP",
+  "typeName": "The Adventurer",
+  "cognitiveStack": ["Fi", "Se", "Ni", "Te"],
+  "strengthDomains": [
+    "cultural diplomacy",
+    "humanitarian response",
+    "adaptive field operations"
+  ],
+  "blindSpots": [
+    "asserting institutional authority",
+    "confrontational negotiation",
+    "large-scale systematic planning"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": -5,
+  "adaptability": 80,
+  "leadershipStyle": "servant",
+  "diplomaticApproach": "relational",
+  "conflictResponse": "avoid",
+  "gameplayModifiers": {
+    "alliancePreference": 5,
+    "noveltyPreference": 5,
+    "outcomeTypeWeight": {
+      "measurable": -15,
+      "humanitarian": 20,
+      "legitimacy": 5
+    },
+    "commitmentTiming": -20
+  }
+}

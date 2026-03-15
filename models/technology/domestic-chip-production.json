@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "domestic-chip-production",
+  "name": "Domestic Chip Production",
+  "domain": "semiconductors",
+  "description": "Establishes foundational domestic semiconductor fabrication capabilities for mature node chips (28nm+). Reduces dependence on foreign chip imports for defense and critical infrastructure systems.",
+  "tier": 1,
+  "researchCost": 75,
+  "researchDurationTurns": 6,
+  "impactLevel": "incremental",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "semiconductors": 5
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.0,
+      "tradeEfficiencyBonus": 0.5
+    },
+    "socialModifiers": {
+      "stabilityBonus": 2
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "unrestricted",
+    "espionageValue": 8
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "machine-learning-foundations",
+      "bonusDescription": "Domestic chip supply supports AI training infrastructure buildout",
+      "bonusMultiplier": 1.15
+    }
+  ],
+  "tags": ["foundational", "fabrication", "supply-chain", "self-sufficiency", "chips"]
+}

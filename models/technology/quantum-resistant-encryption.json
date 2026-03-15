@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "quantum-resistant-encryption",
+  "name": "Quantum-Resistant Encryption",
+  "domain": "cyber",
+  "secondaryDomains": ["quantum"],
+  "description": "Develops and deploys post-quantum cryptographic algorithms resistant to attacks from quantum computers. Critical for protecting classified communications, financial systems, and critical infrastructure against future quantum threats.",
+  "tier": 3,
+  "researchCost": 190,
+  "researchDurationTurns": 12,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "zero-day-research", "minimumLevel": 1 },
+    { "techId": "quantum-computing-prototype", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "cyber": 14,
+      "quantum": 5
+    },
+    "militaryModifiers": {
+      "defenseBonus": 12
+    },
+    "economicModifiers": {
+      "tradeEfficiencyBonus": 1.0
+    },
+    "socialModifiers": {
+      "stabilityBonus": 5
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 50
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "quantum-cryptography",
+      "bonusDescription": "Layered quantum and post-quantum encryption creates virtually unbreakable communications",
+      "bonusMultiplier": 1.4
+    },
+    {
+      "partnerTechId": "critical-infrastructure-hardening",
+      "bonusDescription": "Post-quantum algorithms protect hardened infrastructure from future quantum attacks",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["post-quantum", "encryption", "cryptography", "pqc", "nist", "defense"]
+}

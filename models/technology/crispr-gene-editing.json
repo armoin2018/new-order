@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "crispr-gene-editing",
+  "name": "CRISPR Gene Editing",
+  "domain": "biotech",
+  "secondaryDomains": ["ai"],
+  "description": "Advances CRISPR-Cas9 and next-generation gene editing tools for precision modification of organisms, disease treatment, and agricultural enhancement. Dual-use technology with profound implications for both human health and potential bioweapons development.",
+  "tier": 3,
+  "researchCost": 210,
+  "researchDurationTurns": 14,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "mrna-vaccine-platform", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "biotech": 15
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 2.0
+    },
+    "socialModifiers": {
+      "stabilityBonus": -2,
+      "softPowerBonus": 4,
+      "educationBonus": 3
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 60
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "synthetic-biology",
+      "bonusDescription": "Gene editing combined with synthetic biology enables designed organisms",
+      "bonusMultiplier": 1.4
+    },
+    {
+      "partnerTechId": "machine-learning-foundations",
+      "bonusDescription": "ML models predict optimal gene edit targets and off-target effects",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["crispr", "gene-editing", "precision-medicine", "dual-use", "agriculture", "controversial"]
+}

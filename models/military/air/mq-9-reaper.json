@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "mq-9-reaper",
+  "name": "MQ-9 Reaper",
+  "category": "air",
+  "subcategory": "ucav",
+  "description": "Medium-altitude long-endurance armed remotely piloted aircraft. Primary US hunter-killer platform for counterterrorism and close air support missions.",
+  "nation": "USA",
+  "purchaseCost": 12,
+  "maintenanceCostPerTurn": 1,
+  "attackPower": 45,
+  "defensePower": 10,
+  "range": 30,
+  "speed": 3,
+  "buildTime": 3,
+  "stealthRating": 15,
+  "crewRequirement": 0,
+  "operationalLifespan": 30,
+  "techRequirements": {
+    "ai": 20,
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "persistent-surveillance",
+      "name": "Persistent ISR",
+      "description": "Can loiter over target areas for 14+ hours providing continuous intelligence, surveillance, and reconnaissance.",
+      "modifier": { "range": 5 }
+    },
+    {
+      "abilityId": "precision-strike",
+      "name": "Precision Strike",
+      "description": "Hellfire missiles and GBU-12 Paveway II bombs enable surgical strikes with minimal collateral damage.",
+      "modifier": { "attackPower": 5 }
+    }
+  ],
+  "tags": ["drone", "ucav", "isr", "precision-strike"]
+}

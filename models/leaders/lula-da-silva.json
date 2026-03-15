@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "lula-da-silva",
+  "name": "Luiz In\u00e1cio Lula da Silva",
+  "title": "President of Brazil",
+  "factionId": "brazil",
+  "mbtiType": "ENFJ",
+  "mbtiDichotomyScores": {
+    "EI": 20,
+    "SN": 60,
+    "TF": 75,
+    "JP": 30
+  },
+  "psychology": {
+    "decisionStyle": "consultative",
+    "stressResponse": "escalate",
+    "riskTolerance": 55,
+    "paranoia": 50,
+    "narcissism": 55,
+    "pragmatism": 68,
+    "patience": 60,
+    "vengefulIndex": 45,
+    "charisma": 80,
+    "empathy": 65,
+    "ideologicalRigidity": 40,
+    "corruptibility": 45
+  },
+  "motivations": {
+    "primary": "legacy",
+    "secondary": "power",
+    "fear": "betrayal"
+  },
+  "powerBase": {
+    "source": "popular",
+    "consolidation": 65,
+    "legitimacy": 70,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 50,
+    "scandals": [
+      "Previous corruption conviction (later annulled)",
+      "Operation Car Wash associations",
+      "Polarized domestic support"
+    ],
+    "internalOpposition": 50,
+    "externalPressure": 40
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "claudia-sheinbaum",
+      "modifier": 15,
+      "reason": "Left-leaning Latin American solidarity and BRICS cooperation"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 10,
+      "reason": "BRICS partnership and trade diversification strategy"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -5,
+      "reason": "Occasional friction over Amazon policy and trade balances"
+    }
+  ],
+  "biography": "Lula da Silva returned to Brazil's presidency in 2023 after a dramatic political arc that included two previous terms, a corruption conviction, imprisonment, and judicial exoneration. A former metalworker and union leader, his ENFJ charisma fuels mass appeal among Brazil's working class. He pursues South-South diplomacy through BRICS, balances commodity-driven growth with social welfare expansion, and positions Brazil as a mediating voice in global conflicts while managing a deeply polarized domestic landscape.",
+  "tags": [
+    "emerging-power",
+    "democratic",
+    "BRICS",
+    "commodity-exporter",
+    "populist",
+    "polarized-domestic"
+  ]
+}

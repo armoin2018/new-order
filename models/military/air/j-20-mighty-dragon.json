@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "j-20-mighty-dragon",
+  "name": "J-20 Mighty Dragon",
+  "category": "air",
+  "subcategory": "fighter",
+  "description": "China's fifth-generation stealth fighter optimized for long-range interception and air superiority over the Western Pacific. Features large internal fuel capacity and weapon bays.",
+  "nation": "China",
+  "purchaseCost": 50,
+  "maintenanceCostPerTurn": 5,
+  "attackPower": 74,
+  "defensePower": 50,
+  "range": 22,
+  "speed": 7,
+  "buildTime": 6,
+  "stealthRating": 72,
+  "crewRequirement": 1,
+  "operationalLifespan": 36,
+  "techRequirements": {
+    "ai": 25,
+    "semiconductors": 35
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "long-range-interception",
+      "name": "Long-Range Interceptor",
+      "description": "Optimized for engaging high-value targets like tankers and AWACS at extended range with PL-15 missiles.",
+      "modifier": { "range": 4 }
+    },
+    {
+      "abilityId": "aesa-radar",
+      "name": "Type 1475 AESA Radar",
+      "description": "Advanced active electronically scanned array provides superior detection range and multi-target tracking.",
+      "modifier": { "attackPower": 5 }
+    }
+  ],
+  "tags": ["stealth", "interceptor", "5th-gen", "long-range"]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "abdel-fattah-el-sisi",
+  "name": "Abdel Fattah el-Sisi",
+  "title": "President of Egypt",
+  "factionId": "egypt",
+  "mbtiType": "ISTJ",
+  "mbtiDichotomyScores": {
+    "EI": 72,
+    "SN": 28,
+    "TF": 22,
+    "JP": 12
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "escalate",
+    "riskTolerance": 45,
+    "paranoia": 75,
+    "narcissism": 55,
+    "pragmatism": 70,
+    "patience": 70,
+    "vengefulIndex": 65,
+    "charisma": 40,
+    "empathy": 20,
+    "ideologicalRigidity": 55,
+    "corruptibility": 40
+  },
+  "motivations": {
+    "primary": "security",
+    "secondary": "power",
+    "fear": "overthrow"
+  },
+  "powerBase": {
+    "source": "military",
+    "consolidation": 82,
+    "legitimacy": 50,
+    "succession": "undefined"
+  },
+  "vulnerabilities": {
+    "health": 30,
+    "scandals": [
+      "2013 coup and Rabaa massacre",
+      "Systematic political prisoner detention",
+      "IMF austerity-driven economic hardship",
+      "Suez Canal revenue dependency"
+    ],
+    "internalOpposition": 35,
+    "externalPressure": 50
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "mohammed-bin-salman",
+      "modifier": 15,
+      "reason": "Sunni Arab alliance, Saudi financial support, and shared anti-Brotherhood stance"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": 5,
+      "reason": "Military aid recipient and Camp David Accords partner"
+    },
+    {
+      "targetLeaderId": "ali-khamenei",
+      "modifier": -10,
+      "reason": "Opposed on regional proxies and Sunni-Shia alignment"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": 10,
+      "reason": "Arms purchases and El-Dabaa nuclear plant cooperation"
+    }
+  ],
+  "biography": "Abdel Fattah el-Sisi, a career military officer, seized power in a 2013 coup against the elected Muslim Brotherhood government and has since consolidated authoritarian control over Egypt. His ISTJ temperament manifests as methodical, risk-averse governance focused on security and infrastructure megaprojects\u2014including a new administrative capital\u2014while suppressing dissent with an iron fist. He manages Egypt's strategic Suez Canal chokepoint, balances relationships with Washington, Moscow, and Riyadh, and navigates chronic economic fragility through IMF deals, Gulf aid, and military-controlled enterprises.",
+  "tags": [
+    "regional-power",
+    "authoritarian",
+    "military-origin",
+    "Suez-Canal",
+    "Camp-David",
+    "IMF-dependent",
+    "anti-Brotherhood"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "education",
+  "description": "Education investment type models across 10 categories: primary, secondary, higher-education, vocational, STEM, military-academy, intelligence-training, research-institution, digital-literacy, and propaganda.",
+  "count": 10,
+  "categories": {
+    "primary": 1,
+    "secondary": 1,
+    "higher-education": 1,
+    "vocational": 1,
+    "stem": 1,
+    "military-academy": 1,
+    "intelligence-training": 1,
+    "research-institution": 1,
+    "digital-literacy": 1,
+    "propaganda": 1
+  },
+  "files": [
+    "universal-primary.json",
+    "secondary-modernization.json",
+    "elite-university-system.json",
+    "vocational-training-program.json",
+    "national-stem-initiative.json",
+    "military-officer-academy.json",
+    "intelligence-analyst-school.json",
+    "advanced-research-institute.json",
+    "digital-literacy-campaign.json",
+    "state-propaganda-program.json"
+  ]
+}

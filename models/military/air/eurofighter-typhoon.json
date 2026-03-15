@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "eurofighter-typhoon",
+  "name": "Eurofighter Typhoon",
+  "category": "air",
+  "subcategory": "fighter",
+  "description": "European twin-engine multirole canard-delta fighter jointly developed by the UK, Germany, Italy, and Spain. Excels in both air-to-air and precision strike roles.",
+  "nation": "EU",
+  "purchaseCost": 42,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 70,
+  "defensePower": 50,
+  "range": 16,
+  "speed": 7,
+  "buildTime": 5,
+  "stealthRating": 30,
+  "crewRequirement": 1,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "semiconductors": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "swing-role",
+      "name": "Swing Role",
+      "description": "Can switch between air-to-air and air-to-ground modes mid-mission without returning to base.",
+      "modifier": { "attackPower": 5 }
+    },
+    {
+      "abilityId": "nato-interoperability",
+      "name": "NATO Interoperability",
+      "description": "Full Link 16 integration provides seamless data sharing with allied forces, boosting coalition effectiveness.",
+      "modifier": { "defensePower": 5 }
+    }
+  ],
+  "tags": ["multirole", "4.5-gen", "nato", "european"]
+}

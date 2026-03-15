@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "population",
+  "description": "Population demographic profiles for the game's 8 playable nations. Includes population size, growth, age structure, urbanization, ethnic composition, social indicators, and gameplay modifiers.",
+  "count": 8,
+  "files": [
+    "usa.json",
+    "china.json",
+    "russia.json",
+    "eu.json",
+    "india.json",
+    "japan.json",
+    "iran.json",
+    "dprk.json"
+  ]
+}

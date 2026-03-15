@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "quantum-error-correction",
+  "name": "Quantum Error Correction",
+  "domain": "quantum",
+  "secondaryDomains": ["semiconductors"],
+  "description": "Achieves fault-tolerant quantum computing through advanced error correction codes that maintain qubit coherence over extended computation periods. Critical milestone enabling practical quantum algorithms for cryptography, optimization, and simulation.",
+  "tier": 3,
+  "researchCost": 240,
+  "researchDurationTurns": 15,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "quantum-computing-prototype", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "quantum": 15,
+      "semiconductors": 4
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.5
+    },
+    "socialModifiers": {
+      "softPowerBonus": 5,
+      "educationBonus": 4
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 65
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "photonic-computing",
+      "bonusDescription": "Photonic interconnects dramatically reduce decoherence in quantum systems",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "quantum-supremacy",
+      "bonusDescription": "Error correction is the essential prerequisite for achieving quantum supremacy",
+      "bonusMultiplier": 1.5
+    }
+  ],
+  "tags": ["error-correction", "fault-tolerant", "coherence", "qec", "surface-codes"]
+}

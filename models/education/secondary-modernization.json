@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "secondary-modernization",
+  "name": "Secondary School Modernization",
+  "category": "secondary",
+  "description": "Comprehensive upgrade of secondary education infrastructure, curricula, and teacher training. Introduces modern science labs, updated textbooks, and standardized testing to prepare students for higher education or skilled employment.",
+  "annualCostPerCapita": 250,
+  "implementationTurns": 3,
+  "maturityTurns": 10,
+  "effects": {
+    "technologyDomainBoosts": {
+      "ai": 2,
+      "semiconductors": 1,
+      "biotech": 1
+    },
+    "workforceQuality": 15,
+    "innovationRate": 4,
+    "stabilityModifier": 3,
+    "softPowerModifier": 2
+  },
+  "prerequisites": [
+    { "type": "education", "value": "universal-primary", "minimumLevel": 0.5 }
+  ],
+  "tags": ["secondary", "curriculum", "teacher-training", "infrastructure"]
+}

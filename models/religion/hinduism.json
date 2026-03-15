@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "hinduism",
+  "name": "Hinduism",
+  "description": "The world's oldest major religion and the dominant faith of the Indian subcontinent. A diverse tradition encompassing thousands of deities, philosophical schools, rituals, and social practices including the caste system. Emphasizes dharma, karma, and moksha. Increasingly assertive politically through Hindu nationalist movements.",
+  "adherentsGlobalPercent": 15.2,
+  "socialCohesionModifier": 15,
+  "politicalInfluence": "significant",
+  "demographicTrend": "stable",
+  "interReligiousTensions": [
+    { "targetReligionId": "islam-sunni", "tensionLevel": "wary", "historicalBasis": "Partition, communal riots, Kashmir" },
+    { "targetReligionId": "christianity-protestant", "tensionLevel": "tolerant", "historicalBasis": "Missionary tensions in tribal areas" },
+    { "targetReligionId": "buddhism", "tensionLevel": "harmonious", "historicalBasis": "Shared Dharmic heritage" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 8,
+    "reformResistance": 50,
+    "educationAttitude": "neutral",
+    "scienceAttitude": "neutral",
+    "theocracyPotential": 35,
+    "martyrdomFactor": 30,
+    "charityModifier": 10
+  },
+  "tags": ["dharmic", "ancient", "diverse-practices", "caste-system", "south-asian"]
+}

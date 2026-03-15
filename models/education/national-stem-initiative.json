@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "national-stem-initiative",
+  "name": "National STEM Initiative",
+  "category": "stem",
+  "description": "Nationwide push to increase enrollment and achievement in science, technology, engineering, and mathematics from secondary through university level. Includes scholarships, lab grants, coding bootcamps, and competitive math/science olympiads.",
+  "annualCostPerCapita": 450,
+  "implementationTurns": 4,
+  "maturityTurns": 12,
+  "effects": {
+    "technologyDomainBoosts": {
+      "ai": 10,
+      "semiconductors": 8,
+      "space": 5,
+      "cyber": 7,
+      "biotech": 6,
+      "quantum": 9
+    },
+    "workforceQuality": 18,
+    "innovationRate": 12,
+    "stabilityModifier": 1,
+    "softPowerModifier": 5
+  },
+  "prerequisites": [
+    { "type": "education", "value": "secondary-modernization", "minimumLevel": 0.5 }
+  ],
+  "tags": ["stem", "science", "technology", "engineering", "mathematics", "innovation"]
+}

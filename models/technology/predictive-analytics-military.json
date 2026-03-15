@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "predictive-analytics-military",
+  "name": "Predictive Analytics for Military Intelligence",
+  "domain": "ai",
+  "secondaryDomains": ["space", "cyber"],
+  "description": "Deploys AI-driven predictive models for anticipating enemy force movements, logistics disruption, and geopolitical crisis forecasting. Integrates satellite imagery, signals intelligence, and open-source data for probabilistic threat assessment.",
+  "tier": 3,
+  "researchCost": 200,
+  "researchDurationTurns": 12,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "machine-learning-foundations", "minimumLevel": 1 },
+    { "techId": "natural-language-processing", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "ai": 10,
+      "space": 4
+    },
+    "militaryModifiers": {
+      "attackBonus": 8,
+      "defenseBonus": 10
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 0.5
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 70
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "space-based-surveillance",
+      "bonusDescription": "Real-time satellite feeds massively enhance predictive accuracy",
+      "bonusMultiplier": 1.35
+    },
+    {
+      "partnerTechId": "quantum-computing-prototype",
+      "bonusDescription": "Quantum processing enables complex scenario simulation at unprecedented scale",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["predictive", "intelligence", "military", "forecasting", "threat-assessment", "sigint"]
+}

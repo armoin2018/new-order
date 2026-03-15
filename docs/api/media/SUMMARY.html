@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Conflict 2026 — Project Analysis Report</title>
+<style>
+:root{--bg:#1e1e2e;--bg-surface:#282a36;--bg-card:#313244;--text:#cdd6f4;--text-dim:#6c7086;--accent:#89b4fa;--accent2:#f38ba8;--accent3:#a6e3a1;--accent4:#fab387;--accent5:#cba6f7;--border:#45475a;--success:#a6e3a1;--warning:#fab387;--danger:#f38ba8;--info:#89dceb}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex}
+.sidebar{width:260px;background:var(--bg-surface);border-right:1px solid var(--border);position:fixed;top:0;bottom:0;overflow-y:auto;z-index:10;padding:16px 0}.sidebar h2{padding:0 16px;font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}.sidebar-logo{padding:16px;border-bottom:1px solid var(--border);margin-bottom:16px;text-align:center}.sidebar-logo h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent5));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.sidebar-logo .ver{font-size:11px;color:var(--text-dim)}.nav-link{display:block;padding:8px 16px;color:var(--text-dim);text-decoration:none;font-size:13px;transition:all .15s;cursor:pointer;border-left:3px solid transparent}.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(137,180,250,.08);border-left-color:var(--accent)}
+.main{margin-left:260px;flex:1;padding:32px;max-width:1200px}.section{display:none;animation:fadeIn .3s ease}.section.active{display:block}@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:16px}.card h3{font-size:16px;margin-bottom:12px;color:var(--accent)}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.stat{text-align:center;padding:16px;background:var(--bg-surface);border-radius:8px;border:1px solid var(--border)}.stat .value{font-size:28px;font-weight:700;display:block}.stat .label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600}.badge-success{background:rgba(166,227,161,.15);color:var(--success)}.badge-warning{background:rgba(250,179,135,.15);color:var(--warning)}.badge-danger{background:rgba(243,139,168,.15);color:var(--danger)}.badge-info{background:rgba(137,220,235,.15);color:var(--info)}
+.progress-bar{height:8px;background:var(--bg);border-radius:4px;overflow:hidden;margin:4px 0}.progress-bar .fill{height:100%;border-radius:4px;transition:width .5s ease}
+table{width:100%;border-collapse:collapse;font-size:13px}table th{text-align:left;padding:10px 12px;background:var(--bg-surface);color:var(--accent);font-weight:600;border-bottom:2px solid var(--border)}table td{padding:8px 12px;border-bottom:1px solid var(--border)}table tr:hover td{background:rgba(137,180,250,.04)}
+.chart-container{position:relative;width:100%;max-width:600px;margin:12px auto}canvas{max-width:100%}
+.tag{display:inline-block;padding:2px 8px;margin:2px;border-radius:4px;font-size:11px;background:var(--bg-surface);color:var(--text-dim);border:1px solid var(--border)}
+.health-ring{width:140px;height:140px;margin:0 auto;position:relative}.health-ring svg{transform:rotate(-90deg)}.health-ring .score{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:32px;font-weight:700}
+.tree{font-size:13px;font-family:monospace;color:var(--text-dim);line-height:1.8}.tree .dir{color:var(--accent)}.tree .file{color:var(--text)}
+.finding{padding:12px 16px;border-left:3px solid var(--border);margin:8px 0;background:var(--bg-surface);border-radius:0 4px 4px 0}.finding.critical{border-left-color:var(--danger)}.finding.warning{border-left-color:var(--warning)}.finding.info{border-left-color:var(--info)}.finding.success{border-left-color:var(--success)}.finding h4{font-size:13px;margin-bottom:4px}.finding p{font-size:12px;color:var(--text-dim)}
+.action-item{display:flex;gap:12px;align-items:flex-start;padding:12px;background:var(--bg-surface);border-radius:6px;margin:8px 0}.action-item .priority{min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#1e1e2e}.action-item .p-high{background:var(--danger)}.action-item .p-med{background:var(--warning)}.action-item .p-low{background:var(--info)}
+.mermaid-container{background:var(--bg-surface);padding:16px;border-radius:8px;margin:12px 0;overflow-x:auto}
+h2.section-title{font-size:22px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+@media print{.sidebar{display:none}.main{margin-left:0}.section{display:block!important;page-break-inside:avoid}}
+@media(max-width:768px){.sidebar{display:none}.main{margin-left:0;padding:16px}}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <h1>⚔️ Conflict 2026</h1>
+    <div class="ver">v0.1.0 · Project Analysis · March 4, 2026</div>
+  </div>
+  <h2>Report Sections</h2>
+  <a class="nav-link active" data-target="overview">📊 Overview & Scorecard</a>
+  <a class="nav-link" data-target="architecture">🏗️ Architecture</a>
+  <a class="nav-link" data-target="howto">📖 How to Use</a>
+  <a class="nav-link" data-target="plan">📋 Project Plan</a>
+  <a class="nav-link" data-target="ai-resources">🤖 AI Resources</a>
+  <a class="nav-link" data-target="code-quality">🔍 Code Quality</a>
+  <a class="nav-link" data-target="security">🛡️ Security Scan</a>
+  <a class="nav-link" data-target="performance">⚡ Performance</a>
+  <a class="nav-link" data-target="documentation">📝 Documentation</a>
+  <a class="nav-link" data-target="issues">🐛 Issues & Debt</a>
+  <a class="nav-link" data-target="innovation">💡 Innovation Ideas</a>
+  <a class="nav-link" data-target="competitive">📈 Competitive Analysis</a>
+  <a class="nav-link" data-target="pitch">🚀 Pitch Deck</a>
+  <a class="nav-link" data-target="gtm">🎯 Go-to-Market</a>
+  <a class="nav-link" data-target="actions">⚡ Priority Actions</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<!-- ============================================================ -->
+<!-- SECTION: OVERVIEW -->
+<!-- ============================================================ -->
+<div id="overview" class="section active">
+<h2 class="section-title">Project Overview & Scorecard</h2>
+
+<div class="card">
+<h3>Project Description</h3>
+<p><strong>Conflict 2026: Global Simulation Engine</strong> is a turn-based geopolitical simulation game built with React 19, TypeScript (strict mode), Vite 6, and Zustand. Unlike traditional wargames, it prioritizes <em>political survival</em>, <em>diplomatic leverage</em>, and <em>economic stability</em> over direct combat. A player can lose without firing a shot — through government collapse caused by inflation, low prestige, and foreign-funded insurgency.</p>
+<p style="margin-top:8px;color:var(--text-dim)">Requirements: v6.0.0 (1,150 lines) · Plan: 132 items (28 epics, 104 stories) — <span class="badge badge-success">100% DONE</span></p>
+</div>
+
+<div class="card-grid">
+  <div class="stat"><span class="value" style="color:var(--accent)">108,749</span><span class="label">Total Lines of Code</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent3)">60,323</span><span class="label">Source LOC</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent5)">46,455</span><span class="label">Test LOC</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent4)">224</span><span class="label">TypeScript Files</span></div>
+</div>
+
+<div class="card-grid" style="margin-top:12px">
+  <div class="stat"><span class="value" style="color:var(--accent3)">3,621</span><span class="label">Tests Passing</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent)">96</span><span class="label">Test Files</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent3)">132/132</span><span class="label">Plan Items Done</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent4)">70.76 KB</span><span class="label">Gzip Bundle</span></div>
+</div>
+
+<!-- HEALTH SCORECARD -->
+<div class="card" style="margin-top:20px">
+<h3>Health Scorecard</h3>
+<div class="card-grid">
+  <div>
+    <div class="health-ring">
+      <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--border)" stroke-width="10"/><circle cx="60" cy="60" r="52" fill="none" stroke="var(--accent3)" stroke-width="10" stroke-dasharray="297" stroke-dashoffset="27" stroke-linecap="round"/></svg>
+      <div class="score" style="color:var(--accent3)">91</div>
+    </div>
+    <div style="text-align:center;margin-top:8px;font-size:13px;color:var(--text-dim)">Overall Health</div>
+  </div>
+  <div>
+    <table>
+      <tr><td>Type Safety</td><td><span class="badge badge-success">98/100</span></td><td>Only 1 `: any` (in JSDoc comment)</td></tr>
+      <tr><td>Test Coverage</td><td><span class="badge badge-success">95/100</span></td><td>3,621 tests · 77% test-to-source ratio</td></tr>
+      <tr><td>Security</td><td><span class="badge badge-success">94/100</span></td><td>No child_process, no ReDoS, no secrets</td></tr>
+      <tr><td>Documentation</td><td><span class="badge badge-success">92/100</span></td><td>5,897 JSDoc blocks, extensive SRS</td></tr>
+      <tr><td>Performance</td><td><span class="badge badge-success">90/100</span></td><td>0 sync FS, Web Workers, 70KB gzip</td></tr>
+      <tr><td>Code Quality</td><td><span class="badge badge-success">90/100</span></td><td>1 TODO, strict TS, ESLint clean</td></tr>
+      <tr><td>Architecture</td><td><span class="badge badge-warning">85/100</span></td><td>59 files >500 lines, config 3,017 LOC</td></tr>
+      <tr><td>CI/CD</td><td><span class="badge badge-success">88/100</span></td><td>GitHub Actions, typecheck+lint+build+test</td></tr>
+    </table>
+  </div>
+</div>
+</div>
+
+<div class="card">
+<h3>Technology Stack</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+  <span class="tag">React 19</span><span class="tag">TypeScript 5.7 (strict)</span><span class="tag">Vite 6.4</span><span class="tag">Zustand 5</span><span class="tag">Immer 11</span><span class="tag">AJV 8</span><span class="tag">Vitest 4</span><span class="tag">Playwright 1.58</span><span class="tag">ESLint 9 (flat)</span><span class="tag">Prettier 3</span><span class="tag">happy-dom</span><span class="tag">ES2022 target</span><span class="tag">Web Workers</span>
+</div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: ARCHITECTURE -->
+<!-- ============================================================ -->
+<div id="architecture" class="section">
+<h2 class="section-title">Architecture</h2>
+
+<div class="card">
+<h3>Module Map</h3>
+<div class="tree">
+<span class="dir">src/</span><br>
+├── <span class="dir">engine/</span> — <strong>93 files · 52,539 LOC</strong> — Core simulation logic (pure functions)<br>
+│   ├── <span class="dir">__tests__/</span> — 91 test files · 45,000+ LOC<br>
+│   ├── <span class="file">config.ts</span> — Central config (3,017 lines, 31 top-level sections)<br>
+│   ├── <span class="file">index.ts</span> — Barrel re-exports (967 lines)<br>
+│   ├── <span class="file">store.ts</span> — Zustand world-state store<br>
+│   ├── <span class="file">hooks.ts</span> — React hooks (UI bindings)<br>
+│   ├── <span class="file">turn-engine.ts</span> — Turn structure orchestration<br>
+│   ├── <span class="file">rng.ts</span> — Seeded PRNG (Mulberry32)<br>
+│   └── <span class="file">... 87 more engine files</span><br>
+├── <span class="dir">data/</span> — <strong>18 files · 5,472 LOC</strong> — Types, enums, scenarios<br>
+│   ├── <span class="dir">types/</span> — 12 type definition files (enums, core, military, etc.)<br>
+│   ├── <span class="dir">scenarios/</span> — March 2026 scenario data (2,180 LOC)<br>
+│   └── <span class="dir">validation/</span> — AJV schema validation<br>
+├── <span class="dir">ui/</span> — <strong>14 files</strong> — React components<br>
+│   ├── <span class="file">App.tsx</span> — Root component<br>
+│   ├── <span class="file">StrategicDashboard.tsx</span> · <span class="file">CommandCenter.tsx</span> · <span class="file">DiplomacyPanel.tsx</span><br>
+│   ├── <span class="file">IntelPanel.tsx</span> · <span class="file">HeadlinesPanel.tsx</span> · <span class="file">ActionMenu.tsx</span><br>
+│   └── <span class="file">MapViewport.tsx</span> · <span class="file">TopBar.tsx</span><br>
+├── <span class="dir">workers/</span> — <strong>5 files</strong> — Off-UI-thread simulation<br>
+│   ├── <span class="file">simulation.worker.ts</span> — Web Worker entry<br>
+│   ├── <span class="file">simulation-bridge.ts</span> — Worker ↔ UI bridge<br>
+│   └── <span class="file">protocol.ts</span> — Typed message protocol<br>
+├── <span class="dir">assets/</span> — Static assets<br>
+├── <span class="dir">test/</span> — Test setup<br>
+└── <span class="file">main.tsx</span> — Application entry point<br>
+</div>
+</div>
+
+<div class="card">
+<h3>Dependency Graph</h3>
+<div class="mermaid-container">
+<pre class="mermaid">
+graph TB
+  subgraph "Production Dependencies (5)"
+    React["react 19"]
+    ReactDOM["react-dom 19"]
+    Zustand["zustand 5"]
+    Immer["immer 11"]
+    AJV["ajv 8"]
+  end
+  subgraph "Application Layers"
+    UI["UI Layer<br>(React Components)"]
+    Hooks["Engine Hooks<br>(Zustand Selectors)"]
+    Store["World State Store<br>(Zustand + Immer)"]
+    Engine["Engine Layer<br>(93 Pure-Function Modules)"]
+    Data["Data Layer<br>(Types + Scenarios + Validation)"]
+    Workers["Web Workers<br>(Off-Thread Simulation)"]
+  end
+  UI --> Hooks
+  Hooks --> Store
+  Store --> Engine
+  Engine --> Data
+  Workers --> Engine
+  Workers --> Store
+  Store -.-> Zustand
+  Store -.-> Immer
+  Data -.-> AJV
+  UI -.-> React
+  UI -.-> ReactDOM
+</pre>
+</div>
+</div>
+
+<div class="card">
+<h3>Path Aliases</h3>
+<table>
+  <tr><th>Alias</th><th>Maps To</th><th>Purpose</th></tr>
+  <tr><td><code>@/engine/*</code></td><td>src/engine/*</td><td>Core simulation engines</td></tr>
+  <tr><td><code>@/ui/*</code></td><td>src/ui/*</td><td>React UI components</td></tr>
+  <tr><td><code>@/data/*</code></td><td>src/data/*</td><td>Types, enums, scenarios</td></tr>
+  <tr><td><code>@/workers/*</code></td><td>src/workers/*</td><td>Web Worker threads</td></tr>
+  <tr><td><code>@/assets/*</code></td><td>src/assets/*</td><td>Static assets</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Engine File Breakdown (93 modules)</h3>
+<table>
+  <tr><th>Category</th><th>Files</th><th>Examples</th></tr>
+  <tr><td>AI & Decision</td><td>5</td><td>ai-evaluator, ai-perception, ai-profiles, cognitive-bias, decision-fatigue</td></tr>
+  <tr><td>Military & Combat</td><td>9</td><td>combat, force-structure, invasion, military-doctrine, nuclear-escalation, nuclear-strike, nuclear-iran, hex-map, unit-registry</td></tr>
+  <tr><td>Diplomacy & Alliances</td><td>5</td><td>diplomacy-agreements, alliance-evaluator, alliance-credibility, chemistry-trust, grudge-ledger</td></tr>
+  <tr><td>Economy & Trade</td><td>7</td><td>economic-engine, financial-warfare, trade-warfare, war-economy, market-reactions, sanctions-engine, secondary-sanctions</td></tr>
+  <tr><td>Intelligence</td><td>7</td><td>intel-operations, intel-capability, intel-sharing, intelligence-reliability, covert-insurgency, fog-of-intent, double-agent-japan</td></tr>
+  <tr><td>Psychology</td><td>6</td><td>emotional-state, personality-drift, mass-psychology, psyops, psychological-journey, echo-chamber</td></tr>
+  <tr><td>Information Warfare</td><td>5</td><td>narrative-battle, narrative-campaign, media-ecosystem, virality-deepfake, legitimacy</td></tr>
+  <tr><td>Resources & Climate</td><td>6</td><td>resource-security, resource-disruption, strategic-reserves, mineral-food, climate-refugee, chokepoint</td></tr>
+  <tr><td>Technology</td><td>4</td><td>tech-index, tech-decoupling, export-controls, space-ai</td></tr>
+  <tr><td>Proxy & Non-State</td><td>5</td><td>proxy-network, proxy-autonomy, arms-failedstate, terrorist-escalation, insurrection-civilwar</td></tr>
+  <tr><td>Victory & Strategy</td><td>6</td><td>victory-path, victory-loss-core, victory-loss-extended, loss-warning, strategy-scoring, strategic-analysis</td></tr>
+  <tr><td>UI Support</td><td>6</td><td>headline-generator, nation-briefing, nation-selection, leader-creation, leader-expansion, recommended-actions</td></tr>
+  <tr><td>Phase 3 Polish</td><td>4</td><td>scenario-difficulty-un, visualization-data, tutorial-modding, discovery-engine</td></tr>
+  <tr><td>Infrastructure</td><td>8</td><td>config, index, store, hooks, turn-engine, rng, save-manager, event-logger</td></tr>
+</table>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: HOW TO USE -->
+<!-- ============================================================ -->
+<div id="howto" class="section">
+<h2 class="section-title">How to Use</h2>
+
+<div class="card">
+<h3>Prerequisites</h3>
+<ul style="list-style:none;padding:0">
+  <li>✅ Node.js 20+ (22 recommended)</li>
+  <li>✅ npm 10+</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Installation</h3>
+<pre style="background:var(--bg);padding:12px;border-radius:6px;overflow-x:auto;font-size:13px"><code>git clone https://github.com/your-org/NewOrder.git
+cd NewOrder
+npm install</code></pre>
+</div>
+
+<div class="card">
+<h3>Available Commands</h3>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>npm run dev</code></td><td>Start Vite dev server with HMR</td></tr>
+  <tr><td><code>npm run build</code></td><td>TypeScript compile + Vite production build</td></tr>
+  <tr><td><code>npm run preview</code></td><td>Preview production build locally</td></tr>
+  <tr><td><code>npm run lint</code></td><td>ESLint (flat config, strict rules)</td></tr>
+  <tr><td><code>npm run format</code></td><td>Prettier format all source files</td></tr>
+  <tr><td><code>npm run typecheck</code></td><td>TypeScript strict type checking</td></tr>
+  <tr><td><code>npm test</code></td><td>Run all 3,621 Vitest tests</td></tr>
+  <tr><td><code>npm run test:watch</code></td><td>Vitest in watch mode</td></tr>
+  <tr><td><code>npm run test:coverage</code></td><td>Tests with V8 coverage report</td></tr>
+  <tr><td><code>npm run test:e2e</code></td><td>Playwright end-to-end tests</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>TypeScript Configuration</h3>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+  <span class="tag">strict: true</span>
+  <span class="tag">noUnusedLocals</span>
+  <span class="tag">noUnusedParameters</span>
+  <span class="tag">noUncheckedIndexedAccess</span>
+  <span class="tag">verbatimModuleSyntax</span>
+  <span class="tag">noFallthroughCasesInSwitch</span>
+  <span class="tag">forceConsistentCasingInFileNames</span>
+  <span class="tag">target: ES2022</span>
+  <span class="tag">jsx: react-jsx</span>
+</div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: PROJECT PLAN -->
+<!-- ============================================================ -->
+<div id="plan" class="section">
+<h2 class="section-title">Project Plan — 132/132 Complete</h2>
+
+<div class="card">
+<h3>Plan Completion</h3>
+<div class="progress-bar" style="height:20px;margin:8px 0"><div class="fill" style="width:100%;background:linear-gradient(90deg,var(--accent3),var(--accent))"></div></div>
+<p style="text-align:center;font-size:14px;margin-top:4px"><strong>132 of 132 items complete</strong> — 28 epics, 104 stories — All DONE ✅</p>
+</div>
+
+<div class="card">
+<h3>Epics by Phase</h3>
+<table>
+  <tr><th>#</th><th>Epic</th><th>Stories</th><th>Status</th></tr>
+  <tr><td colspan="4" style="background:var(--bg);font-weight:700;color:var(--accent)">Phase 1 — Foundation & Core (Epics 1–9)</td></tr>
+  <tr><td>CNFL-0001</td><td>Project Foundation & Toolchain</td><td>7</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0002</td><td>Turn Structure & Game Loop</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0003</td><td>Hex Map & Unit System</td><td>6</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0004</td><td>Utility-Based Leader AI Engine</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0005</td><td>Economic Volatility & Trade Wars</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0006</td><td>Headlines & Perception Engine</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0007</td><td>Grey Zone Interaction System</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0008</td><td>Nation Selection & Custom Leader</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0009</td><td>Civil Unrest & Domestic Crisis</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td colspan="4" style="background:var(--bg);font-weight:700;color:var(--accent5)">Phase 1 — Advanced Systems (Epics 10–19)</td></tr>
+  <tr><td>CNFL-0010</td><td>Psychological Engine Core</td><td>5</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0011</td><td>Strategic Pathfinding & Advisory</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0012</td><td>Information Warfare & Narrative</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0013</td><td>Resource Security & Reserves</td><td>2</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0014</td><td>Command Center UI Shell</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0015</td><td>Victory & Loss Conditions</td><td>2</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0016</td><td>Nuclear Escalation Sub-system</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0017</td><td>Diplomacy & Alliances</td><td>2</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0018</td><td>Intelligence & Espionage System</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0019</td><td>Military Doctrine & Capabilities</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td colspan="4" style="background:var(--bg);font-weight:700;color:var(--accent4)">Phase 2 — Deep Expansion (Epics 20–27)</td></tr>
+  <tr><td>CNFL-0020</td><td>Psychological Engine Phase 2</td><td>5</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0021</td><td>Sanctions & Financial Warfare</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0022</td><td>Technology Race & Innovation</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0023</td><td>Climate, Resources & Humanitarian</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0024</td><td>Proxy War Network & Non-State Actors</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0025</td><td>Strategic Advisory Phase 2</td><td>3</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0026</td><td>Information Warfare Phase 2</td><td>2</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td>CNFL-0027</td><td>Phase 2 Expanded Systems</td><td>4</td><td><span class="badge badge-success">DONE</span></td></tr>
+  <tr><td colspan="4" style="background:var(--bg);font-weight:700;color:var(--accent2)">Phase 3 — Polish & Extensibility (Epic 28)</td></tr>
+  <tr><td>CNFL-0028</td><td>Post-Game Analysis & Extensibility</td><td>6</td><td><span class="badge badge-success">DONE</span></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Milestones</h3>
+<div class="card-grid">
+  <div class="stat"><span class="value" style="color:var(--accent3)">✅</span><span class="label">M1 — MVP Foundation</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent3)">✅</span><span class="label">M2 — Deep Expansion</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent3)">✅</span><span class="label">M3 — Polish</span></div>
+</div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: AI RESOURCES -->
+<!-- ============================================================ -->
+<div id="ai-resources" class="section">
+<h2 class="section-title">AI Resources Catalog</h2>
+
+<div class="card-grid">
+  <div class="stat"><span class="value" style="color:var(--accent5)">22</span><span class="label">Agents</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent4)">1</span><span class="label">Personas</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent)">50</span><span class="label">Skills</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent2)">49</span><span class="label">Prompts</span></div>
+</div>
+
+<div class="card">
+<h3>Agents (22)</h3>
+<table>
+  <tr><th>Agent</th><th>Role</th></tr>
+  <tr><td>Orchestrator</td><td>Advanced task decomposition & multi-step operations</td></tr>
+  <tr><td>Architect</td><td>Software architecture, design patterns, system design</td></tr>
+  <tr><td>Base Agent</td><td>Foundational behaviors inherited by all agents</td></tr>
+  <tr><td>Brainstorm</td><td>Creative exploration of solution paths</td></tr>
+  <tr><td>Bug Fixer</td><td>Systematic debugging & resolution</td></tr>
+  <tr><td>Collaborative Minds</td><td>Multi-perspective problem solving</td></tr>
+  <tr><td>Data Architect</td><td>Schema design & data flows</td></tr>
+  <tr><td>Data Engineer</td><td>ETL pipelines & analytics infrastructure</td></tr>
+  <tr><td>Designer</td><td>UI/UX design & design systems</td></tr>
+  <tr><td>DevOps</td><td>CI/CD, infrastructure as code</td></tr>
+  <tr><td>Documentation</td><td>Technical docs & API documentation</td></tr>
+  <tr><td>Entrepreneur</td><td>Revenue & monetization strategy</td></tr>
+  <tr><td>Game Designer</td><td>Mechanics, rules, player experience</td></tr>
+  <tr><td>Leader Panel</td><td>Executive leadership & strategic decisions</td></tr>
+  <tr><td>Marketing</td><td>Brand development & campaigns</td></tr>
+  <tr><td>Optimizer</td><td>Performance & code quality optimization</td></tr>
+  <tr><td>Patent Reviewer</td><td>Prior art research & IP strategy</td></tr>
+  <tr><td>Planner</td><td>Requirements, roadmaps, execution plans</td></tr>
+  <tr><td>Porting</td><td>Code migration & modernization</td></tr>
+  <tr><td>Product Design</td><td>User-centered product development</td></tr>
+  <tr><td>Security</td><td>Vulnerability assessment & secure coding</td></tr>
+  <tr><td>Tester</td><td>Automated test generation & QA</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Skills by Category (50)</h3>
+<table>
+  <tr><th>Category</th><th>Count</th><th>Examples</th></tr>
+  <tr><td>🔧 Admin & Tooling</td><td>6</td><td>Catalog Manager, Plan Manager, Skill Creator, Index, Optimize, Scheduler</td></tr>
+  <tr><td>💬 Communications</td><td>11</td><td>Email, Outlook, Slack, Teams, Zoom, Vonage, WhatsApp, Mailchimp, Calendly, Salesforce, SharePoint</td></tr>
+  <tr><td>📱 Social Media</td><td>10</td><td>Facebook, Instagram, Twitter/X, TikTok, YouTube, Discord, Threads, Meetup, LinkedIn, Reddit</td></tr>
+  <tr><td>🛒 E-Commerce</td><td>3</td><td>Amazon SP-API, Etsy, WooCommerce</td></tr>
+  <tr><td>🎨 Media</td><td>6</td><td>Canva, CapCut, Gamma, Gemini, OpenAI DALL-E/Sora, Speechify</td></tr>
+  <tr><td>🔨 Developer Tools</td><td>11</td><td>Audio, Video, Image, Data Converter, Translator, Web Crawl, SEO Report, RAG, Disk Imager, ESP Manager, Mermaid/PlantUML</td></tr>
+  <tr><td>📊 Data</td><td>1</td><td>Apache Kafka</td></tr>
+  <tr><td>🌐 Web/CMS</td><td>2</td><td>WordPress, Confluence</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Prompts by Category (49)</h3>
+<table>
+  <tr><th>Category</th><th>Count</th><th>Examples</th></tr>
+  <tr><td>Build</td><td>16</td><td>scaffold, requirements, architecture, design, plan, test-plan, business-plan, pitch-deck, GTM, marketing, revenue, lean-canvas, launch-plan, market-research, registry, resume</td></tr>
+  <tr><td>Run</td><td>6</td><td>run, run-next, run-port, run-optimize, run-refactor, run-flow</td></tr>
+  <tr><td>Add</td><td>7</td><td>feature, prompt, instructions, personas, agent, skill, flow, all-glean</td></tr>
+  <tr><td>Admin</td><td>5</td><td>index, health-check, assess, bench, repair</td></tr>
+  <tr><td>QA</td><td>3</td><td>audit, validate, unit-tests</td></tr>
+  <tr><td>Grow</td><td>3</td><td>learn, innovate, evolve</td></tr>
+  <tr><td>Report</td><td>2</td><td>scan-project, SEO report</td></tr>
+  <tr><td>Other</td><td>4</td><td>document, intake, ideation, plan-refine</td></tr>
+</table>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: CODE QUALITY -->
+<!-- ============================================================ -->
+<div id="code-quality" class="section">
+<h2 class="section-title">Code Quality Analysis</h2>
+
+<div class="card">
+<h3>Quality Metrics Summary</h3>
+<table>
+  <tr><th>Metric</th><th>Value</th><th>Rating</th><th>Notes</th></tr>
+  <tr><td><code>: any</code> usage</td><td>1</td><td><span class="badge badge-success">Excellent</span></td><td>In a JSDoc comment, not runtime code</td></tr>
+  <tr><td>TODO / FIXME / HACK</td><td>1</td><td><span class="badge badge-success">Excellent</span></td><td>Single test comment — no tech debt markers</td></tr>
+  <tr><td>console.log/warn/error</td><td>7</td><td><span class="badge badge-success">Good</span></td><td>3 in JSDoc examples, 2 store.ts warns, 1 App.tsx log, 1 bridge comment</td></tr>
+  <tr><td>JSDoc comment blocks</td><td>5,897</td><td><span class="badge badge-success">Excellent</span></td><td>~2.8× ratio vs exported symbols (~2,079)</td></tr>
+  <tr><td>Try-catch blocks</td><td>33</td><td><span class="badge badge-success">Good</span></td><td>Proportionate error handling for 3 async functions</td></tr>
+  <tr><td>Files &gt; 500 lines</td><td>59</td><td><span class="badge badge-warning">Moderate</span></td><td>Expected for engine modules; largest is config.ts (3,017)</td></tr>
+  <tr><td>New RegExp (ReDoS risk)</td><td>0</td><td><span class="badge badge-success">Excellent</span></td><td>No dynamic regex patterns</td></tr>
+  <tr><td>TypeScript strict mode</td><td>All flags</td><td><span class="badge badge-success">Excellent</span></td><td>noUnusedLocals, noUncheckedIndexedAccess, etc.</td></tr>
+  <tr><td>ESLint violations</td><td>0</td><td><span class="badge badge-success">Clean</span></td><td>All files pass ESLint 9 flat config</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Test Quality</h3>
+<div class="card-grid">
+  <div class="stat"><span class="value" style="color:var(--accent3)">3,621</span><span class="label">Tests Passing</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent)">96</span><span class="label">Test Files</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent4)">0</span><span class="label">Failing</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent5)">77%</span><span class="label">Test:Source Ratio</span></div>
+</div>
+<p style="margin-top:12px;font-size:13px;color:var(--text-dim)">Coverage thresholds enforced: <strong>90% lines, 90% functions, 90% branches</strong> for <code>src/engine/**</code></p>
+</div>
+
+<div class="card">
+<h3>Largest Files (Complexity Hotspots)</h3>
+<table>
+  <tr><th>File</th><th>Lines</th><th>Notes</th></tr>
+  <tr><td>config.ts</td><td>3,017</td><td>Central config — 31 sections, all <code>as const</code></td></tr>
+  <tr><td>march2026.scenario.ts</td><td>2,180</td><td>Initial conditions data for all 8 factions</td></tr>
+  <tr><td>index.ts (barrel)</td><td>967</td><td>Engine barrel re-exports — auto-generated</td></tr>
+  <tr><td>narrative-battle-engine.ts</td><td>966</td><td>Complex info-war battle resolution</td></tr>
+  <tr><td>virality-deepfake-engine.ts</td><td>893</td><td>Social media virality simulation</td></tr>
+  <tr><td>enums.ts</td><td>853</td><td>Comprehensive branded types + enum definitions</td></tr>
+  <tr><td>loss-warning.ts</td><td>838</td><td>Multi-condition early warning system</td></tr>
+</table>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: SECURITY -->
+<!-- ============================================================ -->
+<div id="security" class="section">
+<h2 class="section-title">Security Scan</h2>
+
+<div class="card">
+<h3>Vulnerability Assessment</h3>
+<div class="finding success">
+  <h4>✅ No child_process / exec usage</h4>
+  <p>Zero instances of shell execution — no command injection risk.</p>
+</div>
+<div class="finding success">
+  <h4>✅ No dynamic RegExp (ReDoS)</h4>
+  <p>Zero <code>new RegExp()</code> calls — no Regular Expression Denial of Service risk.</p>
+</div>
+<div class="finding success">
+  <h4>✅ No unsafe-eval / unsafe-inline CSP</h4>
+  <p>No Content Security Policy violations detected.</p>
+</div>
+<div class="finding success">
+  <h4>✅ No hardcoded secrets or credentials</h4>
+  <p>9 matches for "secret/token" keywords — all are game-domain terms (e.g., "secret police", "secret violation", game config keys), not actual credentials.</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ console.warn in store.ts</h4>
+  <p>2 console.warn calls in the Zustand store for save/load error logging. Acceptable for client-side debugging. Consider structured logging for production.</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ console.log in App.tsx</h4>
+  <p>1 action log in the root component. Remove before production release or gate behind <code>import.meta.env.DEV</code>.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Dependency Security</h3>
+<table>
+  <tr><th>Dependency</th><th>Version</th><th>Risk</th></tr>
+  <tr><td>react / react-dom</td><td>^19.0.0</td><td><span class="badge badge-success">Low</span> — Well-maintained, XSS protection built in</td></tr>
+  <tr><td>zustand</td><td>^5.0.11</td><td><span class="badge badge-success">Low</span> — Minimal surface area, no network calls</td></tr>
+  <tr><td>immer</td><td>^11.1.4</td><td><span class="badge badge-success">Low</span> — Pure immutability helper</td></tr>
+  <tr><td>ajv</td><td>^8.18.0</td><td><span class="badge badge-success">Low</span> — Schema validation, battle-tested</td></tr>
+</table>
+<p style="margin-top:8px;font-size:12px;color:var(--text-dim)">Only 5 production dependencies — minimal attack surface. All well-maintained mainstream libraries.</p>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: PERFORMANCE -->
+<!-- ============================================================ -->
+<div id="performance" class="section">
+<h2 class="section-title">Performance Analysis</h2>
+
+<div class="card">
+<h3>Performance Findings</h3>
+<div class="finding success">
+  <h4>✅ Zero synchronous file I/O</h4>
+  <p>No <code>readFileSync</code> or <code>writeFileSync</code> in source code. All "fs.readiness" matches are game-domain property accesses, not file system operations.</p>
+</div>
+<div class="finding success">
+  <h4>✅ Web Worker off-thread simulation</h4>
+  <p>Simulation runs in a dedicated Web Worker via <code>simulation.worker.ts</code> with typed <code>postMessage</code> protocol. The UI thread remains responsive.</p>
+</div>
+<div class="finding success">
+  <h4>✅ Compact production bundle</h4>
+  <p>43 modules → <strong>222 KB uncompressed / 70.76 KB gzip</strong>. Well within performance budgets for SPAs.</p>
+</div>
+<div class="finding success">
+  <h4>✅ Pure function architecture</h4>
+  <p>All 93 engine modules use pure functions — no side effects, no mutation. Enables memoization, parallelization, and trivial testing.</p>
+</div>
+<div class="finding success">
+  <h4>✅ Immer for immutable state updates</h4>
+  <p>Zustand store uses Immer middleware — structural sharing avoids unnecessary re-renders.</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ 59 files exceed 500-line complexity threshold</h4>
+  <p>Many engine modules are 600–900 lines. While each file has a single responsibility (one engine), consider extracting pure helper functions into shared utility modules for the largest files.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Build Performance</h3>
+<table>
+  <tr><th>Metric</th><th>Value</th></tr>
+  <tr><td>Build time</td><td>~585ms (Vite)</td></tr>
+  <tr><td>Modules transformed</td><td>43</td></tr>
+  <tr><td>Bundle size (raw)</td><td>222.09 KB</td></tr>
+  <tr><td>Bundle size (gzip)</td><td>70.76 KB</td></tr>
+  <tr><td>Test suite runtime</td><td>~14s (3,621 tests)</td></tr>
+  <tr><td>Test throughput</td><td>~259 tests/second</td></tr>
+</table>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: DOCUMENTATION -->
+<!-- ============================================================ -->
+<div id="documentation" class="section">
+<h2 class="section-title">Documentation & Logging</h2>
+
+<div class="card">
+<h3>Documentation Coverage</h3>
+<table>
+  <tr><th>Metric</th><th>Value</th><th>Rating</th></tr>
+  <tr><td>JSDoc comment blocks</td><td>5,897</td><td><span class="badge badge-success">Excellent</span></td></tr>
+  <tr><td>Exported symbols</td><td>~2,079</td><td>—</td></tr>
+  <tr><td>JSDoc-to-symbol ratio</td><td>~2.8:1</td><td><span class="badge badge-success">Excellent</span></td></tr>
+  <tr><td>Requirements document</td><td>1,150 lines (SRS v6.0.0)</td><td><span class="badge badge-success">Comprehensive</span></td></tr>
+  <tr><td>Project plan</td><td>4,156 lines (132 items)</td><td><span class="badge badge-success">Detailed</span></td></tr>
+  <tr><td>README.md</td><td>Missing</td><td><span class="badge badge-danger">Needs Creation</span></td></tr>
+  <tr><td>API docs (generated)</td><td>Not present</td><td><span class="badge badge-warning">Recommended</span></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Logging Assessment</h3>
+<div class="finding warning">
+  <h4>⚠️ No structured logging framework</h4>
+  <p>Uses <code>console.warn</code> in 2 locations. For production, consider a structured logger (e.g., <code>pino</code> or custom EventEmitter-based logger) that supports log levels and JSON output.</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ Event logger engine exists</h4>
+  <p><code>event-logger.ts</code> provides a game-domain event logging system. This is separate from application logging — good separation of concerns.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Gaps & Recommendations</h3>
+<ol style="padding-left:20px;font-size:13px">
+  <li><strong>Create README.md</strong> — Installation, usage, architecture overview, contribution guide</li>
+  <li><strong>Generate API docs</strong> — Run TypeDoc on the barrel exports for a developer reference</li>
+  <li><strong>Add CONTRIBUTING.md</strong> — Code standards, PR process, testing requirements</li>
+  <li><strong>Add CHANGELOG.md</strong> — Track version-by-version changes for releases</li>
+</ol>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: ISSUES -->
+<!-- ============================================================ -->
+<div id="issues" class="section">
+<h2 class="section-title">Issues & Technical Debt</h2>
+
+<div class="card">
+<h3>Outstanding Issues</h3>
+<div class="finding info">
+  <h4>ℹ️ 1 TODO in test file</h4>
+  <p><code>event-logger.test.ts:438</code> — Comment about event ID format. Not blocking.</p>
+</div>
+<div class="finding warning">
+  <h4>⚠️ config.ts is 3,017 lines</h4>
+  <p>The central configuration file is growing large. Consider splitting into per-domain config files (e.g., <code>config/military.ts</code>, <code>config/economy.ts</code>) and composing them.</p>
+</div>
+<div class="finding warning">
+  <h4>⚠️ Barrel file (index.ts) is 967 lines</h4>
+  <p>With 93 engine modules, the barrel re-export file is large. Consider using code generation or namespace exports to keep it manageable.</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ Missing README.md</h4>
+  <p>No root-level README. Essential for repository discoverability and onboarding.</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ CI workflow node version mismatch</h4>
+  <p><code>ci.yml</code> uses Node 22, <code>test.yml</code> uses Node 20. Standardize to one version (recommend Node 22).</p>
+</div>
+<div class="finding info">
+  <h4>ℹ️ test.yml references <code>npm run compile</code></h4>
+  <p>The <code>compile</code> script doesn't exist in package.json (should be <code>typecheck</code> or <code>build</code>).</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Technical Debt Assessment</h3>
+<div class="progress-bar"><div class="fill" style="width:8%;background:var(--accent3)"></div></div>
+<p style="font-size:13px;color:var(--text-dim)">Technical debt is <strong>very low</strong> (~8%). The codebase is clean with strict TypeScript, comprehensive tests, and consistent architecture.</p>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: INNOVATION -->
+<!-- ============================================================ -->
+<div id="innovation" class="section">
+<h2 class="section-title">Innovation Suggestions</h2>
+
+<div class="card">
+<h3>Feature Ideas</h3>
+<div class="action-item"><div class="priority p-high">1</div><div><strong>Multiplayer Mode</strong> — WebSocket/WebRTC-based multiplayer where each player controls a faction. The pure-function engine architecture makes this feasible with authoritative server validation.</div></div>
+<div class="action-item"><div class="priority p-high">2</div><div><strong>AI Opponent via LLM</strong> — Use a local or API-based LLM to provide natural-language diplomatic negotiations. Feed the leader psychology profile as context for personality-consistent dialogue.</div></div>
+<div class="action-item"><div class="priority p-med">3</div><div><strong>Scenario Editor UI</strong> — Visual editor for creating custom scenarios. Export/import as JSON validated by AJV schemas. Share on a community marketplace.</div></div>
+<div class="action-item"><div class="priority p-med">4</div><div><strong>Replay & Time-Travel</strong> — Leverage the pure-function + immutable state architecture to implement full game replay with scrubbing. Viewers can re-watch any game turn by turn.</div></div>
+<div class="action-item"><div class="priority p-med">5</div><div><strong>Mobile Companion App</strong> — React Native port of the Strategic Dashboard for monitoring games on-the-go. The engine layer is framework-agnostic.</div></div>
+<div class="action-item"><div class="priority p-low">6</div><div><strong>Procedural Scenario Generation</strong> — Use the seeded PRNG to procedurally generate novel geopolitical scenarios with varying faction strengths, alliances, and crisis seeds.</div></div>
+<div class="action-item"><div class="priority p-low">7</div><div><strong>Mod Workshop Integration</strong> — Steam Workshop or custom mod repository. The tutorial-modding-engine already supports custom leaders and pluggable event handlers.</div></div>
+<div class="action-item"><div class="priority p-low">8</div><div><strong>Voice Command Interface</strong> — "Issue sanctions against Russia" — parsed via speech-to-text and mapped to game actions using the typed action protocol.</div></div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: COMPETITIVE -->
+<!-- ============================================================ -->
+<div id="competitive" class="section">
+<h2 class="section-title">Competitive Analysis</h2>
+
+<div class="card">
+<h3>Market Positioning</h3>
+<table>
+  <tr><th>Feature</th><th>Conflict 2026</th><th>Victoria 3</th><th>Civilization VI</th><th>Democracy 4</th><th>Power & Revolution</th></tr>
+  <tr><td>Platform</td><td>Web (cross-platform)</td><td>PC (Steam)</td><td>PC/Console</td><td>PC (Steam)</td><td>PC (Steam)</td></tr>
+  <tr><td>Psychological Modeling</td><td>✅ Deep (5D emotions, bias, drift)</td><td>❌ Basic traits</td><td>❌ Agenda system only</td><td>❌ None</td><td>⚠️ Basic</td></tr>
+  <tr><td>Information Warfare</td><td>✅ Full (deepfakes, virality, narrative)</td><td>❌ None</td><td>❌ None</td><td>❌ None</td><td>⚠️ Basic</td></tr>
+  <tr><td>Financial Warfare</td><td>✅ Full (SWIFT, crypto, debt-trap)</td><td>⚠️ Basic trade</td><td>⚠️ Basic trade</td><td>✅ Detailed economy</td><td>⚠️ Basic</td></tr>
+  <tr><td>Nuclear Escalation</td><td>✅ Tactical to strategic ladder</td><td>❌ None</td><td>✅ Simple nukes</td><td>❌ None</td><td>✅ Present</td></tr>
+  <tr><td>AI Decision Quality</td><td>✅ Utility-based + psychological</td><td>✅ Good</td><td>⚠️ Moderate</td><td>N/A</td><td>⚠️ Basic</td></tr>
+  <tr><td>Modding Support</td><td>✅ JSON data + event handlers</td><td>✅ Extensive</td><td>✅ Extensive</td><td>✅ Good</td><td>❌ Limited</td></tr>
+  <tr><td>Accessibility</td><td>✅ WCAG 2.1 AA planned</td><td>⚠️ Limited</td><td>⚠️ Limited</td><td>✅ Good</td><td>❌ Poor</td></tr>
+  <tr><td>Price Point</td><td>TBD (F2P/Premium)</td><td>$49.99</td><td>$59.99</td><td>$24.99</td><td>$29.99</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Key Differentiators</h3>
+<ol style="padding-left:20px;font-size:13px">
+  <li><strong>Browser-native</strong> — No installation required. Play anywhere with a modern browser.</li>
+  <li><strong>Psychological depth</strong> — 5-dimensional emotional modeling, cognitive biases, personality drift, grudge ledger — unmatched in the genre.</li>
+  <li><strong>Information warfare</strong> — Deepfakes, social media virality, narrative battles, echo chambers — entirely novel game mechanics.</li>
+  <li><strong>"Lose without firing a shot"</strong> — Unique design philosophy elevating political gameplay above military.</li>
+  <li><strong>Modern tech stack</strong> — React 19, TypeScript strict, <70KB bundle, pure-function engines — developer-friendly and extensible.</li>
+</ol>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: PITCH -->
+<!-- ============================================================ -->
+<div id="pitch" class="section">
+<h2 class="section-title">Pitch Deck Summary</h2>
+
+<div class="card">
+<h3>🎯 Value Proposition</h3>
+<p style="font-size:16px;font-weight:600;color:var(--accent)">Conflict 2026 is the first browser-native geopolitical simulation where psychological warfare, information operations, and economic coercion matter more than military force.</p>
+</div>
+
+<div class="card">
+<h3>📊 Market Opportunity</h3>
+<div class="card-grid">
+  <div class="stat"><span class="value" style="color:var(--accent4)">$2.1B</span><span class="label">Strategy Games Market (2025)</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent)">12%</span><span class="label">Annual Growth Rate</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent3)">50M+</span><span class="label">Grand Strategy Audience</span></div>
+</div>
+</div>
+
+<div class="card">
+<h3>🏗️ Traction</h3>
+<div class="card-grid">
+  <div class="stat"><span class="value" style="color:var(--accent3)">109K</span><span class="label">Lines of Code</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent)">93</span><span class="label">Game Engine Modules</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent5)">3,621</span><span class="label">Passing Tests</span></div>
+  <div class="stat"><span class="value" style="color:var(--accent4)">100%</span><span class="label">Plan Completed</span></div>
+</div>
+</div>
+
+<div class="card">
+<h3>🎮 Game Systems</h3>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+  <span class="tag">8 Playable Factions</span>
+  <span class="tag">60-Turn Campaigns</span>
+  <span class="tag">5 Victory Conditions</span>
+  <span class="tag">Nuclear Escalation Ladder</span>
+  <span class="tag">AI Leader Psychology</span>
+  <span class="tag">Information Warfare</span>
+  <span class="tag">Financial Warfare</span>
+  <span class="tag">Proxy Wars</span>
+  <span class="tag">Technology Race</span>
+  <span class="tag">Climate & Humanitarian Crises</span>
+  <span class="tag">Post-Game Analysis</span>
+  <span class="tag">Custom Leaders & Modding</span>
+</div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: GTM -->
+<!-- ============================================================ -->
+<div id="gtm" class="section">
+<h2 class="section-title">Go-to-Market Strategy</h2>
+
+<div class="card">
+<h3>Launch Phases</h3>
+<table>
+  <tr><th>Phase</th><th>Timeline</th><th>Focus</th></tr>
+  <tr><td>Alpha</td><td>Month 1–2</td><td>Core gameplay loop, single-player vs AI. Closed testing with strategy game communities.</td></tr>
+  <tr><td>Beta</td><td>Month 3–4</td><td>Full campaign, scenario editor, modding tools. Open beta on itch.io or similar.</td></tr>
+  <tr><td>Early Access</td><td>Month 5–6</td><td>Steam Early Access + web version. Community feedback integration.</td></tr>
+  <tr><td>1.0 Release</td><td>Month 7–9</td><td>Full release with multiplayer, mod workshop, mobile companion.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Distribution Channels</h3>
+<div class="card-grid">
+  <div class="stat"><span class="value">🌐</span><span class="label">Web (Direct)</span></div>
+  <div class="stat"><span class="value">🎮</span><span class="label">Steam</span></div>
+  <div class="stat"><span class="value">🎯</span><span class="label">itch.io</span></div>
+  <div class="stat"><span class="value">📱</span><span class="label">Mobile (Future)</span></div>
+</div>
+</div>
+
+<div class="card">
+<h3>Pricing Strategy</h3>
+<table>
+  <tr><th>Tier</th><th>Price</th><th>Includes</th></tr>
+  <tr><td>Free Demo</td><td>$0</td><td>10-turn campaign, 2 factions, basic AI</td></tr>
+  <tr><td>Standard</td><td>$24.99</td><td>Full campaign, all factions, all AI levels, post-game analysis</td></tr>
+  <tr><td>Deluxe</td><td>$39.99</td><td>Standard + scenario editor + mod tools + custom leaders</td></tr>
+  <tr><td>Season Pass</td><td>$14.99</td><td>Quarterly content drops: new scenarios, factions, mechanics</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Target Audiences</h3>
+<ol style="padding-left:20px;font-size:13px">
+  <li><strong>Grand Strategy Gamers</strong> — Victoria/EU4/HOI4 players seeking modern-era depth</li>
+  <li><strong>Political Simulation Fans</strong> — Democracy 4, Power & Revolution audience</li>
+  <li><strong>International Relations Students</strong> — Educational value for IR/political science courses</li>
+  <li><strong>Military / Policy Professionals</strong> — Scenario planning and wargaming tool</li>
+  <li><strong>Browser Gamers</strong> — Casual-to-hardcore players who want no-install access</li>
+</ol>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: PRIORITY ACTIONS -->
+<!-- ============================================================ -->
+<div id="actions" class="section">
+<h2 class="section-title">Priority Actions</h2>
+
+<div class="card">
+<h3>Ordered by Severity & Impact</h3>
+
+<div class="action-item"><div class="priority p-high" title="High">1</div><div><strong>Create README.md</strong><br><span style="font-size:12px;color:var(--text-dim)">Missing entirely. Add installation, architecture overview, usage guide, contribution guidelines. Critical for repo discoverability and onboarding. <span class="badge badge-danger">Missing</span></span></div></div>
+
+<div class="action-item"><div class="priority p-high" title="High">2</div><div><strong>Fix CI workflow inconsistencies</strong><br><span style="font-size:12px;color:var(--text-dim)">Standardize Node version (22) across ci.yml and test.yml. Fix <code>npm run compile</code> reference in test.yml (should be <code>typecheck</code>). <span class="badge badge-danger">CI Risk</span></span></div></div>
+
+<div class="action-item"><div class="priority p-med" title="Medium">3</div><div><strong>Remove console.log from App.tsx</strong><br><span style="font-size:12px;color:var(--text-dim)">Line 45 has a debug log. Gate behind <code>import.meta.env.DEV</code> or remove before production. <span class="badge badge-warning">Code Quality</span></span></div></div>
+
+<div class="action-item"><div class="priority p-med" title="Medium">4</div><div><strong>Split config.ts into domain modules</strong><br><span style="font-size:12px;color:var(--text-dim)">At 3,017 lines with 31 sections, consider splitting into <code>config/military.ts</code>, <code>config/economy.ts</code>, etc. and re-composing. <span class="badge badge-warning">Maintainability</span></span></div></div>
+
+<div class="action-item"><div class="priority p-med" title="Medium">5</div><div><strong>Add structured logging</strong><br><span style="font-size:12px;color:var(--text-dim)">Replace ad-hoc console.warn with a structured logger supporting log levels and conditional output. <span class="badge badge-warning">Production Readiness</span></span></div></div>
+
+<div class="action-item"><div class="priority p-med" title="Medium">6</div><div><strong>Generate API documentation</strong><br><span style="font-size:12px;color:var(--text-dim)">Run TypeDoc on barrel exports. 5,897 JSDoc blocks are already written — generating HTML docs is nearly free. <span class="badge badge-info">DX</span></span></div></div>
+
+<div class="action-item"><div class="priority p-low" title="Low">7</div><div><strong>Add CONTRIBUTING.md & CHANGELOG.md</strong><br><span style="font-size:12px;color:var(--text-dim)">Standard open-source practices for community engagement and release tracking. <span class="badge badge-info">Community</span></span></div></div>
+
+<div class="action-item"><div class="priority p-low" title="Low">8</div><div><strong>Add E2E coverage for gameplay flows</strong><br><span style="font-size:12px;color:var(--text-dim)">Current E2E is a smoke test only (page load + #root). Add turn progression, dashboard interaction, save/load flows. <span class="badge badge-info">Testing</span></span></div></div>
+
+<div class="action-item"><div class="priority p-low" title="Low">9</div><div><strong>Set up code coverage reporting in CI</strong><br><span style="font-size:12px;color:var(--text-dim)">Coverage is configured locally but not published in CI. Add Codecov or similar integration. <span class="badge badge-info">CI/CD</span></span></div></div>
+
+<div class="action-item"><div class="priority p-low" title="Low">10</div><div><strong>Consider tree-shaking analysis</strong><br><span style="font-size:12px;color:var(--text-dim)">With 93 engine modules, verify Vite is effectively tree-shaking unused engines. Run <code>npx vite-bundle-visualizer</code>. <span class="badge badge-info">Performance</span></span></div></div>
+</div>
+</div>
+
+</div><!-- end .main -->
+
+<!-- JAVASCRIPT -->
+<script>
+// Tab navigation
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = link.dataset.target;
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    const sec = document.getElementById(target);
+    if (sec) sec.classList.add('active');
+  });
+});
+</script>
+
+<!-- Mermaid (inline, loaded from CDN with fallback text) -->
+<script type="module">
+try {
+  const m = await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs');
+  m.default.initialize({ startOnLoad: false, theme: 'dark', themeVariables: { primaryColor: '#89b4fa', primaryTextColor: '#cdd6f4', lineColor: '#6c7086', secondaryColor: '#313244' }});
+  await m.default.run({ querySelector: '.mermaid' });
+} catch (_) {
+  // Mermaid CDN unavailable — diagrams show as text (acceptable for offline)
+}
+</script>
+
+</body>
+</html>

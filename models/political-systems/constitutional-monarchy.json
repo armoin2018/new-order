@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "constitutional-monarchy",
+  "systemName": "Constitutional Monarchy",
+  "description": "A system combining a hereditary head of state with democratic governance, where the monarch serves as a unifying symbol while elected officials govern. This arrangement provides exceptional stability through institutional continuity and smooth successions. Examples include the UK, Japan, and Spain.",
+  "decisionSpeedModifier": -18,
+  "stabilityBaseline": 15,
+  "civilLibertyIndex": 88,
+  "pressFreedomIndex": 84,
+  "corruptionBaseline": 22,
+  "successionRisk": 8,
+  "reformCapacity": 72,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 1.4,
+    "crisisResistance": 1.3,
+    "intelligenceModifier": {
+      "counterIntel": 0.95,
+      "humintAbroad": 1.05
+    },
+    "controversialActionDelay": 2,
+    "propagandaEffectiveness": 0.5,
+    "civilUnrestThreshold": 0.6
+  },
+  "tags": ["democratic", "monarchy", "constitutional", "stable", "institutional"]
+}

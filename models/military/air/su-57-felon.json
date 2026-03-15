@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "su-57-felon",
+  "name": "Su-57 Felon",
+  "category": "air",
+  "subcategory": "fighter",
+  "description": "Russia's fifth-generation stealth air superiority fighter featuring supermaneuverability and internal weapons bays. Limited production numbers constrain fleet availability.",
+  "nation": "Russia",
+  "purchaseCost": 48,
+  "maintenanceCostPerTurn": 5,
+  "attackPower": 76,
+  "defensePower": 52,
+  "range": 20,
+  "speed": 7,
+  "buildTime": 7,
+  "stealthRating": 70,
+  "crewRequirement": 1,
+  "operationalLifespan": 36,
+  "techRequirements": {
+    "ai": 20,
+    "semiconductors": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "supermaneuverability",
+      "name": "Supermaneuverability",
+      "description": "Thrust-vectoring engines enable extreme post-stall maneuvers, granting advantage in visual-range dogfights.",
+      "modifier": { "defensePower": 10 }
+    },
+    {
+      "abilityId": "loyal-wingman-control",
+      "name": "Loyal Wingman Controller",
+      "description": "Can direct unmanned S-70 Okhotnik drones as cooperative combat wingmen.",
+      "modifier": { "attackPower": 8 }
+    }
+  ],
+  "tags": ["stealth", "air-superiority", "5th-gen", "supermaneuverable"]
+}

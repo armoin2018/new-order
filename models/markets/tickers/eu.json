@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "eu",
+  "exchangeId": "euronext",
+  "tickers": [
+    {
+      "tickerId": "eu-defense",
+      "sectorName": "defense",
+      "initialPrice": 140,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "military-conflict": 3.5,
+        "sanctions-imposed": -1.0,
+        "civil-unrest": -1.0,
+        "trade-deal": 0.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 0.0,
+        "regime-change": -1.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "eu-energy",
+      "sectorName": "energy",
+      "initialPrice": 120,
+      "volatilityMultiplier": 1.1,
+      "eventSensitivityWeights": {
+        "oil-disruption": 4.0,
+        "sanctions-imposed": -2.0,
+        "military-conflict": 1.0,
+        "trade-deal": 1.0,
+        "tech-breakthrough": 0.5,
+        "civil-unrest": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "eu-technology",
+      "sectorName": "technology",
+      "initialPrice": 310,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "tech-breakthrough": 4.5,
+        "sanctions-imposed": -1.5,
+        "trade-deal": 1.5,
+        "civil-unrest": -1.0,
+        "military-conflict": -0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "eu-finance",
+      "sectorName": "finance",
+      "initialPrice": 250,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "civil-unrest": -2.5,
+        "sanctions-imposed": -3.0,
+        "trade-deal": 2.0,
+        "regime-change": -2.5,
+        "military-conflict": -1.0,
+        "oil-disruption": -0.5,
+        "tech-breakthrough": 0.5,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "eu-consumer",
+      "sectorName": "consumer",
+      "initialPrice": 230,
+      "volatilityMultiplier": 0.9,
+      "eventSensitivityWeights": {
+        "military-conflict": -2.0,
+        "civil-unrest": -2.0,
+        "trade-deal": 2.0,
+        "natural-disaster": -2.0,
+        "sanctions-imposed": -1.0,
+        "oil-disruption": -0.5,
+        "tech-breakthrough": 0.5,
+        "regime-change": -0.5
+      }
+    },
+    {
+      "tickerId": "eu-healthcare",
+      "sectorName": "healthcare",
+      "initialPrice": 170,
+      "volatilityMultiplier": 0.8,
+      "eventSensitivityWeights": {
+        "natural-disaster": 2.0,
+        "civil-unrest": -0.5,
+        "military-conflict": 0.5,
+        "tech-breakthrough": 1.5,
+        "sanctions-imposed": -0.5,
+        "trade-deal": 0.5,
+        "oil-disruption": 0.0,
+        "regime-change": -0.5
+      }
+    },
+    {
+      "tickerId": "eu-infrastructure",
+      "sectorName": "infrastructure",
+      "initialPrice": 110,
+      "volatilityMultiplier": 0.9,
+      "eventSensitivityWeights": {
+        "natural-disaster": -3.0,
+        "military-conflict": -2.0,
+        "trade-deal": 1.0,
+        "civil-unrest": -1.0,
+        "sanctions-imposed": -0.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -0.5
+      }
+    },
+    {
+      "tickerId": "eu-mining",
+      "sectorName": "mining",
+      "initialPrice": 65,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "sanctions-imposed": 1.0,
+        "oil-disruption": 1.0,
+        "natural-disaster": -1.0,
+        "military-conflict": 0.5,
+        "trade-deal": 0.5,
+        "civil-unrest": -0.5,
+        "tech-breakthrough": 0.0,
+        "regime-change": -0.5
+      }
+    }
+  ]
+}

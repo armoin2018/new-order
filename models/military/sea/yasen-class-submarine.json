@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "yasen-class-submarine",
+  "name": "Yasen-M class Attack Submarine",
+  "category": "sea",
+  "subcategory": "submarine",
+  "description": "Russia's most advanced nuclear attack submarine featuring a spherical sonar array, Kalibr and Oniks cruise missiles, and reduced acoustic signature compared to predecessors.",
+  "nation": "Russia",
+  "purchaseCost": 140,
+  "maintenanceCostPerTurn": 14,
+  "attackPower": 82,
+  "defensePower": 55,
+  "range": 38,
+  "speed": 4,
+  "buildTime": 18,
+  "stealthRating": 78,
+  "crewRequirement": 90,
+  "operationalLifespan": 35,
+  "techRequirements": {
+    "semiconductors": 25
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "kalibr-cruise-missile",
+      "name": "Kalibr Cruise Missiles",
+      "description": "32 Kalibr cruise missiles provide long-range precision strike capability against land and sea targets.",
+      "modifier": { "attackPower": 10 }
+    },
+    {
+      "abilityId": "anti-carrier-hunter",
+      "name": "Carrier Hunter",
+      "description": "Optimized for stalking and engaging enemy carrier battle groups with supersonic Oniks missiles.",
+      "modifier": { "attackPower": 8 }
+    }
+  ],
+  "tags": ["submarine", "nuclear-powered", "cruise-missile", "anti-ship"]
+}

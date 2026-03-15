@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "lai-ching-te",
+  "name": "Lai Ching-te",
+  "title": "President of the Republic of China (Taiwan)",
+  "factionId": "taiwan",
+  "mbtiType": "INFJ",
+  "mbtiDichotomyScores": {
+    "EI": 62,
+    "SN": 72,
+    "TF": 65,
+    "JP": 25
+  },
+  "psychology": {
+    "decisionStyle": "analytical",
+    "stressResponse": "escalate",
+    "riskTolerance": 50,
+    "paranoia": 55,
+    "narcissism": 30,
+    "pragmatism": 60,
+    "patience": 60,
+    "vengefulIndex": 20,
+    "charisma": 55,
+    "empathy": 65,
+    "ideologicalRigidity": 55,
+    "corruptibility": 10
+  },
+  "motivations": {
+    "primary": "security",
+    "secondary": "ideology",
+    "fear": "war"
+  },
+  "powerBase": {
+    "source": "popular",
+    "consolidation": 55,
+    "legitimacy": 78,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 20,
+    "scandals": [
+      "Labeled 'separatist' by Beijing",
+      "Minority legislature challenges"
+    ],
+    "internalOpposition": 45,
+    "externalPressure": 90
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": -35,
+      "reason": "Beijing views DPP leadership as separatist; existential cross-strait tension"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": 20,
+      "reason": "De facto security guarantor under Taiwan Relations Act"
+    },
+    {
+      "targetLeaderId": "fumio-kishida",
+      "modifier": 15,
+      "reason": "Shared democratic values and regional security concerns about China"
+    }
+  ],
+  "biography": "Lai Ching-te, a physician turned politician, won Taiwan's presidency as the Democratic Progressive Party candidate, representing continuity in the island's assertion of de facto independence. His INFJ idealism drives a principled stance on Taiwanese identity and democratic values, even as cross-strait military pressure from China intensifies. He leads the world's most critical semiconductor supply chain while navigating a minority legislature and the ever-present threat of Chinese coercion, making Taiwan the most dangerous flashpoint in the Indo-Pacific.",
+  "tags": [
+    "flashpoint",
+    "democratic",
+    "semiconductor-hub",
+    "cross-strait",
+    "US-ally-informal",
+    "island-nation"
+  ]
+}

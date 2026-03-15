@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "communist-state",
+  "systemName": "Communist State",
+  "description": "A Marxist-Leninist system with total party control over the state, economy, and military. Central planning enables rapid resource mobilization but creates chronic inefficiency. The regime maintains power through pervasive surveillance and ideological indoctrination. Examples include the DPRK and Cuba.",
+  "decisionSpeedModifier": 40,
+  "stabilityBaseline": -5,
+  "civilLibertyIndex": 5,
+  "pressFreedomIndex": 3,
+  "corruptionBaseline": 75,
+  "successionRisk": 80,
+  "reformCapacity": 8,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 0.6,
+    "crisisResistance": 1.1,
+    "intelligenceModifier": {
+      "counterIntel": 1.5,
+      "humintAbroad": 0.7
+    },
+    "controversialActionDelay": 0,
+    "propagandaEffectiveness": 1.7,
+    "civilUnrestThreshold": 1.8
+  },
+  "tags": ["authoritarian", "communist", "state-economy", "isolated", "ideological"]
+}

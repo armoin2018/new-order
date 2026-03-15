@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "islam-sunni",
+  "name": "Sunni Islam",
+  "parentTradition": "islam",
+  "description": "The largest branch of Islam, comprising roughly 85-90% of all Muslims. Follows the Quran, Hadith, and the Sunnah of the Prophet Muhammad. Encompasses a wide theological spectrum from progressive to ultraconservative Salafi movements. Dominant across the Arab world, Turkey, South/Southeast Asia, and sub-Saharan Africa.",
+  "adherentsGlobalPercent": 23.0,
+  "socialCohesionModifier": 20,
+  "politicalInfluence": "dominant",
+  "demographicTrend": "rapid-growth",
+  "interReligiousTensions": [
+    { "targetReligionId": "islam-shia", "tensionLevel": "hostile", "historicalBasis": "Succession dispute, sectarian conflicts in Iraq, Syria, Yemen" },
+    { "targetReligionId": "christianity-protestant", "tensionLevel": "wary", "historicalBasis": "Missionary competition, geopolitical tensions" },
+    { "targetReligionId": "judaism", "tensionLevel": "hostile", "historicalBasis": "Israeli-Palestinian conflict" },
+    { "targetReligionId": "hinduism", "tensionLevel": "wary", "historicalBasis": "Partition legacy, Kashmir dispute" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 10,
+    "reformResistance": 60,
+    "educationAttitude": "selective",
+    "scienceAttitude": "selective",
+    "theocracyPotential": 75,
+    "martyrdomFactor": 70,
+    "charityModifier": 20
+  },
+  "tags": ["islamic", "majority-faith", "sharia", "rapid-growth", "global-south"]
+}

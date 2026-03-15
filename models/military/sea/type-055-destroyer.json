@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "type-055-destroyer",
+  "name": "Type 055 Renhai-class Destroyer",
+  "category": "sea",
+  "subcategory": "destroyer",
+  "description": "China's most powerful surface combatant, classified by NATO as a cruiser. Features 112 vertical launch cells and advanced integrated radar, serving as the air defense commander for carrier battle groups.",
+  "nation": "China",
+  "purchaseCost": 120,
+  "maintenanceCostPerTurn": 12,
+  "attackPower": 75,
+  "defensePower": 72,
+  "range": 30,
+  "speed": 4,
+  "buildTime": 12,
+  "stealthRating": 25,
+  "crewRequirement": 300,
+  "operationalLifespan": 35,
+  "techRequirements": {
+    "semiconductors": 30,
+    "ai": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "area-air-defense",
+      "name": "Area Air Defense Commander",
+      "description": "112 VLS cells with HHQ-9 missiles provide layered fleet air defense over a wide area.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "anti-ship-barrage",
+      "name": "Anti-Ship Missile Barrage",
+      "description": "YJ-18 anti-ship cruise missiles enable saturation attacks against enemy surface combatants.",
+      "modifier": { "attackPower": 10 }
+    }
+  ],
+  "tags": ["destroyer", "aegis-equivalent", "area-defense", "vls"]
+}

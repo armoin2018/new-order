@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "russia",
+  "populationMillions": 144.2,
+  "growthRatePercent": -0.2,
+  "urbanizationPercent": 75.0,
+  "medianAge": 40.3,
+  "lifeExpectancy": 73.0,
+  "literacyRatePercent": 99.7,
+  "ageDistribution": {
+    "youth": 18.0,
+    "workingAge": 66.0,
+    "elderly": 16.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Russian", "percentOfPopulation": 77.7, "socialCohesion": 80 },
+    { "groupName": "Tatar/Bashkir", "percentOfPopulation": 5.6, "socialCohesion": 65 },
+    { "groupName": "Chechen/Caucasian", "percentOfPopulation": 3.2, "socialCohesion": 40 },
+    { "groupName": "Other Minorities", "percentOfPopulation": 13.5, "socialCohesion": 55 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.36,
+    "humanDevelopmentIndex": 0.822,
+    "healthcareAccessPercent": 76.0,
+    "internetPenetrationPercent": 85.0,
+    "unemploymentRatePercent": 3.5
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 65,
+    "conscriptionPool": 30.0,
+    "socialStabilityBaseline": -5,
+    "innovationPotential": 55,
+    "consumptionDemandMultiplier": 1.4
+  },
+  "tags": ["great-power", "demographic-decline", "resource-rich", "brain-drain", "aging"]
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "advanced-research-institute",
+  "name": "Advanced Research Institute",
+  "category": "research-institution",
+  "description": "National network of elite research institutions focused on cutting-edge science and technology. Conducts classified and unclassified R&D across defense, energy, computing, and biomedical fields. Functions as the nation's innovation engine.",
+  "annualCostPerCapita": 900,
+  "implementationTurns": 6,
+  "maturityTurns": 20,
+  "effects": {
+    "technologyDomainBoosts": {
+      "ai": 12,
+      "semiconductors": 10,
+      "space": 8,
+      "cyber": 9,
+      "biotech": 11,
+      "quantum": 12
+    },
+    "workforceQuality": 15,
+    "innovationRate": 20,
+    "stabilityModifier": 1,
+    "softPowerModifier": 10,
+    "militaryReadinessModifier": 4,
+    "espionageModifier": 2
+  },
+  "prerequisites": [
+    { "type": "education", "value": "elite-university-system", "minimumLevel": 0.5 },
+    { "type": "education", "value": "national-stem-initiative", "minimumLevel": 0.4 },
+    { "type": "gdp-per-capita", "value": "25000", "minimumLevel": 25000 }
+  ],
+  "tags": ["research", "r-and-d", "innovation", "national-labs", "cutting-edge", "dual-use"]
+}

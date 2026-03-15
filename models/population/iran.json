@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "iran",
+  "populationMillions": 88.6,
+  "growthRatePercent": 0.7,
+  "urbanizationPercent": 76.4,
+  "medianAge": 32.7,
+  "lifeExpectancy": 76.7,
+  "literacyRatePercent": 88.7,
+  "ageDistribution": {
+    "youth": 24.0,
+    "workingAge": 70.0,
+    "elderly": 6.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Persian", "percentOfPopulation": 54.0, "socialCohesion": 80 },
+    { "groupName": "Azerbaijani", "percentOfPopulation": 16.0, "socialCohesion": 60 },
+    { "groupName": "Kurdish/Luri", "percentOfPopulation": 17.0, "socialCohesion": 45 },
+    { "groupName": "Arab/Baloch/Other", "percentOfPopulation": 13.0, "socialCohesion": 40 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.40,
+    "humanDevelopmentIndex": 0.774,
+    "healthcareAccessPercent": 82.0,
+    "internetPenetrationPercent": 78.0,
+    "unemploymentRatePercent": 9.5
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 55,
+    "conscriptionPool": 18.0,
+    "socialStabilityBaseline": -10,
+    "innovationPotential": 45,
+    "consumptionDemandMultiplier": 1.2
+  },
+  "tags": ["middle-income", "theocratic", "sanctions", "young-population", "regional-power"]
+}

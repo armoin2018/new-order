@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "fumio-kishida",
+  "name": "Fumio Kishida",
+  "title": "Prime Minister of Japan",
+  "factionId": "japan",
+  "mbtiType": "ISFJ",
+  "mbtiDichotomyScores": {
+    "EI": 62,
+    "SN": 22,
+    "TF": 60,
+    "JP": 18
+  },
+  "psychology": {
+    "decisionStyle": "consensus",
+    "stressResponse": "withdraw",
+    "riskTolerance": 25,
+    "paranoia": 40,
+    "narcissism": 25,
+    "pragmatism": 78,
+    "patience": 85,
+    "vengefulIndex": 15,
+    "charisma": 40,
+    "empathy": 70,
+    "ideologicalRigidity": 30,
+    "corruptibility": 15
+  },
+  "motivations": {
+    "primary": "security",
+    "secondary": "prosperity",
+    "fear": "war"
+  },
+  "powerBase": {
+    "source": "party",
+    "consolidation": 50,
+    "legitimacy": 65,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 25,
+    "scandals": ["LDP factional fundraising scandal", "Declining public approval"],
+    "internalOpposition": 55,
+    "externalPressure": 60
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "us-president",
+      "modifier": 25,
+      "reason": "Cornerstone US-Japan alliance and shared security architecture"
+    },
+    {
+      "targetLeaderId": "eu-chancellor",
+      "modifier": 15,
+      "reason": "Values-based partnership among democratic nations"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": -15,
+      "reason": "Historical tensions and East China Sea territorial disputes"
+    },
+    {
+      "targetLeaderId": "kim-jong-un",
+      "modifier": -25,
+      "reason": "Direct missile threat from DPRK and abduction issue"
+    }
+  ],
+  "biography": "Fumio Kishida represents Japan's cautious, institution-respecting political tradition, navigating a dangerous neighborhood while maintaining pacifist constitutional norms. His ISFJ temperament drives a duty-bound, detail-oriented approach that prioritizes stability and alliance management over bold unilateral action. He pursues incremental defense buildup while deepening economic ties across Asia.",
+  "tags": ["major-power", "democratic", "status-quo", "alliance-member", "economic-power", "pacifist-constitution"]
+}

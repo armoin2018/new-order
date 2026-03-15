@@ -1,0 +1,18 @@
+{
+  "files": [
+    "global-defense.json",
+    "global-energy.json",
+    "global-technology.json",
+    "global-finance.json",
+    "global-consumer.json",
+    "global-composite.json",
+    "us-composite.json",
+    "china-composite.json",
+    "russia-composite.json",
+    "japan-composite.json",
+    "iran-composite.json",
+    "dprk-composite.json",
+    "eu-composite.json",
+    "syria-composite.json"
+  ]
+}

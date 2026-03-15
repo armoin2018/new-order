@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "narendra-modi",
+  "name": "Narendra Modi",
+  "title": "Prime Minister of India",
+  "factionId": "india",
+  "mbtiType": "ESTJ",
+  "mbtiDichotomyScores": {
+    "EI": 18,
+    "SN": 25,
+    "TF": 20,
+    "JP": 12
+  },
+  "psychology": {
+    "decisionStyle": "consultative",
+    "stressResponse": "escalate",
+    "riskTolerance": 60,
+    "paranoia": 55,
+    "narcissism": 75,
+    "pragmatism": 72,
+    "patience": 50,
+    "vengefulIndex": 60,
+    "charisma": 82,
+    "empathy": 35,
+    "ideologicalRigidity": 65,
+    "corruptibility": 25
+  },
+  "motivations": {
+    "primary": "legacy",
+    "secondary": "ideology",
+    "fear": "irrelevance"
+  },
+  "powerBase": {
+    "source": "popular",
+    "consolidation": 80,
+    "legitimacy": 78,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 30,
+    "scandals": ["Hindu nationalism controversy", "Press freedom criticism", "Economic inequality gap"],
+    "internalOpposition": 35,
+    "externalPressure": 40
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "us-president",
+      "modifier": 15,
+      "reason": "Quad partnership and growing defense-technology cooperation"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": 10,
+      "reason": "Legacy defense procurement relationship and energy imports"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": -20,
+      "reason": "Border disputes and strategic competition in the Indo-Pacific"
+    }
+  ],
+  "biography": "Narendra Modi transformed Indian politics through a potent mix of Hindu nationalist ideology and technocratic modernization. His ESTJ temperament manifests in decisive executive action, a focus on tangible deliverables like infrastructure and digital identity, and a hierarchical management style. He seeks to position India as a leading pole in a multipolar world order.",
+  "tags": ["major-power", "democratic", "non-aligned", "nuclear-armed", "demographic-giant", "rising-power"]
+}

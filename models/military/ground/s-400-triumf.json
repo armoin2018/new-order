@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "s-400-triumf",
+  "name": "S-400 Triumf",
+  "category": "ground",
+  "subcategory": "air-defense",
+  "description": "Russia's most capable long-range air defense system, able to engage aircraft, cruise missiles, and ballistic targets at ranges up to 400km. A major export success and geopolitical lever.",
+  "nation": "Russia",
+  "purchaseCost": 55,
+  "maintenanceCostPerTurn": 5,
+  "attackPower": 25,
+  "defensePower": 92,
+  "range": 15,
+  "speed": 2,
+  "buildTime": 6,
+  "stealthRating": 5,
+  "crewRequirement": 80,
+  "operationalLifespan": 30,
+  "techRequirements": {
+    "semiconductors": 25
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "layered-defense",
+      "name": "Layered Engagement Zones",
+      "description": "Four different missile types provide overlapping engagement envelopes from 2km to 400km range.",
+      "modifier": { "defensePower": 12 }
+    },
+    {
+      "abilityId": "anti-access-denial",
+      "name": "Anti-Access/Area Denial",
+      "description": "Creates a no-fly zone that denies enemy air operations across a vast area, reshaping the battlespace.",
+      "modifier": { "range": 5 }
+    }
+  ],
+  "tags": ["air-defense", "a2ad", "sam", "long-range"]
+}

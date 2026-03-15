@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "virginia-class-submarine",
+  "name": "Virginia-class Attack Submarine",
+  "category": "sea",
+  "subcategory": "submarine",
+  "description": "Nuclear-powered fast attack submarine optimized for littoral and blue-water operations. Features advanced sonar, Tomahawk cruise missiles, and special operations support.",
+  "nation": "USA",
+  "purchaseCost": 160,
+  "maintenanceCostPerTurn": 16,
+  "attackPower": 85,
+  "defensePower": 60,
+  "range": 40,
+  "speed": 4,
+  "buildTime": 16,
+  "stealthRating": 88,
+  "crewRequirement": 132,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "semiconductors": 35,
+    "cyber": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "tomahawk-strike",
+      "name": "Tomahawk Land-Attack",
+      "description": "Carries up to 40 Tomahawk cruise missiles for precision land-attack strikes from concealed positions.",
+      "modifier": { "attackPower": 12 }
+    },
+    {
+      "abilityId": "silent-running",
+      "name": "Silent Running",
+      "description": "Ultra-quiet pump-jet propulsion and advanced acoustic dampening make detection extremely difficult.",
+      "modifier": { "stealthRating": 10 }
+    }
+  ],
+  "tags": ["submarine", "nuclear-powered", "stealth", "cruise-missile"]
+}

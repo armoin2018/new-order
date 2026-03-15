@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-spy-covert",
+  "description": "Espionage and covert operations equipment including intelligence networks, SIGINT, special operations, and counterintelligence",
+  "count": 4,
+  "files": [
+    "humint-network.json",
+    "signals-intercept-station.json",
+    "covert-action-team.json",
+    "counterintelligence-unit.json"
+  ]
+}

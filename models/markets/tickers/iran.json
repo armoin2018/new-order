@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "iran",
+  "exchangeId": "tedpix",
+  "tickers": [
+    {
+      "tickerId": "ir-defense",
+      "sectorName": "defense",
+      "initialPrice": 65,
+      "volatilityMultiplier": 1.3,
+      "eventSensitivityWeights": {
+        "military-conflict": 4.0,
+        "sanctions-imposed": -1.0,
+        "civil-unrest": -1.5,
+        "trade-deal": 0.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 0.5,
+        "regime-change": -2.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "ir-energy",
+      "sectorName": "energy",
+      "initialPrice": 320,
+      "volatilityMultiplier": 1.5,
+      "eventSensitivityWeights": {
+        "oil-disruption": 5.0,
+        "sanctions-imposed": -3.0,
+        "military-conflict": 1.5,
+        "trade-deal": 1.0,
+        "tech-breakthrough": 0.0,
+        "civil-unrest": -1.0,
+        "regime-change": -2.5,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "ir-technology",
+      "sectorName": "technology",
+      "initialPrice": 25,
+      "volatilityMultiplier": 1.4,
+      "eventSensitivityWeights": {
+        "tech-breakthrough": 3.0,
+        "sanctions-imposed": -2.5,
+        "trade-deal": 1.5,
+        "civil-unrest": -1.5,
+        "military-conflict": -0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -2.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "ir-finance",
+      "sectorName": "finance",
+      "initialPrice": 40,
+      "volatilityMultiplier": 1.5,
+      "eventSensitivityWeights": {
+        "civil-unrest": -3.0,
+        "sanctions-imposed": -4.0,
+        "trade-deal": 2.0,
+        "regime-change": -3.5,
+        "military-conflict": -1.5,
+        "oil-disruption": -1.0,
+        "tech-breakthrough": 0.0,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "ir-consumer",
+      "sectorName": "consumer",
+      "initialPrice": 35,
+      "volatilityMultiplier": 1.3,
+      "eventSensitivityWeights": {
+        "military-conflict": -3.0,
+        "civil-unrest": -2.5,
+        "trade-deal": 2.0,
+        "natural-disaster": -2.0,
+        "sanctions-imposed": -2.0,
+        "oil-disruption": -0.5,
+        "tech-breakthrough": 0.0,
+        "regime-change": -2.0
+      }
+    },
+    {
+      "tickerId": "ir-mining",
+      "sectorName": "mining",
+      "initialPrice": 85,
+      "volatilityMultiplier": 1.2,
+      "eventSensitivityWeights": {
+        "sanctions-imposed": 1.5,
+        "oil-disruption": 1.5,
+        "natural-disaster": -1.0,
+        "military-conflict": 0.5,
+        "trade-deal": 0.5,
+        "civil-unrest": -0.5,
+        "tech-breakthrough": 0.0,
+        "regime-change": -0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "dprk",
+  "populationMillions": 26.2,
+  "growthRatePercent": 0.4,
+  "urbanizationPercent": 62.9,
+  "medianAge": 35.3,
+  "lifeExpectancy": 72.6,
+  "literacyRatePercent": 100.0,
+  "ageDistribution": {
+    "youth": 20.0,
+    "workingAge": 70.0,
+    "elderly": 10.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Korean", "percentOfPopulation": 99.8, "socialCohesion": 90 },
+    { "groupName": "Other", "percentOfPopulation": 0.2, "socialCohesion": 50 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.30,
+    "humanDevelopmentIndex": 0.590,
+    "healthcareAccessPercent": 70.0,
+    "internetPenetrationPercent": 0.1,
+    "unemploymentRatePercent": 3.0
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 35,
+    "conscriptionPool": 6.5,
+    "socialStabilityBaseline": -15,
+    "innovationPotential": 15,
+    "consumptionDemandMultiplier": 0.3
+  },
+  "tags": ["hermit-kingdom", "totalitarian", "nuclear-armed", "sanctions", "homogeneous", "isolated"]
+}

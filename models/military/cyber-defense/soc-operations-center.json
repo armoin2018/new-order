@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "soc-operations-center",
+  "name": "Security Operations Center",
+  "category": "cyber-defense",
+  "subcategory": "operations-center",
+  "description": "A 24/7 cybersecurity nerve center staffed by analysts monitoring national networks for intrusions, anomalies, and attacks. Coordinates incident response and threat hunting across government and critical infrastructure.",
+  "nation": null,
+  "purchaseCost": 55,
+  "maintenanceCostPerTurn": 8,
+  "attackPower": 10,
+  "defensePower": 75,
+  "range": 10,
+  "speed": 0,
+  "buildTime": 8,
+  "stealthRating": 20,
+  "crewRequirement": 150,
+  "operationalLifespan": 20,
+  "techRequirements": {
+    "cyber": 35,
+    "ai": 25,
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "incident-response",
+      "name": "Rapid Incident Response",
+      "description": "Dedicated response teams contain and remediate breaches within hours, minimizing damage from successful intrusions.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "threat-hunting",
+      "name": "Proactive Threat Hunting",
+      "description": "Analysts actively search for hidden adversaries in networks rather than waiting for alerts, discovering stealthy APTs.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["cyber", "defensive", "soc", "incident-response"]
+}

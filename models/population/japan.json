@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "japan",
+  "populationMillions": 123.3,
+  "growthRatePercent": -0.5,
+  "urbanizationPercent": 91.9,
+  "medianAge": 49.1,
+  "lifeExpectancy": 84.8,
+  "literacyRatePercent": 99.0,
+  "ageDistribution": {
+    "youth": 12.0,
+    "workingAge": 59.0,
+    "elderly": 29.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Japanese", "percentOfPopulation": 97.5, "socialCohesion": 95 },
+    { "groupName": "Korean/Chinese/Other", "percentOfPopulation": 2.5, "socialCohesion": 60 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.33,
+    "humanDevelopmentIndex": 0.920,
+    "healthcareAccessPercent": 100.0,
+    "internetPenetrationPercent": 93.0,
+    "unemploymentRatePercent": 2.6
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 88,
+    "conscriptionPool": 12.0,
+    "socialStabilityBaseline": 20,
+    "innovationPotential": 85,
+    "consumptionDemandMultiplier": 2.8
+  },
+  "tags": ["high-income", "super-aging", "homogeneous", "tech-leader", "demographic-crisis"]
+}

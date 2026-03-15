@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "k2-black-panther",
+  "name": "K2 Black Panther",
+  "category": "ground",
+  "subcategory": "mbt",
+  "description": "South Korea's advanced main battle tank featuring an autoloader, in-arm hydropneumatic suspension, and top-attack missile defense. One of the most technologically sophisticated MBTs in production.",
+  "nation": "South Korea",
+  "purchaseCost": 32,
+  "maintenanceCostPerTurn": 3,
+  "attackPower": 78,
+  "defensePower": 80,
+  "range": 4,
+  "speed": 3,
+  "buildTime": 4,
+  "stealthRating": 8,
+  "crewRequirement": 3,
+  "operationalLifespan": 35,
+  "techRequirements": {
+    "semiconductors": 25,
+    "ai": 10
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "active-suspension",
+      "name": "Active Suspension System",
+      "description": "In-arm hydropneumatic suspension enables terrain adaptation, hull-down positioning, and firing on the move with high accuracy.",
+      "modifier": { "attackPower": 8 }
+    },
+    {
+      "abilityId": "top-attack-defense",
+      "name": "Top-Attack Countermeasure",
+      "description": "Soft-kill and hard-kill systems protect against top-attack munitions like Javelin missiles.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["mbt", "advanced", "export", "autoloader"]
+}

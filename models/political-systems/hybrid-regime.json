@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "hybrid-regime",
+  "systemName": "Hybrid Regime",
+  "description": "A system combining democratic institutions with authoritarian practices, where elections occur but the playing field is heavily tilted toward incumbents. These regimes are inherently unstable, oscillating between democratic backsliding and popular pushback. Examples include Turkey, Hungary, and Venezuela.",
+  "decisionSpeedModifier": 15,
+  "stabilityBaseline": -8,
+  "civilLibertyIndex": 40,
+  "pressFreedomIndex": 35,
+  "corruptionBaseline": 58,
+  "successionRisk": 45,
+  "reformCapacity": 30,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 0.85,
+    "crisisResistance": 0.8,
+    "intelligenceModifier": {
+      "counterIntel": 1.1,
+      "humintAbroad": 0.95
+    },
+    "controversialActionDelay": 1,
+    "propagandaEffectiveness": 1.1,
+    "civilUnrestThreshold": 0.9
+  },
+  "tags": ["hybrid", "backsliding", "managed-elections", "polarized", "volatile"]
+}

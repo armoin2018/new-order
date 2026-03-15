@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ENTJ",
+  "typeName": "The Commander",
+  "cognitiveStack": ["Te", "Ni", "Se", "Fi"],
+  "strengthDomains": [
+    "strategic command",
+    "organizational restructuring",
+    "decisive action under pressure",
+    "long-term vision execution"
+  ],
+  "blindSpots": [
+    "emotional intelligence in personal relations",
+    "patience with inefficiency",
+    "grassroots sentiment awareness"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 45,
+  "adaptability": 45,
+  "leadershipStyle": "commanding",
+  "diplomaticApproach": "pragmatic",
+  "conflictResponse": "dominate",
+  "gameplayModifiers": {
+    "alliancePreference": 5,
+    "noveltyPreference": 10,
+    "outcomeTypeWeight": {
+      "measurable": 25,
+      "humanitarian": -15,
+      "legitimacy": 10
+    },
+    "commitmentTiming": 25
+  }
+}

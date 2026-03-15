@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "christianity-orthodox",
+  "name": "Eastern Orthodox Christianity",
+  "parentTradition": "christianity",
+  "description": "Ancient Christian tradition rooted in the Byzantine Empire, organized as a communion of autocephalous national churches. Strong emphasis on liturgical tradition, iconography, and mystical theology. Deeply intertwined with national identity in Russia, Greece, Serbia, Romania, and other Eastern European nations.",
+  "adherentsGlobalPercent": 3.8,
+  "socialCohesionModifier": 18,
+  "politicalInfluence": "significant",
+  "demographicTrend": "declining",
+  "interReligiousTensions": [
+    { "targetReligionId": "christianity-catholic", "tensionLevel": "tolerant", "historicalBasis": "Great Schism, ongoing theological dialogue" },
+    { "targetReligionId": "islam-sunni", "tensionLevel": "wary", "historicalBasis": "Ottoman legacy, Balkan conflicts" },
+    { "targetReligionId": "secular-atheism", "tensionLevel": "wary", "historicalBasis": "Soviet persecution and post-Soviet revival" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 12,
+    "reformResistance": 65,
+    "educationAttitude": "neutral",
+    "scienceAttitude": "neutral",
+    "theocracyPotential": 30,
+    "martyrdomFactor": 35,
+    "charityModifier": 12
+  },
+  "tags": ["christian", "byzantine", "national-church", "traditional", "eastern-europe"]
+}

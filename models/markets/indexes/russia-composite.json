@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "russia-composite",
+  "indexName": "Russia Composite Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Broad composite index tracking all major Russian economic sectors including defense, energy, technology, finance, consumer goods, healthcare, and mining.",
+  "constituentTickers": [
+    { "tickerId": "ru-defense", "exchangeId": "moex", "weight": 0.1429 },
+    { "tickerId": "ru-energy", "exchangeId": "moex", "weight": 0.1429 },
+    { "tickerId": "ru-technology", "exchangeId": "moex", "weight": 0.1429 },
+    { "tickerId": "ru-finance", "exchangeId": "moex", "weight": 0.1429 },
+    { "tickerId": "ru-consumer", "exchangeId": "moex", "weight": 0.1429 },
+    { "tickerId": "ru-healthcare", "exchangeId": "moex", "weight": 0.1429 },
+    { "tickerId": "ru-mining", "exchangeId": "moex", "weight": 0.1429 }
+  ]
+}

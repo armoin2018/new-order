@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "military-officer-academy",
+  "name": "Military Officer Academy",
+  "category": "military-academy",
+  "description": "Elite military leadership institution training future commanders in strategy, tactics, logistics, and joint operations. Produces professional officer corps capable of executing complex multi-domain warfare and maintaining force discipline.",
+  "annualCostPerCapita": 350,
+  "implementationTurns": 4,
+  "maturityTurns": 12,
+  "effects": {
+    "technologyDomainBoosts": {
+      "cyber": 2,
+      "space": 1
+    },
+    "workforceQuality": 5,
+    "innovationRate": 2,
+    "stabilityModifier": 4,
+    "softPowerModifier": 2,
+    "militaryReadinessModifier": 18,
+    "espionageModifier": 3
+  },
+  "prerequisites": [
+    { "type": "education", "value": "secondary-modernization", "minimumLevel": 0.4 },
+    { "type": "stability", "value": "30", "minimumLevel": 30 }
+  ],
+  "tags": ["military", "officer-corps", "leadership", "strategy", "joint-operations"]
+}

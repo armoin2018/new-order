@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "islam-shia",
+  "name": "Shia Islam",
+  "parentTradition": "islam",
+  "description": "The second-largest branch of Islam, comprising 10-15% of Muslims. Distinguishes itself through reverence for the Ahl al-Bayt (Prophet's family), the Imamate, and distinct jurisprudence. Dominant in Iran and Iraq, with significant minorities in Lebanon, Bahrain, Yemen, and Pakistan. Associated with strong clerical authority and resistance movements.",
+  "adherentsGlobalPercent": 3.5,
+  "socialCohesionModifier": 22,
+  "politicalInfluence": "dominant",
+  "demographicTrend": "growing",
+  "interReligiousTensions": [
+    { "targetReligionId": "islam-sunni", "tensionLevel": "hostile", "historicalBasis": "Succession dispute, proxy wars across Middle East" },
+    { "targetReligionId": "judaism", "tensionLevel": "hostile", "historicalBasis": "Iranian-Israeli confrontation" },
+    { "targetReligionId": "secular-atheism", "tensionLevel": "hostile", "historicalBasis": "Opposition to Western secularism" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 8,
+    "reformResistance": 70,
+    "educationAttitude": "selective",
+    "scienceAttitude": "selective",
+    "theocracyPotential": 90,
+    "martyrdomFactor": 85,
+    "charityModifier": 18
+  },
+  "tags": ["islamic", "shia", "clerical-authority", "resistance", "theocratic-governance"]
+}

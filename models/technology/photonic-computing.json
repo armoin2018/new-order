@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "photonic-computing",
+  "name": "Photonic Computing",
+  "domain": "semiconductors",
+  "secondaryDomains": ["ai", "quantum"],
+  "description": "Develops optical computing systems that use photons instead of electrons for data processing, achieving dramatically higher bandwidth and lower latency. Bridges classical and quantum computing with photonic interconnects.",
+  "tier": 4,
+  "researchCost": 350,
+  "researchDurationTurns": 19,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "three-nm-chip-fabrication", "minimumLevel": 1 }
+  ],
+  "domainLevelRequirement": {
+    "semiconductors": 45
+  },
+  "effects": {
+    "domainBoosts": {
+      "semiconductors": 16,
+      "ai": 8,
+      "quantum": 6
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 2.5,
+      "revenueMultiplier": 1.15
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 70
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "quantum-error-correction",
+      "bonusDescription": "Photonic interconnects dramatically improve quantum coherence times",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "artificial-general-intelligence",
+      "bonusDescription": "Photonic computing provides massive parallelism needed for AGI workloads",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["photonic", "optical", "bandwidth", "interconnects", "next-generation"]
+}

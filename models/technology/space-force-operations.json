@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "space-force-operations",
+  "name": "Space Force Operations Command",
+  "domain": "space",
+  "secondaryDomains": ["cyber", "ai"],
+  "description": "Establishes integrated space operations command structure with orbital maneuvering, space domain awareness, and satellite servicing capabilities. Enables coordinated offensive and defensive operations across the space domain.",
+  "tier": 3,
+  "researchCost": 240,
+  "researchDurationTurns": 14,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "satellite-constellation", "minimumLevel": 1 },
+    { "techId": "space-based-surveillance", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "space": 15,
+      "cyber": 4
+    },
+    "militaryModifiers": {
+      "attackBonus": 8,
+      "defenseBonus": 10
+    },
+    "socialModifiers": {
+      "softPowerBonus": 5,
+      "stabilityBonus": 1
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 60
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "anti-satellite-weapons",
+      "bonusDescription": "Unified space command maximizes ASAT coordination and response time",
+      "bonusMultiplier": 1.25
+    },
+    {
+      "partnerTechId": "ai-powered-cyber-defense",
+      "bonusDescription": "AI defense protects space assets from cyber attack and electronic warfare",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["space-force", "operations", "command", "sda", "orbital-maneuver", "servicing"]
+}

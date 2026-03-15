@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "quantum-computing-prototype",
+  "name": "Quantum Computing Prototype",
+  "domain": "quantum",
+  "secondaryDomains": ["cyber", "ai"],
+  "description": "Constructs first-generation quantum processors with 50-100 logical qubits capable of demonstrating quantum advantage on specific problems. Establishes national quantum computing expertise and infrastructure for advanced research programs.",
+  "tier": 2,
+  "researchCost": 150,
+  "researchDurationTurns": 10,
+  "impactLevel": "significant",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "quantum": 10,
+      "cyber": 3
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.0
+    },
+    "socialModifiers": {
+      "softPowerBonus": 5,
+      "educationBonus": 3
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 50
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "three-nm-chip-fabrication",
+      "bonusDescription": "Advanced fabrication improves quantum control electronics and qubit coherence",
+      "bonusMultiplier": 1.2
+    },
+    {
+      "partnerTechId": "predictive-analytics-military",
+      "bonusDescription": "Quantum computing enables complex military scenario optimization",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["quantum", "qubits", "prototype", "quantum-advantage", "foundational"]
+}

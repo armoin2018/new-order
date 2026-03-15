@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "bse",
+  "exchangeName": "BSE Limited (Bombay Stock Exchange)",
+  "nationId": "india",
+  "baseIndexValue": 75000,
+  "volatilityProfile": "medium",
+  "currencyCode": "INR",
+  "marketCapBillions": 4200,
+  "sectorWeights": {
+    "defense": 0.03,
+    "energy": 0.12,
+    "technology": 0.22,
+    "finance": 0.24,
+    "consumer": 0.18,
+    "healthcare": 0.08,
+    "infrastructure": 0.08,
+    "mining": 0.05
+  }
+}

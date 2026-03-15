@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "elite-university-system",
+  "name": "Elite University System",
+  "category": "higher-education",
+  "description": "Massive investment in world-class research universities with competitive faculty recruitment, state-of-the-art laboratories, and generous scholarship programs. Attracts top global talent and produces breakthrough research.",
+  "annualCostPerCapita": 800,
+  "implementationTurns": 6,
+  "maturityTurns": 18,
+  "effects": {
+    "technologyDomainBoosts": {
+      "ai": 8,
+      "semiconductors": 6,
+      "space": 4,
+      "cyber": 5,
+      "biotech": 7,
+      "quantum": 8
+    },
+    "workforceQuality": 25,
+    "innovationRate": 15,
+    "stabilityModifier": 2,
+    "softPowerModifier": 12
+  },
+  "prerequisites": [
+    { "type": "education", "value": "secondary-modernization", "minimumLevel": 0.6 },
+    { "type": "gdp-per-capita", "value": "15000", "minimumLevel": 15000 }
+  ],
+  "tags": ["higher-education", "research", "talent-magnet", "soft-power", "innovation"]
+}

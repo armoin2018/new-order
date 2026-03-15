@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/market-index.schema.json",
+  "title": "Market Index Model",
+  "description": "JSON Schema for market index models (DR-172). Defines composite indexes built from weighted constituent tickers across exchanges.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "indexId",
+    "indexName",
+    "indexType",
+    "constituentTickers",
+    "baseValue"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "indexId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique index identifier (e.g., 'gfsi', 'us-tech-100')"
+    },
+    "indexName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "Human-readable index name"
+    },
+    "indexType": {
+      "type": "string",
+      "enum": ["preset", "custom"],
+      "description": "Whether the index is system-defined or player-created"
+    },
+    "constituentTickers": {
+      "type": "array",
+      "description": "Tickers that compose this index with their weights",
+      "items": {
+        "type": "object",
+        "required": ["tickerId", "exchangeId", "weight"],
+        "additionalProperties": false,
+        "properties": {
+          "tickerId": {
+            "type": "string",
+            "description": "Reference to a ticker in a nation ticker set"
+          },
+          "exchangeId": {
+            "type": "string",
+            "description": "Exchange on which the ticker is listed"
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Proportional weight of this ticker in the index (0-1)"
+          }
+        }
+      }
+    },
+    "baseValue": {
+      "type": "number",
+      "default": 100,
+      "description": "Starting index value at game start"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the index purpose"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

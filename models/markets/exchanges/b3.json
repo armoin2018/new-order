@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "b3",
+  "exchangeName": "B3 - Brasil Bolsa Balcão",
+  "nationId": "brazil",
+  "baseIndexValue": 128000,
+  "volatilityProfile": "high",
+  "currencyCode": "BRL",
+  "marketCapBillions": 950,
+  "sectorWeights": {
+    "defense": 0.02,
+    "energy": 0.18,
+    "technology": 0.06,
+    "finance": 0.28,
+    "consumer": 0.16,
+    "healthcare": 0.04,
+    "infrastructure": 0.10,
+    "mining": 0.16
+  }
+}

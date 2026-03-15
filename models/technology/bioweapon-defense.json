@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "bioweapon-defense",
+  "name": "Bioweapon Defense Systems",
+  "domain": "biotech",
+  "secondaryDomains": ["ai", "cyber"],
+  "description": "Develops comprehensive biodefense capabilities including rapid pathogen identification, automated decontamination systems, medical countermeasure stockpiles, and simulation of engineered biological agent scenarios for military and civilian protection.",
+  "tier": 3,
+  "researchCost": 190,
+  "researchDurationTurns": 12,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "pandemic-early-warning", "minimumLevel": 1 },
+    { "techId": "mrna-vaccine-platform", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "biotech": 12
+    },
+    "militaryModifiers": {
+      "defenseBonus": 10
+    },
+    "socialModifiers": {
+      "stabilityBonus": 6,
+      "softPowerBonus": 3
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 45
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "crispr-gene-editing",
+      "bonusDescription": "Gene editing enables rapid engineering of countermeasures against novel bioagents",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "ai-powered-cyber-defense",
+      "bonusDescription": "AI systems cross-correlate cyber and bio threats for integrated defense",
+      "bonusMultiplier": 1.15
+    }
+  ],
+  "tags": ["biodefense", "bioweapon", "countermeasure", "decontamination", "detection"]
+}

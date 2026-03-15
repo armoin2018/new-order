@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/technology.schema.json",
+  "title": "Technology Model",
+  "description": "JSON Schema for technology research models (DR-148). Defines research projects with impacts, costs, durations, prerequisites, and domain effects.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "techId",
+    "name",
+    "domain",
+    "description",
+    "researchCost",
+    "researchDurationTurns",
+    "impactLevel"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "techId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique technology identifier (e.g., 'quantum-computing-l2', 'autonomous-weapons-ai')"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "domain": {
+      "type": "string",
+      "enum": ["ai", "semiconductors", "space", "cyber", "biotech", "quantum"],
+      "description": "Primary technology domain"
+    },
+    "secondaryDomains": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["ai", "semiconductors", "space", "cyber", "biotech", "quantum"]
+      },
+      "description": "Domains that receive secondary benefits"
+    },
+    "description": { "type": "string", "minLength": 10 },
+    "tier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Technology tier (1=fundamental, 5=bleeding-edge)"
+    },
+    "researchCost": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Treasury investment required to complete"
+    },
+    "researchDurationTurns": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 48,
+      "description": "Base turns to complete at full funding"
+    },
+    "impactLevel": {
+      "type": "string",
+      "enum": ["incremental", "significant", "breakthrough", "paradigm-shift"],
+      "description": "Scale of impact on gameplay"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["techId"],
+        "properties": {
+          "techId": { "type": "string" },
+          "minimumLevel": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "description": "Technologies that must be completed first"
+    },
+    "domainLevelRequirement": {
+      "type": "object",
+      "description": "Minimum domain levels required to begin research",
+      "patternProperties": {
+        "^(ai|semiconductors|space|cyber|biotech|quantum)$": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "effects": {
+      "type": "object",
+      "description": "Gameplay effects when research completes",
+      "properties": {
+        "domainBoosts": {
+          "type": "object",
+          "patternProperties": {
+            "^(ai|semiconductors|space|cyber|biotech|quantum)$": {
+              "type": "number"
+            }
+          }
+        },
+        "militaryModifiers": {
+          "type": "object",
+          "properties": {
+            "attackBonus": { "type": "number" },
+            "defenseBonus": { "type": "number" },
+            "unlocksEquipment": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "economicModifiers": {
+          "type": "object",
+          "properties": {
+            "gdpGrowthBonus": { "type": "number" },
+            "tradeEfficiencyBonus": { "type": "number" },
+            "revenueMultiplier": { "type": "number" }
+          }
+        },
+        "socialModifiers": {
+          "type": "object",
+          "properties": {
+            "stabilityBonus": { "type": "number" },
+            "softPowerBonus": { "type": "number" },
+            "educationBonus": { "type": "number" }
+          }
+        }
+      }
+    },
+    "knowledgeTransfer": {
+      "type": "object",
+      "properties": {
+        "canExport": { "type": "boolean", "default": true },
+        "exportRestrictionLevel": {
+          "type": "string",
+          "enum": ["unrestricted", "allied-only", "embargo-restricted", "classified"],
+          "default": "unrestricted"
+        },
+        "espionageValue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Attractiveness as espionage target"
+        }
+      }
+    },
+    "combinationBonuses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["partnerTechId", "bonusDescription"],
+        "properties": {
+          "partnerTechId": { "type": "string" },
+          "bonusDescription": { "type": "string" },
+          "bonusMultiplier": { "type": "number", "minimum": 1.0 }
+        }
+      },
+      "description": "Synergy bonuses when combined with other technologies"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

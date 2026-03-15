@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "buddhism",
+  "name": "Buddhism",
+  "description": "Founded by Siddhartha Gautama in the 5th century BCE, Buddhism teaches the Four Noble Truths and the Eightfold Path to end suffering. Major branches include Theravada (Southeast Asia), Mahayana (East Asia), and Vajrayana (Tibet, Mongolia). Generally pacifist, emphasizing meditation, compassion, and non-attachment.",
+  "adherentsGlobalPercent": 6.6,
+  "socialCohesionModifier": 12,
+  "politicalInfluence": "minimal",
+  "demographicTrend": "stable",
+  "interReligiousTensions": [
+    { "targetReligionId": "hinduism", "tensionLevel": "harmonious", "historicalBasis": "Shared Dharmic roots" },
+    { "targetReligionId": "islam-sunni", "tensionLevel": "wary", "historicalBasis": "Rohingya crisis, historical destruction of Buddhist sites" },
+    { "targetReligionId": "state-ideology", "tensionLevel": "wary", "historicalBasis": "Suppression under communist regimes (Tibet, China)" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 12,
+    "reformResistance": 15,
+    "educationAttitude": "pro-education",
+    "scienceAttitude": "pro-science",
+    "theocracyPotential": 10,
+    "martyrdomFactor": 15,
+    "charityModifier": 14
+  },
+  "tags": ["dharmic", "pacifist", "meditation", "east-asian", "southeast-asian"]
+}

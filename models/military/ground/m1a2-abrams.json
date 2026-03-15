@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "m1a2-abrams",
+  "name": "M1A2 SEPv3 Abrams",
+  "category": "ground",
+  "subcategory": "mbt",
+  "description": "The premier American main battle tank featuring composite armor, 120mm smoothbore cannon, and advanced fire control. The SEPv3 upgrade adds improved networking, power generation, and Trophy active protection.",
+  "nation": "USA",
+  "purchaseCost": 35,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 80,
+  "defensePower": 85,
+  "range": 4,
+  "speed": 3,
+  "buildTime": 4,
+  "stealthRating": 5,
+  "crewRequirement": 4,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "trophy-aps",
+      "name": "Trophy Active Protection",
+      "description": "Hard-kill active protection system intercepts incoming anti-tank missiles and RPGs before impact.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "depleted-uranium-armor",
+      "name": "Depleted Uranium Armor",
+      "description": "Chobham composite armor with DU mesh inserts provides exceptional protection against kinetic penetrators.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["mbt", "heavy-armor", "aps", "nato"]
+}

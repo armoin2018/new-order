@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "claudia-sheinbaum",
+  "name": "Claudia Sheinbaum",
+  "title": "President of Mexico",
+  "factionId": "mexico",
+  "mbtiType": "INTJ",
+  "mbtiDichotomyScores": {
+    "EI": 65,
+    "SN": 70,
+    "TF": 25,
+    "JP": 20
+  },
+  "psychology": {
+    "decisionStyle": "analytical",
+    "stressResponse": "withdraw",
+    "riskTolerance": 40,
+    "paranoia": 45,
+    "narcissism": 35,
+    "pragmatism": 72,
+    "patience": 65,
+    "vengefulIndex": 30,
+    "charisma": 50,
+    "empathy": 55,
+    "ideologicalRigidity": 50,
+    "corruptibility": 20
+  },
+  "motivations": {
+    "primary": "legacy",
+    "secondary": "ideology",
+    "fear": "irrelevance"
+  },
+  "powerBase": {
+    "source": "party",
+    "consolidation": 68,
+    "legitimacy": 72,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 25,
+    "scandals": [
+      "Perceived as continuation of AMLO's policies",
+      "Cartel violence escalation"
+    ],
+    "internalOpposition": 40,
+    "externalPressure": 55
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -10,
+      "reason": "Trade tensions and immigration policy friction along shared border"
+    },
+    {
+      "targetLeaderId": "lula-da-silva",
+      "modifier": 15,
+      "reason": "Left-leaning Latin American solidarity and shared development goals"
+    }
+  ],
+  "biography": "Claudia Sheinbaum, a climate scientist turned politician, became Mexico's first female president after serving as head of government of Mexico City. A prot\u00e9g\u00e9 of Andr\u00e9s Manuel L\u00f3pez Obrador, she combines academic rigor with progressive populism. Her INTJ temperament drives methodical policy planning, particularly in energy transition and social programs, while navigating the complex power dynamics between state institutions, cartels, and the influential MORENA party apparatus.",
+  "tags": [
+    "emerging-power",
+    "democratic",
+    "energy-producer",
+    "cartel-conflict",
+    "USMCA-partner",
+    "climate-scientist"
+  ]
+}

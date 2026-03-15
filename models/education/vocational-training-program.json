@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "vocational-training-program",
+  "name": "Vocational Training Program",
+  "category": "vocational",
+  "description": "National network of technical colleges and apprenticeship programs focused on manufacturing, construction, electronics, and skilled trades. Produces a highly capable industrial workforce and reduces youth unemployment.",
+  "annualCostPerCapita": 300,
+  "implementationTurns": 3,
+  "maturityTurns": 8,
+  "effects": {
+    "technologyDomainBoosts": {
+      "semiconductors": 4,
+      "cyber": 1
+    },
+    "workforceQuality": 20,
+    "innovationRate": 3,
+    "stabilityModifier": 6,
+    "softPowerModifier": 1
+  },
+  "prerequisites": [
+    { "type": "education", "value": "universal-primary", "minimumLevel": 0.5 }
+  ],
+  "tags": ["vocational", "workforce", "manufacturing", "apprenticeship", "skilled-trades"]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "psx-pk",
+  "exchangeName": "Pakistan Stock Exchange",
+  "nationId": "pakistan",
+  "baseIndexValue": 68000,
+  "volatilityProfile": "high",
+  "currencyCode": "PKR",
+  "marketCapBillions": 35,
+  "sectorWeights": {
+    "defense": 0.05,
+    "energy": 0.18,
+    "technology": 0.04,
+    "finance": 0.30,
+    "consumer": 0.15,
+    "healthcare": 0.08,
+    "infrastructure": 0.12,
+    "mining": 0.08
+  }
+}

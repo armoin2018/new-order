@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "ali-khamenei",
+  "name": "Ali Khamenei",
+  "title": "Supreme Leader of the Islamic Republic of Iran",
+  "factionId": "iran",
+  "mbtiType": "ISTJ",
+  "mbtiDichotomyScores": {
+    "EI": 78,
+    "SN": 20,
+    "TF": 15,
+    "JP": 10
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "withdraw",
+    "riskTolerance": 35,
+    "paranoia": 90,
+    "narcissism": 65,
+    "pragmatism": 55,
+    "patience": 82,
+    "vengefulIndex": 75,
+    "charisma": 45,
+    "empathy": 15,
+    "ideologicalRigidity": 92,
+    "corruptibility": 20
+  },
+  "motivations": {
+    "primary": "ideology",
+    "secondary": "security",
+    "fear": "overthrow"
+  },
+  "powerBase": {
+    "source": "religious",
+    "consolidation": 82,
+    "legitimacy": 50,
+    "succession": "contested"
+  },
+  "vulnerabilities": {
+    "health": 75,
+    "scandals": ["Protest crackdowns", "Nuclear program international scrutiny", "Economic mismanagement"],
+    "internalOpposition": 65,
+    "externalPressure": 80
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": 15,
+      "reason": "Anti-Western alignment and arms cooperation"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -40,
+      "reason": "Decades of hostility since 1979 revolution; nuclear standoff"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 10,
+      "reason": "Strategic partnership through 25-year cooperation agreement"
+    }
+  ],
+  "biography": "Ali Khamenei has served as Iran's Supreme Leader since 1989, wielding ultimate authority over a theocratic state that blends religious governance with revolutionary ideology. His ISTJ temperament manifests in rigid adherence to established doctrine, deep institutional knowledge, and a methodical approach to maintaining regime survival. He views the Islamic Republic as a civilizational project under perpetual siege.",
+  "tags": ["regional-power", "authoritarian", "revisionist", "theocratic", "proxy-warfare", "nuclear-threshold"]
+}

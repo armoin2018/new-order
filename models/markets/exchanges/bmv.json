@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "bmv",
+  "exchangeName": "Bolsa Mexicana de Valores",
+  "nationId": "mexico",
+  "baseIndexValue": 52000,
+  "volatilityProfile": "high",
+  "currencyCode": "MXN",
+  "marketCapBillions": 480,
+  "sectorWeights": {
+    "defense": 0.02,
+    "energy": 0.15,
+    "technology": 0.08,
+    "finance": 0.25,
+    "consumer": 0.22,
+    "healthcare": 0.06,
+    "infrastructure": 0.12,
+    "mining": 0.10
+  }
+}

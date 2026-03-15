@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "techno-authoritarian",
+  "systemName": "Techno-Authoritarian State",
+  "description": "An authoritarian system that leverages advanced digital surveillance, social credit systems, and AI-driven governance to maintain control while delivering economic growth. Highly efficient at crisis response and social management, but fundamentally brittle against systemic technological failures or cyber-attacks. China's digital governance model is the archetype.",
+  "decisionSpeedModifier": 40,
+  "stabilityBaseline": 10,
+  "civilLibertyIndex": 12,
+  "pressFreedomIndex": 8,
+  "corruptionBaseline": 50,
+  "successionRisk": 45,
+  "reformCapacity": 40,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 1.1,
+    "crisisResistance": 1.4,
+    "intelligenceModifier": {
+      "counterIntel": 1.6,
+      "humintAbroad": 1.3
+    },
+    "controversialActionDelay": 0,
+    "propagandaEffectiveness": 1.8,
+    "civilUnrestThreshold": 1.7
+  },
+  "tags": ["authoritarian", "digital-surveillance", "ai-governance", "technocratic", "state-controlled"]
+}

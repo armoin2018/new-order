@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-cyber-offense",
+  "description": "Offensive cyber warfare capabilities including exploit kits, APT platforms, botnets, and ransomware",
+  "count": 4,
+  "files": [
+    "zero-day-exploit-kit.json",
+    "apt-infrastructure.json",
+    "ddos-botnet.json",
+    "ransomware-toolkit.json"
+  ]
+}

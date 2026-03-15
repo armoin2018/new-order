@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "us-president",
+  "name": "US President",
+  "title": "President of the United States",
+  "factionId": "usa",
+  "mbtiType": "ENTJ",
+  "mbtiDichotomyScores": {
+    "EI": 20,
+    "SN": 65,
+    "TF": 22,
+    "JP": 18
+  },
+  "psychology": {
+    "decisionStyle": "consultative",
+    "stressResponse": "delegate",
+    "riskTolerance": 55,
+    "paranoia": 45,
+    "narcissism": 60,
+    "pragmatism": 72,
+    "patience": 40,
+    "vengefulIndex": 35,
+    "charisma": 75,
+    "empathy": 50,
+    "ideologicalRigidity": 35,
+    "corruptibility": 30
+  },
+  "motivations": {
+    "primary": "prosperity",
+    "secondary": "security",
+    "fear": "economic-collapse"
+  },
+  "powerBase": {
+    "source": "popular",
+    "consolidation": 55,
+    "legitimacy": 80,
+    "succession": "clear"
+  },
+  "vulnerabilities": {
+    "health": 30,
+    "scandals": ["Partisan gridlock", "Polarized electorate"],
+    "internalOpposition": 55,
+    "externalPressure": 50
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "eu-chancellor",
+      "modifier": 20,
+      "reason": "Transatlantic alliance and shared democratic values"
+    },
+    {
+      "targetLeaderId": "fumio-kishida",
+      "modifier": 25,
+      "reason": "Treaty alliance and Indo-Pacific strategic alignment"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": -25,
+      "reason": "Great-power competition across technology, trade, and military domains"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": -35,
+      "reason": "Deep adversarial posture over European security"
+    },
+    {
+      "targetLeaderId": "kim-jong-un",
+      "modifier": -30,
+      "reason": "Nuclear proliferation threat and hostile posture"
+    }
+  ],
+  "biography": "A composite representation of US presidential leadership, blending institutional power with democratic constraints. The ENTJ archetype reflects the decisive, strategic command style expected of American presidents, tempered by congressional checks and electoral cycles. Pursues a rules-based international order while balancing domestic economic pressures.",
+  "tags": ["superpower", "democratic", "status-quo", "nuclear-armed", "alliance-leader", "economic-hegemon"]
+}

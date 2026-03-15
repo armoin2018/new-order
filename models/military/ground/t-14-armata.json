@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "t-14-armata",
+  "name": "T-14 Armata",
+  "category": "ground",
+  "subcategory": "mbt",
+  "description": "Russia's next-generation main battle tank featuring an unmanned turret, Afghanit active protection system, and crew capsule design. Limited production constrains operational deployment.",
+  "nation": "Russia",
+  "purchaseCost": 30,
+  "maintenanceCostPerTurn": 3,
+  "attackPower": 82,
+  "defensePower": 82,
+  "range": 4,
+  "speed": 3,
+  "buildTime": 5,
+  "stealthRating": 10,
+  "crewRequirement": 3,
+  "operationalLifespan": 35,
+  "techRequirements": {
+    "ai": 15,
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "unmanned-turret",
+      "name": "Unmanned Turret",
+      "description": "Crew isolated in armored capsule below turret ring, dramatically improving survivability after turret penetration.",
+      "modifier": { "defensePower": 12 }
+    },
+    {
+      "abilityId": "afghanit-aps",
+      "name": "Afghanit Active Protection",
+      "description": "Radar-guided hard-kill APS detects and intercepts incoming projectiles including APFSDS rounds.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["mbt", "next-gen", "unmanned-turret", "aps"]
+}

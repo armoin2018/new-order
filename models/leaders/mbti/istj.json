@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ISTJ",
+  "typeName": "The Logistician",
+  "cognitiveStack": ["Si", "Te", "Fi", "Ne"],
+  "strengthDomains": [
+    "systematic administration",
+    "regulatory compliance",
+    "logistical planning",
+    "institutional memory"
+  ],
+  "blindSpots": [
+    "adapting to ambiguity",
+    "reading emotional undercurrents",
+    "embracing untested approaches"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 25,
+  "adaptability": 30,
+  "leadershipStyle": "commanding",
+  "diplomaticApproach": "transactional",
+  "conflictResponse": "dominate",
+  "gameplayModifiers": {
+    "alliancePreference": -5,
+    "noveltyPreference": -20,
+    "outcomeTypeWeight": {
+      "measurable": 25,
+      "humanitarian": -5,
+      "legitimacy": 15
+    },
+    "commitmentTiming": 20
+  }
+}

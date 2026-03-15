@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "twse",
+  "exchangeName": "Taiwan Stock Exchange",
+  "nationId": "taiwan",
+  "baseIndexValue": 20500,
+  "volatilityProfile": "high",
+  "currencyCode": "TWD",
+  "marketCapBillions": 2100,
+  "sectorWeights": {
+    "defense": 0.02,
+    "energy": 0.03,
+    "technology": 0.55,
+    "finance": 0.15,
+    "consumer": 0.10,
+    "healthcare": 0.05,
+    "infrastructure": 0.05,
+    "mining": 0.05
+  }
+}

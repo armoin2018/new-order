@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "federal-republic",
+  "systemName": "Federal Republic",
+  "description": "A democratic republic where sovereignty is divided between a central government and constituent states or provinces. Federalism provides resilience through decentralized governance and diverse power centers, but decision-making is slowed by inter-governmental negotiation. Examples include the USA, Germany, and Brazil.",
+  "decisionSpeedModifier": -25,
+  "stabilityBaseline": 14,
+  "civilLibertyIndex": 82,
+  "pressFreedomIndex": 78,
+  "corruptionBaseline": 30,
+  "successionRisk": 12,
+  "reformCapacity": 70,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 1.35,
+    "crisisResistance": 1.25,
+    "intelligenceModifier": {
+      "counterIntel": 1.0,
+      "humintAbroad": 1.1
+    },
+    "controversialActionDelay": 3,
+    "propagandaEffectiveness": 0.4,
+    "civilUnrestThreshold": 0.65
+  },
+  "tags": ["democratic", "federal", "decentralized", "rule-of-law", "checks-and-balances"]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "eu-composite",
+  "indexName": "EU Composite Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Broad composite index tracking all major EU economic sectors including defense, energy, technology, finance, consumer goods, healthcare, infrastructure, and mining.",
+  "constituentTickers": [
+    { "tickerId": "eu-defense", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-energy", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-technology", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-finance", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-consumer", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-healthcare", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-infrastructure", "exchangeId": "euronext", "weight": 0.125 },
+    { "tickerId": "eu-mining", "exchangeId": "euronext", "weight": 0.125 }
+  ]
+}

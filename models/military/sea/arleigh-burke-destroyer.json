@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "arleigh-burke-destroyer",
+  "name": "Arleigh Burke-class Destroyer",
+  "category": "sea",
+  "subcategory": "destroyer",
+  "description": "Workhorse of the US Navy surface fleet, the Aegis-equipped guided missile destroyer excels at air defense, anti-submarine warfare, and land-attack missions. Over 70 hulls in service.",
+  "nation": "USA",
+  "purchaseCost": 100,
+  "maintenanceCostPerTurn": 10,
+  "attackPower": 70,
+  "defensePower": 75,
+  "range": 28,
+  "speed": 4,
+  "buildTime": 10,
+  "stealthRating": 20,
+  "crewRequirement": 329,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "semiconductors": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "aegis-combat-system",
+      "name": "Aegis Combat System",
+      "description": "SPY-1D radar and Aegis fire control provide simultaneous tracking and engagement of over 100 aerial targets.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "ballistic-missile-defense",
+      "name": "Ballistic Missile Defense",
+      "description": "SM-3 interceptors provide theater ballistic missile defense capability, protecting allied territories.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["destroyer", "aegis", "bmd", "multi-mission"]
+}

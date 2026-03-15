@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ENFJ",
+  "typeName": "The Protagonist",
+  "cognitiveStack": ["Fe", "Ni", "Se", "Ti"],
+  "strengthDomains": [
+    "inspirational leadership",
+    "diplomatic alliance-building",
+    "social mobilization"
+  ],
+  "blindSpots": [
+    "objective cost-benefit analysis",
+    "tolerating prolonged dissent",
+    "self-care under sustained pressure"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 25,
+  "adaptability": 55,
+  "leadershipStyle": "charismatic",
+  "diplomaticApproach": "relational",
+  "conflictResponse": "collaborate",
+  "gameplayModifiers": {
+    "alliancePreference": 25,
+    "noveltyPreference": 5,
+    "outcomeTypeWeight": {
+      "measurable": -10,
+      "humanitarian": 20,
+      "legitimacy": 20
+    },
+    "commitmentTiming": 10
+  }
+}

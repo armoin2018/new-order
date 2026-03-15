@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-domestic",
+  "description": "Domestic security equipment including riot control, border patrol, and surveillance systems",
+  "count": 3,
+  "files": [
+    "riot-control-unit.json",
+    "border-patrol-system.json",
+    "surveillance-network.json"
+  ]
+}

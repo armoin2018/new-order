@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "state-propaganda-program",
+  "name": "State Propaganda Program",
+  "category": "propaganda",
+  "description": "Centralized state messaging and ideological indoctrination system operating through schools, media, and public institutions. Promotes regime legitimacy and national unity at the cost of critical thinking, academic freedom, and international reputation.",
+  "annualCostPerCapita": 150,
+  "implementationTurns": 1,
+  "maturityTurns": 4,
+  "effects": {
+    "workforceQuality": -5,
+    "innovationRate": -3,
+    "stabilityModifier": 12,
+    "softPowerModifier": -4,
+    "militaryReadinessModifier": 6,
+    "espionageModifier": 2
+  },
+  "exclusiveWith": ["elite-university-system"],
+  "prerequisites": [],
+  "tags": ["propaganda", "indoctrination", "state-media", "censorship", "authoritarian"]
+}

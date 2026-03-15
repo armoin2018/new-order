@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "political-systems",
+  "description": "Political system profiles defining governance types and their gameplay modifiers",
+  "count": 12,
+  "files": [
+    "liberal-democracy.json",
+    "parliamentary-democracy.json",
+    "one-party-state.json",
+    "authoritarian-republic.json",
+    "theocracy.json",
+    "absolute-monarchy.json",
+    "constitutional-monarchy.json",
+    "military-junta.json",
+    "communist-state.json",
+    "federal-republic.json",
+    "hybrid-regime.json",
+    "techno-authoritarian.json"
+  ]
+}

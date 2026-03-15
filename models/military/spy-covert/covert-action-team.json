@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "covert-action-team",
+  "name": "Covert Action Team",
+  "category": "spy-covert",
+  "subcategory": "special-operations",
+  "description": "Elite special operations unit trained for clandestine direct action, sabotage, personnel recovery, and unconventional warfare behind enemy lines. Operates with minimal footprint and plausible deniability.",
+  "nation": null,
+  "purchaseCost": 25,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 40,
+  "defensePower": 20,
+  "range": 15,
+  "speed": 3,
+  "buildTime": 8,
+  "stealthRating": 90,
+  "crewRequirement": 12,
+  "operationalLifespan": 15,
+  "techRequirements": {
+    "cyber": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "sabotage",
+      "name": "Infrastructure Sabotage",
+      "description": "Can covertly destroy or disable critical enemy infrastructure including bridges, power plants, and command posts.",
+      "modifier": { "attackPower": 15 }
+    },
+    {
+      "abilityId": "plausible-deniability",
+      "name": "Plausible Deniability",
+      "description": "Operations are conducted with no traceable link to the sponsoring nation, avoiding diplomatic repercussions.",
+      "modifier": {}
+    }
+  ],
+  "tags": ["special-ops", "covert", "sabotage", "direct-action"]
+}

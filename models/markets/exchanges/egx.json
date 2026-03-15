@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "egx",
+  "exchangeName": "Egyptian Exchange",
+  "nationId": "egypt",
+  "baseIndexValue": 28000,
+  "volatilityProfile": "high",
+  "currencyCode": "EGP",
+  "marketCapBillions": 42,
+  "sectorWeights": {
+    "defense": 0.03,
+    "energy": 0.15,
+    "technology": 0.04,
+    "finance": 0.28,
+    "consumer": 0.18,
+    "healthcare": 0.06,
+    "infrastructure": 0.16,
+    "mining": 0.10
+  }
+}

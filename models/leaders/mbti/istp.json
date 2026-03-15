@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ISTP",
+  "typeName": "The Virtuoso",
+  "cognitiveStack": ["Ti", "Se", "Ni", "Fe"],
+  "strengthDomains": [
+    "tactical improvisation",
+    "crisis troubleshooting",
+    "mechanical and technical problem-solving"
+  ],
+  "blindSpots": [
+    "long-term diplomatic engagement",
+    "emotional coalition management",
+    "bureaucratic persistence"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 10,
+  "adaptability": 75,
+  "leadershipStyle": "analytical",
+  "diplomaticApproach": "pragmatic",
+  "conflictResponse": "compromise",
+  "gameplayModifiers": {
+    "alliancePreference": -15,
+    "noveltyPreference": 10,
+    "outcomeTypeWeight": {
+      "measurable": 15,
+      "humanitarian": -10,
+      "legitimacy": -5
+    },
+    "commitmentTiming": -15
+  }
+}

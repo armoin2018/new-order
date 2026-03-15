@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "hypersonic-glide-vehicle",
+  "name": "Hypersonic Glide Vehicle",
+  "domain": "space",
+  "secondaryDomains": ["semiconductors"],
+  "description": "Develops maneuverable hypersonic glide vehicles capable of Mach 5+ speeds with unpredictable trajectories, defeating existing missile defense systems. Represents a fundamental shift in strategic deterrence and first-strike calculus.",
+  "tier": 4,
+  "researchCost": 380,
+  "researchDurationTurns": 20,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "anti-satellite-weapons", "minimumLevel": 1 }
+  ],
+  "domainLevelRequirement": {
+    "space": 40
+  },
+  "effects": {
+    "domainBoosts": {
+      "space": 18
+    },
+    "militaryModifiers": {
+      "attackBonus": 20,
+      "defenseBonus": -2,
+      "unlocksEquipment": ["hgv-conventional-strike", "hgv-nuclear-delivery"]
+    },
+    "socialModifiers": {
+      "stabilityBonus": -5,
+      "softPowerBonus": -3
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 95
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "quantum-sensing",
+      "bonusDescription": "Quantum guidance systems improve HGV terminal accuracy to sub-meter precision",
+      "bonusMultiplier": 1.3
+    }
+  ],
+  "tags": ["hypersonic", "glide-vehicle", "mach5", "strategic-deterrence", "first-strike", "missile-defense-defeating"]
+}

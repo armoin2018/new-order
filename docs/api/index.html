@@ -1,0 +1,415 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Conflict 2026 — API Reference - v0.1.0</title><meta name="description" content="Documentation for Conflict 2026 — API Reference"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">Conflict 2026 — API Reference - v0.1.0</a><div id="tsd-toolbar-links"><a href="https://github.com/your-org/NewOrder">GitHub</a><a href=".project/REQUIREMENTS.md">Requirements</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>Conflict 2026 — API Reference - v0.1.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="⚔️-conflict-2026-global-simulation-engine" class="tsd-anchor-link">⚔️ Conflict 2026: Global Simulation Engine<a href="#⚔️-conflict-2026-global-simulation-engine" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p>A turn-based geopolitical simulation built with <strong>React 19</strong>, <strong>TypeScript</strong> (strict mode), <strong>Vite 6</strong>, and <strong>Zustand 5</strong>. Unlike traditional wargames, <em>Conflict 2026</em> prioritizes <strong>political survival</strong>, <strong>diplomatic leverage</strong>, and <strong>economic stability</strong> over direct combat.</p>
+<blockquote>
+<p><strong>Design Philosophy:</strong> A player must be able to lose the game without a single shot being fired — through government collapse caused by high inflation, low prestige, and foreign-funded insurgency.</p>
+</blockquote>
+<hr>
+<h2 id="📋-table-of-contents" class="tsd-anchor-link">📋 Table of Contents<a href="#📋-table-of-contents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li><a href="#-features">Features</a></li>
+<li><a href="#-quick-start">Quick Start</a></li>
+<li><a href="#-architecture">Architecture</a></li>
+<li><a href="#-game-systems">Game Systems</a></li>
+<li><a href="#-technology-stack">Technology Stack</a></li>
+<li><a href="#-project-structure">Project Structure</a></li>
+<li><a href="#-testing">Testing</a></li>
+<li><a href="#-scripts">Scripts</a></li>
+<li><a href="#-configuration">Configuration</a></li>
+<li><a href="#-contributing">Contributing</a></li>
+<li><a href="#-license">License</a></li>
+</ul>
+<hr>
+<h2 id="✨-features" class="tsd-anchor-link">✨ Features<a href="#✨-features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li><strong>8 Playable Factions</strong> — USA, China, Russia, Iran, DPRK, EU, Japan, Syria</li>
+<li><strong>60-Turn Campaigns</strong> — Monthly geopolitical simulation from March 2026</li>
+<li><strong>5 Victory Conditions</strong> — Military Dominance, Economic Hegemony, Diplomatic Unity, Ideological Victory, Survival</li>
+<li><strong>Psychological Engine</strong> — 5-dimensional emotional modeling, cognitive biases, personality drift, grudge ledger</li>
+<li><strong>Information Warfare</strong> — Deepfakes, social media virality, narrative battles, echo chambers</li>
+<li><strong>Financial Warfare</strong> — SWIFT disconnection, sanctions, crypto evasion, debt-trap diplomacy, currency attacks</li>
+<li><strong>Nuclear Escalation Ladder</strong> — Tactical through strategic escalation with deterrence mechanics</li>
+<li><strong>AI Leader Decision Engine</strong> — Utility-based AI with psychological modeling and cognitive biases</li>
+<li><strong>Proxy Wars &amp; Non-State Actors</strong> — Proxy network graphs, autonomy/blowback, arms bazaar</li>
+<li><strong>Technology Race</strong> — AI, quantum, semiconductor, space, cyber, biotech indices</li>
+<li><strong>Climate &amp; Humanitarian Crises</strong> — Resource security, refugee flows, pandemics</li>
+<li><strong>Post-Game Strategic Analysis</strong> — Turn-by-turn replay with inflection point detection</li>
+<li><strong>Modding Support</strong> — JSON-based scenarios, custom leaders, pluggable event handlers</li>
+</ul>
+<hr>
+<h2 id="🚀-quick-start" class="tsd-anchor-link">🚀 Quick Start<a href="#🚀-quick-start" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="prerequisites" class="tsd-anchor-link">Prerequisites<a href="#prerequisites" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><strong>Node.js</strong> 22+ (LTS recommended)</li>
+<li><strong>npm</strong> 10+</li>
+</ul>
+<h3 id="installation" class="tsd-anchor-link">Installation<a href="#installation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="bash"><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-2">clone</span><span class="hl-1"> </span><span class="hl-2">https://github.com/your-org/NewOrder.git</span><br/><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-2">NewOrder</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="development" class="tsd-anchor-link">Development<a href="#development" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">dev</span><span class="hl-1">          </span><span class="hl-3"># Start Vite dev server with HMR</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Open <a href="http://localhost:5173">http://localhost:5173</a> in your browser.</p>
+<h3 id="build" class="tsd-anchor-link">Build<a href="#build" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build</span><span class="hl-1">        </span><span class="hl-3"># TypeScript compile + Vite production build</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">preview</span><span class="hl-1">      </span><span class="hl-3"># Preview production build locally</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<h2 id="🏗️-architecture" class="tsd-anchor-link">🏗️ Architecture<a href="#🏗️-architecture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Conflict 2026 uses a <strong>layered pure-function architecture</strong> with complete separation between game logic and presentation:</p>
+<pre><code><span class="hl-1">┌─────────────────────────────────────────────┐</span><br/><span class="hl-1">│           </span><span class="hl-4">UI</span><span class="hl-1"> </span><span class="hl-0">Layer</span><span class="hl-1"> (</span><span class="hl-5">React</span><span class="hl-1"> </span><span class="hl-6">19</span><span class="hl-1">)               │</span><br/><span class="hl-1">│   </span><span class="hl-5">CommandCenter</span><span class="hl-1"> · </span><span class="hl-5">Dashboard</span><span class="hl-1"> · </span><span class="hl-5">Intel</span><span class="hl-1"> · </span><span class="hl-5">Map</span><span class="hl-1">   │</span><br/><span class="hl-1">├─────────────────────────────────────────────┤</span><br/><span class="hl-1">│        </span><span class="hl-5">Engine</span><span class="hl-1"> </span><span class="hl-0">Hooks</span><span class="hl-1"> (</span><span class="hl-5">Zustand</span><span class="hl-1"> </span><span class="hl-5">Selectors</span><span class="hl-1">)      │</span><br/><span class="hl-1">├─────────────────────────────────────────────┤</span><br/><span class="hl-1">│         </span><span class="hl-5">World</span><span class="hl-1"> </span><span class="hl-5">State</span><span class="hl-1"> </span><span class="hl-5">Store</span><span class="hl-1">                    │</span><br/><span class="hl-1">│    (</span><span class="hl-5">Zustand</span><span class="hl-1"> + </span><span class="hl-5">Immer</span><span class="hl-1">, </span><span class="hl-5">localStorage</span><span class="hl-1"> </span><span class="hl-5">persist</span><span class="hl-1">)   │</span><br/><span class="hl-1">├─────────────────────────────────────────────┤</span><br/><span class="hl-1">│        </span><span class="hl-5">Engine</span><span class="hl-1"> </span><span class="hl-0">Layer</span><span class="hl-1"> (</span><span class="hl-6">93</span><span class="hl-1"> </span><span class="hl-5">Pure</span><span class="hl-1">-</span><span class="hl-5">Function</span><span class="hl-1">        │</span><br/><span class="hl-1">│              </span><span class="hl-5">Game</span><span class="hl-1"> </span><span class="hl-5">Modules</span><span class="hl-1">)                   │</span><br/><span class="hl-1">├─────────────────────────────────────────────┤</span><br/><span class="hl-1">│      </span><span class="hl-5">Data</span><span class="hl-1"> </span><span class="hl-0">Layer</span><span class="hl-1"> (</span><span class="hl-5">Types</span><span class="hl-1"> + </span><span class="hl-5">Scenarios</span><span class="hl-1"> +         │</span><br/><span class="hl-1">│            </span><span class="hl-4">AJV</span><span class="hl-1"> </span><span class="hl-5">Validation</span><span class="hl-1">)                   │</span><br/><span class="hl-1">├─────────────────────────────────────────────┤</span><br/><span class="hl-1">│      </span><span class="hl-5">Web</span><span class="hl-1"> </span><span class="hl-0">Workers</span><span class="hl-1"> (</span><span class="hl-5">Off</span><span class="hl-1">-</span><span class="hl-5">Thread</span><span class="hl-1"> </span><span class="hl-5">Simulation</span><span class="hl-1">)     │</span><br/><span class="hl-1">└─────────────────────────────────────────────┘</span>
+</code><button>Copy</button></pre>
+
+<h3 id="key-design-decisions" class="tsd-anchor-link">Key Design Decisions<a href="#key-design-decisions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><strong>Pure functions everywhere</strong> — All 93 engine modules are side-effect-free. This enables trivial testing, memoization, and parallelization.</li>
+<li><strong>Immutable state</strong> — Zustand + Immer provides structural sharing for efficient React re-renders.</li>
+<li><strong>Web Workers</strong> — Heavy simulation runs off the UI thread via a typed <code>postMessage</code> protocol.</li>
+<li><strong>Single config</strong> — All game constants live in <code>GAME_CONFIG</code> (<code>src/engine/config/</code>), enabling formula tuning with zero code changes.</li>
+<li><strong>AJV validation</strong> — Scenario data is schema-validated at load time.</li>
+<li><strong>Seeded PRNG</strong> — Deterministic simulation via Mulberry32 for reproducible replays.</li>
+</ul>
+<hr>
+<h2 id="🎮-game-systems" class="tsd-anchor-link">🎮 Game Systems<a href="#🎮-game-systems" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Engine Module</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turn Engine</td>
+<td><code>turn-engine.ts</code></td>
+<td>Turn structure, phase sequencing, game loop</td>
+</tr>
+<tr>
+<td>AI Decision</td>
+<td><code>ai-evaluator.ts</code>, <code>ai-perception-engine.ts</code></td>
+<td>Utility-based leader AI with psychological modeling</td>
+</tr>
+<tr>
+<td>Economy</td>
+<td><code>economic-engine.ts</code>, <code>market-reactions.ts</code></td>
+<td>GDP, trade, inflation, market reactions</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td><code>combat.ts</code>, <code>force-structure.ts</code></td>
+<td>Hex-based military operations</td>
+</tr>
+<tr>
+<td>Diplomacy</td>
+<td><code>diplomacy-agreements.ts</code>, <code>alliance-evaluator.ts</code></td>
+<td>Treaties, alliances, credibility tracking</td>
+</tr>
+<tr>
+<td>Nuclear</td>
+<td><code>nuclear-escalation.ts</code>, <code>nuclear-strike.ts</code></td>
+<td>Escalation ladder, MAD calculations</td>
+</tr>
+<tr>
+<td>Civil Unrest</td>
+<td><code>civil-unrest.ts</code>, <code>insurrection-civilwar-engine.ts</code></td>
+<td>Domestic stability, regime change</td>
+</tr>
+<tr>
+<td>Psychology</td>
+<td><code>emotional-state.ts</code>, <code>cognitive-bias.ts</code>, <code>personality-drift.ts</code></td>
+<td>Leader emotional modeling</td>
+</tr>
+<tr>
+<td>Information War</td>
+<td><code>narrative-battle-engine.ts</code>, <code>virality-deepfake-engine.ts</code></td>
+<td>Media warfare, propaganda</td>
+</tr>
+<tr>
+<td>Financial War</td>
+<td><code>financial-warfare.ts</code>, <code>sanctions-engine.ts</code></td>
+<td>SWIFT, sanctions, crypto evasion</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td><code>tech-index-engine.ts</code>, <code>space-ai-engine.ts</code></td>
+<td>Tech race, export controls</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td><code>resource-security.ts</code>, <code>strategic-reserves.ts</code></td>
+<td>Minerals, chokepoints, climate</td>
+</tr>
+<tr>
+<td>Proxy Wars</td>
+<td><code>proxy-network-engine.ts</code>, <code>proxy-autonomy-engine.ts</code></td>
+<td>Non-state actors, blowback</td>
+</tr>
+<tr>
+<td>Intelligence</td>
+<td><code>intel-operations.ts</code>, <code>intelligence-reliability.ts</code></td>
+<td>Espionage, fog of war</td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td><code>strategic-analysis-engine.ts</code>, <code>strategy-scoring-engine.ts</code></td>
+<td>Advisory, victory path analysis</td>
+</tr>
+<tr>
+<td>Headlines</td>
+<td><code>headline-generator.ts</code></td>
+<td>Dynamic news generation</td>
+</tr>
+<tr>
+<td>Victory/Loss</td>
+<td><code>victory-loss-core.ts</code>, <code>victory-loss-extended.ts</code></td>
+<td>Win/loss condition evaluation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="🛠️-technology-stack" class="tsd-anchor-link">🛠️ Technology Stack<a href="#🛠️-technology-stack" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Technology</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework</strong></td>
+<td>React</td>
+<td>19.x</td>
+</tr>
+<tr>
+<td><strong>Language</strong></td>
+<td>TypeScript</td>
+<td>~5.7 (strict mode)</td>
+</tr>
+<tr>
+<td><strong>Build Tool</strong></td>
+<td>Vite</td>
+<td>6.x</td>
+</tr>
+<tr>
+<td><strong>State Management</strong></td>
+<td>Zustand + Immer</td>
+<td>5.x / 11.x</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>AJV</td>
+<td>8.x</td>
+</tr>
+<tr>
+<td><strong>Unit Testing</strong></td>
+<td>Vitest</td>
+<td>4.x</td>
+</tr>
+<tr>
+<td><strong>E2E Testing</strong></td>
+<td>Playwright</td>
+<td>1.58.x</td>
+</tr>
+<tr>
+<td><strong>Linting</strong></td>
+<td>ESLint (flat config)</td>
+<td>9.x</td>
+</tr>
+<tr>
+<td><strong>Formatting</strong></td>
+<td>Prettier</td>
+<td>3.x</td>
+</tr>
+<tr>
+<td><strong>DOM Environment</strong></td>
+<td>happy-dom</td>
+<td>20.x</td>
+</tr>
+<tr>
+<td><strong>Target</strong></td>
+<td>ES2022</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="production-dependencies-5-only" class="tsd-anchor-link">Production Dependencies (5 only)<a href="#production-dependencies-5-only" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code><span class="hl-5">react</span><span class="hl-1"> · </span><span class="hl-5">react</span><span class="hl-1">-</span><span class="hl-5">dom</span><span class="hl-1"> · </span><span class="hl-5">zustand</span><span class="hl-1"> · </span><span class="hl-5">immer</span><span class="hl-1"> · </span><span class="hl-5">ajv</span>
+</code><button>Copy</button></pre>
+
+<p>Bundle size: <strong>222 KB raw / 70.76 KB gzip</strong> (43 modules)</p>
+<hr>
+<h2 id="📁-project-structure" class="tsd-anchor-link">📁 Project Structure<a href="#📁-project-structure" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<pre><code><span class="hl-5">NewOrder</span><span class="hl-1">/</span><br/><span class="hl-1">├── </span><span class="hl-5">src</span><span class="hl-1">/</span><br/><span class="hl-1">│   ├── </span><span class="hl-5">engine</span><span class="hl-1">/           # </span><span class="hl-6">93</span><span class="hl-1"> </span><span class="hl-5">pure</span><span class="hl-1">-</span><span class="hl-7">function</span><span class="hl-1"> </span><span class="hl-0">game</span><span class="hl-1"> </span><span class="hl-0">engine</span><span class="hl-1"> </span><span class="hl-0">modules</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">config</span><span class="hl-1">/       # </span><span class="hl-0">Centralized</span><span class="hl-1"> </span><span class="hl-0">game</span><span class="hl-1"> </span><span class="hl-0">configuration</span><span class="hl-1"> </span><span class="hl-0">constants</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">__tests__</span><span class="hl-1">/    # 91 </span><span class="hl-0">engine</span><span class="hl-1"> </span><span class="hl-0">test</span><span class="hl-1"> </span><span class="hl-0">files</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">index</span><span class="hl-1">.</span><span class="hl-0">ts</span><span class="hl-1">      # </span><span class="hl-0">Barrel</span><span class="hl-1"> </span><span class="hl-0">re</span><span class="hl-1">-</span><span class="hl-0">exports</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">store</span><span class="hl-1">.</span><span class="hl-0">ts</span><span class="hl-1">      # </span><span class="hl-0">Zustand</span><span class="hl-1"> </span><span class="hl-0">world</span><span class="hl-1"> </span><span class="hl-0">state</span><span class="hl-1"> </span><span class="hl-0">store</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">hooks</span><span class="hl-1">.</span><span class="hl-0">ts</span><span class="hl-1">      # </span><span class="hl-0">React</span><span class="hl-1"> </span><span class="hl-0">hooks</span><span class="hl-1"> </span><span class="hl-0">for</span><span class="hl-1"> </span><span class="hl-0">UI</span><span class="hl-1"> </span><span class="hl-0">bindings</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">turn</span><span class="hl-1">-</span><span class="hl-0">engine</span><span class="hl-1">.</span><span class="hl-0">ts</span><br/><span class="hl-1">│   │   └── ...           # 87 </span><span class="hl-0">more</span><span class="hl-1"> </span><span class="hl-0">engine</span><span class="hl-1"> </span><span class="hl-0">files</span><br/><span class="hl-1">│   ├── </span><span class="hl-0">data</span><span class="hl-1">/</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">types</span><span class="hl-1">/        # </span><span class="hl-0">TypeScript</span><span class="hl-1"> </span><span class="hl-0">type</span><span class="hl-1"> </span><span class="hl-0">definitions</span><span class="hl-1"> &amp; </span><span class="hl-0">enums</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">scenarios</span><span class="hl-1">/    # </span><span class="hl-0">March</span><span class="hl-1"> 2026 </span><span class="hl-0">initial</span><span class="hl-1"> </span><span class="hl-0">conditions</span><br/><span class="hl-1">│   │   └── </span><span class="hl-0">validation</span><span class="hl-1">/   # </span><span class="hl-0">AJV</span><span class="hl-1"> </span><span class="hl-0">schema</span><span class="hl-1"> </span><span class="hl-0">validation</span><br/><span class="hl-1">│   ├── </span><span class="hl-0">ui</span><span class="hl-1">/               # </span><span class="hl-0">React</span><span class="hl-1"> </span><span class="hl-0">components</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">App</span><span class="hl-1">.</span><span class="hl-0">tsx</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">CommandCenter</span><span class="hl-1">.</span><span class="hl-0">tsx</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">StrategicDashboard</span><span class="hl-1">.</span><span class="hl-0">tsx</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">DiplomacyPanel</span><span class="hl-1">.</span><span class="hl-0">tsx</span><br/><span class="hl-1">│   │   └── ...</span><br/><span class="hl-1">│   ├── </span><span class="hl-0">workers</span><span class="hl-1">/          # </span><span class="hl-0">Web</span><span class="hl-1"> </span><span class="hl-0">Worker</span><span class="hl-1"> </span><span class="hl-0">for</span><span class="hl-1"> </span><span class="hl-0">off</span><span class="hl-1">-</span><span class="hl-0">thread</span><span class="hl-1"> </span><span class="hl-0">simulation</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">simulation</span><span class="hl-1">.</span><span class="hl-0">worker</span><span class="hl-1">.</span><span class="hl-0">ts</span><br/><span class="hl-1">│   │   ├── </span><span class="hl-0">simulation</span><span class="hl-1">-</span><span class="hl-0">bridge</span><span class="hl-1">.</span><span class="hl-0">ts</span><br/><span class="hl-1">│   │   └── </span><span class="hl-0">protocol</span><span class="hl-1">.</span><span class="hl-0">ts</span><br/><span class="hl-1">│   └── </span><span class="hl-0">main</span><span class="hl-1">.</span><span class="hl-0">tsx</span><span class="hl-1">          # </span><span class="hl-0">Application</span><span class="hl-1"> </span><span class="hl-0">entry</span><span class="hl-1"> </span><span class="hl-0">point</span><br/><span class="hl-1">├── </span><span class="hl-0">e2e</span><span class="hl-1">/                  # </span><span class="hl-0">Playwright</span><span class="hl-1"> </span><span class="hl-0">end</span><span class="hl-1">-</span><span class="hl-0">to</span><span class="hl-1">-</span><span class="hl-0">end</span><span class="hl-1"> </span><span class="hl-0">tests</span><br/><span class="hl-1">├── .</span><span class="hl-0">project</span><span class="hl-1">/             # </span><span class="hl-0">Project</span><span class="hl-1"> </span><span class="hl-0">management</span><br/><span class="hl-1">│   ├── </span><span class="hl-0">REQUIREMENTS</span><span class="hl-1">.</span><span class="hl-0">md</span><span class="hl-1">   # </span><span class="hl-0">SRS</span><span class="hl-1"> </span><span class="hl-0">v6</span><span class="hl-1">.0.0 (1,150 </span><span class="hl-5">lines</span><span class="hl-1">)</span><br/><span class="hl-1">│   ├── </span><span class="hl-0">PLAN</span><span class="hl-1">.</span><span class="hl-0">json</span><span class="hl-1">         # 132 </span><span class="hl-0">items</span><span class="hl-1">, 28 </span><span class="hl-0">epics</span><span class="hl-1"> — </span><span class="hl-0">all</span><span class="hl-1"> </span><span class="hl-0">complete</span><br/><span class="hl-1">│   └── </span><span class="hl-0">SUMMARY</span><span class="hl-1">.</span><span class="hl-0">html</span><span class="hl-1">      # </span><span class="hl-0">Interactive</span><span class="hl-1"> </span><span class="hl-0">project</span><span class="hl-1"> </span><span class="hl-0">analysis</span><span class="hl-1"> </span><span class="hl-0">report</span><br/><span class="hl-1">├── .</span><span class="hl-0">github</span><span class="hl-1">/</span><span class="hl-0">workflows</span><span class="hl-1">/    # </span><span class="hl-0">CI</span><span class="hl-1">/</span><span class="hl-0">CD</span><span class="hl-1"> </span><span class="hl-0">pipelines</span><br/><span class="hl-1">├── </span><span class="hl-0">package</span><span class="hl-1">.</span><span class="hl-0">json</span><br/><span class="hl-1">├── </span><span class="hl-0">tsconfig</span><span class="hl-1">.</span><span class="hl-0">json</span><br/><span class="hl-1">├── </span><span class="hl-0">vite</span><span class="hl-1">.</span><span class="hl-0">config</span><span class="hl-1">.</span><span class="hl-0">ts</span><br/><span class="hl-1">└── </span><span class="hl-0">vitest</span><span class="hl-1">.</span><span class="hl-0">config</span><span class="hl-1">.</span><span class="hl-0">ts</span>
+</code><button>Copy</button></pre>
+
+<hr>
+<h2 id="🧪-testing" class="tsd-anchor-link">🧪 Testing<a href="#🧪-testing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>The project has comprehensive test coverage with <strong>3,621 passing tests</strong> across <strong>96 test files</strong>.</p>
+<pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">test</span><span class="hl-1">                  </span><span class="hl-3"># Run all tests</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">test:watch</span><span class="hl-1">        </span><span class="hl-3"># Watch mode</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">test:coverage</span><span class="hl-1">     </span><span class="hl-3"># With V8 coverage report</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">test:e2e</span><span class="hl-1">          </span><span class="hl-3"># Playwright E2E tests</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="coverage-thresholds" class="tsd-anchor-link">Coverage Thresholds<a href="#coverage-thresholds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Engine code (<code>src/engine/**</code>) enforces <strong>90% minimum</strong> coverage for lines, functions, and branches.</p>
+<h3 id="test-architecture" class="tsd-anchor-link">Test Architecture<a href="#test-architecture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><strong>Unit tests</strong> — Pure-function engine modules tested in isolation</li>
+<li><strong>Integration tests</strong> — Multi-engine interactions and state transitions</li>
+<li><strong>Component tests</strong> — React components with happy-dom</li>
+<li><strong>E2E tests</strong> — Playwright smoke tests and gameplay flows</li>
+</ul>
+<hr>
+<h2 id="📜-scripts" class="tsd-anchor-link">📜 Scripts<a href="#📜-scripts" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm run dev</code></td>
+<td>Start Vite dev server with HMR</td>
+</tr>
+<tr>
+<td><code>npm run build</code></td>
+<td>TypeScript compile + Vite production build</td>
+</tr>
+<tr>
+<td><code>npm run preview</code></td>
+<td>Preview production build locally</td>
+</tr>
+<tr>
+<td><code>npm run lint</code></td>
+<td>ESLint with strict rules</td>
+</tr>
+<tr>
+<td><code>npm run format</code></td>
+<td>Prettier format all source files</td>
+</tr>
+<tr>
+<td><code>npm run typecheck</code></td>
+<td>TypeScript strict type checking</td>
+</tr>
+<tr>
+<td><code>npm test</code></td>
+<td>Run all 3,621 Vitest tests</td>
+</tr>
+<tr>
+<td><code>npm run test:watch</code></td>
+<td>Vitest in watch mode</td>
+</tr>
+<tr>
+<td><code>npm run test:coverage</code></td>
+<td>Tests with V8 coverage report</td>
+</tr>
+<tr>
+<td><code>npm run test:e2e</code></td>
+<td>Playwright end-to-end tests</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="⚙️-configuration" class="tsd-anchor-link">⚙️ Configuration<a href="#⚙️-configuration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="typescript" class="tsd-anchor-link">TypeScript<a href="#typescript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Strict mode with all safety flags enabled:</p>
+<ul>
+<li><code>strict: true</code></li>
+<li><code>noUnusedLocals</code> / <code>noUnusedParameters</code></li>
+<li><code>noUncheckedIndexedAccess</code></li>
+<li><code>verbatimModuleSyntax</code></li>
+<li><code>noFallthroughCasesInSwitch</code></li>
+</ul>
+<h3 id="path-aliases" class="tsd-anchor-link">Path Aliases<a href="#path-aliases" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>Maps To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@/engine/*</code></td>
+<td><code>src/engine/*</code></td>
+</tr>
+<tr>
+<td><code>@/ui/*</code></td>
+<td><code>src/ui/*</code></td>
+</tr>
+<tr>
+<td><code>@/data/*</code></td>
+<td><code>src/data/*</code></td>
+</tr>
+<tr>
+<td><code>@/workers/*</code></td>
+<td><code>src/workers/*</code></td>
+</tr>
+<tr>
+<td><code>@/assets/*</code></td>
+<td><code>src/assets/*</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="game-configuration" class="tsd-anchor-link">Game Configuration<a href="#game-configuration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>All game constants (formula weights, thresholds, decay rates, modifiers) are centralized in <code>src/engine/config/</code>. Tuning game balance requires changing constants only — no code modifications.</p>
+<hr>
+<h2 id="🤝-contributing" class="tsd-anchor-link">🤝 Contributing<a href="#🤝-contributing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>See <a href="media/CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines on:</p>
+<ul>
+<li>Setting up your development environment</li>
+<li>Code standards and TypeScript conventions</li>
+<li>Testing requirements</li>
+<li>Pull request process</li>
+</ul>
+<hr>
+<h2 id="📄-license" class="tsd-anchor-link">📄 License<a href="#📄-license" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>This project is private and proprietary. All rights reserved.</p>
+<hr>
+<h2 id="📊-project-status" class="tsd-anchor-link">📊 Project Status<a href="#📊-project-status" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plan Completion</strong></td>
+<td>132/132 (100%)</td>
+</tr>
+<tr>
+<td><strong>Tests</strong></td>
+<td>3,621 passing</td>
+</tr>
+<tr>
+<td><strong>Source LOC</strong></td>
+<td>60,323</td>
+</tr>
+<tr>
+<td><strong>Test LOC</strong></td>
+<td>46,455</td>
+</tr>
+<tr>
+<td><strong>Bundle Size</strong></td>
+<td>70.76 KB (gzip)</td>
+</tr>
+<tr>
+<td><strong>TypeScript Strict</strong></td>
+<td>✅ All flags</td>
+</tr>
+<tr>
+<td><strong>ESLint</strong></td>
+<td>✅ Zero violations</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Generated from <a href="media/SUMMARY.html">.project/SUMMARY.html</a> — March 4, 2026</p>
+</blockquote>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#⚔️-conflict-2026-global-simulation-engine"><span>⚔️ <wbr/>Conflict 2026: <wbr/>Global <wbr/>Simulation <wbr/>Engine</span></a><ul><li><a href="#📋-table-of-contents"><span>📋 <wbr/>Table of <wbr/>Contents</span></a></li><li><a href="#✨-features"><span>✨ <wbr/>Features</span></a></li><li><a href="#🚀-quick-start"><span>🚀 <wbr/>Quick <wbr/>Start</span></a></li><li><ul><li><a href="#prerequisites"><span>Prerequisites</span></a></li><li><a href="#installation"><span>Installation</span></a></li><li><a href="#development"><span>Development</span></a></li><li><a href="#build"><span>Build</span></a></li></ul></li><li><a href="#🏗️-architecture"><span>🏗️ <wbr/>Architecture</span></a></li><li><ul><li><a href="#key-design-decisions"><span>Key <wbr/>Design <wbr/>Decisions</span></a></li></ul></li><li><a href="#🎮-game-systems"><span>🎮 <wbr/>Game <wbr/>Systems</span></a></li><li><a href="#🛠️-technology-stack"><span>🛠️ <wbr/>Technology <wbr/>Stack</span></a></li><li><ul><li><a href="#production-dependencies-5-only"><span>Production <wbr/>Dependencies (5 only)</span></a></li></ul></li><li><a href="#📁-project-structure"><span>📁 <wbr/>Project <wbr/>Structure</span></a></li><li><a href="#🧪-testing"><span>🧪 <wbr/>Testing</span></a></li><li><ul><li><a href="#coverage-thresholds"><span>Coverage <wbr/>Thresholds</span></a></li><li><a href="#test-architecture"><span>Test <wbr/>Architecture</span></a></li></ul></li><li><a href="#📜-scripts"><span>📜 <wbr/>Scripts</span></a></li><li><a href="#⚙️-configuration"><span>⚙️ <wbr/>Configuration</span></a></li><li><ul><li><a href="#typescript"><span>Type<wbr/>Script</span></a></li><li><a href="#path-aliases"><span>Path <wbr/>Aliases</span></a></li><li><a href="#game-configuration"><span>Game <wbr/>Configuration</span></a></li></ul></li><li><a href="#🤝-contributing"><span>🤝 <wbr/>Contributing</span></a></li><li><a href="#📄-license"><span>📄 <wbr/>License</span></a></li><li><a href="#📊-project-status"><span>📊 <wbr/>Project <wbr/>Status</span></a></li></ul></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://github.com/your-org/NewOrder" class="tsd-nav-link">GitHub</a><a href=".project/REQUIREMENTS.md" class="tsd-nav-link">Requirements</a></nav><nav class="tsd-navigation"><a href="modules.html">Conflict 2026 — API Reference - v0.1.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

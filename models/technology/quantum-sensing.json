@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "quantum-sensing",
+  "name": "Quantum Sensing & Metrology",
+  "domain": "quantum",
+  "secondaryDomains": ["space"],
+  "description": "Develops quantum sensors exploiting superposition and entanglement for ultra-precise measurements of gravity, magnetic fields, and electromagnetic emissions. Enables detection of stealth aircraft, underground facilities, and submarine movements.",
+  "tier": 2,
+  "researchCost": 140,
+  "researchDurationTurns": 9,
+  "impactLevel": "significant",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "quantum": 8,
+      "space": 4
+    },
+    "militaryModifiers": {
+      "attackBonus": 5,
+      "defenseBonus": 8,
+      "unlocksEquipment": ["quantum-gravimeter", "quantum-magnetometer"]
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 45
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "space-based-surveillance",
+      "bonusDescription": "Space-deployed quantum sensors achieve unprecedented detection sensitivity",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "hypersonic-glide-vehicle",
+      "bonusDescription": "Quantum inertial navigation provides GPS-independent precision guidance",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["quantum-sensing", "gravimeter", "magnetometer", "detection", "stealth-defeat", "navigation"]
+}

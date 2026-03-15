@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "asx",
+  "exchangeName": "Australian Securities Exchange",
+  "nationId": "australia",
+  "baseIndexValue": 8200,
+  "volatilityProfile": "medium",
+  "currencyCode": "AUD",
+  "marketCapBillions": 1800,
+  "sectorWeights": {
+    "defense": 0.03,
+    "energy": 0.08,
+    "technology": 0.10,
+    "finance": 0.32,
+    "consumer": 0.14,
+    "healthcare": 0.10,
+    "infrastructure": 0.05,
+    "mining": 0.18
+  }
+}

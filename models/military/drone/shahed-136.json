@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "shahed-136",
+  "name": "Shahed-136",
+  "category": "drone",
+  "subcategory": "loitering-munition",
+  "description": "Iranian one-way attack drone (loitering munition) designed for massed saturation strikes against infrastructure and military targets. Extremely cheap to produce and launched in swarms to overwhelm air defenses.",
+  "nation": "Iran",
+  "purchaseCost": 2,
+  "maintenanceCostPerTurn": 0,
+  "attackPower": 25,
+  "defensePower": 2,
+  "range": 20,
+  "speed": 2,
+  "buildTime": 1,
+  "stealthRating": 15,
+  "crewRequirement": 0,
+  "operationalLifespan": 1,
+  "techRequirements": {},
+  "specialAbilities": [
+    {
+      "abilityId": "swarm-saturation",
+      "name": "Swarm Saturation Attack",
+      "description": "Launched in large salvos to overwhelm enemy air defense systems through sheer numbers, exhausting interceptor stocks.",
+      "modifier": { "attackPower": 15 }
+    },
+    {
+      "abilityId": "expendable",
+      "name": "Expendable Platform",
+      "description": "Single-use design means every unit is consumed on attack, but extreme low cost enables mass procurement.",
+      "modifier": {}
+    }
+  ],
+  "tags": ["drone", "loitering-munition", "expendable", "swarm"]
+}

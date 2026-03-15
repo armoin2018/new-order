@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "digital-literacy-campaign",
+  "name": "National Digital Literacy Campaign",
+  "category": "digital-literacy",
+  "description": "Nationwide initiative to equip the population with essential digital skills including internet use, cybersecurity awareness, basic programming, and digital government services. Bridges the digital divide and creates a tech-ready workforce.",
+  "annualCostPerCapita": 180,
+  "implementationTurns": 2,
+  "maturityTurns": 6,
+  "effects": {
+    "technologyDomainBoosts": {
+      "ai": 3,
+      "cyber": 4
+    },
+    "workforceQuality": 12,
+    "innovationRate": 5,
+    "stabilityModifier": 3,
+    "softPowerModifier": 2
+  },
+  "prerequisites": [
+    { "type": "education", "value": "universal-primary", "minimumLevel": 0.6 }
+  ],
+  "tags": ["digital", "literacy", "internet", "cybersecurity-awareness", "e-government", "coding"]
+}

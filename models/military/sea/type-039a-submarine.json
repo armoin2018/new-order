@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "type-039a-submarine",
+  "name": "Type 039A Yuan-class Submarine",
+  "category": "sea",
+  "subcategory": "submarine",
+  "description": "China's advanced diesel-electric attack submarine featuring air-independent propulsion for extended submerged endurance. A cost-effective littoral warfare platform produced in large numbers.",
+  "nation": "China",
+  "purchaseCost": 45,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 60,
+  "defensePower": 50,
+  "range": 20,
+  "speed": 3,
+  "buildTime": 8,
+  "stealthRating": 72,
+  "crewRequirement": 58,
+  "operationalLifespan": 30,
+  "techRequirements": {
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "aip-system",
+      "name": "Air-Independent Propulsion",
+      "description": "Stirling engine AIP allows extended submerged patrols without snorkeling, greatly reducing detection risk.",
+      "modifier": { "stealthRating": 10 }
+    },
+    {
+      "abilityId": "mine-laying",
+      "name": "Covert Mine Laying",
+      "description": "Can deploy naval mines in enemy shipping lanes and chokepoints without surfacing.",
+      "modifier": { "attackPower": 5 }
+    }
+  ],
+  "tags": ["submarine", "diesel-electric", "aip", "littoral"]
+}

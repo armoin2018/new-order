@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "quantum-cryptography",
+  "name": "Quantum Cryptography & Key Distribution",
+  "domain": "quantum",
+  "secondaryDomains": ["cyber", "space"],
+  "description": "Implements quantum key distribution networks using entangled photon pairs for theoretically unbreakable encrypted communications. Deploys both fiber-optic and satellite-based QKD links for strategic military and diplomatic channels.",
+  "tier": 3,
+  "researchCost": 220,
+  "researchDurationTurns": 13,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "quantum-computing-prototype", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "quantum": 12,
+      "cyber": 8,
+      "space": 3
+    },
+    "militaryModifiers": {
+      "defenseBonus": 12
+    },
+    "socialModifiers": {
+      "stabilityBonus": 4
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 60
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "satellite-constellation",
+      "bonusDescription": "Satellite-based QKD enables global quantum-secured communications",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "quantum-resistant-encryption",
+      "bonusDescription": "Dual quantum and post-quantum encryption creates layered unbreakable security",
+      "bonusMultiplier": 1.4
+    }
+  ],
+  "tags": ["qkd", "quantum-key-distribution", "entanglement", "unbreakable", "encryption", "communications"]
+}

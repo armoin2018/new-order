@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "pse",
+  "exchangeName": "Pyongyang Stock Exchange",
+  "nationId": "dprk",
+  "baseIndexValue": 100,
+  "volatilityProfile": "extreme",
+  "currencyCode": "KPW",
+  "marketCapBillions": 5,
+  "sectorWeights": {
+    "defense": 0.40,
+    "energy": 0.15,
+    "technology": 0.02,
+    "finance": 0.05,
+    "consumer": 0.08,
+    "healthcare": 0.05,
+    "infrastructure": 0.15,
+    "mining": 0.10
+  }
+}

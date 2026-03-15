@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/leader-profile.schema.json",
+  "title": "Extended Leader Profile Model",
+  "description": "JSON Schema for extended leader profiles with MBTI integration (DR-142, DR-143). Extends the existing LeaderProfile type with full psychological modeling.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "leaderId",
+    "name",
+    "factionId",
+    "mbtiType",
+    "psychology",
+    "motivations",
+    "powerBase"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "leaderId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique leader identifier (e.g., 'xi-jinping', 'fictional-leader-01')"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "title": { "type": "string", "description": "Official title (e.g., 'President', 'Supreme Leader')" },
+    "factionId": {
+      "type": "string",
+      "description": "Nation/faction this leader belongs to"
+    },
+    "mbtiType": {
+      "type": "string",
+      "pattern": "^[EI][SN][TF][JP]$",
+      "description": "MBTI type code — references MBTI profile in models/leaders/mbti/"
+    },
+    "mbtiDichotomyScores": {
+      "type": "object",
+      "description": "How strongly leader leans on each dichotomy (50 = balanced, 100 = extreme)",
+      "required": ["EI", "SN", "TF", "JP"],
+      "properties": {
+        "EI": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "0 = extreme Extravert, 100 = extreme Introvert"
+        },
+        "SN": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "0 = extreme Sensing, 100 = extreme Intuition"
+        },
+        "TF": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "0 = extreme Thinking, 100 = extreme Feeling"
+        },
+        "JP": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "0 = extreme Judging, 100 = extreme Perceiving"
+        }
+      }
+    },
+    "psychology": {
+      "type": "object",
+      "required": [
+        "decisionStyle",
+        "stressResponse",
+        "riskTolerance",
+        "paranoia",
+        "narcissism",
+        "pragmatism",
+        "patience",
+        "vengefulIndex"
+      ],
+      "properties": {
+        "decisionStyle": {
+          "type": "string",
+          "enum": ["analytical", "intuitive", "consultative", "autocratic", "consensus"]
+        },
+        "stressResponse": {
+          "type": "string",
+          "enum": ["escalate", "withdraw", "delegate", "freeze", "innovate"]
+        },
+        "riskTolerance": { "type": "number", "minimum": 0, "maximum": 100 },
+        "paranoia": { "type": "number", "minimum": 0, "maximum": 100 },
+        "narcissism": { "type": "number", "minimum": 0, "maximum": 100 },
+        "pragmatism": { "type": "number", "minimum": 0, "maximum": 100 },
+        "patience": { "type": "number", "minimum": 0, "maximum": 100 },
+        "vengefulIndex": { "type": "number", "minimum": 0, "maximum": 100 },
+        "charisma": { "type": "number", "minimum": 0, "maximum": 100 },
+        "empathy": { "type": "number", "minimum": 0, "maximum": 100 },
+        "ideologicalRigidity": { "type": "number", "minimum": 0, "maximum": 100 },
+        "corruptibility": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "motivations": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "enum": ["power", "legacy", "ideology", "security", "prosperity", "revenge", "reform"]
+        },
+        "secondary": {
+          "type": "string",
+          "enum": ["power", "legacy", "ideology", "security", "prosperity", "revenge", "reform"]
+        },
+        "fear": {
+          "type": "string",
+          "enum": ["overthrow", "irrelevance", "humiliation", "war", "economic-collapse", "betrayal"]
+        }
+      }
+    },
+    "powerBase": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["military", "party", "dynasty", "popular", "religious", "economic", "intelligence"]
+        },
+        "consolidation": { "type": "number", "minimum": 0, "maximum": 100 },
+        "legitimacy": { "type": "number", "minimum": 0, "maximum": 100 },
+        "succession": {
+          "type": "string",
+          "enum": ["clear", "contested", "undefined", "hereditary", "appointed"]
+        }
+      }
+    },
+    "vulnerabilities": {
+      "type": "object",
+      "properties": {
+        "health": { "type": "number", "minimum": 0, "maximum": 100 },
+        "scandals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "internalOpposition": { "type": "number", "minimum": 0, "maximum": 100 },
+        "externalPressure": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "compatibilityOverrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["targetLeaderId", "modifier"],
+        "properties": {
+          "targetLeaderId": { "type": "string" },
+          "modifier": {
+            "type": "number",
+            "minimum": -100,
+            "maximum": 100,
+            "description": "Override for MBTI-derived compatibility"
+          },
+          "reason": { "type": "string" }
+        }
+      },
+      "description": "Manual overrides to MBTI compatibility matrix for specific leader pairs"
+    },
+    "biography": {
+      "type": "string",
+      "description": "Brief biography for flavor text and AI context"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

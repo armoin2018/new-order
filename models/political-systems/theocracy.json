@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "theocracy",
+  "systemName": "Theocracy",
+  "description": "A system where religious authority forms the basis of political legitimacy, with clergy holding supreme power over secular institutions. Ideological cohesion provides crisis resilience, but reform is extremely difficult and dissent is treated as heresy. The primary modern example is Iran.",
+  "decisionSpeedModifier": 20,
+  "stabilityBaseline": 5,
+  "civilLibertyIndex": 15,
+  "pressFreedomIndex": 10,
+  "corruptionBaseline": 55,
+  "successionRisk": 50,
+  "reformCapacity": 10,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 1.0,
+    "crisisResistance": 1.25,
+    "intelligenceModifier": {
+      "counterIntel": 1.2,
+      "humintAbroad": 0.9
+    },
+    "controversialActionDelay": 1,
+    "propagandaEffectiveness": 1.6,
+    "civilUnrestThreshold": 1.3
+  },
+  "tags": ["authoritarian", "theocratic", "ideological", "clergy-led", "religious-law"]
+}

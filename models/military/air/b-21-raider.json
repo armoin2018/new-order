@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "b-21-raider",
+  "name": "B-21 Raider",
+  "category": "air",
+  "subcategory": "bomber",
+  "description": "Next-generation American stealth strategic bomber designed to penetrate advanced integrated air defense systems and deliver conventional or nuclear ordnance globally.",
+  "nation": "USA",
+  "purchaseCost": 180,
+  "maintenanceCostPerTurn": 18,
+  "attackPower": 95,
+  "defensePower": 35,
+  "range": 45,
+  "speed": 5,
+  "buildTime": 14,
+  "stealthRating": 95,
+  "crewRequirement": 2,
+  "operationalLifespan": 50,
+  "techRequirements": {
+    "ai": 40,
+    "semiconductors": 50,
+    "cyber": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "deep-penetration",
+      "name": "Deep Penetration Strike",
+      "description": "Extremely low observability allows penetration of the most advanced air defense networks without detection.",
+      "modifier": { "attackPower": 15 }
+    },
+    {
+      "abilityId": "nuclear-capable",
+      "name": "Nuclear Capable",
+      "description": "Certified to deliver B61-12 tactical nuclear weapons, providing strategic deterrence capability.",
+      "modifier": {}
+    }
+  ],
+  "tags": ["stealth", "bomber", "strategic", "nuclear-capable"]
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/religion.schema.json",
+  "title": "Religion Profile Model",
+  "description": "JSON Schema for religion/belief system profiles (DR-161). Defines religious traditions with social, political, and gameplay effects.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "religionId",
+    "name",
+    "description",
+    "adherentsGlobalPercent",
+    "socialCohesionModifier",
+    "politicalInfluence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "religionId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique religion identifier (e.g., 'christianity-protestant', 'islam-sunni', 'secular-atheism')"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "parentTradition": {
+      "type": "string",
+      "description": "Parent religion/tradition if this is a denomination or branch"
+    },
+    "description": { "type": "string", "minLength": 10 },
+    "adherentsGlobalPercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Approximate global adherent percentage"
+    },
+    "socialCohesionModifier": {
+      "type": "number",
+      "minimum": -30,
+      "maximum": 30,
+      "description": "Effect on social cohesion when majority religion"
+    },
+    "politicalInfluence": {
+      "type": "string",
+      "enum": ["none", "minimal", "moderate", "significant", "dominant", "theocratic"],
+      "description": "Typical level of political influence"
+    },
+    "demographicTrend": {
+      "type": "string",
+      "enum": ["growing", "stable", "declining", "rapid-growth", "rapid-decline"],
+      "description": "Current global demographic trend"
+    },
+    "interReligiousTensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["targetReligionId", "tensionLevel"],
+        "properties": {
+          "targetReligionId": { "type": "string" },
+          "tensionLevel": {
+            "type": "string",
+            "enum": ["harmonious", "tolerant", "wary", "hostile", "violent"]
+          },
+          "historicalBasis": { "type": "string" }
+        }
+      },
+      "description": "Relations with other religions"
+    },
+    "gameplayModifiers": {
+      "type": "object",
+      "properties": {
+        "stabilityModifier": {
+          "type": "number",
+          "minimum": -20,
+          "maximum": 20,
+          "description": "When majority: effect on internal stability"
+        },
+        "reformResistance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Resistance to progressive secular reform"
+        },
+        "educationAttitude": {
+          "type": "string",
+          "enum": ["pro-education", "neutral", "selective", "restrictive"],
+          "description": "General attitude toward secular education"
+        },
+        "scienceAttitude": {
+          "type": "string",
+          "enum": ["pro-science", "neutral", "selective", "anti-science"],
+          "description": "General attitude toward scientific research"
+        },
+        "theocracyPotential": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Likelihood of theocratic governance influence"
+        },
+        "martyrdomFactor": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Population resistance to foreign occupation"
+        },
+        "charityModifier": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30,
+          "description": "Bonus to soft power and social stability"
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

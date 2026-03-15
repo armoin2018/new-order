@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-drone",
+  "description": "Unmanned aerial vehicle models including armed tactical drones, loitering munitions, and surveillance platforms",
+  "count": 4,
+  "files": [
+    "tb2-bayraktar.json",
+    "shahed-136.json",
+    "rq-4-global-hawk.json",
+    "wing-loong-2.json"
+  ]
+}

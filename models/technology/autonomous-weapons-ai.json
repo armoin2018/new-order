@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "autonomous-weapons-ai",
+  "name": "Autonomous Weapons AI",
+  "domain": "ai",
+  "secondaryDomains": ["space", "cyber"],
+  "description": "Develops lethal autonomous weapons systems with AI-driven target identification, engagement decisions, and swarm coordination. Enables fully autonomous drone strike capabilities and robotic ground combat units.",
+  "tier": 3,
+  "researchCost": 220,
+  "researchDurationTurns": 14,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "machine-learning-foundations", "minimumLevel": 1 },
+    { "techId": "natural-language-processing", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "ai": 12
+    },
+    "militaryModifiers": {
+      "attackBonus": 15,
+      "defenseBonus": 5,
+      "unlocksEquipment": [
+        "autonomous-combat-drone",
+        "ai-guided-missile-system",
+        "robotic-ground-unit"
+      ]
+    },
+    "socialModifiers": {
+      "stabilityBonus": -3,
+      "softPowerBonus": -5
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 85
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "satellite-constellation",
+      "bonusDescription": "Satellite-linked autonomous weapons gain global targeting coverage",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "neuromorphic-computing",
+      "bonusDescription": "Neuromorphic chips enable real-time battlefield decision-making on-device",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["autonomous", "weapons", "drones", "lethal", "swarm", "controversial", "military"]
+}

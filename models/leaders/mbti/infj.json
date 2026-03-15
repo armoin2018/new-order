@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "INFJ",
+  "typeName": "The Advocate",
+  "cognitiveStack": ["Ni", "Fe", "Ti", "Se"],
+  "strengthDomains": [
+    "long-range vision",
+    "diplomatic persuasion",
+    "moral authority"
+  ],
+  "blindSpots": [
+    "pragmatic compromise",
+    "tactical flexibility in crises",
+    "over-idealism clouding judgment"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 20,
+  "adaptability": 45,
+  "leadershipStyle": "visionary",
+  "diplomaticApproach": "principled",
+  "conflictResponse": "compromise",
+  "gameplayModifiers": {
+    "alliancePreference": 10,
+    "noveltyPreference": 10,
+    "outcomeTypeWeight": {
+      "measurable": -10,
+      "humanitarian": 25,
+      "legitimacy": 20
+    },
+    "commitmentTiming": 10
+  }
+}

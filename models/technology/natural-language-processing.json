@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "natural-language-processing",
+  "name": "Natural Language Processing",
+  "domain": "ai",
+  "secondaryDomains": ["cyber"],
+  "description": "Develops advanced language models capable of translation, sentiment analysis, and automated intelligence report generation. Enables real-time processing of foreign communications and open-source intelligence at scale.",
+  "tier": 2,
+  "researchCost": 120,
+  "researchDurationTurns": 8,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "machine-learning-foundations", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "ai": 8,
+      "cyber": 3
+    },
+    "militaryModifiers": {
+      "defenseBonus": 2
+    },
+    "socialModifiers": {
+      "softPowerBonus": 3
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 25
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "deepfake-generation",
+      "bonusDescription": "NLP models enhance deepfake script generation and voice synthesis realism",
+      "bonusMultiplier": 1.2
+    },
+    {
+      "partnerTechId": "offensive-cyber-operations",
+      "bonusDescription": "AI-driven phishing and social engineering campaigns become highly effective",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["language-models", "intelligence", "translation", "sentiment-analysis", "osint"]
+}

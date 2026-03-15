@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "taliban-leadership",
+  "name": "Taliban Supreme Council",
+  "title": "Supreme Leader and Shura Council of the Islamic Emirate of Afghanistan",
+  "factionId": "afghanistan",
+  "mbtiType": "ISTJ",
+  "mbtiDichotomyScores": {
+    "EI": 80,
+    "SN": 20,
+    "TF": 15,
+    "JP": 10
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "escalate",
+    "riskTolerance": 70,
+    "paranoia": 80,
+    "narcissism": 60,
+    "pragmatism": 25,
+    "patience": 85,
+    "vengefulIndex": 85,
+    "charisma": 40,
+    "empathy": 10,
+    "ideologicalRigidity": 95,
+    "corruptibility": 30
+  },
+  "motivations": {
+    "primary": "ideology",
+    "secondary": "power",
+    "fear": "overthrow"
+  },
+  "powerBase": {
+    "source": "military",
+    "consolidation": 75,
+    "legitimacy": 30,
+    "succession": "undefined"
+  },
+  "vulnerabilities": {
+    "health": 40,
+    "scandals": [
+      "Systematic suppression of women's rights",
+      "Harboring international terrorist networks",
+      "Opium economy dependence",
+      "Internal Haqqani network power struggles"
+    ],
+    "internalOpposition": 45,
+    "externalPressure": 85
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "asif-ali-zardari",
+      "modifier": -10,
+      "reason": "Durand Line disputes and cross-border militant tensions"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 5,
+      "reason": "China cautiously engages for Belt-and-Road mineral access"
+    },
+    {
+      "targetLeaderId": "ali-khamenei",
+      "modifier": -15,
+      "reason": "Sunni-Shia sectarian divide despite shared anti-Western stance"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": -5,
+      "reason": "Historical Soviet-Afghan enmity tempered by pragmatic engagement"
+    }
+  ],
+  "biography": "The Taliban's collective leadership, nominally headed by Supreme Leader Hibatullah Akhundzada, seized control of Afghanistan in August 2021 after the US withdrawal. Ruling as a theocratic ISTJ-oriented hierarchy, they impose strict Sharia law, have effectively erased women from public life, and govern through a Shura council system that values tradition, obedience, and religious orthodoxy above all. Despite international isolation and a humanitarian crisis, they maintain iron grip through tribal networks, opium revenue, and the Haqqani network's security apparatus, while cautiously engaging China and Gulf states for economic survival.",
+  "tags": [
+    "pariah-state",
+    "theocratic",
+    "no-exchange",
+    "opium-economy",
+    "isolated",
+    "insurgent-origin",
+    "anti-western"
+  ]
+}

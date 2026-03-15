@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "saudi_arabia",
+  "exchangeId": "tadawul",
+  "tickers": [
+    {
+      "tickerId": "saudi_arabia-energy",
+      "sectorName": "energy",
+      "initialPrice": 240,
+      "volatilityMultiplier": 1.2,
+      "eventSensitivityWeights": {
+        "military-conflict": 1.5,
+        "sanctions-imposed": -2.0,
+        "civil-unrest": -1.0,
+        "trade-deal": 1.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 4.5,
+        "regime-change": -2.5,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "saudi_arabia-finance",
+      "sectorName": "finance",
+      "initialPrice": 130,
+      "volatilityMultiplier": 0.9,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.0,
+        "sanctions-imposed": -2.5,
+        "civil-unrest": -2.0,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -1.0,
+        "regime-change": -3.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "saudi_arabia-infrastructure",
+      "sectorName": "infrastructure",
+      "initialPrice": 75,
+      "volatilityMultiplier": 0.9,
+      "eventSensitivityWeights": {
+        "military-conflict": -2.0,
+        "sanctions-imposed": -1.0,
+        "civil-unrest": -1.5,
+        "trade-deal": 1.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.5,
+        "natural-disaster": -2.5
+      }
+    },
+    {
+      "tickerId": "saudi_arabia-consumer",
+      "sectorName": "consumer",
+      "initialPrice": 55,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.5,
+        "sanctions-imposed": -1.0,
+        "civil-unrest": -2.0,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.5,
+        "natural-disaster": -1.5
+      }
+    },
+    {
+      "tickerId": "saudi_arabia-defense",
+      "sectorName": "defense",
+      "initialPrice": 40,
+      "volatilityMultiplier": 1.1,
+      "eventSensitivityWeights": {
+        "military-conflict": 4.0,
+        "sanctions-imposed": -1.5,
+        "civil-unrest": -0.5,
+        "trade-deal": 0.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "saudi_arabia-technology",
+      "sectorName": "technology",
+      "initialPrice": 35,
+      "volatilityMultiplier": 1.2,
+      "eventSensitivityWeights": {
+        "military-conflict": -0.5,
+        "sanctions-imposed": -1.5,
+        "civil-unrest": -0.5,
+        "trade-deal": 1.5,
+        "tech-breakthrough": 4.0,
+        "oil-disruption": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "state-ideology",
+  "name": "State Ideology (Juche / Maoism / Personality Cult)",
+  "description": "Secular state ideologies that function as quasi-religious belief systems, demanding absolute loyalty to the state, party, or supreme leader. Includes Juche (North Korea), Maoist thought (China during Cultural Revolution), and other personality cults. Replaces traditional religion with state mythology, revolutionary narratives, and enforced ideological conformity.",
+  "adherentsGlobalPercent": 1.5,
+  "socialCohesionModifier": 25,
+  "politicalInfluence": "theocratic",
+  "demographicTrend": "declining",
+  "interReligiousTensions": [
+    { "targetReligionId": "christianity-protestant", "tensionLevel": "hostile", "historicalBasis": "Underground church persecution" },
+    { "targetReligionId": "buddhism", "tensionLevel": "hostile", "historicalBasis": "Suppression of Buddhist institutions" },
+    { "targetReligionId": "secular-atheism", "tensionLevel": "wary", "historicalBasis": "Secular atheism without state loyalty is subversive" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 15,
+    "reformResistance": 95,
+    "educationAttitude": "restrictive",
+    "scienceAttitude": "selective",
+    "theocracyPotential": 100,
+    "martyrdomFactor": 80,
+    "charityModifier": 0
+  },
+  "tags": ["state-religion", "personality-cult", "totalitarian", "juche", "ideological-conformity"]
+}

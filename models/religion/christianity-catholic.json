@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "christianity-catholic",
+  "name": "Roman Catholicism",
+  "parentTradition": "christianity",
+  "description": "The largest single Christian denomination, led by the Pope in Vatican City. Characterized by sacramental theology, hierarchical structure, and a global network of parishes, schools, hospitals, and charitable institutions. Strong presence in Europe, Latin America, Philippines, and sub-Saharan Africa.",
+  "adherentsGlobalPercent": 16.8,
+  "socialCohesionModifier": 15,
+  "politicalInfluence": "significant",
+  "demographicTrend": "stable",
+  "interReligiousTensions": [
+    { "targetReligionId": "christianity-protestant", "tensionLevel": "tolerant", "historicalBasis": "Ecumenical dialogue since Vatican II" },
+    { "targetReligionId": "christianity-orthodox", "tensionLevel": "tolerant", "historicalBasis": "Great Schism legacy, ongoing reconciliation" },
+    { "targetReligionId": "secular-atheism", "tensionLevel": "wary", "historicalBasis": "Secularization of traditionally Catholic societies" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 10,
+    "reformResistance": 45,
+    "educationAttitude": "pro-education",
+    "scienceAttitude": "neutral",
+    "theocracyPotential": 20,
+    "martyrdomFactor": 25,
+    "charityModifier": 22
+  },
+  "tags": ["christian", "papal", "hierarchical", "global-institution", "charitable"]
+}

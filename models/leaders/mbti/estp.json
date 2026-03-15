@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ESTP",
+  "typeName": "The Entrepreneur",
+  "cognitiveStack": ["Se", "Ti", "Fe", "Ni"],
+  "strengthDomains": [
+    "crisis management",
+    "tactical opportunism",
+    "bold negotiation"
+  ],
+  "blindSpots": [
+    "long-range strategic planning",
+    "institutional patience",
+    "ideological consistency"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 45,
+  "adaptability": 90,
+  "leadershipStyle": "adaptive",
+  "diplomaticApproach": "pragmatic",
+  "conflictResponse": "escalate",
+  "gameplayModifiers": {
+    "alliancePreference": -5,
+    "noveltyPreference": 15,
+    "outcomeTypeWeight": {
+      "measurable": 20,
+      "humanitarian": -10,
+      "legitimacy": -5
+    },
+    "commitmentTiming": -10
+  }
+}

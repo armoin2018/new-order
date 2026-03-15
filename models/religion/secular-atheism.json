@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "religionId": "secular-atheism",
+  "name": "Secular/Atheist/Agnostic",
+  "description": "Encompasses non-religious worldviews including atheism, agnosticism, secular humanism, and religious indifference. Growing rapidly in Western Europe, East Asia, and among younger global populations. Associated with scientific rationalism, progressive social values, and skepticism toward institutional religion.",
+  "adherentsGlobalPercent": 15.6,
+  "socialCohesionModifier": 5,
+  "politicalInfluence": "moderate",
+  "demographicTrend": "growing",
+  "interReligiousTensions": [
+    { "targetReligionId": "christianity-protestant", "tensionLevel": "wary", "historicalBasis": "Culture war over social values" },
+    { "targetReligionId": "islam-sunni", "tensionLevel": "wary", "historicalBasis": "Secularism vs. religious law debates" },
+    { "targetReligionId": "islam-shia", "tensionLevel": "hostile", "historicalBasis": "Western secularism as ideological threat" }
+  ],
+  "gameplayModifiers": {
+    "stabilityModifier": 5,
+    "reformResistance": 5,
+    "educationAttitude": "pro-education",
+    "scienceAttitude": "pro-science",
+    "theocracyPotential": 0,
+    "martyrdomFactor": 5,
+    "charityModifier": 5
+  },
+  "tags": ["non-religious", "secular", "humanist", "scientific", "progressive"]
+}

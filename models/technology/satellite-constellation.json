@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "satellite-constellation",
+  "name": "Satellite Constellation Network",
+  "domain": "space",
+  "secondaryDomains": ["cyber"],
+  "description": "Deploys a large-scale low-Earth orbit satellite constellation providing global communications, GPS augmentation, and persistent Earth observation. Forms the backbone for military command-and-control and intelligence gathering from space.",
+  "tier": 2,
+  "researchCost": 150,
+  "researchDurationTurns": 10,
+  "impactLevel": "significant",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "space": 10,
+      "cyber": 3
+    },
+    "militaryModifiers": {
+      "attackBonus": 4,
+      "defenseBonus": 4
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.0
+    },
+    "socialModifiers": {
+      "softPowerBonus": 5
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 35
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "predictive-analytics-military",
+      "bonusDescription": "Satellite data feeds transform predictive military intelligence accuracy",
+      "bonusMultiplier": 1.3
+    }
+  ],
+  "tags": ["satellite", "leo", "communications", "earth-observation", "gps", "c2"]
+}

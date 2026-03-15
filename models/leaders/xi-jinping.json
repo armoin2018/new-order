@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "xi-jinping",
+  "name": "Xi Jinping",
+  "title": "General Secretary of the CPC & President of the PRC",
+  "factionId": "china",
+  "mbtiType": "INTJ",
+  "mbtiDichotomyScores": {
+    "EI": 72,
+    "SN": 68,
+    "TF": 18,
+    "JP": 15
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "escalate",
+    "riskTolerance": 65,
+    "paranoia": 82,
+    "narcissism": 78,
+    "pragmatism": 70,
+    "patience": 80,
+    "vengefulIndex": 72,
+    "charisma": 55,
+    "empathy": 20,
+    "ideologicalRigidity": 75,
+    "corruptibility": 25
+  },
+  "motivations": {
+    "primary": "power",
+    "secondary": "legacy",
+    "fear": "overthrow"
+  },
+  "powerBase": {
+    "source": "party",
+    "consolidation": 92,
+    "legitimacy": 70,
+    "succession": "undefined"
+  },
+  "vulnerabilities": {
+    "health": 45,
+    "scandals": ["Anti-corruption purges perceived as political tool", "Xinjiang international scrutiny"],
+    "internalOpposition": 25,
+    "externalPressure": 70
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": 20,
+      "reason": "Strategic 'no-limits' partnership against Western order"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -25,
+      "reason": "Systemic great-power rivalry and trade conflicts"
+    },
+    {
+      "targetLeaderId": "kim-jong-un",
+      "modifier": 10,
+      "reason": "Ideological patron-client relationship with DPRK"
+    }
+  ],
+  "biography": "Xi Jinping consolidated power as China's paramount leader, removing term limits and centralizing authority to a degree unseen since Mao. A strategic long-term planner, he pursues the 'China Dream' of national rejuvenation through economic dominance, military modernization, and reshaping the global order. His INTJ temperament drives meticulous five-year plans and a vision-first approach to geopolitics.",
+  "tags": ["superpower", "authoritarian", "revisionist", "nuclear-armed", "belt-and-road", "tech-rivalry"]
+}

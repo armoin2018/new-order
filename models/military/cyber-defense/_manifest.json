@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-cyber-defense",
+  "description": "Defensive cyber security capabilities including SOC, threat intelligence, endpoint protection, and intrusion detection",
+  "count": 4,
+  "files": [
+    "soc-operations-center.json",
+    "threat-intelligence-platform.json",
+    "endpoint-protection-suite.json",
+    "network-intrusion-detection.json"
+  ]
+}

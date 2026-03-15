@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "moex",
+  "exchangeName": "Moscow Exchange",
+  "nationId": "russia",
+  "baseIndexValue": 2800,
+  "volatilityProfile": "high",
+  "currencyCode": "RUB",
+  "marketCapBillions": 850,
+  "sectorWeights": {
+    "defense": 0.12,
+    "energy": 0.35,
+    "technology": 0.05,
+    "finance": 0.15,
+    "consumer": 0.08,
+    "healthcare": 0.03,
+    "infrastructure": 0.07,
+    "mining": 0.15
+  }
+}

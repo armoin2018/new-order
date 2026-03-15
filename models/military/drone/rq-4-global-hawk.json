@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "rq-4-global-hawk",
+  "name": "RQ-4 Global Hawk",
+  "category": "drone",
+  "subcategory": "surveillance-uas",
+  "description": "High-altitude long-endurance unmanned surveillance aircraft providing persistent wide-area ISR coverage. Can survey 100,000 square kilometers per day from 60,000+ feet altitude.",
+  "nation": "USA",
+  "purchaseCost": 45,
+  "maintenanceCostPerTurn": 5,
+  "attackPower": 0,
+  "defensePower": 5,
+  "range": 45,
+  "speed": 3,
+  "buildTime": 6,
+  "stealthRating": 10,
+  "crewRequirement": 0,
+  "operationalLifespan": 25,
+  "techRequirements": {
+    "ai": 25,
+    "semiconductors": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "wide-area-surveillance",
+      "name": "Wide-Area Surveillance",
+      "description": "Multi-spectral sensors can image 100,000 sq km per day, mapping entire theaters of operation in a single sortie.",
+      "modifier": { "range": 10 }
+    },
+    {
+      "abilityId": "signals-intelligence",
+      "name": "Airborne SIGINT",
+      "description": "Onboard SIGINT package intercepts enemy communications and radar emissions across vast areas.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["drone", "surveillance", "hale", "isr"]
+}

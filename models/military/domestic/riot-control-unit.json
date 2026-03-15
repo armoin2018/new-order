@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "riot-control-unit",
+  "name": "Riot Control and Internal Security Unit",
+  "category": "domestic",
+  "subcategory": "internal-security",
+  "description": "Paramilitary police formation equipped with non-lethal and lethal riot suppression gear. Deployed to maintain public order, disperse protests, and enforce state of emergency declarations.",
+  "nation": null,
+  "purchaseCost": 8,
+  "maintenanceCostPerTurn": 1,
+  "attackPower": 15,
+  "defensePower": 40,
+  "range": 1,
+  "speed": 2,
+  "buildTime": 2,
+  "stealthRating": 0,
+  "crewRequirement": 200,
+  "operationalLifespan": 20,
+  "techRequirements": {},
+  "specialAbilities": [
+    {
+      "abilityId": "crowd-suppression",
+      "name": "Crowd Suppression",
+      "description": "Tear gas, water cannons, and rubber bullets reduce civil unrest levels but may inflame public opinion if overused.",
+      "modifier": { "defensePower": 10 }
+    },
+    {
+      "abilityId": "curfew-enforcement",
+      "name": "Curfew Enforcement",
+      "description": "Enables state curfew orders, restricting population movement and reducing protest organization effectiveness.",
+      "modifier": { "defensePower": 5 }
+    }
+  ],
+  "tags": ["domestic", "internal-security", "riot-control", "non-lethal"]
+}

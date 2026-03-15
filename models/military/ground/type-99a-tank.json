@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "type-99a-tank",
+  "name": "Type 99A Main Battle Tank",
+  "category": "ground",
+  "subcategory": "mbt",
+  "description": "China's most advanced main battle tank with a 125mm smoothbore gun, composite armor with ERA, and laser-warning/active protection systems. The backbone of PLA armored divisions.",
+  "nation": "China",
+  "purchaseCost": 28,
+  "maintenanceCostPerTurn": 3,
+  "attackPower": 76,
+  "defensePower": 78,
+  "range": 4,
+  "speed": 3,
+  "buildTime": 4,
+  "stealthRating": 5,
+  "crewRequirement": 3,
+  "operationalLifespan": 35,
+  "techRequirements": {
+    "semiconductors": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "laser-dazzler",
+      "name": "Laser Countermeasure System",
+      "description": "JD-3 laser dazzler blinds enemy optics and laser-guided munitions, disrupting targeting systems.",
+      "modifier": { "defensePower": 8 }
+    },
+    {
+      "abilityId": "autoloader",
+      "name": "Autoloader",
+      "description": "Automatic loading system sustains high rate of fire with reduced crew requirement.",
+      "modifier": { "attackPower": 5 }
+    }
+  ],
+  "tags": ["mbt", "heavy-armor", "autoloader", "era"]
+}

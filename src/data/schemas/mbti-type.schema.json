@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/mbti-type.schema.json",
+  "title": "MBTI Type Profile",
+  "description": "JSON Schema for MBTI personality type profiles (DR-141). Defines cognitive functions, behavioral tendencies, and gameplay modifiers for each of the 16 Myers-Briggs types.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "typeCode",
+    "typeName",
+    "cognitiveStack",
+    "strengthDomains",
+    "blindSpots",
+    "stressPattern",
+    "decisionSpeed",
+    "adaptability",
+    "leadershipStyle",
+    "diplomaticApproach",
+    "conflictResponse"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Schema version for migration support"
+    },
+    "typeCode": {
+      "type": "string",
+      "pattern": "^[EI][SN][TF][JP]$",
+      "description": "Four-letter MBTI type code (e.g., ENTJ, ISFP)"
+    },
+    "typeName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Human-readable type name (e.g., 'The Commander', 'The Adventurer')"
+    },
+    "cognitiveStack": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Te", "Ti", "Fe", "Fi", "Se", "Si", "Ne", "Ni"]
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "Ordered cognitive function stack: dominant, auxiliary, tertiary, inferior"
+    },
+    "strengthDomains": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Areas where this type excels (e.g., 'strategic planning', 'crisis management')"
+    },
+    "blindSpots": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Areas of vulnerability or oversight"
+    },
+    "stressPattern": {
+      "type": "string",
+      "enum": ["grip", "loop", "shadow", "regression"],
+      "description": "How this type typically deteriorates under stress"
+    },
+    "decisionSpeed": {
+      "type": "number",
+      "minimum": -30,
+      "maximum": 50,
+      "description": "Modifier to decision speed (negative = slower, positive = faster). J types tend positive, P types tend negative."
+    },
+    "adaptability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "How well this type adapts to changing conditions (0 = rigid, 100 = highly flexible)"
+    },
+    "leadershipStyle": {
+      "type": "string",
+      "enum": [
+        "commanding",
+        "visionary",
+        "diplomatic",
+        "analytical",
+        "servant",
+        "charismatic",
+        "strategic",
+        "adaptive"
+      ],
+      "description": "Primary leadership approach"
+    },
+    "diplomaticApproach": {
+      "type": "string",
+      "enum": [
+        "transactional",
+        "relational",
+        "principled",
+        "pragmatic",
+        "confrontational",
+        "collaborative"
+      ],
+      "description": "Preferred diplomatic style"
+    },
+    "conflictResponse": {
+      "type": "string",
+      "enum": [
+        "dominate",
+        "compromise",
+        "avoid",
+        "accommodate",
+        "collaborate",
+        "escalate"
+      ],
+      "description": "Default response to conflict situations"
+    },
+    "gameplayModifiers": {
+      "type": "object",
+      "description": "Optional gameplay weight modifiers for AI decision engine (FR-2102)",
+      "properties": {
+        "alliancePreference": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Modifier to alliance/coalition action utility weight"
+        },
+        "noveltyPreference": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Modifier for unconventional vs. proven strategy preference"
+        },
+        "outcomeTypeWeight": {
+          "type": "object",
+          "description": "Weight modifiers for different outcome types",
+          "properties": {
+            "measurable": { "type": "number", "minimum": -30, "maximum": 30 },
+            "humanitarian": { "type": "number", "minimum": -30, "maximum": 30 },
+            "legitimacy": { "type": "number", "minimum": -30, "maximum": 30 }
+          }
+        },
+        "commitmentTiming": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Modifier for early commitment vs. delayed decision (J vs P)"
+        }
+      }
+    }
+  }
+}

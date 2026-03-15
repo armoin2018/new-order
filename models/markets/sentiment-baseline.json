@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Baseline market sentiment estimates per exchange, reflecting March 2026 geopolitical climate. Load this file or override with a custom baseline.",
+  "globalSentiment": "cautious",
+  "globalSentimentScore": -5,
+  "exchangeBaselines": {
+    "nyse": {
+      "sentiment": "neutral",
+      "sentimentScore": 8,
+      "trendStrength": 30,
+      "note": "Strong tech earnings offset by geopolitical uncertainty. Cautiously optimistic."
+    },
+    "sse": {
+      "sentiment": "bearish",
+      "sentimentScore": -18,
+      "trendStrength": 45,
+      "note": "Property sector stress, export slowdown from chip sanctions. Capital outflows."
+    },
+    "moex": {
+      "sentiment": "bearish",
+      "sentimentScore": -35,
+      "trendStrength": 60,
+      "note": "Ongoing sanctions, war economy, restricted foreign investment."
+    },
+    "tse": {
+      "sentiment": "neutral",
+      "sentimentScore": 5,
+      "trendStrength": 20,
+      "note": "Yen weakness supports exporters, but domestic demand flat."
+    },
+    "tedpix": {
+      "sentiment": "bearish",
+      "sentimentScore": -25,
+      "trendStrength": 50,
+      "note": "Sanctions pressure, rial volatility, restricted external trade."
+    },
+    "pse": {
+      "sentiment": "bearish",
+      "sentimentScore": -60,
+      "trendStrength": 10,
+      "note": "Minimal foreign participation, state-controlled pricing."
+    },
+    "euronext": {
+      "sentiment": "neutral",
+      "sentimentScore": 2,
+      "trendStrength": 25,
+      "note": "ECB rate decisions pending, energy costs stabilising post-crisis."
+    },
+    "dse": {
+      "sentiment": "bearish",
+      "sentimentScore": -40,
+      "trendStrength": 15,
+      "note": "Reconstruction economy, very low liquidity, donor-dependent."
+    }
+  },
+  "climateRiskFactors": {
+    "HeatWave": { "energySectorImpact": -2.5, "consumerImpact": -1.0, "agricultureImpact": -4.0 },
+    "Flooding": { "energySectorImpact": -1.5, "consumerImpact": -2.5, "infrastructureImpact": -3.5 },
+    "Drought": { "energySectorImpact": -1.0, "consumerImpact": -3.0, "agricultureImpact": -5.0 },
+    "Typhoon": { "energySectorImpact": -3.0, "consumerImpact": -2.0, "infrastructureImpact": -4.0 },
+    "ArcticCollapse": { "energySectorImpact": 2.0, "defenseSectorImpact": 1.5, "globalSentimentShock": -8.0 },
+    "Wildfire": { "energySectorImpact": -1.5, "consumerImpact": -1.5, "healthcareImpact": -2.0 },
+    "Earthquake": { "energySectorImpact": -2.0, "consumerImpact": -3.0, "infrastructureImpact": -5.0 }
+  }
+}

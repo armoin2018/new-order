@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "leopard-2a7",
+  "name": "Leopard 2A7+",
+  "category": "ground",
+  "subcategory": "mbt",
+  "description": "Germany's latest Leopard 2 variant with enhanced urban warfare capability, programmable HE ammunition, and improved protection. The gold standard for European NATO armored forces.",
+  "nation": "Germany",
+  "purchaseCost": 33,
+  "maintenanceCostPerTurn": 3,
+  "attackPower": 79,
+  "defensePower": 82,
+  "range": 4,
+  "speed": 3,
+  "buildTime": 4,
+  "stealthRating": 5,
+  "crewRequirement": 4,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "semiconductors": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "urban-warfare-kit",
+      "name": "Urban Warfare Package",
+      "description": "Roof-mounted remote weapon station, all-around cameras, and bar armor optimize the tank for close urban combat.",
+      "modifier": { "defensePower": 8 }
+    },
+    {
+      "abilityId": "programmable-ammo",
+      "name": "Programmable HE Ammunition",
+      "description": "DM11 rounds can be programmed for airburst, impact, or delayed detonation, maximizing lethality against varied targets.",
+      "modifier": { "attackPower": 8 }
+    }
+  ],
+  "tags": ["mbt", "heavy-armor", "nato", "urban-capable"]
+}

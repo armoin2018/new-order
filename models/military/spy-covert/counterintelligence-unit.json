@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "counterintelligence-unit",
+  "name": "Counterintelligence Unit",
+  "category": "spy-covert",
+  "subcategory": "counterintelligence",
+  "description": "Specialized unit dedicated to detecting, neutralizing, and exploiting enemy espionage operations. Conducts mole hunts, double-agent operations, and deception campaigns to protect national secrets.",
+  "nation": null,
+  "purchaseCost": 30,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 10,
+  "defensePower": 45,
+  "range": 5,
+  "speed": 1,
+  "buildTime": 6,
+  "stealthRating": 70,
+  "crewRequirement": 40,
+  "operationalLifespan": 20,
+  "techRequirements": {
+    "cyber": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "mole-hunt",
+      "name": "Mole Hunt",
+      "description": "Systematic investigation to identify and neutralize enemy agents who have penetrated friendly intelligence services.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "double-agent-ops",
+      "name": "Double Agent Operations",
+      "description": "Turns captured enemy agents to feed disinformation back to their handlers, deceiving enemy intelligence.",
+      "modifier": { "attackPower": 10 }
+    }
+  ],
+  "tags": ["counterintelligence", "defensive", "deception", "security"]
+}

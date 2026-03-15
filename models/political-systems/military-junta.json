@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "military-junta",
+  "systemName": "Military Junta",
+  "description": "A government controlled by a military committee that seized power, typically through a coup. Command-and-control structures enable very fast decisions, but legitimacy is low, international isolation is common, and internal power struggles create constant instability. Myanmar is a contemporary example.",
+  "decisionSpeedModifier": 50,
+  "stabilityBaseline": -15,
+  "civilLibertyIndex": 8,
+  "pressFreedomIndex": 5,
+  "corruptionBaseline": 80,
+  "successionRisk": 85,
+  "reformCapacity": 5,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 0.5,
+    "crisisResistance": 0.7,
+    "intelligenceModifier": {
+      "counterIntel": 1.3,
+      "humintAbroad": 0.6
+    },
+    "controversialActionDelay": 0,
+    "propagandaEffectiveness": 1.2,
+    "civilUnrestThreshold": 1.6
+  },
+  "tags": ["authoritarian", "military", "coup-origin", "isolated", "repressive"]
+}

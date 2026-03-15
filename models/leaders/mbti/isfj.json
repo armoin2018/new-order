@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ISFJ",
+  "typeName": "The Defender",
+  "cognitiveStack": ["Si", "Fe", "Ti", "Ne"],
+  "strengthDomains": [
+    "social cohesion",
+    "institutional support",
+    "crisis welfare management"
+  ],
+  "blindSpots": [
+    "asserting boundaries under pressure",
+    "delegating critical tasks",
+    "anticipating radical systemic change"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 15,
+  "adaptability": 35,
+  "leadershipStyle": "servant",
+  "diplomaticApproach": "relational",
+  "conflictResponse": "accommodate",
+  "gameplayModifiers": {
+    "alliancePreference": 15,
+    "noveltyPreference": -15,
+    "outcomeTypeWeight": {
+      "measurable": 5,
+      "humanitarian": 25,
+      "legitimacy": 10
+    },
+    "commitmentTiming": 15
+  }
+}

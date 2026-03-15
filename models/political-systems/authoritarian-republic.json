@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "authoritarian-republic",
+  "systemName": "Authoritarian Republic",
+  "description": "A nominally republican system where elections exist but are systematically manipulated to entrench a dominant leader or ruling clique. Institutions are hollowed out to serve the executive, creating fast decision-making but brittle legitimacy. Examples include Russia, Turkey, and Egypt.",
+  "decisionSpeedModifier": 30,
+  "stabilityBaseline": 2,
+  "civilLibertyIndex": 25,
+  "pressFreedomIndex": 18,
+  "corruptionBaseline": 70,
+  "successionRisk": 65,
+  "reformCapacity": 20,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 0.8,
+    "crisisResistance": 1.0,
+    "intelligenceModifier": {
+      "counterIntel": 1.3,
+      "humintAbroad": 1.1
+    },
+    "controversialActionDelay": 0,
+    "propagandaEffectiveness": 1.3,
+    "civilUnrestThreshold": 1.2
+  },
+  "tags": ["authoritarian", "strongman", "managed-elections", "personalist"]
+}

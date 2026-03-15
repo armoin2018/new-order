@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "global-defense",
+  "indexName": "Global Defense Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Tracks defense sector performance across all 8 major exchanges, GDP-weighted",
+  "constituentTickers": [
+    { "tickerId": "us-defense", "exchangeId": "nyse", "weight": 0.30 },
+    { "tickerId": "cn-defense", "exchangeId": "sse", "weight": 0.20 },
+    { "tickerId": "eu-defense", "exchangeId": "euronext", "weight": 0.15 },
+    { "tickerId": "jp-defense", "exchangeId": "tse", "weight": 0.10 },
+    { "tickerId": "kp-defense", "exchangeId": "pse", "weight": 0.10 },
+    { "tickerId": "ru-defense", "exchangeId": "moex", "weight": 0.08 },
+    { "tickerId": "ir-defense", "exchangeId": "tedpix", "weight": 0.05 },
+    { "tickerId": "sy-defense", "exchangeId": "dse", "weight": 0.02 }
+  ]
+}

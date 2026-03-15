@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "three-nm-chip-fabrication",
+  "name": "3nm Chip Fabrication",
+  "domain": "semiconductors",
+  "secondaryDomains": ["ai", "quantum"],
+  "description": "Achieves volume production of 3nm process node semiconductors, delivering massive performance and efficiency gains for AI accelerators, military systems, and consumer electronics. Only a handful of nations can reach this capability.",
+  "tier": 3,
+  "researchCost": 250,
+  "researchDurationTurns": 14,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "advanced-lithography", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "semiconductors": 15,
+      "ai": 8,
+      "quantum": 3
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 2.5,
+      "revenueMultiplier": 1.2
+    },
+    "militaryModifiers": {
+      "attackBonus": 3,
+      "defenseBonus": 3
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 75
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "autonomous-weapons-ai",
+      "bonusDescription": "3nm chips enable edge AI processing in autonomous weapons platforms",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "quantum-computing-prototype",
+      "bonusDescription": "Advanced chip fabrication improves quantum control electronics fidelity",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["3nm", "fabrication", "leading-edge", "strategic", "export-control"]
+}

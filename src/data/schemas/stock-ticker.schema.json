@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/stock-ticker.schema.json",
+  "title": "Nation Ticker Set",
+  "description": "JSON Schema for a nation's full set of stock tickers per exchange (DR-170). Wraps an array of sector tickers with exchange and nation metadata.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "nationId",
+    "exchangeId",
+    "tickers"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "nationId": {
+      "type": "string",
+      "enum": ["us", "china", "russia", "japan", "iran", "dprk", "eu", "syria"],
+      "description": "Nation faction identifier"
+    },
+    "exchangeId": {
+      "type": "string",
+      "description": "Reference to the parent exchange"
+    },
+    "tickers": {
+      "type": "array",
+      "description": "Array of sector tickers listed on this exchange for the nation",
+      "items": {
+        "type": "object",
+        "required": [
+          "tickerId",
+          "sectorName",
+          "initialPrice",
+          "eventSensitivityWeights"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "tickerId": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "description": "Unique ticker identifier (e.g., 'us-defense-1', 'cn-energy-prime')"
+          },
+          "sectorName": {
+            "type": "string",
+            "enum": [
+              "defense",
+              "energy",
+              "technology",
+              "finance",
+              "consumer",
+              "healthcare",
+              "infrastructure",
+              "mining"
+            ],
+            "description": "Market sector classification"
+          },
+          "initialPrice": {
+            "type": "number",
+            "minimum": 1,
+            "description": "Starting price at game start"
+          },
+          "eventSensitivityWeights": {
+            "type": "object",
+            "description": "Mapping of game event types to price impact multipliers (-5.0 to 5.0)",
+            "properties": {
+              "military-conflict":  { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "sanctions-imposed":  { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "tech-breakthrough":  { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "civil-unrest":       { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "trade-deal":         { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "oil-disruption":     { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "regime-change":      { "type": "number", "minimum": -5.0, "maximum": 5.0 },
+              "natural-disaster":   { "type": "number", "minimum": -5.0, "maximum": 5.0 }
+            },
+            "additionalProperties": false
+          },
+          "volatilityMultiplier": {
+            "type": "number",
+            "minimum": 0.1,
+            "maximum": 5.0,
+            "description": "Per-ticker volatility scaling factor"
+          }
+        }
+      }
+    }
+  }
+}

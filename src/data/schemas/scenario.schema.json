@@ -1,0 +1,895 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://conflict2026.dev/schemas/scenario.schema.json",
+  "title": "New Order Scenario Definition",
+  "description": "JSON Schema for validating scenario definition files (DR-105). Covers initial setup data: nations, leaders, map, units, flashpoints, and victory conditions.",
+  "type": "object",
+  "required": [
+    "meta",
+    "factions",
+    "relationshipMatrix",
+    "nationStates",
+    "geographicPostures",
+    "nationFaultLines",
+    "mapConfig",
+    "units",
+    "militaryForceStructures",
+    "intelligenceCapabilities",
+    "aiProfiles",
+    "cognitiveBiasDefinitions",
+    "interpersonalChemistry",
+    "massPsychology",
+    "mediaEcosystems",
+    "technologyIndices",
+    "techBlocInfo",
+    "resourceSecurity",
+    "climateEvents",
+    "nonStateActors",
+    "proxyRelationships",
+    "flashpoints",
+    "victoryConditions",
+    "lossConditions",
+    "eventTimeline"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "$ref": "#/definitions/ScenarioMeta"
+    },
+    "factions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/FactionId" },
+      "minItems": 2,
+      "maxItems": 8,
+      "uniqueItems": true
+    },
+    "relationshipMatrix": {
+      "type": "object",
+      "description": "DR-101: 2D tension matrix keyed by FactionId → FactionId → TensionLevel",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "type": "object",
+          "patternProperties": {
+            "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+              "type": "number",
+              "minimum": -100,
+              "maximum": 100
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "nationStates": {
+      "type": "object",
+      "description": "DR-104: Initial nation state per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/NationState"
+        }
+      },
+      "additionalProperties": false
+    },
+    "geographicPostures": {
+      "type": "object",
+      "description": "DR-111: Geographic posture per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/GeographicPosture"
+        }
+      },
+      "additionalProperties": false
+    },
+    "nationFaultLines": {
+      "type": "object",
+      "description": "DR-113: Ethnic/religious fault lines per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/NationFaultLines"
+        }
+      },
+      "additionalProperties": false
+    },
+    "mapConfig": {
+      "$ref": "#/definitions/MapConfig"
+    },
+    "units": {
+      "type": "array",
+      "description": "DR-103: Initial military units",
+      "items": { "$ref": "#/definitions/Unit" }
+    },
+    "militaryForceStructures": {
+      "type": "object",
+      "description": "DR-110: Military force structure per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/MilitaryForceStructure"
+        }
+      },
+      "additionalProperties": false
+    },
+    "intelligenceCapabilities": {
+      "type": "object",
+      "description": "DR-109: Intelligence capability matrix per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/IntelligenceCapabilityMatrix"
+        }
+      },
+      "additionalProperties": false
+    },
+    "aiProfiles": {
+      "type": "object",
+      "description": "DR-108: AI leader profiles per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/AIProfileConfig"
+        }
+      },
+      "additionalProperties": false
+    },
+    "cognitiveBiasDefinitions": {
+      "type": "array",
+      "description": "DR-120: Global cognitive bias registry definitions",
+      "items": { "$ref": "#/definitions/CognitiveBiasDefinition" }
+    },
+    "interpersonalChemistry": {
+      "type": "array",
+      "description": "DR-121: Initial interpersonal chemistry pairs",
+      "items": { "$ref": "#/definitions/InterpersonalChemistry" }
+    },
+    "massPsychology": {
+      "type": "object",
+      "description": "DR-123: Initial mass psychology per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/MassPsychologyIndex"
+        }
+      },
+      "additionalProperties": false
+    },
+    "mediaEcosystems": {
+      "type": "object",
+      "description": "DR-139: Media ecosystem config per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/MediaEcosystemConfig"
+        }
+      },
+      "additionalProperties": false
+    },
+    "technologyIndices": {
+      "type": "object",
+      "description": "DR-130: Technology index per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/TechnologyIndex"
+        }
+      },
+      "additionalProperties": false
+    },
+    "techBlocInfo": {
+      "type": "object",
+      "description": "DR-131: Tech bloc alignment info per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/NationTechBlocInfo"
+        }
+      },
+      "additionalProperties": false
+    },
+    "resourceSecurity": {
+      "type": "object",
+      "description": "DR-132: Resource security index per faction",
+      "patternProperties": {
+        "^(us|china|russia|japan|iran|dprk|eu|syria)$": {
+          "$ref": "#/definitions/ResourceSecurityIndex"
+        }
+      },
+      "additionalProperties": false
+    },
+    "climateEvents": {
+      "type": "array",
+      "description": "DR-133: Pre-scheduled climate events",
+      "items": { "$ref": "#/definitions/ClimateEvent" }
+    },
+    "nonStateActors": {
+      "type": "array",
+      "description": "DR-140: Non-state actors at game start",
+      "items": { "$ref": "#/definitions/NonStateActor" }
+    },
+    "proxyRelationships": {
+      "type": "array",
+      "description": "DR-135: Initial proxy relationships",
+      "items": { "$ref": "#/definitions/ProxyRelationship" }
+    },
+    "flashpoints": {
+      "type": "array",
+      "description": "DR-105: Flashpoint variables",
+      "items": { "$ref": "#/definitions/FlashpointVariable" }
+    },
+    "victoryConditions": {
+      "type": "array",
+      "description": "Victory condition definitions",
+      "items": { "$ref": "#/definitions/VictoryConditionDef" },
+      "minItems": 1
+    },
+    "lossConditions": {
+      "type": "array",
+      "description": "Loss condition definitions",
+      "items": { "$ref": "#/definitions/LossConditionDef" },
+      "minItems": 1
+    },
+    "eventTimeline": {
+      "type": "array",
+      "description": "Pre-scripted events",
+      "items": { "$ref": "#/definitions/TimelineEvent" }
+    },
+    "hexMap": {
+      "type": "object",
+      "description": "Optional pre-computed hex map",
+      "additionalProperties": { "$ref": "#/definitions/HexState" }
+    }
+  },
+  "definitions": {
+    "FactionId": {
+      "type": "string",
+      "enum": ["us", "china", "russia", "japan", "iran", "dprk", "eu", "syria"]
+    },
+    "UnitType": {
+      "type": "string",
+      "enum": ["Infantry", "Armor", "Naval", "Air", "CyberWarfare", "HypersonicMissile", "FishingFleet", "MobileNuclearLauncher"]
+    },
+    "TerrainType": {
+      "type": "string",
+      "enum": ["Mountain", "Urban", "Desert", "Plains", "Forest", "Coastal", "Island", "Arctic"]
+    },
+    "Doctrine": {
+      "type": "string",
+      "enum": ["Defensive", "Offensive", "Hybrid", "Asymmetric", "Nuclear"]
+    },
+    "DecisionStyle": {
+      "type": "string",
+      "enum": ["Transactional", "Analytical", "Intuitive", "Ideological"]
+    },
+    "StressResponse": {
+      "type": "string",
+      "enum": ["Escalate", "Consolidate", "Deflect", "Retreat"]
+    },
+    "BiasType": {
+      "type": "string",
+      "enum": ["SunkCost", "ConfirmationBias", "Groupthink", "Anchoring", "LossAversion", "Optimism", "AvailabilityHeuristic", "DunningKruger", "Recency", "EscalationOfCommitment"]
+    },
+    "InteractionTone": {
+      "type": "string",
+      "enum": ["Friendly", "Neutral", "Cold", "Hostile", "Threatening"]
+    },
+    "EscalationStage": {
+      "type": "string",
+      "enum": ["Grumbling", "Protests", "Riots", "Insurrection", "CivilWar"]
+    },
+    "MediaEcosystemType": {
+      "type": "string",
+      "enum": ["FreePress", "StateMedia", "ClosedSystem", "Fragmented"]
+    },
+    "NarrativeType": {
+      "type": "string",
+      "enum": ["Victimhood", "Liberation", "EconomicJustice", "HistoricalGrievance"]
+    },
+    "SanctionTier": {
+      "type": "string",
+      "enum": ["Targeted", "Sectoral", "Comprehensive"]
+    },
+    "TechDomain": {
+      "type": "string",
+      "enum": ["AI", "Semiconductors", "Space", "Cyber", "Biotech", "Quantum"]
+    },
+    "TechBlocAlignment": {
+      "type": "string",
+      "enum": ["US-led", "China-led", "non-aligned"]
+    },
+    "NonStateActorType": {
+      "type": "string",
+      "enum": ["Militia", "TerroristGroup", "SeparatistMovement", "CyberCollective", "MercenaryGroup", "PoliticalMovement"]
+    },
+    "ClimateEventType": {
+      "type": "string",
+      "enum": ["HeatWave", "Flooding", "Drought", "Typhoon", "ArcticCollapse", "Wildfire", "Earthquake"]
+    },
+    "RefugeeCause": {
+      "type": "string",
+      "enum": ["war", "famine", "climate", "unrest"]
+    },
+    "RefugeeResponse": {
+      "type": "string",
+      "enum": ["accept", "reject", "weaponized"]
+    },
+    "Score0to100": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "ScenarioMeta": {
+      "type": "object",
+      "required": ["id", "name", "version", "author", "description", "maxTurns"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "author": { "type": "string" },
+        "description": { "type": "string" },
+        "maxTurns": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "NationState": {
+      "type": "object",
+      "required": ["factionId", "stability", "treasury", "gdp", "inflation", "militaryReadiness", "nuclearThreshold", "diplomaticInfluence", "popularity", "allianceCredibility", "techLevel"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "stability": { "$ref": "#/definitions/Score0to100" },
+        "treasury": { "type": "number" },
+        "gdp": { "type": "number" },
+        "inflation": { "type": "number", "minimum": 0 },
+        "militaryReadiness": { "$ref": "#/definitions/Score0to100" },
+        "nuclearThreshold": { "$ref": "#/definitions/Score0to100" },
+        "diplomaticInfluence": { "$ref": "#/definitions/Score0to100" },
+        "popularity": { "$ref": "#/definitions/Score0to100" },
+        "allianceCredibility": { "$ref": "#/definitions/Score0to100" },
+        "techLevel": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "GeographicPosture": {
+      "type": "object",
+      "required": ["factionId", "strategicDepth", "naturalDefenses", "keyVulnerabilities", "chokepointControl", "terrainAdvantage", "energyDependency"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "strategicDepth": { "$ref": "#/definitions/Score0to100" },
+        "naturalDefenses": { "type": "array", "items": { "type": "string" } },
+        "keyVulnerabilities": { "type": "array", "items": { "type": "string" } },
+        "chokepointControl": { "type": "array", "items": { "type": "string" } },
+        "terrainAdvantage": { "type": "number", "minimum": -50, "maximum": 50 },
+        "energyDependency": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "NationFaultLines": {
+      "type": "object",
+      "required": ["factionId", "faultLines"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "faultLines": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/EthnicFaultLine" }
+        }
+      }
+    },
+    "EthnicFaultLine": {
+      "type": "object",
+      "required": ["groupName", "tensionBase", "triggers", "foreignSponsorVulnerability", "affectedHexRegions"],
+      "additionalProperties": false,
+      "properties": {
+        "groupName": { "type": "string" },
+        "tensionBase": { "$ref": "#/definitions/Score0to100" },
+        "triggers": { "type": "array", "items": { "type": "string" } },
+        "foreignSponsorVulnerability": { "$ref": "#/definitions/Score0to100" },
+        "affectedHexRegions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "MapConfig": {
+      "type": "object",
+      "required": ["width", "height", "defaultTerrain", "hexOverrides"],
+      "additionalProperties": false,
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "defaultTerrain": { "type": "string" },
+        "hexOverrides": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/HexState" }
+        }
+      }
+    },
+    "HexState": {
+      "type": "object",
+      "required": ["id", "nationControl", "terrainType", "terrainBonus", "resourceYield", "civilianUnrest", "militaryPresence", "infrastructureLevel"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "nationControl": {
+          "oneOf": [
+            { "$ref": "#/definitions/FactionId" },
+            { "type": "null" }
+          ]
+        },
+        "terrainType": { "$ref": "#/definitions/TerrainType" },
+        "terrainBonus": { "type": "number", "minimum": -20, "maximum": 20 },
+        "resourceYield": { "$ref": "#/definitions/Score0to100" },
+        "civilianUnrest": { "$ref": "#/definitions/Score0to100" },
+        "militaryPresence": { "$ref": "#/definitions/Score0to100" },
+        "infrastructureLevel": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "Unit": {
+      "type": "object",
+      "required": ["id", "factionId", "unitType", "hp", "attackPower", "defensePower", "movementRange", "specialAbilities", "supplyStatus", "morale", "position", "isGhost"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "unitType": { "$ref": "#/definitions/UnitType" },
+        "hp": { "$ref": "#/definitions/Score0to100" },
+        "attackPower": { "$ref": "#/definitions/Score0to100" },
+        "defensePower": { "$ref": "#/definitions/Score0to100" },
+        "movementRange": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "specialAbilities": { "type": "array", "items": { "type": "string" } },
+        "supplyStatus": { "$ref": "#/definitions/Score0to100" },
+        "morale": { "$ref": "#/definitions/Score0to100" },
+        "position": { "type": "string" },
+        "isGhost": { "type": "boolean" }
+      }
+    },
+    "MilitaryForceStructure": {
+      "type": "object",
+      "required": ["factionId", "activeForces", "nuclearArsenal", "navalPower", "airPower", "specialCapability", "forceProjection", "readiness", "doctrine", "techLevel"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "activeForces": { "type": "number", "minimum": 0 },
+        "nuclearArsenal": { "type": "integer", "minimum": 0 },
+        "navalPower": { "$ref": "#/definitions/Score0to100" },
+        "airPower": { "$ref": "#/definitions/Score0to100" },
+        "specialCapability": { "type": "array", "items": { "type": "string" } },
+        "forceProjection": { "$ref": "#/definitions/Score0to100" },
+        "readiness": { "$ref": "#/definitions/Score0to100" },
+        "doctrine": { "$ref": "#/definitions/Doctrine" },
+        "techLevel": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "IntelligenceCapabilityMatrix": {
+      "type": "object",
+      "required": ["factionId", "capabilities", "operationsLog", "assetRegistry"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "capabilities": {
+          "type": "object",
+          "required": ["humint", "sigint", "cyber", "covert", "counterIntel"],
+          "additionalProperties": false,
+          "properties": {
+            "humint": { "$ref": "#/definitions/Score0to100" },
+            "sigint": { "$ref": "#/definitions/Score0to100" },
+            "cyber": { "$ref": "#/definitions/Score0to100" },
+            "covert": { "$ref": "#/definitions/Score0to100" },
+            "counterIntel": { "$ref": "#/definitions/Score0to100" }
+          }
+        },
+        "operationsLog": { "type": "array", "items": { "$ref": "#/definitions/IntelOperation" } },
+        "assetRegistry": { "type": "array", "items": { "$ref": "#/definitions/IntelAsset" } }
+      }
+    },
+    "IntelOperation": {
+      "type": "object",
+      "required": ["operationName", "type", "targetFaction", "turnLaunched", "active", "discovered", "outcome"],
+      "additionalProperties": false,
+      "properties": {
+        "operationName": { "type": "string" },
+        "type": { "type": "string", "enum": ["HUMINT", "SIGINT", "CYBER", "COVERT"] },
+        "targetFaction": { "$ref": "#/definitions/FactionId" },
+        "turnLaunched": { "type": "integer", "minimum": 0 },
+        "active": { "type": "boolean" },
+        "discovered": { "type": "boolean" },
+        "outcome": { "type": ["string", "null"] }
+      }
+    },
+    "IntelAsset": {
+      "type": "object",
+      "required": ["codeName", "targetFaction", "reliability", "exposureRisk", "active"],
+      "additionalProperties": false,
+      "properties": {
+        "codeName": { "type": "string" },
+        "targetFaction": { "$ref": "#/definitions/FactionId" },
+        "reliability": { "$ref": "#/definitions/Score0to100" },
+        "exposureRisk": { "$ref": "#/definitions/Score0to100" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "AIProfileConfig": {
+      "type": "object",
+      "required": ["factionId", "leader", "initialEmotionalState", "biasAssignments"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "leader": { "$ref": "#/definitions/LeaderProfile" },
+        "initialEmotionalState": { "$ref": "#/definitions/EmotionalStateSnapshot" },
+        "biasAssignments": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/LeaderBiasAssignment" },
+          "minItems": 2,
+          "maxItems": 4
+        }
+      }
+    },
+    "LeaderProfile": {
+      "type": "object",
+      "required": ["id", "identity", "psychology", "motivations", "powerBase", "vulnerabilities", "historicalAnalog"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "identity": {
+          "type": "object",
+          "required": ["name", "title", "nation", "age", "ideology"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "title": { "type": "string" },
+            "nation": { "$ref": "#/definitions/FactionId" },
+            "age": { "type": "integer", "minimum": 18 },
+            "ideology": { "type": "string" }
+          }
+        },
+        "psychology": {
+          "type": "object",
+          "required": ["decisionStyle", "stressResponse", "riskTolerance", "paranoia", "narcissism", "pragmatism", "patience", "vengefulIndex"],
+          "additionalProperties": false,
+          "properties": {
+            "decisionStyle": { "$ref": "#/definitions/DecisionStyle" },
+            "stressResponse": { "$ref": "#/definitions/StressResponse" },
+            "riskTolerance": { "$ref": "#/definitions/Score0to100" },
+            "paranoia": { "$ref": "#/definitions/Score0to100" },
+            "narcissism": { "$ref": "#/definitions/Score0to100" },
+            "pragmatism": { "$ref": "#/definitions/Score0to100" },
+            "patience": { "$ref": "#/definitions/Score0to100" },
+            "vengefulIndex": { "$ref": "#/definitions/Score0to100" }
+          }
+        },
+        "motivations": {
+          "type": "object",
+          "required": ["primaryGoal", "ideologicalCore", "redLines", "legacyAmbition"],
+          "additionalProperties": false,
+          "properties": {
+            "primaryGoal": { "type": "string" },
+            "ideologicalCore": { "type": "string" },
+            "redLines": { "type": "array", "items": { "type": "string" } },
+            "legacyAmbition": { "type": "string" }
+          }
+        },
+        "powerBase": {
+          "type": "object",
+          "required": ["military", "oligarchs", "party", "clergy", "public", "securityServices"],
+          "additionalProperties": false,
+          "properties": {
+            "military": { "$ref": "#/definitions/Score0to100" },
+            "oligarchs": { "$ref": "#/definitions/Score0to100" },
+            "party": { "$ref": "#/definitions/Score0to100" },
+            "clergy": { "$ref": "#/definitions/Score0to100" },
+            "public": { "$ref": "#/definitions/Score0to100" },
+            "securityServices": { "$ref": "#/definitions/Score0to100" }
+          }
+        },
+        "vulnerabilities": {
+          "type": "object",
+          "required": ["healthRisk", "successionClarity", "coupRisk", "personalScandal"],
+          "additionalProperties": false,
+          "properties": {
+            "healthRisk": { "$ref": "#/definitions/Score0to100" },
+            "successionClarity": { "$ref": "#/definitions/Score0to100" },
+            "coupRisk": { "$ref": "#/definitions/Score0to100" },
+            "personalScandal": { "$ref": "#/definitions/Score0to100" }
+          }
+        },
+        "historicalAnalog": { "type": "string" }
+      }
+    },
+    "EmotionalStateSnapshot": {
+      "type": "object",
+      "required": ["leaderId", "turn", "stress", "confidence", "anger", "fear", "resolve", "decisionFatigue", "stressInoculated"],
+      "additionalProperties": false,
+      "properties": {
+        "leaderId": { "type": "string" },
+        "turn": { "type": "integer", "minimum": 0 },
+        "stress": { "$ref": "#/definitions/Score0to100" },
+        "confidence": { "$ref": "#/definitions/Score0to100" },
+        "anger": { "$ref": "#/definitions/Score0to100" },
+        "fear": { "$ref": "#/definitions/Score0to100" },
+        "resolve": { "$ref": "#/definitions/Score0to100" },
+        "decisionFatigue": { "$ref": "#/definitions/Score0to100" },
+        "stressInoculated": { "type": "boolean" }
+      }
+    },
+    "LeaderBiasAssignment": {
+      "type": "object",
+      "required": ["biasType", "intensity", "trigger"],
+      "additionalProperties": false,
+      "properties": {
+        "biasType": { "$ref": "#/definitions/BiasType" },
+        "intensity": { "$ref": "#/definitions/Score0to100" },
+        "trigger": { "type": "string" }
+      }
+    },
+    "CognitiveBiasDefinition": {
+      "type": "object",
+      "required": ["biasType", "description", "triggerCondition", "distortionFormula", "defaultCarriers", "defaultIntensity"],
+      "additionalProperties": false,
+      "properties": {
+        "biasType": { "$ref": "#/definitions/BiasType" },
+        "description": { "type": "string" },
+        "triggerCondition": { "type": "string" },
+        "distortionFormula": { "type": "string" },
+        "defaultCarriers": { "type": "array", "items": { "type": "string" } },
+        "defaultIntensity": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "InterpersonalChemistry": {
+      "type": "object",
+      "required": ["leaderA", "leaderB", "chemistry", "trust", "grudgeCount", "lastInteractionTone", "emotionalAlignment"],
+      "additionalProperties": false,
+      "properties": {
+        "leaderA": { "type": "string" },
+        "leaderB": { "type": "string" },
+        "chemistry": { "type": "number", "minimum": -50, "maximum": 50 },
+        "trust": { "type": "number", "minimum": -100, "maximum": 100 },
+        "grudgeCount": { "type": "integer", "minimum": 0 },
+        "lastInteractionTone": { "$ref": "#/definitions/InteractionTone" },
+        "emotionalAlignment": { "type": "number", "minimum": -100, "maximum": 100 }
+      }
+    },
+    "MassPsychologyIndex": {
+      "type": "object",
+      "required": ["factionId", "turn", "fear", "anger", "hope", "warWeariness", "nationalism"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "turn": { "type": "integer", "minimum": 0 },
+        "fear": { "$ref": "#/definitions/Score0to100" },
+        "anger": { "$ref": "#/definitions/Score0to100" },
+        "hope": { "$ref": "#/definitions/Score0to100" },
+        "warWeariness": { "$ref": "#/definitions/Score0to100" },
+        "nationalism": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "MediaEcosystemConfig": {
+      "type": "object",
+      "required": ["factionId", "type", "viralityMultiplier", "censorshipEffectiveness", "propagandaResistance", "narrativeControlScore"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "type": { "$ref": "#/definitions/MediaEcosystemType" },
+        "viralityMultiplier": { "type": "number", "minimum": 0 },
+        "censorshipEffectiveness": { "$ref": "#/definitions/Score0to100" },
+        "propagandaResistance": { "$ref": "#/definitions/Score0to100" },
+        "narrativeControlScore": { "$ref": "#/definitions/Score0to100" }
+      }
+    },
+    "TechnologyIndex": {
+      "type": "object",
+      "required": ["factionId", "ai", "semiconductors", "space", "cyber", "biotech", "quantum", "techBlocAlignment", "activeResearch", "exportControls"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "ai": { "$ref": "#/definitions/Score0to100" },
+        "semiconductors": { "$ref": "#/definitions/Score0to100" },
+        "space": { "$ref": "#/definitions/Score0to100" },
+        "cyber": { "$ref": "#/definitions/Score0to100" },
+        "biotech": { "$ref": "#/definitions/Score0to100" },
+        "quantum": { "$ref": "#/definitions/Score0to100" },
+        "techBlocAlignment": {
+          "oneOf": [
+            { "$ref": "#/definitions/TechBlocAlignment" },
+            { "type": "null" }
+          ]
+        },
+        "activeResearch": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/ActiveResearch" }
+        },
+        "exportControls": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/FactionId" }
+          }
+        }
+      }
+    },
+    "ActiveResearch": {
+      "type": "object",
+      "required": ["domain", "projectName", "turnsInvested", "turnsRemaining", "expectedBoost"],
+      "additionalProperties": false,
+      "properties": {
+        "domain": { "$ref": "#/definitions/TechDomain" },
+        "projectName": { "type": "string" },
+        "turnsInvested": { "type": "integer", "minimum": 0 },
+        "turnsRemaining": { "type": "integer", "minimum": 0 },
+        "expectedBoost": { "type": "number", "minimum": 0 }
+      }
+    },
+    "NationTechBlocInfo": {
+      "type": "object",
+      "required": ["factionId", "blocMembership", "techSharingPartners", "quantumThreatActive", "quantumThreatMitigated", "ethicsAccordSignatory"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "blocMembership": {
+          "oneOf": [
+            { "$ref": "#/definitions/TechBlocAlignment" },
+            { "type": "null" }
+          ]
+        },
+        "techSharingPartners": { "type": "array", "items": { "$ref": "#/definitions/FactionId" } },
+        "quantumThreatActive": { "type": "boolean" },
+        "quantumThreatMitigated": { "type": "boolean" },
+        "ethicsAccordSignatory": { "type": "boolean" }
+      }
+    },
+    "ResourceSecurityIndex": {
+      "type": "object",
+      "required": ["factionId", "turn", "energy", "food", "water", "criticalMinerals", "strategicReserves", "activeResourceLeverage", "importDependency"],
+      "additionalProperties": false,
+      "properties": {
+        "factionId": { "$ref": "#/definitions/FactionId" },
+        "turn": { "type": "integer", "minimum": 0 },
+        "energy": { "$ref": "#/definitions/Score0to100" },
+        "food": { "$ref": "#/definitions/Score0to100" },
+        "water": { "$ref": "#/definitions/Score0to100" },
+        "criticalMinerals": { "$ref": "#/definitions/Score0to100" },
+        "strategicReserves": {
+          "type": "object",
+          "required": ["energy", "food", "water", "criticalMinerals"],
+          "additionalProperties": false,
+          "properties": {
+            "energy": { "type": "number", "minimum": 0 },
+            "food": { "type": "number", "minimum": 0 },
+            "water": { "type": "number", "minimum": 0 },
+            "criticalMinerals": { "type": "number", "minimum": 0 }
+          }
+        },
+        "activeResourceLeverage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["resource", "target", "description", "turnInitiated", "active"],
+            "additionalProperties": false,
+            "properties": {
+              "resource": { "type": "string" },
+              "target": { "$ref": "#/definitions/FactionId" },
+              "description": { "type": "string" },
+              "turnInitiated": { "type": "integer", "minimum": 0 },
+              "active": { "type": "boolean" }
+            }
+          }
+        },
+        "importDependency": {
+          "type": "object",
+          "required": ["energy", "food", "water", "criticalMinerals"],
+          "additionalProperties": false,
+          "properties": {
+            "energy": { "$ref": "#/definitions/Score0to100" },
+            "food": { "$ref": "#/definitions/Score0to100" },
+            "water": { "$ref": "#/definitions/Score0to100" },
+            "criticalMinerals": { "$ref": "#/definitions/Score0to100" }
+          }
+        }
+      }
+    },
+    "ClimateEvent": {
+      "type": "object",
+      "required": ["type", "targetRegion", "severity", "turnToFire", "frequency", "fired", "resolution", "impactSummary"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "$ref": "#/definitions/ClimateEventType" },
+        "targetRegion": { "type": "string" },
+        "severity": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "turnToFire": { "type": "integer", "minimum": 1 },
+        "frequency": { "type": "integer", "minimum": 0 },
+        "fired": { "type": "boolean" },
+        "resolution": { "type": ["string", "null"] },
+        "impactSummary": { "type": ["string", "null"] }
+      }
+    },
+    "NonStateActor": {
+      "type": "object",
+      "required": ["id", "name", "type", "sponsor", "region", "capability", "loyalty", "autonomy", "deniability", "hostileTowards", "activeOps", "independent"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "$ref": "#/definitions/NonStateActorType" },
+        "sponsor": {
+          "oneOf": [
+            { "$ref": "#/definitions/FactionId" },
+            { "type": "null" }
+          ]
+        },
+        "region": { "type": "string" },
+        "capability": { "$ref": "#/definitions/Score0to100" },
+        "loyalty": { "$ref": "#/definitions/Score0to100" },
+        "autonomy": { "$ref": "#/definitions/Score0to100" },
+        "deniability": { "$ref": "#/definitions/Score0to100" },
+        "hostileTowards": { "type": "array", "items": { "$ref": "#/definitions/FactionId" } },
+        "activeOps": { "type": "array", "items": { "type": "string" } },
+        "independent": { "type": "boolean" }
+      }
+    },
+    "ProxyRelationship": {
+      "type": "object",
+      "required": ["sponsor", "proxyName", "actorId", "type", "loyalty", "capability", "autonomy", "deniability", "region", "operationHistory", "escalationLevel"],
+      "additionalProperties": false,
+      "properties": {
+        "sponsor": { "$ref": "#/definitions/FactionId" },
+        "proxyName": { "type": "string" },
+        "actorId": { "type": "string" },
+        "type": { "$ref": "#/definitions/NonStateActorType" },
+        "loyalty": { "$ref": "#/definitions/Score0to100" },
+        "capability": { "$ref": "#/definitions/Score0to100" },
+        "autonomy": { "$ref": "#/definitions/Score0to100" },
+        "deniability": { "$ref": "#/definitions/Score0to100" },
+        "region": { "type": "string" },
+        "operationHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["operationName", "turn", "target", "success", "blowback"],
+            "additionalProperties": false,
+            "properties": {
+              "operationName": { "type": "string" },
+              "turn": { "type": "integer", "minimum": 0 },
+              "target": { "type": "string" },
+              "success": { "type": "boolean" },
+              "blowback": { "type": "boolean" }
+            }
+          }
+        },
+        "escalationLevel": { "type": "integer", "minimum": 1, "maximum": 4 }
+      }
+    },
+    "FlashpointVariable": {
+      "type": "object",
+      "required": ["id", "name", "description", "metricImpacts"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "metricImpacts": { "type": "object" }
+      }
+    },
+    "VictoryConditionDef": {
+      "type": "object",
+      "required": ["id", "name", "description", "requirements"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "requirements": { "type": "object" }
+      }
+    },
+    "LossConditionDef": {
+      "type": "object",
+      "required": ["id", "name", "description", "triggers"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "triggers": { "type": "object" }
+      }
+    },
+    "TimelineEvent": {
+      "type": "object",
+      "required": ["turn", "eventKey", "name", "description", "effects"],
+      "additionalProperties": false,
+      "properties": {
+        "turn": { "type": "integer", "minimum": 1 },
+        "eventKey": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "effects": { "type": "object" }
+      }
+    }
+  }
+}

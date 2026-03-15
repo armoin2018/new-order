@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "space-based-surveillance",
+  "name": "Space-Based Surveillance Network",
+  "domain": "space",
+  "secondaryDomains": ["ai", "cyber"],
+  "description": "Deploys advanced electro-optical, synthetic aperture radar, and signals intelligence satellites for persistent global surveillance. Provides near-real-time monitoring of military installations, troop movements, and nuclear activities worldwide.",
+  "tier": 3,
+  "researchCost": 210,
+  "researchDurationTurns": 12,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "satellite-constellation", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "space": 12,
+      "ai": 4
+    },
+    "militaryModifiers": {
+      "attackBonus": 6,
+      "defenseBonus": 8
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 75
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "predictive-analytics-military",
+      "bonusDescription": "AI-analyzed satellite imagery enables automated threat detection and change monitoring",
+      "bonusMultiplier": 1.35
+    },
+    {
+      "partnerTechId": "quantum-sensing",
+      "bonusDescription": "Quantum sensors dramatically improve satellite imaging resolution and sensitivity",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["surveillance", "eo-ir", "sar", "sigint", "reconnaissance", "persistent"]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "signals-intercept-station",
+  "name": "SIGINT Intercept Station",
+  "category": "spy-covert",
+  "subcategory": "signals-intelligence",
+  "description": "A signals intelligence facility that intercepts, decrypts, and analyzes enemy communications, radar emissions, and electronic transmissions. Provides real-time tactical and strategic intelligence.",
+  "nation": null,
+  "purchaseCost": 65,
+  "maintenanceCostPerTurn": 8,
+  "attackPower": 5,
+  "defensePower": 20,
+  "range": 25,
+  "speed": 0,
+  "buildTime": 8,
+  "stealthRating": 40,
+  "crewRequirement": 200,
+  "operationalLifespan": 25,
+  "techRequirements": {
+    "cyber": 30,
+    "semiconductors": 25,
+    "ai": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "comms-intercept",
+      "name": "Communications Intercept",
+      "description": "Monitors and decrypts enemy military and diplomatic communications, revealing plans and force dispositions.",
+      "modifier": { "defensePower": 12 }
+    },
+    {
+      "abilityId": "elint-mapping",
+      "name": "ELINT Radar Mapping",
+      "description": "Maps enemy radar networks and electronic order of battle, enabling effective electronic warfare planning.",
+      "modifier": { "attackPower": 8 }
+    }
+  ],
+  "tags": ["intelligence", "sigint", "elint", "fixed-facility"]
+}

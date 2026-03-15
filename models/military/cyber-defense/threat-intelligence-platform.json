@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "threat-intelligence-platform",
+  "name": "Threat Intelligence Platform",
+  "category": "cyber-defense",
+  "subcategory": "threat-intelligence",
+  "description": "Aggregates, correlates, and analyzes cyber threat data from multiple sources including allied nations, dark web monitoring, and honeypots. Provides actionable intelligence to anticipate and prevent attacks.",
+  "nation": null,
+  "purchaseCost": 40,
+  "maintenanceCostPerTurn": 5,
+  "attackPower": 5,
+  "defensePower": 65,
+  "range": 30,
+  "speed": 0,
+  "buildTime": 6,
+  "stealthRating": 25,
+  "crewRequirement": 50,
+  "operationalLifespan": 15,
+  "techRequirements": {
+    "cyber": 30,
+    "ai": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "predictive-analysis",
+      "name": "Predictive Threat Analysis",
+      "description": "AI-powered analysis predicts likely attack vectors and campaigns before they materialize, enabling preemptive defense.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "allied-sharing",
+      "name": "Allied Intelligence Sharing",
+      "description": "Real-time threat data exchange with allied nations creates a collective defense network with broader visibility.",
+      "modifier": { "defensePower": 8 }
+    }
+  ],
+  "tags": ["cyber", "defensive", "threat-intel", "ai-powered"]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "global-technology",
+  "indexName": "Global Technology Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Tracks global technology sector performance weighted by innovation capacity",
+  "constituentTickers": [
+    { "tickerId": "us-technology", "exchangeId": "nyse", "weight": 0.31 },
+    { "tickerId": "cn-technology", "exchangeId": "sse", "weight": 0.26 },
+    { "tickerId": "eu-technology", "exchangeId": "euronext", "weight": 0.20 },
+    { "tickerId": "jp-technology", "exchangeId": "tse", "weight": 0.15 },
+    { "tickerId": "ru-technology", "exchangeId": "moex", "weight": 0.05 },
+    { "tickerId": "ir-technology", "exchangeId": "tedpix", "weight": 0.03 }
+  ]
+}

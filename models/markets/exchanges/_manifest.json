@@ -1,0 +1,12 @@
+{
+  "files": [
+    "nyse.json",
+    "sse.json",
+    "moex.json",
+    "tse.json",
+    "tedpix.json",
+    "pse.json",
+    "euronext.json",
+    "dse.json"
+  ]
+}

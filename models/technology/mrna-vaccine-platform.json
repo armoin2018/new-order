@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "mrna-vaccine-platform",
+  "name": "mRNA Vaccine Platform",
+  "domain": "biotech",
+  "description": "Develops rapid-response mRNA vaccine design and manufacturing platform capable of producing novel vaccines within weeks of pathogen identification. Provides foundational biotechnology infrastructure for pandemic response and biodefense.",
+  "tier": 2,
+  "researchCost": 130,
+  "researchDurationTurns": 8,
+  "impactLevel": "significant",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "biotech": 10
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.0
+    },
+    "socialModifiers": {
+      "stabilityBonus": 4,
+      "softPowerBonus": 5
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "unrestricted",
+    "espionageValue": 30
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "crispr-gene-editing",
+      "bonusDescription": "CRISPR-enhanced mRNA design enables precision-targeted therapeutic vaccines",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "pandemic-early-warning",
+      "bonusDescription": "Early warning triggers rapid mRNA vaccine development pipeline",
+      "bonusMultiplier": 1.35
+    }
+  ],
+  "tags": ["mrna", "vaccine", "pandemic-response", "biodefense", "rapid-manufacturing"]
+}

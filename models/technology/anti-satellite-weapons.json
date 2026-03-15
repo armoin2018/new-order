@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "anti-satellite-weapons",
+  "name": "Anti-Satellite Weapons Systems",
+  "domain": "space",
+  "secondaryDomains": ["cyber"],
+  "description": "Develops kinetic kill vehicles, directed-energy weapons, and co-orbital interceptors capable of disabling or destroying enemy satellites. Establishes space denial capability as a critical deterrent and warfighting domain.",
+  "tier": 3,
+  "researchCost": 230,
+  "researchDurationTurns": 14,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "satellite-constellation", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "space": 14
+    },
+    "militaryModifiers": {
+      "attackBonus": 12,
+      "defenseBonus": 6,
+      "unlocksEquipment": ["kinetic-asat-missile", "co-orbital-interceptor"]
+    },
+    "socialModifiers": {
+      "stabilityBonus": -2,
+      "softPowerBonus": -4
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 80
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "hypersonic-glide-vehicle",
+      "bonusDescription": "ASAT and hypersonic programs share propulsion and guidance technology",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "space-based-surveillance",
+      "bonusDescription": "Surveillance assets provide targeting data for ASAT engagement",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["asat", "space-denial", "kinetic-kill", "directed-energy", "deterrent"]
+}

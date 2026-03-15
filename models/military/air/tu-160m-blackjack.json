@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "tu-160m-blackjack",
+  "name": "Tu-160M Blackjack",
+  "category": "air",
+  "subcategory": "bomber",
+  "description": "Modernized Russian supersonic strategic bomber and the largest combat aircraft in service. Carries cruise missiles for standoff nuclear and conventional strikes.",
+  "nation": "Russia",
+  "purchaseCost": 150,
+  "maintenanceCostPerTurn": 15,
+  "attackPower": 88,
+  "defensePower": 25,
+  "range": 50,
+  "speed": 6,
+  "buildTime": 16,
+  "stealthRating": 20,
+  "crewRequirement": 4,
+  "operationalLifespan": 40,
+  "techRequirements": {
+    "semiconductors": 25
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "standoff-cruise-missile",
+      "name": "Standoff Cruise Missile Launch",
+      "description": "Launches Kh-101 cruise missiles from outside enemy air defense range, striking targets up to 5,500 km away.",
+      "modifier": { "range": 8 }
+    },
+    {
+      "abilityId": "supersonic-dash",
+      "name": "Supersonic Dash",
+      "description": "Variable-geometry wings allow Mach 2+ supersonic sprint to evade interceptors during ingress or egress.",
+      "modifier": { "speed": 2 }
+    }
+  ],
+  "tags": ["bomber", "strategic", "nuclear-capable", "supersonic"]
+}

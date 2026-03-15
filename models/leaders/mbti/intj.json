@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "INTJ",
+  "typeName": "The Architect",
+  "cognitiveStack": ["Ni", "Te", "Fi", "Se"],
+  "strengthDomains": [
+    "strategic planning",
+    "systems optimization",
+    "long-term contingency analysis"
+  ],
+  "blindSpots": [
+    "interpersonal sensitivity",
+    "political consensus-building",
+    "short-term morale management"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 35,
+  "adaptability": 40,
+  "leadershipStyle": "visionary",
+  "diplomaticApproach": "pragmatic",
+  "conflictResponse": "collaborate",
+  "gameplayModifiers": {
+    "alliancePreference": -10,
+    "noveltyPreference": 15,
+    "outcomeTypeWeight": {
+      "measurable": 20,
+      "humanitarian": -15,
+      "legitimacy": 10
+    },
+    "commitmentTiming": 15
+  }
+}

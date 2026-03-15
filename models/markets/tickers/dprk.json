@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "dprk",
+  "exchangeId": "pse",
+  "tickers": [
+    {
+      "tickerId": "kp-defense",
+      "sectorName": "defense",
+      "initialPrice": 40,
+      "volatilityMultiplier": 1.5,
+      "eventSensitivityWeights": {
+        "military-conflict": 4.0,
+        "sanctions-imposed": -0.5,
+        "civil-unrest": -0.5,
+        "trade-deal": 0.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 0.5,
+        "regime-change": -2.5,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "kp-energy",
+      "sectorName": "energy",
+      "initialPrice": 15,
+      "volatilityMultiplier": 1.5,
+      "eventSensitivityWeights": {
+        "oil-disruption": 4.5,
+        "sanctions-imposed": -2.5,
+        "military-conflict": 1.0,
+        "trade-deal": 1.0,
+        "tech-breakthrough": 0.0,
+        "civil-unrest": -0.5,
+        "regime-change": -2.0,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "kp-consumer",
+      "sectorName": "consumer",
+      "initialPrice": 8,
+      "volatilityMultiplier": 1.4,
+      "eventSensitivityWeights": {
+        "military-conflict": -3.0,
+        "civil-unrest": -2.5,
+        "trade-deal": 2.0,
+        "natural-disaster": -2.5,
+        "sanctions-imposed": -2.0,
+        "oil-disruption": -0.5,
+        "tech-breakthrough": 0.0,
+        "regime-change": -2.0
+      }
+    },
+    {
+      "tickerId": "kp-infrastructure",
+      "sectorName": "infrastructure",
+      "initialPrice": 12,
+      "volatilityMultiplier": 1.3,
+      "eventSensitivityWeights": {
+        "natural-disaster": -3.5,
+        "military-conflict": -2.5,
+        "trade-deal": 1.0,
+        "civil-unrest": -1.0,
+        "sanctions-imposed": -1.0,
+        "tech-breakthrough": 0.0,
+        "oil-disruption": -0.5,
+        "regime-change": -1.5
+      }
+    },
+    {
+      "tickerId": "kp-mining",
+      "sectorName": "mining",
+      "initialPrice": 20,
+      "volatilityMultiplier": 1.3,
+      "eventSensitivityWeights": {
+        "sanctions-imposed": 1.5,
+        "oil-disruption": 1.0,
+        "natural-disaster": -1.0,
+        "military-conflict": 0.5,
+        "trade-deal": 0.5,
+        "civil-unrest": -0.5,
+        "tech-breakthrough": 0.0,
+        "regime-change": -0.5
+      }
+    }
+  ]
+}

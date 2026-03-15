@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "machine-learning-foundations",
+  "name": "Machine Learning Foundations",
+  "domain": "ai",
+  "secondaryDomains": ["cyber", "semiconductors"],
+  "description": "Establishes core machine learning infrastructure including training pipelines, data labeling systems, and foundational neural network architectures. Provides the essential building blocks for all advanced AI research programs.",
+  "tier": 1,
+  "researchCost": 60,
+  "researchDurationTurns": 5,
+  "impactLevel": "incremental",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "ai": 5
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 0.5
+    },
+    "socialModifiers": {
+      "educationBonus": 2
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "unrestricted",
+    "espionageValue": 10
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "domestic-chip-production",
+      "bonusDescription": "Local hardware accelerates ML training throughput",
+      "bonusMultiplier": 1.15
+    }
+  ],
+  "tags": ["foundational", "neural-networks", "training", "data-science", "dual-use"]
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "humint-network",
+  "name": "HUMINT Field Network",
+  "category": "spy-covert",
+  "subcategory": "intelligence",
+  "description": "A clandestine network of human intelligence assets embedded in foreign governments, militaries, and institutions. Provides irreplaceable strategic insight but requires years to cultivate and is vulnerable to counterintelligence.",
+  "nation": null,
+  "purchaseCost": 40,
+  "maintenanceCostPerTurn": 6,
+  "attackPower": 15,
+  "defensePower": 10,
+  "range": 30,
+  "speed": 1,
+  "buildTime": 12,
+  "stealthRating": 85,
+  "crewRequirement": 50,
+  "operationalLifespan": 20,
+  "techRequirements": {
+    "cyber": 10
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "deep-cover-assets",
+      "name": "Deep Cover Assets",
+      "description": "Long-term embedded agents provide advance warning of enemy strategic decisions and political shifts.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "covert-influence",
+      "name": "Covert Influence Operations",
+      "description": "Assets can subtly influence foreign decision-makers, potentially altering enemy policy without attribution.",
+      "modifier": { "attackPower": 10 }
+    }
+  ],
+  "tags": ["intelligence", "humint", "covert", "strategic"]
+}

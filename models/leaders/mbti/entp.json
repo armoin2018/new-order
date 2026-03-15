@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ENTP",
+  "typeName": "The Debater",
+  "cognitiveStack": ["Ne", "Ti", "Fe", "Si"],
+  "strengthDomains": [
+    "strategic innovation",
+    "debate and negotiation",
+    "disruption tactics",
+    "scenario analysis"
+  ],
+  "blindSpots": [
+    "operational consistency",
+    "emotional sensitivity in alliances",
+    "institutional loyalty"
+  ],
+  "stressPattern": "loop",
+  "decisionSpeed": 5,
+  "adaptability": 80,
+  "leadershipStyle": "visionary",
+  "diplomaticApproach": "pragmatic",
+  "conflictResponse": "escalate",
+  "gameplayModifiers": {
+    "alliancePreference": -5,
+    "noveltyPreference": 30,
+    "outcomeTypeWeight": {
+      "measurable": 10,
+      "humanitarian": -10,
+      "legitimacy": -5
+    },
+    "commitmentTiming": -20
+  }
+}

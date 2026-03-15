@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "china",
+  "populationMillions": 1425.7,
+  "growthRatePercent": -0.02,
+  "urbanizationPercent": 65.2,
+  "medianAge": 39.0,
+  "lifeExpectancy": 78.2,
+  "literacyRatePercent": 96.8,
+  "ageDistribution": {
+    "youth": 17.0,
+    "workingAge": 70.0,
+    "elderly": 13.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Han Chinese", "percentOfPopulation": 91.1, "socialCohesion": 85 },
+    { "groupName": "Zhuang/Manchu/Hui", "percentOfPopulation": 5.4, "socialCohesion": 60 },
+    { "groupName": "Uyghur/Tibetan", "percentOfPopulation": 1.8, "socialCohesion": 30 },
+    { "groupName": "Other Minorities", "percentOfPopulation": 1.7, "socialCohesion": 55 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.38,
+    "humanDevelopmentIndex": 0.768,
+    "healthcareAccessPercent": 95.0,
+    "internetPenetrationPercent": 73.0,
+    "unemploymentRatePercent": 5.2
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 70,
+    "conscriptionPool": 215.0,
+    "socialStabilityBaseline": 5,
+    "innovationPotential": 78,
+    "consumptionDemandMultiplier": 2.5
+  },
+  "tags": ["superpower", "demographic-decline", "manufacturing-base", "authoritarian", "aging"]
+}

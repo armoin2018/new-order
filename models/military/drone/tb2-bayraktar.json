@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "tb2-bayraktar",
+  "name": "Bayraktar TB2",
+  "category": "drone",
+  "subcategory": "tactical-ucav",
+  "description": "Turkish medium-altitude armed tactical drone that revolutionized modern warfare. Carries laser-guided MAM munitions and has proven devastatingly effective against armor, air defense systems, and logistics in multiple conflicts.",
+  "nation": "Turkey",
+  "purchaseCost": 8,
+  "maintenanceCostPerTurn": 1,
+  "attackPower": 40,
+  "defensePower": 5,
+  "range": 14,
+  "speed": 2,
+  "buildTime": 2,
+  "stealthRating": 20,
+  "crewRequirement": 0,
+  "operationalLifespan": 20,
+  "techRequirements": {
+    "ai": 10,
+    "semiconductors": 10
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "sead-capability",
+      "name": "SEAD Capability",
+      "description": "Proven ability to locate and destroy enemy air defense radars and launchers, suppressing enemy air defenses.",
+      "modifier": { "attackPower": 10 }
+    },
+    {
+      "abilityId": "cost-effective-attrition",
+      "name": "Cost-Effective Attrition",
+      "description": "Low unit cost means losses are easily replaced, enabling aggressive employment against high-value targets.",
+      "modifier": {}
+    }
+  ],
+  "tags": ["drone", "ucav", "tactical", "export"]
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "asif-ali-zardari",
+  "name": "Asif Ali Zardari",
+  "title": "President of Pakistan",
+  "factionId": "pakistan",
+  "mbtiType": "ESTP",
+  "mbtiDichotomyScores": {
+    "EI": 30,
+    "SN": 35,
+    "TF": 40,
+    "JP": 75
+  },
+  "psychology": {
+    "decisionStyle": "intuitive",
+    "stressResponse": "innovate",
+    "riskTolerance": 60,
+    "paranoia": 65,
+    "narcissism": 50,
+    "pragmatism": 70,
+    "patience": 45,
+    "vengefulIndex": 55,
+    "charisma": 50,
+    "empathy": 30,
+    "ideologicalRigidity": 20,
+    "corruptibility": 65
+  },
+  "motivations": {
+    "primary": "power",
+    "secondary": "prosperity",
+    "fear": "betrayal"
+  },
+  "powerBase": {
+    "source": "party",
+    "consolidation": 50,
+    "legitimacy": 40,
+    "succession": "hereditary"
+  },
+  "vulnerabilities": {
+    "health": 55,
+    "scandals": [
+      "Mr. Ten Percent corruption allegations",
+      "Swiss bank account investigations",
+      "Bhutto assassination conspiracy theories",
+      "Multiple prior imprisonments"
+    ],
+    "internalOpposition": 65,
+    "externalPressure": 60
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 15,
+      "reason": "CPEC economic dependency and strategic partnership with China"
+    },
+    {
+      "targetLeaderId": "narendra-modi",
+      "modifier": -30,
+      "reason": "Kashmir dispute and deep historical Indo-Pakistani rivalry"
+    },
+    {
+      "targetLeaderId": "taliban-leadership",
+      "modifier": -10,
+      "reason": "Complex border tensions despite historical ISI connections"
+    }
+  ],
+  "biography": "Asif Ali Zardari, widower of assassinated former Prime Minister Benazir Bhutto, returned to Pakistan's presidency after years of political exile and imprisonment. Known as 'Mr. Ten Percent' for alleged kickback schemes, his ESTP pragmatism enables survival across Pakistan's treacherous civil-military power dynamics. He balances the powerful military establishment, manages CPEC obligations to China, navigates the nuclear rivalry with India over Kashmir, and contends with internal extremism\u2014all while his PPP party struggles to maintain relevance against populist challengers.",
+  "tags": [
+    "nuclear-armed",
+    "fragile-state",
+    "CPEC",
+    "Kashmir-dispute",
+    "military-politics",
+    "dynastic-politics"
+  ]
+}

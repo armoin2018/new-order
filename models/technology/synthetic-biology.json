@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "synthetic-biology",
+  "name": "Synthetic Biology",
+  "domain": "biotech",
+  "secondaryDomains": ["ai", "semiconductors"],
+  "description": "Engineers entirely new biological systems, organisms, and metabolic pathways from scratch. Enables bio-manufacturing of novel materials, bio-computing substrates, and designed organisms for environmental remediation, agriculture, and defense applications.",
+  "tier": 4,
+  "researchCost": 340,
+  "researchDurationTurns": 18,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "crispr-gene-editing", "minimumLevel": 1 }
+  ],
+  "domainLevelRequirement": {
+    "biotech": 40,
+    "ai": 20
+  },
+  "effects": {
+    "domainBoosts": {
+      "biotech": 20,
+      "semiconductors": 3
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 3.0,
+      "revenueMultiplier": 1.15
+    },
+    "socialModifiers": {
+      "stabilityBonus": -4,
+      "softPowerBonus": 6,
+      "educationBonus": 4
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 75
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "artificial-general-intelligence",
+      "bonusDescription": "AGI designs synthetic organisms with capabilities beyond human imagination",
+      "bonusMultiplier": 1.5
+    },
+    {
+      "partnerTechId": "quantum-computing-prototype",
+      "bonusDescription": "Quantum simulation of protein folding accelerates synthetic biology design cycles",
+      "bonusMultiplier": 1.25
+    }
+  ],
+  "tags": ["synthetic-biology", "bio-manufacturing", "designed-organisms", "bio-computing", "dual-use"]
+}

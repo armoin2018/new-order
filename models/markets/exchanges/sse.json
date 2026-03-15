@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "sse",
+  "exchangeName": "Shanghai Stock Exchange",
+  "nationId": "china",
+  "baseIndexValue": 3200,
+  "volatilityProfile": "high",
+  "currencyCode": "CNY",
+  "marketCapBillions": 8500,
+  "sectorWeights": {
+    "defense": 0.06,
+    "energy": 0.12,
+    "technology": 0.22,
+    "finance": 0.20,
+    "consumer": 0.15,
+    "healthcare": 0.05,
+    "infrastructure": 0.15,
+    "mining": 0.05
+  }
+}

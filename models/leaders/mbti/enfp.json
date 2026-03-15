@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ENFP",
+  "typeName": "The Campaigner",
+  "cognitiveStack": ["Ne", "Fi", "Te", "Si"],
+  "strengthDomains": [
+    "coalition building",
+    "ideological mobilization",
+    "creative diplomacy",
+    "public communication"
+  ],
+  "blindSpots": [
+    "operational follow-through",
+    "routine administration",
+    "risk assessment discipline"
+  ],
+  "stressPattern": "loop",
+  "decisionSpeed": -5,
+  "adaptability": 75,
+  "leadershipStyle": "diplomatic",
+  "diplomaticApproach": "principled",
+  "conflictResponse": "collaborate",
+  "gameplayModifiers": {
+    "alliancePreference": 20,
+    "noveltyPreference": 25,
+    "outcomeTypeWeight": {
+      "measurable": -15,
+      "humanitarian": 20,
+      "legitimacy": 10
+    },
+    "commitmentTiming": -15
+  }
+}

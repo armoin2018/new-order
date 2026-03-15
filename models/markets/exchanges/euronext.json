@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "euronext",
+  "exchangeName": "Euronext",
+  "nationId": "eu",
+  "baseIndexValue": 7800,
+  "volatilityProfile": "medium",
+  "currencyCode": "EUR",
+  "marketCapBillions": 7100,
+  "sectorWeights": {
+    "defense": 0.06,
+    "energy": 0.09,
+    "technology": 0.20,
+    "finance": 0.24,
+    "consumer": 0.20,
+    "healthcare": 0.10,
+    "infrastructure": 0.06,
+    "mining": 0.05
+  }
+}

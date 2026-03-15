@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "queen-elizabeth-carrier",
+  "name": "Queen Elizabeth-class Aircraft Carrier",
+  "category": "sea",
+  "subcategory": "carrier",
+  "description": "The Royal Navy's largest warship, a 65,000-tonne STOVL carrier operating F-35B Lightning II jets. Features a twin-island design and ski-jump ramp for short takeoff operations.",
+  "nation": "UK",
+  "purchaseCost": 300,
+  "maintenanceCostPerTurn": 30,
+  "attackPower": 50,
+  "defensePower": 40,
+  "range": 35,
+  "speed": 4,
+  "buildTime": 20,
+  "stealthRating": 5,
+  "crewRequirement": 1600,
+  "operationalLifespan": 50,
+  "techRequirements": {
+    "semiconductors": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "stovl-operations",
+      "name": "STOVL Air Wing",
+      "description": "Operates up to 36 F-35B jets using ski-jump launch, enabling carrier aviation without catapult systems.",
+      "modifier": { "attackPower": 15 }
+    },
+    {
+      "abilityId": "nato-flagship",
+      "name": "NATO Flagship",
+      "description": "Advanced C4I systems allow the carrier to serve as a NATO task group flagship, coordinating allied naval operations.",
+      "modifier": { "defensePower": 8 }
+    }
+  ],
+  "tags": ["carrier", "capital-ship", "stovl", "nato"]
+}

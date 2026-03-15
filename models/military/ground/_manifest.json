@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-ground",
+  "description": "Ground force equipment models including main battle tanks, air defense systems, and rocket artillery",
+  "count": 8,
+  "files": [
+    "m1a2-abrams.json",
+    "t-14-armata.json",
+    "type-99a-tank.json",
+    "patriot-pac3.json",
+    "s-400-triumf.json",
+    "himars-mlrs.json",
+    "k2-black-panther.json",
+    "leopard-2a7.json"
+  ]
+}

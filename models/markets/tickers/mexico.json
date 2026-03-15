@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "mexico",
+  "exchangeId": "bmv",
+  "tickers": [
+    {
+      "tickerId": "mexico-energy",
+      "sectorName": "energy",
+      "initialPrice": 80,
+      "volatilityMultiplier": 1.3,
+      "eventSensitivityWeights": {
+        "military-conflict": 0.5,
+        "sanctions-imposed": -1.5,
+        "civil-unrest": -1.5,
+        "trade-deal": 1.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 3.5,
+        "regime-change": -2.0,
+        "natural-disaster": -1.5
+      }
+    },
+    {
+      "tickerId": "mexico-consumer",
+      "sectorName": "consumer",
+      "initialPrice": 65,
+      "volatilityMultiplier": 1.1,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.5,
+        "sanctions-imposed": -1.0,
+        "civil-unrest": -2.5,
+        "trade-deal": 2.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.5,
+        "natural-disaster": -2.0
+      }
+    },
+    {
+      "tickerId": "mexico-finance",
+      "sectorName": "finance",
+      "initialPrice": 110,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.0,
+        "sanctions-imposed": -2.5,
+        "civil-unrest": -2.0,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -3.0,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "mexico-mining",
+      "sectorName": "mining",
+      "initialPrice": 45,
+      "volatilityMultiplier": 1.2,
+      "eventSensitivityWeights": {
+        "military-conflict": 0.5,
+        "sanctions-imposed": 1.0,
+        "civil-unrest": -1.0,
+        "trade-deal": 1.0,
+        "tech-breakthrough": 0.0,
+        "oil-disruption": 0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -1.5
+      }
+    },
+    {
+      "tickerId": "mexico-infrastructure",
+      "sectorName": "infrastructure",
+      "initialPrice": 55,
+      "volatilityMultiplier": 0.9,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.5,
+        "sanctions-imposed": -0.5,
+        "civil-unrest": -1.5,
+        "trade-deal": 1.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -3.0
+      }
+    },
+    {
+      "tickerId": "mexico-technology",
+      "sectorName": "technology",
+      "initialPrice": 40,
+      "volatilityMultiplier": 1.1,
+      "eventSensitivityWeights": {
+        "military-conflict": -0.5,
+        "sanctions-imposed": -1.5,
+        "civil-unrest": -1.0,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 4.0,
+        "oil-disruption": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -0.5
+      }
+    }
+  ]
+}

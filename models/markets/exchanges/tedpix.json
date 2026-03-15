@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "tedpix",
+  "exchangeName": "Tehran Stock Exchange",
+  "nationId": "iran",
+  "baseIndexValue": 2100000,
+  "volatilityProfile": "extreme",
+  "currencyCode": "IRR",
+  "marketCapBillions": 180,
+  "sectorWeights": {
+    "defense": 0.08,
+    "energy": 0.40,
+    "technology": 0.05,
+    "finance": 0.12,
+    "consumer": 0.10,
+    "healthcare": 0.05,
+    "infrastructure": 0.10,
+    "mining": 0.10
+  }
+}

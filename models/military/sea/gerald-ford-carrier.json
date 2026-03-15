@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "gerald-ford-carrier",
+  "name": "Gerald R. Ford-class Aircraft Carrier",
+  "category": "sea",
+  "subcategory": "carrier",
+  "description": "The most advanced supercarrier ever built, featuring electromagnetic aircraft launch system (EMALS) and advanced arresting gear. Carries 75+ aircraft and serves as the centerpiece of a carrier strike group.",
+  "nation": "USA",
+  "purchaseCost": 500,
+  "maintenanceCostPerTurn": 50,
+  "attackPower": 60,
+  "defensePower": 50,
+  "range": 40,
+  "speed": 4,
+  "buildTime": 24,
+  "stealthRating": 5,
+  "crewRequirement": 4539,
+  "operationalLifespan": 60,
+  "techRequirements": {
+    "semiconductors": 40,
+    "ai": 30
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "power-projection",
+      "name": "Power Projection",
+      "description": "Launches and recovers up to 75 aircraft, projecting air power across an entire theater of operations.",
+      "modifier": { "attackPower": 20 }
+    },
+    {
+      "abilityId": "emals-launch",
+      "name": "EMALS Launch System",
+      "description": "Electromagnetic catapult increases aircraft sortie rate by 25% compared to legacy steam catapults.",
+      "modifier": { "attackPower": 10 }
+    }
+  ],
+  "tags": ["carrier", "capital-ship", "power-projection", "nuclear-powered"]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "wing-loong-2",
+  "name": "Wing Loong II",
+  "category": "drone",
+  "subcategory": "male-ucav",
+  "description": "China's primary export armed medium-altitude long-endurance drone, competing directly with the MQ-9 Reaper. Carries precision-guided munitions and provides ISR for nations unable to procure Western alternatives.",
+  "nation": "China",
+  "purchaseCost": 10,
+  "maintenanceCostPerTurn": 1,
+  "attackPower": 38,
+  "defensePower": 8,
+  "range": 25,
+  "speed": 2,
+  "buildTime": 3,
+  "stealthRating": 12,
+  "crewRequirement": 0,
+  "operationalLifespan": 25,
+  "techRequirements": {
+    "ai": 15,
+    "semiconductors": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "export-accessible",
+      "name": "Export Accessible",
+      "description": "Available for export to nations denied Western drones, expanding Chinese military influence and intelligence access.",
+      "modifier": {}
+    },
+    {
+      "abilityId": "dual-role-isr-strike",
+      "name": "Dual ISR/Strike",
+      "description": "Carries both EO/IR sensors and guided munitions, allowing seamless transition from surveillance to strike.",
+      "modifier": { "attackPower": 5 }
+    }
+  ],
+  "tags": ["drone", "ucav", "male", "export"]
+}

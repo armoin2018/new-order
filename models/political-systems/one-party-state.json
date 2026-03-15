@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "one-party-state",
+  "systemName": "One-Party State",
+  "description": "A political system where a single ruling party holds a constitutional monopoly on power, often with internal factions substituting for multi-party competition. Decisions are made quickly through party hierarchy, but succession crises and ideological rigidity pose long-term risks. Examples include China, Cuba, and Vietnam.",
+  "decisionSpeedModifier": 35,
+  "stabilityBaseline": 8,
+  "civilLibertyIndex": 20,
+  "pressFreedomIndex": 12,
+  "corruptionBaseline": 60,
+  "successionRisk": 55,
+  "reformCapacity": 35,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 0.9,
+    "crisisResistance": 1.3,
+    "intelligenceModifier": {
+      "counterIntel": 1.4,
+      "humintAbroad": 1.2
+    },
+    "controversialActionDelay": 0,
+    "propagandaEffectiveness": 1.5,
+    "civilUnrestThreshold": 1.4
+  },
+  "tags": ["authoritarian", "single-party", "state-controlled", "centralized"]
+}

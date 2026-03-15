@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "liberal-democracy",
+  "systemName": "Liberal Democracy",
+  "description": "A representative government with strong separation of powers, independent judiciary, and constitutionally protected civil liberties. Decision-making is slow due to legislative debate, judicial review, and public accountability, but the system is resilient to shocks and highly adaptive over time. Examples include the USA, France, and the UK.",
+  "decisionSpeedModifier": -20,
+  "stabilityBaseline": 12,
+  "civilLibertyIndex": 90,
+  "pressFreedomIndex": 85,
+  "corruptionBaseline": 25,
+  "successionRisk": 10,
+  "reformCapacity": 80,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 1.3,
+    "crisisResistance": 1.2,
+    "intelligenceModifier": {
+      "counterIntel": 0.9,
+      "humintAbroad": 1.1
+    },
+    "controversialActionDelay": 2,
+    "propagandaEffectiveness": 0.5,
+    "civilUnrestThreshold": 0.7
+  },
+  "tags": ["democratic", "western", "nato-aligned", "open-society", "rule-of-law"]
+}

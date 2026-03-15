@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "neuromorphic-computing",
+  "name": "Neuromorphic Computing",
+  "domain": "semiconductors",
+  "secondaryDomains": ["ai"],
+  "description": "Develops brain-inspired chip architectures that process information through spiking neural networks, achieving orders-of-magnitude improvement in energy efficiency for AI inference tasks. Enables autonomous systems to run advanced AI models without cloud connectivity.",
+  "tier": 4,
+  "researchCost": 320,
+  "researchDurationTurns": 18,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "three-nm-chip-fabrication", "minimumLevel": 1 }
+  ],
+  "domainLevelRequirement": {
+    "semiconductors": 40,
+    "ai": 25
+  },
+  "effects": {
+    "domainBoosts": {
+      "semiconductors": 18,
+      "ai": 12
+    },
+    "militaryModifiers": {
+      "attackBonus": 5,
+      "defenseBonus": 5,
+      "unlocksEquipment": ["neuromorphic-drone-processor", "edge-ai-combat-system"]
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 2.0
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 80
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "autonomous-weapons-ai",
+      "bonusDescription": "Neuromorphic chips enable real-time on-device battlefield AI decision-making",
+      "bonusMultiplier": 1.35
+    },
+    {
+      "partnerTechId": "artificial-general-intelligence",
+      "bonusDescription": "Brain-inspired hardware is foundational substrate for AGI deployment",
+      "bonusMultiplier": 1.5
+    }
+  ],
+  "tags": ["neuromorphic", "spiking-neural-networks", "edge-ai", "energy-efficient", "brain-inspired"]
+}

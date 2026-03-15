@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "absolute-monarchy",
+  "systemName": "Absolute Monarchy",
+  "description": "A hereditary system where the monarch wields near-total executive, legislative, and sometimes religious authority. Decision-making is extremely fast and centralized, but succession crises can be devastating and reform capacity is minimal. Examples include Saudi Arabia and Brunei.",
+  "decisionSpeedModifier": 45,
+  "stabilityBaseline": 6,
+  "civilLibertyIndex": 10,
+  "pressFreedomIndex": 8,
+  "corruptionBaseline": 65,
+  "successionRisk": 70,
+  "reformCapacity": 15,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 0.7,
+    "crisisResistance": 0.9,
+    "intelligenceModifier": {
+      "counterIntel": 1.1,
+      "humintAbroad": 0.8
+    },
+    "controversialActionDelay": 0,
+    "propagandaEffectiveness": 1.4,
+    "civilUnrestThreshold": 1.5
+  },
+  "tags": ["authoritarian", "monarchy", "hereditary", "centralized", "petrostate"]
+}

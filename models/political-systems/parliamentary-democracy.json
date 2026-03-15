@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "parliamentary-democracy",
+  "systemName": "Parliamentary Democracy",
+  "description": "A democratic system where the executive derives legitimacy from and is accountable to the legislature. Coalition governments are common, requiring negotiation but enabling faster policy pivots than presidential systems. Examples include Germany, Japan, and India.",
+  "decisionSpeedModifier": -15,
+  "stabilityBaseline": 10,
+  "civilLibertyIndex": 85,
+  "pressFreedomIndex": 82,
+  "corruptionBaseline": 28,
+  "successionRisk": 15,
+  "reformCapacity": 75,
+  "gameplayModifiers": {
+    "stabilityRecoveryRate": 1.25,
+    "crisisResistance": 1.1,
+    "intelligenceModifier": {
+      "counterIntel": 0.85,
+      "humintAbroad": 1.0
+    },
+    "controversialActionDelay": 2,
+    "propagandaEffectiveness": 0.45,
+    "civilUnrestThreshold": 0.65
+  },
+  "tags": ["democratic", "parliamentary", "coalition-prone", "rule-of-law"]
+}

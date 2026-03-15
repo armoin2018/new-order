@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "dse",
+  "exchangeName": "Damascus Securities Exchange",
+  "nationId": "syria",
+  "baseIndexValue": 8500,
+  "volatilityProfile": "extreme",
+  "currencyCode": "SYP",
+  "marketCapBillions": 3,
+  "sectorWeights": {
+    "defense": 0.10,
+    "energy": 0.15,
+    "technology": 0.03,
+    "finance": 0.10,
+    "consumer": 0.12,
+    "healthcare": 0.05,
+    "infrastructure": 0.30,
+    "mining": 0.15
+  }
+}

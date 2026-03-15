@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "military-air",
+  "description": "Air force equipment models including fighters, bombers, and aerial combat platforms",
+  "count": 8,
+  "files": [
+    "f-35a-lightning.json",
+    "su-57-felon.json",
+    "j-20-mighty-dragon.json",
+    "b-21-raider.json",
+    "tu-160m-blackjack.json",
+    "eurofighter-typhoon.json",
+    "mq-9-reaper.json",
+    "f-22-raptor.json"
+  ]
+}

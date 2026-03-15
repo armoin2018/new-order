@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "japan-composite",
+  "indexName": "Japan Composite Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Broad composite index tracking all major Japanese economic sectors including defense, energy, technology, finance, consumer goods, healthcare, infrastructure, and mining.",
+  "constituentTickers": [
+    { "tickerId": "jp-defense", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-energy", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-technology", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-finance", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-consumer", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-healthcare", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-infrastructure", "exchangeId": "tse", "weight": 0.125 },
+    { "tickerId": "jp-mining", "exchangeId": "tse", "weight": 0.125 }
+  ]
+}

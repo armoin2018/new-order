@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "india",
+  "exchangeId": "bse",
+  "tickers": [
+    {
+      "tickerId": "india-technology",
+      "sectorName": "technology",
+      "initialPrice": 180,
+      "volatilityMultiplier": 1.1,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.0,
+        "sanctions-imposed": -1.5,
+        "civil-unrest": -1.0,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 4.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -0.5
+      }
+    },
+    {
+      "tickerId": "india-finance",
+      "sectorName": "finance",
+      "initialPrice": 120,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.5,
+        "sanctions-imposed": -2.5,
+        "civil-unrest": -2.5,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -2.5,
+        "natural-disaster": -1.0
+      }
+    },
+    {
+      "tickerId": "india-energy",
+      "sectorName": "energy",
+      "initialPrice": 65,
+      "volatilityMultiplier": 1.2,
+      "eventSensitivityWeights": {
+        "military-conflict": 0.5,
+        "sanctions-imposed": -1.5,
+        "civil-unrest": -1.0,
+        "trade-deal": 1.0,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": 3.5,
+        "regime-change": -1.5,
+        "natural-disaster": -1.5
+      }
+    },
+    {
+      "tickerId": "india-consumer",
+      "sectorName": "consumer",
+      "initialPrice": 55,
+      "volatilityMultiplier": 1.0,
+      "eventSensitivityWeights": {
+        "military-conflict": -1.5,
+        "sanctions-imposed": -1.0,
+        "civil-unrest": -2.5,
+        "trade-deal": 2.0,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.5,
+        "natural-disaster": -2.0
+      }
+    },
+    {
+      "tickerId": "india-healthcare",
+      "sectorName": "healthcare",
+      "initialPrice": 70,
+      "volatilityMultiplier": 0.8,
+      "eventSensitivityWeights": {
+        "military-conflict": 0.5,
+        "sanctions-imposed": -0.5,
+        "civil-unrest": -0.5,
+        "trade-deal": 1.0,
+        "tech-breakthrough": 1.5,
+        "oil-disruption": 0.0,
+        "regime-change": -0.5,
+        "natural-disaster": 2.0
+      }
+    },
+    {
+      "tickerId": "india-infrastructure",
+      "sectorName": "infrastructure",
+      "initialPrice": 45,
+      "volatilityMultiplier": 0.9,
+      "eventSensitivityWeights": {
+        "military-conflict": -2.0,
+        "sanctions-imposed": -0.5,
+        "civil-unrest": -1.5,
+        "trade-deal": 1.5,
+        "tech-breakthrough": 0.5,
+        "oil-disruption": -0.5,
+        "regime-change": -1.0,
+        "natural-disaster": -3.0
+      }
+    }
+  ]
+}

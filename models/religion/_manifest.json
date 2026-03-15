@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "collection": "religion",
+  "description": "Religion and belief system profiles defining major world religions, denominations, and secular ideologies with social cohesion, political influence, inter-religious tensions, and gameplay modifiers.",
+  "count": 10,
+  "files": [
+    "christianity-protestant.json",
+    "christianity-catholic.json",
+    "christianity-orthodox.json",
+    "islam-sunni.json",
+    "islam-shia.json",
+    "hinduism.json",
+    "buddhism.json",
+    "judaism.json",
+    "secular-atheism.json",
+    "state-ideology.json"
+  ]
+}

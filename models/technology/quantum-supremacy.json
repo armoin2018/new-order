@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "quantum-supremacy",
+  "name": "Quantum Supremacy",
+  "domain": "quantum",
+  "secondaryDomains": ["ai", "cyber", "biotech", "semiconductors", "space"],
+  "description": "Achieves large-scale fault-tolerant quantum computing with thousands of logical qubits, capable of solving previously intractable problems across cryptography, drug discovery, materials science, and optimization. Fundamentally reshapes the global technology landscape and balance of power.",
+  "tier": 5,
+  "researchCost": 480,
+  "researchDurationTurns": 24,
+  "impactLevel": "paradigm-shift",
+  "prerequisites": [
+    { "techId": "quantum-error-correction", "minimumLevel": 1 },
+    { "techId": "quantum-cryptography", "minimumLevel": 1 }
+  ],
+  "domainLevelRequirement": {
+    "quantum": 60,
+    "semiconductors": 35
+  },
+  "effects": {
+    "domainBoosts": {
+      "quantum": 30,
+      "ai": 15,
+      "cyber": 15,
+      "biotech": 10,
+      "semiconductors": 8,
+      "space": 5
+    },
+    "militaryModifiers": {
+      "attackBonus": 15,
+      "defenseBonus": 15
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 5.0,
+      "tradeEfficiencyBonus": 2.0,
+      "revenueMultiplier": 1.4
+    },
+    "socialModifiers": {
+      "stabilityBonus": -3,
+      "softPowerBonus": 15,
+      "educationBonus": 8
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 100
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "artificial-general-intelligence",
+      "bonusDescription": "Quantum-enhanced AGI achieves capabilities beyond human comprehension",
+      "bonusMultiplier": 2.0
+    },
+    {
+      "partnerTechId": "synthetic-biology",
+      "bonusDescription": "Quantum simulation revolutionizes protein design and synthetic organism engineering",
+      "bonusMultiplier": 1.4
+    }
+  ],
+  "tags": ["quantum-supremacy", "paradigm-shift", "fault-tolerant", "cryptography-breaking", "civilization"]
+}

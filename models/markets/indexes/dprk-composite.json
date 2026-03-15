@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "dprk-composite",
+  "indexName": "DPRK Composite Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Broad composite index tracking all major DPRK economic sectors including defense, energy, consumer goods, infrastructure, and mining.",
+  "constituentTickers": [
+    { "tickerId": "kp-defense", "exchangeId": "pse", "weight": 0.2 },
+    { "tickerId": "kp-energy", "exchangeId": "pse", "weight": 0.2 },
+    { "tickerId": "kp-consumer", "exchangeId": "pse", "weight": 0.2 },
+    { "tickerId": "kp-infrastructure", "exchangeId": "pse", "weight": 0.2 },
+    { "tickerId": "kp-mining", "exchangeId": "pse", "weight": 0.2 }
+  ]
+}

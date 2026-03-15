@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "universal-primary",
+  "name": "Universal Primary Education",
+  "category": "primary",
+  "description": "Nationwide program ensuring every child receives basic primary education including reading, writing, arithmetic, and foundational civic knowledge. Builds the baseline human capital essential for all other education investments.",
+  "annualCostPerCapita": 120,
+  "implementationTurns": 2,
+  "maturityTurns": 8,
+  "effects": {
+    "workforceQuality": 10,
+    "innovationRate": 2,
+    "stabilityModifier": 5,
+    "softPowerModifier": 3
+  },
+  "prerequisites": [],
+  "tags": ["foundation", "literacy", "baseline", "human-capital"]
+}

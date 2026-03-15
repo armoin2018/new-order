@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "INFP",
+  "typeName": "The Mediator",
+  "cognitiveStack": ["Fi", "Ne", "Si", "Te"],
+  "strengthDomains": [
+    "ideological inspiration",
+    "humanitarian advocacy",
+    "creative problem framing"
+  ],
+  "blindSpots": [
+    "executive follow-through",
+    "transactional negotiation",
+    "rapid tactical decision-making"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": -15,
+  "adaptability": 55,
+  "leadershipStyle": "diplomatic",
+  "diplomaticApproach": "principled",
+  "conflictResponse": "avoid",
+  "gameplayModifiers": {
+    "alliancePreference": 10,
+    "noveltyPreference": 15,
+    "outcomeTypeWeight": {
+      "measurable": -20,
+      "humanitarian": 30,
+      "legitimacy": 15
+    },
+    "commitmentTiming": -20
+  }
+}

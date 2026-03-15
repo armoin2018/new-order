@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "apt-infrastructure",
+  "name": "Advanced Persistent Threat Platform",
+  "category": "cyber-offense",
+  "subcategory": "persistent-access",
+  "description": "Sophisticated command-and-control infrastructure for maintaining long-term covert access to enemy networks. Includes custom malware frameworks, proxy chains, and data exfiltration systems.",
+  "nation": null,
+  "purchaseCost": 45,
+  "maintenanceCostPerTurn": 6,
+  "attackPower": 55,
+  "defensePower": 10,
+  "range": 50,
+  "speed": 6,
+  "buildTime": 8,
+  "stealthRating": 85,
+  "crewRequirement": 30,
+  "operationalLifespan": 12,
+  "techRequirements": {
+    "cyber": 40,
+    "ai": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "persistent-access",
+      "name": "Persistent Network Access",
+      "description": "Maintains covert footholds in enemy government and military networks for months, enabling continuous intelligence collection.",
+      "modifier": { "attackPower": 10 }
+    },
+    {
+      "abilityId": "data-exfiltration",
+      "name": "Bulk Data Exfiltration",
+      "description": "Steals classified documents, weapons designs, and diplomatic communications at scale from compromised networks.",
+      "modifier": { "attackPower": 8 }
+    }
+  ],
+  "tags": ["cyber", "offensive", "apt", "espionage"]
+}

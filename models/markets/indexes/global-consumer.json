@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "global-consumer",
+  "indexName": "Global Consumer Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Tracks global consumer sector performance weighted by consumer market size",
+  "constituentTickers": [
+    { "tickerId": "us-consumer", "exchangeId": "nyse", "weight": 0.30 },
+    { "tickerId": "cn-consumer", "exchangeId": "sse", "weight": 0.25 },
+    { "tickerId": "eu-consumer", "exchangeId": "euronext", "weight": 0.20 },
+    { "tickerId": "jp-consumer", "exchangeId": "tse", "weight": 0.15 },
+    { "tickerId": "ru-consumer", "exchangeId": "moex", "weight": 0.04 },
+    { "tickerId": "ir-consumer", "exchangeId": "tedpix", "weight": 0.03 },
+    { "tickerId": "sy-consumer", "exchangeId": "dse", "weight": 0.02 },
+    { "tickerId": "kp-consumer", "exchangeId": "pse", "weight": 0.01 }
+  ]
+}

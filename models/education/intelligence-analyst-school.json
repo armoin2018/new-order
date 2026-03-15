@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "educationId": "intelligence-analyst-school",
+  "name": "Intelligence Analyst School",
+  "category": "intelligence-training",
+  "description": "Classified training program for signals intelligence, human intelligence, imagery analysis, and counterintelligence operations. Produces skilled analysts and field operatives capable of strategic intelligence collection and covert action.",
+  "annualCostPerCapita": 500,
+  "implementationTurns": 5,
+  "maturityTurns": 14,
+  "effects": {
+    "technologyDomainBoosts": {
+      "ai": 3,
+      "cyber": 6
+    },
+    "workforceQuality": 3,
+    "innovationRate": 2,
+    "stabilityModifier": 2,
+    "softPowerModifier": -2,
+    "militaryReadinessModifier": 5,
+    "espionageModifier": 14
+  },
+  "prerequisites": [
+    { "type": "education", "value": "secondary-modernization", "minimumLevel": 0.5 },
+    { "type": "technology", "value": "offensive-cyber-operations", "minimumLevel": 0.3 }
+  ],
+  "tags": ["intelligence", "espionage", "sigint", "humint", "counterintelligence", "classified"]
+}

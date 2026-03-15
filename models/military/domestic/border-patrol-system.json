@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "border-patrol-system",
+  "name": "Integrated Border Patrol System",
+  "category": "domestic",
+  "subcategory": "border-security",
+  "description": "Comprehensive border security infrastructure combining sensor towers, ground radar, drone patrols, and rapid response teams to detect and interdict illegal crossings and smuggling operations.",
+  "nation": null,
+  "purchaseCost": 35,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 10,
+  "defensePower": 55,
+  "range": 8,
+  "speed": 1,
+  "buildTime": 6,
+  "stealthRating": 5,
+  "crewRequirement": 500,
+  "operationalLifespan": 25,
+  "techRequirements": {
+    "ai": 10,
+    "semiconductors": 10
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "smuggling-interdiction",
+      "name": "Smuggling Interdiction",
+      "description": "Sensor fusion detects covert border crossings and smuggling tunnels, reducing arms and contraband flow.",
+      "modifier": { "defensePower": 12 }
+    },
+    {
+      "abilityId": "refugee-management",
+      "name": "Refugee Flow Management",
+      "description": "Controls and processes large refugee movements during crises, preventing destabilizing uncontrolled migration.",
+      "modifier": { "defensePower": 8 }
+    }
+  ],
+  "tags": ["domestic", "border-security", "sensor-network", "interdiction"]
+}

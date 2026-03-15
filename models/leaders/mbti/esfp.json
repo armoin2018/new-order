@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ESFP",
+  "typeName": "The Entertainer",
+  "cognitiveStack": ["Se", "Fi", "Te", "Ni"],
+  "strengthDomains": [
+    "public morale boosting",
+    "coalition charisma",
+    "rapid crisis response"
+  ],
+  "blindSpots": [
+    "strategic depth",
+    "long-term institutional building",
+    "analytical rigor under pressure"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 30,
+  "adaptability": 85,
+  "leadershipStyle": "charismatic",
+  "diplomaticApproach": "relational",
+  "conflictResponse": "compromise",
+  "gameplayModifiers": {
+    "alliancePreference": 15,
+    "noveltyPreference": 10,
+    "outcomeTypeWeight": {
+      "measurable": -5,
+      "humanitarian": 15,
+      "legitimacy": 10
+    },
+    "commitmentTiming": -15
+  }
+}

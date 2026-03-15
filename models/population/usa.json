@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "usa",
+  "populationMillions": 334.9,
+  "growthRatePercent": 0.5,
+  "urbanizationPercent": 83.3,
+  "medianAge": 38.9,
+  "lifeExpectancy": 77.5,
+  "literacyRatePercent": 99.0,
+  "ageDistribution": {
+    "youth": 18.0,
+    "workingAge": 65.0,
+    "elderly": 17.0
+  },
+  "ethnicComposition": [
+    { "groupName": "White", "percentOfPopulation": 57.8, "socialCohesion": 70 },
+    { "groupName": "Hispanic/Latino", "percentOfPopulation": 19.1, "socialCohesion": 65 },
+    { "groupName": "Black/African American", "percentOfPopulation": 12.6, "socialCohesion": 60 },
+    { "groupName": "Asian/Other", "percentOfPopulation": 10.5, "socialCohesion": 72 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.39,
+    "humanDevelopmentIndex": 0.921,
+    "healthcareAccessPercent": 91.4,
+    "internetPenetrationPercent": 92.0,
+    "unemploymentRatePercent": 3.7
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 82,
+    "conscriptionPool": 60.0,
+    "socialStabilityBaseline": 10,
+    "innovationPotential": 92,
+    "consumptionDemandMultiplier": 3.8
+  },
+  "tags": ["superpower", "diverse", "high-income", "innovation-leader", "nato"]
+}

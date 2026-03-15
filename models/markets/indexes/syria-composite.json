@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "syria-composite",
+  "indexName": "Syria Composite Index",
+  "indexType": "preset",
+  "baseValue": 100,
+  "description": "Broad composite index tracking all major Syrian economic sectors including defense, energy, consumer goods, infrastructure, and mining.",
+  "constituentTickers": [
+    { "tickerId": "sy-defense", "exchangeId": "dse", "weight": 0.2 },
+    { "tickerId": "sy-energy", "exchangeId": "dse", "weight": 0.2 },
+    { "tickerId": "sy-consumer", "exchangeId": "dse", "weight": 0.2 },
+    { "tickerId": "sy-infrastructure", "exchangeId": "dse", "weight": 0.2 },
+    { "tickerId": "sy-mining", "exchangeId": "dse", "weight": 0.2 }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/military-equipment.schema.json",
+  "title": "Military Equipment Model",
+  "description": "JSON Schema for military equipment models (DR-145). Defines individual equipment types with stats, costs, and requirements across 8 categories.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "equipmentId",
+    "name",
+    "category",
+    "description",
+    "purchaseCost",
+    "maintenanceCostPerTurn",
+    "attackPower",
+    "defensePower",
+    "buildTime"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "equipmentId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique equipment identifier (e.g., 'f-35a-lightning', 'type-055-destroyer')"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "category": {
+      "type": "string",
+      "enum": ["air", "sea", "ground", "spy-covert", "drone", "domestic", "cyber-offense", "cyber-defense"],
+      "description": "Equipment category matching models/military/ subdirectory"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Sub-classification within category (e.g., 'fighter', 'bomber', 'transport' for air)"
+    },
+    "description": { "type": "string", "minLength": 10 },
+    "nation": {
+      "type": ["string", "null"],
+      "description": "Nation of origin or primary operator. Null for universal equipment."
+    },
+    "purchaseCost": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Treasury cost to procure one unit"
+    },
+    "maintenanceCostPerTurn": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Ongoing Treasury cost per turn per unit"
+    },
+    "attackPower": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Offensive capability rating"
+    },
+    "defensePower": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Defensive capability rating"
+    },
+    "range": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Operational range in hex units"
+    },
+    "speed": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Movement speed (hexes per turn)"
+    },
+    "specialAbilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["abilityId", "name", "description"],
+        "properties": {
+          "abilityId": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "modifier": { "type": "object" }
+        }
+      }
+    },
+    "techRequirements": {
+      "type": "object",
+      "description": "Technology level prerequisites (domain: minimum level)",
+      "patternProperties": {
+        "^(ai|semiconductors|space|cyber|biotech|quantum)$": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "crewRequirement": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Personnel required to operate"
+    },
+    "buildTime": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "description": "Turns required to build/deliver after purchase"
+    },
+    "operationalLifespan": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Turns before accelerated degradation begins"
+    },
+    "stealthRating": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Detection resistance (higher = harder to detect)"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

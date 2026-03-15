@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "typeCode": "ESTJ",
+  "typeName": "The Executive",
+  "cognitiveStack": ["Te", "Si", "Ne", "Fi"],
+  "strengthDomains": [
+    "organizational efficiency",
+    "military logistics",
+    "regulatory enforcement",
+    "institutional authority"
+  ],
+  "blindSpots": [
+    "emotional nuance in diplomacy",
+    "creative problem-solving",
+    "cultural sensitivity"
+  ],
+  "stressPattern": "grip",
+  "decisionSpeed": 40,
+  "adaptability": 25,
+  "leadershipStyle": "commanding",
+  "diplomaticApproach": "transactional",
+  "conflictResponse": "dominate",
+  "gameplayModifiers": {
+    "alliancePreference": 5,
+    "noveltyPreference": -20,
+    "outcomeTypeWeight": {
+      "measurable": 25,
+      "humanitarian": -10,
+      "legitimacy": 15
+    },
+    "commitmentTiming": 25
+  }
+}

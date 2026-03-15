@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "tse",
+  "exchangeName": "Tokyo Stock Exchange",
+  "nationId": "japan",
+  "baseIndexValue": 38000,
+  "volatilityProfile": "low",
+  "currencyCode": "JPY",
+  "marketCapBillions": 6200,
+  "sectorWeights": {
+    "defense": 0.04,
+    "energy": 0.06,
+    "technology": 0.30,
+    "finance": 0.18,
+    "consumer": 0.22,
+    "healthcare": 0.10,
+    "infrastructure": 0.06,
+    "mining": 0.04
+  }
+}

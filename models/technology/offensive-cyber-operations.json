@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "offensive-cyber-operations",
+  "name": "Offensive Cyber Operations",
+  "domain": "cyber",
+  "secondaryDomains": ["ai"],
+  "description": "Develops full-spectrum offensive cyber warfare capabilities including network infiltration, data exfiltration, industrial sabotage, and coordinated multi-vector attacks against adversary critical infrastructure and military command systems.",
+  "tier": 2,
+  "researchCost": 130,
+  "researchDurationTurns": 9,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "zero-day-research", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "cyber": 10
+    },
+    "militaryModifiers": {
+      "attackBonus": 10
+    },
+    "socialModifiers": {
+      "softPowerBonus": -3,
+      "stabilityBonus": -1
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 70
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "deepfake-generation",
+      "bonusDescription": "Deepfake-augmented cyber operations enable devastating influence and sabotage campaigns",
+      "bonusMultiplier": 1.3
+    },
+    {
+      "partnerTechId": "zero-day-research",
+      "bonusDescription": "Zero-day stockpile provides critical ammunition for offensive operations",
+      "bonusMultiplier": 1.4
+    }
+  ],
+  "tags": ["offensive", "cyber-warfare", "infiltration", "sabotage", "exfiltration", "apt"]
+}

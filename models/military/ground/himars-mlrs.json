@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "himars-mlrs",
+  "name": "M142 HIMARS",
+  "category": "ground",
+  "subcategory": "rocket-artillery",
+  "description": "High Mobility Artillery Rocket System — a lightweight, wheeled multiple rocket launcher firing GPS-guided GMLRS rockets and ATACMS ballistic missiles. Proven devastating in combined-arms warfare.",
+  "nation": "USA",
+  "purchaseCost": 20,
+  "maintenanceCostPerTurn": 2,
+  "attackPower": 72,
+  "defensePower": 15,
+  "range": 10,
+  "speed": 4,
+  "buildTime": 3,
+  "stealthRating": 10,
+  "crewRequirement": 3,
+  "operationalLifespan": 25,
+  "techRequirements": {
+    "semiconductors": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "shoot-and-scoot",
+      "name": "Shoot and Scoot",
+      "description": "Rapid displacement after firing prevents counter-battery targeting, greatly improving survivability.",
+      "modifier": { "defensePower": 10 }
+    },
+    {
+      "abilityId": "precision-rockets",
+      "name": "GPS-Guided Rockets",
+      "description": "GMLRS rockets achieve sub-meter accuracy at 70+ km range, enabling destruction of point targets with minimal rounds.",
+      "modifier": { "attackPower": 10 }
+    }
+  ],
+  "tags": ["rocket-artillery", "precision-strike", "mobile", "nato"]
+}

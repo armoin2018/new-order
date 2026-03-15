@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "kim-jong-un",
+  "name": "Kim Jong-un",
+  "title": "Supreme Leader of the Democratic People's Republic of Korea",
+  "factionId": "dprk",
+  "mbtiType": "ESTP",
+  "mbtiDichotomyScores": {
+    "EI": 30,
+    "SN": 15,
+    "TF": 18,
+    "JP": 72
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "escalate",
+    "riskTolerance": 82,
+    "paranoia": 92,
+    "narcissism": 90,
+    "pragmatism": 55,
+    "patience": 30,
+    "vengefulIndex": 90,
+    "charisma": 50,
+    "empathy": 8,
+    "ideologicalRigidity": 70,
+    "corruptibility": 60
+  },
+  "motivations": {
+    "primary": "power",
+    "secondary": "security",
+    "fear": "overthrow"
+  },
+  "powerBase": {
+    "source": "dynasty",
+    "consolidation": 90,
+    "legitimacy": 40,
+    "succession": "hereditary"
+  },
+  "vulnerabilities": {
+    "health": 55,
+    "scandals": ["International human rights condemnation", "Family purges and executions", "Famine and economic deprivation"],
+    "internalOpposition": 10,
+    "externalPressure": 90
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 10,
+      "reason": "Patron-client relationship; China as economic lifeline"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": 15,
+      "reason": "Arms-for-support relationship and shared adversary"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -30,
+      "reason": "Nuclear standoff and existential mutual hostility"
+    },
+    {
+      "targetLeaderId": "fumio-kishida",
+      "modifier": -25,
+      "reason": "Missile overflights and abduction grievance"
+    }
+  ],
+  "biography": "Kim Jong-un inherited the world's most isolated totalitarian state and rapidly consolidated power through purges, including the execution of his own uncle. His ESTP temperament drives impulsive, high-stakes gambits — from nuclear brinkmanship to surprise diplomatic summits — combined with a ruthless survival instinct. He views nuclear weapons as the ultimate guarantee against regime change.",
+  "tags": ["minor-power", "authoritarian", "rogue-state", "nuclear-armed", "dynasty", "hermit-kingdom"]
+}

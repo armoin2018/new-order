@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "ddos-botnet",
+  "name": "DDoS Botnet Infrastructure",
+  "category": "cyber-offense",
+  "subcategory": "denial-of-service",
+  "description": "A distributed network of compromised devices capable of generating massive traffic floods against target networks. Used to disrupt enemy communications, financial systems, and government services during conflict.",
+  "nation": null,
+  "purchaseCost": 15,
+  "maintenanceCostPerTurn": 2,
+  "attackPower": 35,
+  "defensePower": 5,
+  "range": 50,
+  "speed": 8,
+  "buildTime": 4,
+  "stealthRating": 50,
+  "crewRequirement": 5,
+  "operationalLifespan": 10,
+  "techRequirements": {
+    "cyber": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "service-disruption",
+      "name": "Critical Service Disruption",
+      "description": "Overwhelms banking, government portals, and military communications, causing economic damage and public panic.",
+      "modifier": { "attackPower": 12 }
+    },
+    {
+      "abilityId": "diversionary-attack",
+      "name": "Diversionary Smokescreen",
+      "description": "DDoS floods mask concurrent precision cyber intrusions, distracting defenders from the real attack.",
+      "modifier": { "attackPower": 5 }
+    }
+  ],
+  "tags": ["cyber", "offensive", "ddos", "disruption"]
+}

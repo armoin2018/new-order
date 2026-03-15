@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "mohammed-bin-salman",
+  "name": "Mohammed bin Salman Al Saud",
+  "title": "Crown Prince and Prime Minister of Saudi Arabia",
+  "factionId": "saudi_arabia",
+  "mbtiType": "ENTJ",
+  "mbtiDichotomyScores": {
+    "EI": 25,
+    "SN": 72,
+    "TF": 20,
+    "JP": 15
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "escalate",
+    "riskTolerance": 75,
+    "paranoia": 70,
+    "narcissism": 80,
+    "pragmatism": 65,
+    "patience": 35,
+    "vengefulIndex": 80,
+    "charisma": 60,
+    "empathy": 15,
+    "ideologicalRigidity": 40,
+    "corruptibility": 30
+  },
+  "motivations": {
+    "primary": "power",
+    "secondary": "legacy",
+    "fear": "irrelevance"
+  },
+  "powerBase": {
+    "source": "dynasty",
+    "consolidation": 88,
+    "legitimacy": 60,
+    "succession": "hereditary"
+  },
+  "vulnerabilities": {
+    "health": 15,
+    "scandals": ["Khashoggi assassination ordering", "Yemen war humanitarian catastrophe", "Ritz-Carlton purge of rivals", "OPEC+ production cut controversies"],
+    "internalOpposition": 20,
+    "externalPressure": 55
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -10,
+      "reason": "Khashoggi fallout and oil production disagreements strain relationship"
+    },
+    {
+      "targetLeaderId": "ali-khamenei",
+      "modifier": -30,
+      "reason": "Saudi-Iranian sectarian and geopolitical rivalry across the Middle East"
+    },
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 10,
+      "reason": "Expanding economic ties and oil-for-infrastructure deals"
+    },
+    {
+      "targetLeaderId": "vladimir-putin",
+      "modifier": 5,
+      "reason": "OPEC+ cooperation despite competing interests in energy markets"
+    },
+    {
+      "targetLeaderId": "abdel-fattah-el-sisi",
+      "modifier": 15,
+      "reason": "Sunni Arab alliance and shared regional security interests"
+    }
+  ],
+  "biography": "Mohammed bin Salman, known as MBS, transformed Saudi Arabia's power structure by sidelining older princes and consolidating near-absolute authority as Crown Prince. His ENTJ drive fuels the ambitious Vision 2030 economic diversification plan—including the NEOM megacity—while maintaining the kingdom's petro-state leverage through OPEC+. Ruthless in eliminating dissent (the Khashoggi affair, the Ritz-Carlton purge), he simultaneously pursues social liberalization, sports investment diplomacy, and a pragmatic warming toward Israel, positioning Saudi Arabia as the indispensable Middle Eastern power broker.",
+  "tags": ["energy-superpower", "authoritarian-monarchy", "OPEC", "Vision-2030", "nuclear-aspirant", "regional-hegemon", "sportswashing"]
+}

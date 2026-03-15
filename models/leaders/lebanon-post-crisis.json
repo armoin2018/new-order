@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "lebanon-post-crisis",
+  "name": "Caretaker Government of Lebanon",
+  "title": "Caretaker Prime Minister of the Lebanese Republic",
+  "factionId": "lebanon",
+  "mbtiType": "ISFP",
+  "mbtiDichotomyScores": {
+    "EI": 65,
+    "SN": 38,
+    "TF": 70,
+    "JP": 78
+  },
+  "psychology": {
+    "decisionStyle": "consensus",
+    "stressResponse": "freeze",
+    "riskTolerance": 25,
+    "paranoia": 60,
+    "narcissism": 20,
+    "pragmatism": 55,
+    "patience": 50,
+    "vengefulIndex": 15,
+    "charisma": 30,
+    "empathy": 55,
+    "ideologicalRigidity": 20,
+    "corruptibility": 60
+  },
+  "motivations": {
+    "primary": "security",
+    "secondary": "prosperity",
+    "fear": "economic-collapse"
+  },
+  "powerBase": {
+    "source": "party",
+    "consolidation": 15,
+    "legitimacy": 20,
+    "succession": "undefined"
+  },
+  "vulnerabilities": {
+    "health": 35,
+    "scandals": [
+      "Beirut port explosion cover-up",
+      "Central bank Ponzi scheme collapse",
+      "Hezbollah parallel state",
+      "Systemic sectarian corruption"
+    ],
+    "internalOpposition": 80,
+    "externalPressure": 75
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "ali-khamenei",
+      "modifier": -5,
+      "reason": "Hezbollah's Iranian proxy status dominates Lebanese security policy"
+    },
+    {
+      "targetLeaderId": "mohammed-bin-salman",
+      "modifier": -15,
+      "reason": "Saudi Arabia withdrew support over Hezbollah influence"
+    },
+    {
+      "targetLeaderId": "abdel-fattah-el-sisi",
+      "modifier": 5,
+      "reason": "Regional Sunni solidarity and shared concern over Iranian expansion"
+    }
+  ],
+  "biography": "Lebanon's post-crisis caretaker government represents the collapse of the country's confessional power-sharing system. Following the 2020 Beirut port explosion, hyperinflation that destroyed the currency, and a banking sector meltdown, the state functions as little more than a shell. The ISFP-type leadership reflects a weak, reactive caretaker apparatus unable to form a permanent government, caught between Hezbollah's parallel military state, sectarian warlords, and an international community demanding reforms. Lebanon's once-vibrant economy has shrunk by over 60%, and the country serves as a cautionary tale of state failure in the modern era.",
+  "tags": [
+    "failed-state",
+    "sectarian",
+    "Hezbollah-dominated",
+    "economic-collapse",
+    "caretaker-government",
+    "humanitarian-crisis",
+    "degraded-exchange"
+  ]
+}

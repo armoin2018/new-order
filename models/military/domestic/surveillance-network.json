@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "surveillance-network",
+  "name": "Domestic Surveillance Network",
+  "category": "domestic",
+  "subcategory": "surveillance",
+  "description": "Mass surveillance infrastructure including CCTV networks, facial recognition, social media monitoring, and communications intercept capabilities. Provides internal security awareness at the cost of civil liberties.",
+  "nation": null,
+  "purchaseCost": 50,
+  "maintenanceCostPerTurn": 7,
+  "attackPower": 5,
+  "defensePower": 35,
+  "range": 3,
+  "speed": 0,
+  "buildTime": 8,
+  "stealthRating": 30,
+  "crewRequirement": 300,
+  "operationalLifespan": 15,
+  "techRequirements": {
+    "ai": 25,
+    "semiconductors": 20,
+    "cyber": 15
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "facial-recognition",
+      "name": "AI Facial Recognition",
+      "description": "Identifies persons of interest in real-time across the national CCTV grid, enabling rapid location of dissidents and fugitives.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "social-credit-scoring",
+      "name": "Social Monitoring System",
+      "description": "Tracks citizen behavior and social connections to predict and preemptively suppress organized dissent.",
+      "modifier": { "defensePower": 10 }
+    }
+  ],
+  "tags": ["domestic", "surveillance", "ai-powered", "civil-liberties-risk"]
+}

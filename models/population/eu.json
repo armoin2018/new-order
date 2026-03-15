@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "eu",
+  "populationMillions": 448.4,
+  "growthRatePercent": 0.1,
+  "urbanizationPercent": 75.5,
+  "medianAge": 44.4,
+  "lifeExpectancy": 80.1,
+  "literacyRatePercent": 99.2,
+  "ageDistribution": {
+    "youth": 15.0,
+    "workingAge": 64.0,
+    "elderly": 21.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Western European", "percentOfPopulation": 45.0, "socialCohesion": 80 },
+    { "groupName": "Eastern European", "percentOfPopulation": 30.0, "socialCohesion": 72 },
+    { "groupName": "Southern European", "percentOfPopulation": 18.0, "socialCohesion": 75 },
+    { "groupName": "Immigrant/Other", "percentOfPopulation": 7.0, "socialCohesion": 50 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.30,
+    "humanDevelopmentIndex": 0.896,
+    "healthcareAccessPercent": 97.0,
+    "internetPenetrationPercent": 90.0,
+    "unemploymentRatePercent": 6.1
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 80,
+    "conscriptionPool": 55.0,
+    "socialStabilityBaseline": 15,
+    "innovationPotential": 80,
+    "consumptionDemandMultiplier": 3.0
+  },
+  "tags": ["aggregate", "high-income", "aging", "welfare-state", "nato", "diverse"]
+}

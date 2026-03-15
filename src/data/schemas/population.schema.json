@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/population.schema.json",
+  "title": "Population Demographics Model",
+  "description": "JSON Schema for nation population and demographic models (DR-159). Defines demographic distribution, growth, age structure, urbanization, and social indicators.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "nationId",
+    "populationMillions",
+    "growthRatePercent",
+    "urbanizationPercent",
+    "medianAge",
+    "lifeExpectancy",
+    "literacyRatePercent"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "nationId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Nation identifier matching FactionId (e.g., 'usa', 'china', 'russia')"
+    },
+    "populationMillions": {
+      "type": "number",
+      "minimum": 0.001,
+      "description": "Total population in millions"
+    },
+    "growthRatePercent": {
+      "type": "number",
+      "minimum": -5,
+      "maximum": 10,
+      "description": "Annual population growth rate as percentage"
+    },
+    "urbanizationPercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage living in urban areas"
+    },
+    "medianAge": {
+      "type": "number",
+      "minimum": 10,
+      "maximum": 70,
+      "description": "Median age of population"
+    },
+    "lifeExpectancy": {
+      "type": "number",
+      "minimum": 30,
+      "maximum": 100,
+      "description": "Average life expectancy in years"
+    },
+    "literacyRatePercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Adult literacy rate"
+    },
+    "ageDistribution": {
+      "type": "object",
+      "required": ["youth", "workingAge", "elderly"],
+      "properties": {
+        "youth": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage aged 0-14"
+        },
+        "workingAge": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage aged 15-64"
+        },
+        "elderly": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage aged 65+"
+        }
+      }
+    },
+    "ethnicComposition": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["groupName", "percentOfPopulation"],
+        "properties": {
+          "groupName": { "type": "string" },
+          "percentOfPopulation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "socialCohesion": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Integration/cohesion level within society"
+          }
+        }
+      }
+    },
+    "socialIndicators": {
+      "type": "object",
+      "properties": {
+        "giniCoefficient": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Income inequality (0 = perfect equality)"
+        },
+        "humanDevelopmentIndex": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "healthcareAccessPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "internetPenetrationPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "unemploymentRatePercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "gameplayModifiers": {
+      "type": "object",
+      "properties": {
+        "workforceQuality": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Overall workforce capability index"
+        },
+        "conscriptionPool": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Millions of military-eligible population"
+        },
+        "socialStabilityBaseline": {
+          "type": "number",
+          "minimum": -50,
+          "maximum": 50,
+          "description": "Base contribution to stability score"
+        },
+        "innovationPotential": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Population-derived innovation capacity"
+        },
+        "consumptionDemandMultiplier": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Domestic economic demand factor"
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

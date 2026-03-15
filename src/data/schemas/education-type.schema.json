@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/education-type.schema.json",
+  "title": "Education Type Model",
+  "description": "JSON Schema for education investment types (DR-157). Defines education programs with multi-domain effects, costs, and workforce impacts.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "educationId",
+    "name",
+    "description",
+    "annualCostPerCapita",
+    "implementationTurns",
+    "category"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "educationId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique education type identifier (e.g., 'stem-initiative', 'vocational-training')"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "category": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary",
+        "higher-education",
+        "vocational",
+        "stem",
+        "military-academy",
+        "intelligence-training",
+        "research-institution",
+        "digital-literacy",
+        "propaganda"
+      ],
+      "description": "Education program category"
+    },
+    "description": { "type": "string", "minLength": 10 },
+    "annualCostPerCapita": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Annual cost per million population"
+    },
+    "implementationTurns": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "description": "Turns before effects begin manifesting"
+    },
+    "maturityTurns": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 48,
+      "description": "Turns to reach full effect"
+    },
+    "maxEffectivenessPercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 200,
+      "default": 100,
+      "description": "Cap on effectiveness (100 = standard, >100 = possible overperformance)"
+    },
+    "effects": {
+      "type": "object",
+      "properties": {
+        "technologyDomainBoosts": {
+          "type": "object",
+          "description": "Research speed bonuses per domain when fully mature",
+          "patternProperties": {
+            "^(ai|semiconductors|space|cyber|biotech|quantum)$": {
+              "type": "number",
+              "minimum": -10,
+              "maximum": 30
+            }
+          }
+        },
+        "workforceQuality": {
+          "type": "number",
+          "minimum": -20,
+          "maximum": 50,
+          "description": "Impact on workforce quality index"
+        },
+        "innovationRate": {
+          "type": "number",
+          "minimum": -5,
+          "maximum": 20,
+          "description": "Impact on national innovation rate"
+        },
+        "stabilityModifier": {
+          "type": "number",
+          "minimum": -10,
+          "maximum": 15,
+          "description": "Impact on social stability"
+        },
+        "softPowerModifier": {
+          "type": "number",
+          "minimum": -5,
+          "maximum": 20,
+          "description": "Impact on international soft power"
+        },
+        "militaryReadinessModifier": {
+          "type": "number",
+          "minimum": -10,
+          "maximum": 20,
+          "description": "Impact on military training/readiness"
+        },
+        "espionageModifier": {
+          "type": "number",
+          "minimum": -5,
+          "maximum": 15,
+          "description": "Impact on intelligence capability"
+        }
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "value"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["education", "technology", "gdp-per-capita", "stability"]
+          },
+          "value": { "type": "string" },
+          "minimumLevel": { "type": "number" }
+        }
+      }
+    },
+    "exclusiveWith": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Education IDs that cannot coexist with this program"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

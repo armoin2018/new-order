@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/stock-exchange.schema.json",
+  "title": "Stock Exchange Model",
+  "description": "JSON Schema for stock exchange models (DR-169). Defines per-exchange financial market configuration with volatility profiles, sector weights, and market capitalisation.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "exchangeId",
+    "exchangeName",
+    "nationId",
+    "baseIndexValue",
+    "volatilityProfile",
+    "currencyCode"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "exchangeId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique exchange identifier (e.g., 'nyse', 'sse', 'moex')"
+    },
+    "exchangeName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "Human-readable exchange name"
+    },
+    "nationId": {
+      "type": "string",
+      "enum": ["us", "china", "russia", "japan", "iran", "dprk", "eu", "syria"],
+      "description": "Owning nation faction identifier"
+    },
+    "baseIndexValue": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Starting index value for the exchange at game start"
+    },
+    "volatilityProfile": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "extreme"],
+      "description": "Baseline volatility classification for the exchange"
+    },
+    "currencyCode": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3,
+      "description": "ISO 4217 currency code (e.g., 'USD', 'CNY', 'EUR')"
+    },
+    "marketCapBillions": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total market capitalisation in billions of local currency"
+    },
+    "sectorWeights": {
+      "type": "object",
+      "description": "Mapping of sector names to proportional weights (0-1)",
+      "patternProperties": {
+        "^(defense|energy|technology|finance|consumer|healthcare|infrastructure|mining)$": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

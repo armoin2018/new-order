@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "nyse",
+  "exchangeName": "New York Stock Exchange",
+  "nationId": "us",
+  "baseIndexValue": 42000,
+  "volatilityProfile": "medium",
+  "currencyCode": "USD",
+  "marketCapBillions": 25000,
+  "sectorWeights": {
+    "defense": 0.08,
+    "energy": 0.10,
+    "technology": 0.28,
+    "finance": 0.22,
+    "consumer": 0.18,
+    "healthcare": 0.09,
+    "infrastructure": 0.03,
+    "mining": 0.02
+  }
+}

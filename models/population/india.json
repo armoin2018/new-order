@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "nationId": "india",
+  "populationMillions": 1441.7,
+  "growthRatePercent": 0.9,
+  "urbanizationPercent": 36.0,
+  "medianAge": 28.2,
+  "lifeExpectancy": 70.8,
+  "literacyRatePercent": 77.7,
+  "ageDistribution": {
+    "youth": 26.0,
+    "workingAge": 67.0,
+    "elderly": 7.0
+  },
+  "ethnicComposition": [
+    { "groupName": "Indo-Aryan", "percentOfPopulation": 72.0, "socialCohesion": 65 },
+    { "groupName": "Dravidian", "percentOfPopulation": 25.0, "socialCohesion": 60 },
+    { "groupName": "Mongoloid/Other", "percentOfPopulation": 3.0, "socialCohesion": 55 }
+  ],
+  "socialIndicators": {
+    "giniCoefficient": 0.35,
+    "humanDevelopmentIndex": 0.644,
+    "healthcareAccessPercent": 55.0,
+    "internetPenetrationPercent": 52.0,
+    "unemploymentRatePercent": 7.8
+  },
+  "gameplayModifiers": {
+    "workforceQuality": 50,
+    "conscriptionPool": 250.0,
+    "socialStabilityBaseline": 0,
+    "innovationPotential": 65,
+    "consumptionDemandMultiplier": 1.8
+  },
+  "tags": ["most-populous", "demographic-dividend", "young-population", "emerging-power", "diverse"]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "f-22-raptor",
+  "name": "F-22 Raptor",
+  "category": "air",
+  "subcategory": "fighter",
+  "description": "The world's premier air superiority fighter combining stealth, supercruise, and integrated avionics. No longer in production, making existing airframes irreplaceable strategic assets.",
+  "nation": "USA",
+  "purchaseCost": 65,
+  "maintenanceCostPerTurn": 8,
+  "attackPower": 85,
+  "defensePower": 60,
+  "range": 16,
+  "speed": 8,
+  "buildTime": 8,
+  "stealthRating": 90,
+  "crewRequirement": 1,
+  "operationalLifespan": 36,
+  "techRequirements": {
+    "ai": 25,
+    "semiconductors": 40
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "supercruise",
+      "name": "Supercruise",
+      "description": "Sustained supersonic flight without afterburner conserves fuel and reduces infrared signature during high-speed ingress.",
+      "modifier": { "speed": 2 }
+    },
+    {
+      "abilityId": "first-look-first-kill",
+      "name": "First Look, First Kill",
+      "description": "Superior radar and stealth combination ensures detection of enemy aircraft before being detected, granting first-strike advantage.",
+      "modifier": { "attackPower": 12 }
+    }
+  ],
+  "tags": ["stealth", "air-superiority", "5th-gen", "supercruise"]
+}

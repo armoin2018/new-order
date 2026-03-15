@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "ai-powered-cyber-defense",
+  "name": "AI-Powered Cyber Defense",
+  "domain": "cyber",
+  "secondaryDomains": ["ai"],
+  "description": "Deploys artificial intelligence systems for autonomous threat detection, incident response, and adaptive network defense. AI models continuously learn from attack patterns to predict and neutralize cyber threats before they materialize.",
+  "tier": 3,
+  "researchCost": 200,
+  "researchDurationTurns": 12,
+  "impactLevel": "breakthrough",
+  "prerequisites": [
+    { "techId": "machine-learning-foundations", "minimumLevel": 1 },
+    { "techId": "critical-infrastructure-hardening", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "cyber": 15,
+      "ai": 5
+    },
+    "militaryModifiers": {
+      "defenseBonus": 15
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.0
+    },
+    "socialModifiers": {
+      "stabilityBonus": 4
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 55
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "space-force-operations",
+      "bonusDescription": "AI defense shield extends to protect space-based C2 and satellite systems",
+      "bonusMultiplier": 1.2
+    },
+    {
+      "partnerTechId": "quantum-resistant-encryption",
+      "bonusDescription": "AI monitoring combined with quantum-safe encryption creates impenetrable defense",
+      "bonusMultiplier": 1.3
+    }
+  ],
+  "tags": ["ai-defense", "autonomous", "threat-detection", "incident-response", "adaptive"]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "exchangeId": "bse-lb",
+  "exchangeName": "Beirut Stock Exchange",
+  "nationId": "lebanon",
+  "baseIndexValue": 1200,
+  "volatilityProfile": "extreme",
+  "currencyCode": "LBP",
+  "marketCapBillions": 2,
+  "sectorWeights": {
+    "defense": 0.01,
+    "energy": 0.05,
+    "technology": 0.03,
+    "finance": 0.45,
+    "consumer": 0.20,
+    "healthcare": 0.08,
+    "infrastructure": 0.10,
+    "mining": 0.08
+  }
+}

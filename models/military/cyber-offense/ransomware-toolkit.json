@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "ransomware-toolkit",
+  "name": "Ransomware Deployment System",
+  "category": "cyber-offense",
+  "subcategory": "ransomware",
+  "description": "State-sponsored ransomware framework designed to encrypt and disable enemy infrastructure at scale. Targets hospitals, utilities, and government systems to create societal disruption and economic pressure.",
+  "nation": null,
+  "purchaseCost": 20,
+  "maintenanceCostPerTurn": 3,
+  "attackPower": 45,
+  "defensePower": 5,
+  "range": 50,
+  "speed": 7,
+  "buildTime": 5,
+  "stealthRating": 60,
+  "crewRequirement": 10,
+  "operationalLifespan": 8,
+  "techRequirements": {
+    "cyber": 30,
+    "ai": 10
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "mass-encryption",
+      "name": "Mass Infrastructure Encryption",
+      "description": "Simultaneously encrypts systems across multiple sectors, paralyzing government operations and essential services.",
+      "modifier": { "attackPower": 15 }
+    },
+    {
+      "abilityId": "wiper-variant",
+      "name": "Destructive Wiper Mode",
+      "description": "Can be switched from ransomware to data destruction mode, permanently destroying enemy data and systems.",
+      "modifier": { "attackPower": 10 }
+    }
+  ],
+  "tags": ["cyber", "offensive", "ransomware", "infrastructure-attack"]
+}

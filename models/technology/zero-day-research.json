@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "zero-day-research",
+  "name": "Zero-Day Vulnerability Research",
+  "domain": "cyber",
+  "secondaryDomains": ["ai"],
+  "description": "Establishes dedicated programs for discovering, stockpiling, and weaponizing zero-day software vulnerabilities in adversary systems. Provides foundational offensive cyber capability and intelligence on foreign software supply chains.",
+  "tier": 2,
+  "researchCost": 100,
+  "researchDurationTurns": 7,
+  "impactLevel": "significant",
+  "prerequisites": [],
+  "effects": {
+    "domainBoosts": {
+      "cyber": 8
+    },
+    "militaryModifiers": {
+      "attackBonus": 6
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": false,
+    "exportRestrictionLevel": "classified",
+    "espionageValue": 60
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "offensive-cyber-operations",
+      "bonusDescription": "Zero-day arsenal dramatically amplifies offensive cyber campaign effectiveness",
+      "bonusMultiplier": 1.4
+    },
+    {
+      "partnerTechId": "machine-learning-foundations",
+      "bonusDescription": "ML-assisted fuzzing accelerates zero-day discovery rates",
+      "bonusMultiplier": 1.2
+    }
+  ],
+  "tags": ["zero-day", "vulnerability", "exploit", "offensive", "stockpile"]
+}

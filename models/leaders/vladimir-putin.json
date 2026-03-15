@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "leaderId": "vladimir-putin",
+  "name": "Vladimir Putin",
+  "title": "President of the Russian Federation",
+  "factionId": "russia",
+  "mbtiType": "ISTP",
+  "mbtiDichotomyScores": {
+    "EI": 65,
+    "SN": 30,
+    "TF": 12,
+    "JP": 60
+  },
+  "psychology": {
+    "decisionStyle": "autocratic",
+    "stressResponse": "escalate",
+    "riskTolerance": 78,
+    "paranoia": 88,
+    "narcissism": 72,
+    "pragmatism": 80,
+    "patience": 55,
+    "vengefulIndex": 85,
+    "charisma": 60,
+    "empathy": 15,
+    "ideologicalRigidity": 55,
+    "corruptibility": 40
+  },
+  "motivations": {
+    "primary": "power",
+    "secondary": "security",
+    "fear": "humiliation"
+  },
+  "powerBase": {
+    "source": "intelligence",
+    "consolidation": 88,
+    "legitimacy": 55,
+    "succession": "undefined"
+  },
+  "vulnerabilities": {
+    "health": 50,
+    "scandals": ["Ukraine invasion international isolation", "Oligarch tensions", "Wagner Group mutiny aftermath"],
+    "internalOpposition": 20,
+    "externalPressure": 85
+  },
+  "compatibilityOverrides": [
+    {
+      "targetLeaderId": "xi-jinping",
+      "modifier": 20,
+      "reason": "Strategic partnership as junior partner against Western hegemony"
+    },
+    {
+      "targetLeaderId": "us-president",
+      "modifier": -35,
+      "reason": "Deep adversarial relationship; NATO expansion grievance"
+    },
+    {
+      "targetLeaderId": "eu-chancellor",
+      "modifier": -30,
+      "reason": "Energy weaponization and security threat to Europe"
+    },
+    {
+      "targetLeaderId": "ali-khamenei",
+      "modifier": 15,
+      "reason": "Tactical alignment through shared opposition to Western dominance"
+    }
+  ],
+  "biography": "A former KGB officer who rose through the chaos of post-Soviet Russia, Vladimir Putin has ruled as the dominant figure in Russian politics for over two decades. His ISTP nature manifests in tactical opportunism, a preference for concrete action over abstract ideology, and a cold pragmatism in crisis. He views the collapse of the Soviet Union as a catastrophe to be reversed through strength.",
+  "tags": ["superpower", "authoritarian", "revisionist", "nuclear-armed", "energy-leverage", "hybrid-warfare"]
+}

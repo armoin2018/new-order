@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "patriot-pac3",
+  "name": "MIM-104 Patriot PAC-3 MSE",
+  "category": "ground",
+  "subcategory": "air-defense",
+  "description": "America's premier ground-based air and missile defense system. PAC-3 MSE interceptors use hit-to-kill technology against tactical ballistic missiles, cruise missiles, and aircraft.",
+  "nation": "USA",
+  "purchaseCost": 60,
+  "maintenanceCostPerTurn": 6,
+  "attackPower": 30,
+  "defensePower": 90,
+  "range": 12,
+  "speed": 2,
+  "buildTime": 6,
+  "stealthRating": 5,
+  "crewRequirement": 90,
+  "operationalLifespan": 30,
+  "techRequirements": {
+    "semiconductors": 35,
+    "ai": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "hit-to-kill",
+      "name": "Hit-to-Kill Intercept",
+      "description": "PAC-3 MSE uses kinetic energy impact to destroy incoming ballistic missiles, ensuring complete warhead neutralization.",
+      "modifier": { "defensePower": 15 }
+    },
+    {
+      "abilityId": "ibcs-integration",
+      "name": "IBCS Network Integration",
+      "description": "Integrated Battle Command System links with other sensors and shooters for joint engagement capability.",
+      "modifier": { "defensePower": 8 }
+    }
+  ],
+  "tags": ["air-defense", "bmd", "sam", "nato"]
+}

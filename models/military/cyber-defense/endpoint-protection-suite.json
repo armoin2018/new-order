@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "equipmentId": "endpoint-protection-suite",
+  "name": "National Endpoint Protection Suite",
+  "category": "cyber-defense",
+  "subcategory": "endpoint-security",
+  "description": "Enterprise-scale endpoint detection and response platform deployed across all government and military systems. Combines antivirus, behavioral analysis, and automated response to detect and contain malware.",
+  "nation": null,
+  "purchaseCost": 30,
+  "maintenanceCostPerTurn": 4,
+  "attackPower": 5,
+  "defensePower": 55,
+  "range": 5,
+  "speed": 0,
+  "buildTime": 4,
+  "stealthRating": 10,
+  "crewRequirement": 30,
+  "operationalLifespan": 10,
+  "techRequirements": {
+    "cyber": 25,
+    "ai": 20
+  },
+  "specialAbilities": [
+    {
+      "abilityId": "behavioral-detection",
+      "name": "Behavioral Threat Detection",
+      "description": "AI-based behavioral analysis detects novel malware and zero-day attacks that evade signature-based detection.",
+      "modifier": { "defensePower": 12 }
+    },
+    {
+      "abilityId": "automated-quarantine",
+      "name": "Automated Quarantine",
+      "description": "Instantly isolates compromised endpoints from the network, preventing lateral movement of attackers.",
+      "modifier": { "defensePower": 8 }
+    }
+  ],
+  "tags": ["cyber", "defensive", "edr", "endpoint"]
+}

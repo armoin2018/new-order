@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "deepfake-generation",
+  "name": "Deepfake Generation & Detection",
+  "domain": "ai",
+  "secondaryDomains": ["cyber"],
+  "description": "Develops advanced generative adversarial networks for creating hyper-realistic synthetic media including video, audio, and text. Includes both offensive deepfake capabilities and defensive detection systems for information warfare.",
+  "tier": 2,
+  "researchCost": 110,
+  "researchDurationTurns": 7,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "machine-learning-foundations", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "ai": 6,
+      "cyber": 4
+    },
+    "militaryModifiers": {
+      "attackBonus": 3
+    },
+    "socialModifiers": {
+      "stabilityBonus": -2,
+      "softPowerBonus": 4
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "allied-only",
+    "espionageValue": 40
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "offensive-cyber-operations",
+      "bonusDescription": "Deepfakes combined with cyber ops enable devastating influence campaigns",
+      "bonusMultiplier": 1.3
+    }
+  ],
+  "tags": ["deepfake", "disinformation", "information-warfare", "gan", "synthetic-media"]
+}

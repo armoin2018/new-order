@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "techId": "advanced-lithography",
+  "name": "Advanced Lithography Systems",
+  "domain": "semiconductors",
+  "secondaryDomains": ["ai"],
+  "description": "Develops extreme ultraviolet (EUV) and next-generation lithography tools enabling sub-7nm chip production. Critical bottleneck technology controlled by very few nations, with enormous geopolitical implications.",
+  "tier": 2,
+  "researchCost": 140,
+  "researchDurationTurns": 9,
+  "impactLevel": "significant",
+  "prerequisites": [
+    { "techId": "domestic-chip-production", "minimumLevel": 1 }
+  ],
+  "effects": {
+    "domainBoosts": {
+      "semiconductors": 10,
+      "ai": 3
+    },
+    "economicModifiers": {
+      "gdpGrowthBonus": 1.5,
+      "revenueMultiplier": 1.1
+    }
+  },
+  "knowledgeTransfer": {
+    "canExport": true,
+    "exportRestrictionLevel": "embargo-restricted",
+    "espionageValue": 55
+  },
+  "combinationBonuses": [
+    {
+      "partnerTechId": "three-nm-chip-fabrication",
+      "bonusDescription": "Advanced lithography is prerequisite enabling path to 3nm node production",
+      "bonusMultiplier": 1.4
+    }
+  ],
+  "tags": ["euv", "lithography", "fabrication", "chokepoint", "export-control"]
+}

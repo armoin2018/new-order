@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "MBTI type compatibility matrix for diplomatic chemistry calculations",
+  "matrix": {
+    "INTJ": {
+      "INTJ": 60, "INTP": 75, "ENTJ": 80, "ENTP": 85,
+      "INFJ": 65, "INFP": 50, "ENFJ": 55, "ENFP": 60,
+      "ISTJ": 70, "ISFJ": 45, "ESTJ": 65, "ESFJ": 35,
+      "ISTP": 72, "ISFP": 38, "ESTP": 45, "ESFP": 28
+    },
+    "INTP": {
+      "INTJ": 75, "INTP": 62, "ENTJ": 78, "ENTP": 82,
+      "INFJ": 68, "INFP": 58, "ENFJ": 50, "ENFP": 65,
+      "ISTJ": 55, "ISFJ": 40, "ESTJ": 48, "ESFJ": 32,
+      "ISTP": 74, "ISFP": 42, "ESTP": 55, "ESFP": 35
+    },
+    "ENTJ": {
+      "INTJ": 80, "INTP": 78, "ENTJ": 58, "ENTP": 82,
+      "INFJ": 60, "INFP": 45, "ENFJ": 65, "ENFP": 62,
+      "ISTJ": 72, "ISFJ": 48, "ESTJ": 70, "ESFJ": 42,
+      "ISTP": 68, "ISFP": 35, "ESTP": 60, "ESFP": 38
+    },
+    "ENTP": {
+      "INTJ": 85, "INTP": 82, "ENTJ": 82, "ENTP": 60,
+      "INFJ": 88, "INFP": 62, "ENFJ": 68, "ENFP": 72,
+      "ISTJ": 42, "ISFJ": 35, "ESTJ": 45, "ESFJ": 40,
+      "ISTP": 70, "ISFP": 48, "ESTP": 65, "ESFP": 50
+    },
+    "INFJ": {
+      "INTJ": 65, "INTP": 68, "ENTJ": 60, "ENTP": 88,
+      "INFJ": 65, "INFP": 78, "ENFJ": 75, "ENFP": 85,
+      "ISTJ": 50, "ISFJ": 58, "ESTJ": 38, "ESFJ": 52,
+      "ISTP": 42, "ISFP": 60, "ESTP": 30, "ESFP": 35
+    },
+    "INFP": {
+      "INTJ": 50, "INTP": 58, "ENTJ": 45, "ENTP": 62,
+      "INFJ": 78, "INFP": 65, "ENFJ": 82, "ENFP": 75,
+      "ISTJ": 35, "ISFJ": 55, "ESTJ": 28, "ESFJ": 52,
+      "ISTP": 38, "ISFP": 68, "ESTP": 25, "ESFP": 42
+    },
+    "ENFJ": {
+      "INTJ": 55, "INTP": 50, "ENTJ": 65, "ENTP": 68,
+      "INFJ": 75, "INFP": 82, "ENFJ": 62, "ENFP": 78,
+      "ISTJ": 45, "ISFJ": 65, "ESTJ": 52, "ESFJ": 68,
+      "ISTP": 40, "ISFP": 72, "ESTP": 38, "ESFP": 55
+    },
+    "ENFP": {
+      "INTJ": 60, "INTP": 65, "ENTJ": 62, "ENTP": 72,
+      "INFJ": 85, "INFP": 75, "ENFJ": 78, "ENFP": 60,
+      "ISTJ": 30, "ISFJ": 48, "ESTJ": 32, "ESFJ": 55,
+      "ISTP": 45, "ISFP": 70, "ESTP": 50, "ESFP": 62
+    },
+    "ISTJ": {
+      "INTJ": 70, "INTP": 55, "ENTJ": 72, "ENTP": 42,
+      "INFJ": 50, "INFP": 35, "ENFJ": 45, "ENFP": 30,
+      "ISTJ": 62, "ISFJ": 72, "ESTJ": 78, "ESFJ": 65,
+      "ISTP": 75, "ISFP": 55, "ESTP": 68, "ESFP": 40
+    },
+    "ISFJ": {
+      "INTJ": 45, "INTP": 40, "ENTJ": 48, "ENTP": 35,
+      "INFJ": 58, "INFP": 55, "ENFJ": 65, "ENFP": 48,
+      "ISTJ": 72, "ISFJ": 62, "ESTJ": 70, "ESFJ": 75,
+      "ISTP": 55, "ISFP": 68, "ESTP": 40, "ESFP": 60
+    },
+    "ESTJ": {
+      "INTJ": 65, "INTP": 48, "ENTJ": 70, "ENTP": 45,
+      "INFJ": 38, "INFP": 28, "ENFJ": 52, "ENFP": 32,
+      "ISTJ": 78, "ISFJ": 70, "ESTJ": 60, "ESFJ": 72,
+      "ISTP": 75, "ISFP": 42, "ESTP": 72, "ESFP": 48
+    },
+    "ESFJ": {
+      "INTJ": 35, "INTP": 32, "ENTJ": 42, "ENTP": 40,
+      "INFJ": 52, "INFP": 52, "ENFJ": 68, "ENFP": 55,
+      "ISTJ": 65, "ISFJ": 75, "ESTJ": 72, "ESFJ": 60,
+      "ISTP": 38, "ISFP": 72, "ESTP": 50, "ESFP": 70
+    },
+    "ISTP": {
+      "INTJ": 72, "INTP": 74, "ENTJ": 68, "ENTP": 70,
+      "INFJ": 42, "INFP": 38, "ENFJ": 40, "ENFP": 45,
+      "ISTJ": 75, "ISFJ": 55, "ESTJ": 75, "ESFJ": 38,
+      "ISTP": 58, "ISFP": 62, "ESTP": 78, "ESFP": 50
+    },
+    "ISFP": {
+      "INTJ": 38, "INTP": 42, "ENTJ": 35, "ENTP": 48,
+      "INFJ": 60, "INFP": 68, "ENFJ": 72, "ENFP": 70,
+      "ISTJ": 55, "ISFJ": 68, "ESTJ": 42, "ESFJ": 72,
+      "ISTP": 62, "ISFP": 58, "ESTP": 65, "ESFP": 75
+    },
+    "ESTP": {
+      "INTJ": 45, "INTP": 55, "ENTJ": 60, "ENTP": 65,
+      "INFJ": 30, "INFP": 25, "ENFJ": 38, "ENFP": 50,
+      "ISTJ": 68, "ISFJ": 40, "ESTJ": 72, "ESFJ": 50,
+      "ISTP": 78, "ISFP": 65, "ESTP": 55, "ESFP": 72
+    },
+    "ESFP": {
+      "INTJ": 28, "INTP": 35, "ENTJ": 38, "ENTP": 50,
+      "INFJ": 35, "INFP": 42, "ENFJ": 55, "ENFP": 62,
+      "ISTJ": 40, "ISFJ": 60, "ESTJ": 48, "ESFJ": 70,
+      "ISTP": 50, "ISFP": 75, "ESTP": 72, "ESFP": 58
+    }
+  }
+}
