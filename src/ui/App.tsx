@@ -1582,12 +1582,10 @@ const StartScreen: FC = () => {
   return (
     <div style={{
       ...rootStyle,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      overflowY: 'auto',
       background: 'radial-gradient(ellipse at center, #0f1a2e 0%, #0a0a12 70%)',
     }}>
-      <div style={{ textAlign: 'center', maxWidth: 900, padding: 32 }}>
+      <div style={{ textAlign: 'center', maxWidth: 900, margin: '0 auto', padding: '48px 32px' }}>
         <h1 style={{ fontSize: 48, fontWeight: 800, letterSpacing: 4, marginBottom: 8, color: '#e0e0e0' }}>
           ⚔️ NEW ORDER
         </h1>

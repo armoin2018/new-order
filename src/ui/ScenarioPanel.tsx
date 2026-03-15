@@ -6,9 +6,12 @@
  * during gameplay, and download buttons for JSON/CSV/HTML exports.
  */
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import type { FC, CSSProperties } from 'react';
 import { useGameStore } from '@/engine/store';
+import type { GameActions } from '@/engine/store';
+import { MARCH_2026_SCENARIO } from '@/data/scenarios/march2026.scenario';
+import type { ScenarioDefinition, FactionId } from '@/data/types';
 import type {
   ScenarioScore,
   DimensionScore,
@@ -66,7 +69,14 @@ export const ScenarioPanel: FC<ScenarioPanelProps> = ({ scenarioScore }) => {
   const gameEndReason = useGameStore((s) => s.gameEndReason);
   const currentTurn = useGameStore((s) => s.currentTurn) as number;
   const playerFaction = useGameStore((s) => s.playerFaction);
-  const [activeTab, setActiveTab] = useState<'scoring' | 'history' | 'export'>('scoring');
+  const [activeTab, setActiveTab] = useState<'scoring' | 'history' | 'export' | 'scenario-io'>('scoring');
+
+  const tabLabels: Record<typeof activeTab, string> = {
+    scoring: '📊 Scoring',
+    history: '📜 History',
+    export: '💾 Export',
+    'scenario-io': '📦 Scenario I/O',
+  };
 
   return (
     <div style={panelStyle} data-testid="scenario-panel">
@@ -74,7 +84,7 @@ export const ScenarioPanel: FC<ScenarioPanelProps> = ({ scenarioScore }) => {
 
       {/* Tab Selector */}
       <div style={{ display: 'flex', gap: 0, marginBottom: 16, borderBottom: '1px solid #222' }}>
-        {(['scoring', 'history', 'export'] as const).map((tab) => (
+        {(['scoring', 'history', 'export', 'scenario-io'] as const).map((tab) => (
           <button
             key={tab}
             data-testid={`scenario-tab-${tab}`}
@@ -93,7 +103,7 @@ export const ScenarioPanel: FC<ScenarioPanelProps> = ({ scenarioScore }) => {
               fontFamily: 'inherit',
             }}
           >
-            {tab === 'scoring' ? '📊 Scoring' : tab === 'history' ? '📜 History' : '💾 Export'}
+            {tabLabels[tab]}
           </button>
         ))}
       </div>
@@ -106,6 +116,9 @@ export const ScenarioPanel: FC<ScenarioPanelProps> = ({ scenarioScore }) => {
       )}
       {activeTab === 'export' && (
         <ExportView isGameOver={isGameOver} />
+      )}
+      {activeTab === 'scenario-io' && (
+        <ScenarioIOView />
       )}
     </div>
   );
@@ -361,5 +374,317 @@ const ExportButton: FC<{
     {label}
   </button>
 );
+
+// ─── Scenario I/O View ───────────────────────────────────────
+
+/** Build a ScenarioDefinition from the current game state for export. */
+function buildScenarioFromState(): ScenarioDefinition {
+  const s = useGameStore.getState();
+  return {
+    meta: { ...s.scenarioMeta },
+    factions: Object.keys(s.nationStates) as FactionId[],
+    relationshipMatrix: s.relationshipMatrix,
+    nationStates: s.nationStates,
+    geographicPostures: s.geographicPostures,
+    nationFaultLines: s.nationFaultLines,
+    mapConfig: MARCH_2026_SCENARIO.mapConfig,
+    units: Object.values(s.unitRegistry),
+    militaryForceStructures: s.militaryForceStructures,
+    intelligenceCapabilities: s.intelligenceCapabilities,
+    aiProfiles: MARCH_2026_SCENARIO.aiProfiles,
+    cognitiveBiasDefinitions: s.cognitiveBiasRegistry?.definitions ?? MARCH_2026_SCENARIO.cognitiveBiasDefinitions,
+    interpersonalChemistry: s.interpersonalChemistry ?? MARCH_2026_SCENARIO.interpersonalChemistry,
+    massPsychology: s.massPsychology ?? MARCH_2026_SCENARIO.massPsychology,
+    mediaEcosystems: MARCH_2026_SCENARIO.mediaEcosystems,
+    technologyIndices: s.technologyIndices ?? MARCH_2026_SCENARIO.technologyIndices,
+    techBlocInfo: s.techBlocAlignmentMap?.nations ?? MARCH_2026_SCENARIO.techBlocInfo,
+    resourceSecurity: s.resourceSecurity ?? MARCH_2026_SCENARIO.resourceSecurity,
+    climateEvents: s.climateEventQueue?.upcoming ?? MARCH_2026_SCENARIO.climateEvents,
+    nonStateActors: MARCH_2026_SCENARIO.nonStateActors,
+    proxyRelationships: MARCH_2026_SCENARIO.proxyRelationships,
+    flashpoints: MARCH_2026_SCENARIO.flashpoints,
+    victoryConditions: MARCH_2026_SCENARIO.victoryConditions,
+    lossConditions: MARCH_2026_SCENARIO.lossConditions,
+    eventTimeline: MARCH_2026_SCENARIO.eventTimeline,
+  };
+}
+
+/** Minimal validation that a parsed object looks like a ScenarioDefinition. */
+function isValidScenario(obj: unknown): obj is ScenarioDefinition {
+  if (!obj || typeof obj !== 'object') return false;
+  const o = obj as Record<string, unknown>;
+  if (!o.meta || typeof o.meta !== 'object') return false;
+  const meta = o.meta as Record<string, unknown>;
+  if (typeof meta.id !== 'string' || typeof meta.name !== 'string') return false;
+  if (!o.factions || !Array.isArray(o.factions) || o.factions.length === 0) return false;
+  if (!o.nationStates || typeof o.nationStates !== 'object') return false;
+  if (!o.relationshipMatrix || typeof o.relationshipMatrix !== 'object') return false;
+  return true;
+}
+
+const ScenarioIOView: FC = () => {
+  const currentTurn = useGameStore((s) => s.currentTurn) as number;
+  const scenarioMeta = useGameStore((s) => s.scenarioMeta);
+  const initializeFromScenario: GameActions['initializeFromScenario'] = useGameStore((s) => s.initializeFromScenario);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [importStatus, setImportStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [previewData, setPreviewData] = useState<ScenarioDefinition | null>(null);
+  const [selectedFaction, setSelectedFaction] = useState<FactionId | null>(null);
+
+  // ── Export current scenario ────────────────────────────────
+  const handleExportScenario = useCallback(() => {
+    try {
+      const scenario = buildScenarioFromState();
+      const content = JSON.stringify(scenario, null, 2);
+      const blob = new Blob([content], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `scenario-${scenario.meta.id || 'custom'}-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch {
+      // silent — UI only
+    }
+  }, []);
+
+  // ── Import: read file ──────────────────────────────────────
+  const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setImportStatus(null);
+    setPreviewData(null);
+    setSelectedFaction(null);
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.name.endsWith('.json')) {
+      setImportStatus({ type: 'error', message: 'Please select a .json file.' });
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const parsed = JSON.parse(reader.result as string);
+        if (!isValidScenario(parsed)) {
+          setImportStatus({ type: 'error', message: 'Invalid scenario file — missing required fields (meta, factions, nationStates, relationshipMatrix).' });
+          return;
+        }
+        setPreviewData(parsed);
+        setImportStatus({ type: 'success', message: `Loaded "${parsed.meta.name}" — ${parsed.factions.length} factions, ${parsed.meta.maxTurns} max turns.` });
+      } catch {
+        setImportStatus({ type: 'error', message: 'Failed to parse JSON file. Please check the file format.' });
+      }
+    };
+    reader.onerror = () => {
+      setImportStatus({ type: 'error', message: 'Failed to read file.' });
+    };
+    reader.readAsText(file);
+  }, []);
+
+  // ── Import: start simulation ───────────────────────────────
+  const handleStartFromImport = useCallback(() => {
+    if (!previewData || !selectedFaction) return;
+    initializeFromScenario(previewData, selectedFaction);
+  }, [previewData, selectedFaction, initializeFromScenario]);
+
+  const handleClearImport = useCallback(() => {
+    setPreviewData(null);
+    setImportStatus(null);
+    setSelectedFaction(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  }, []);
+
+  return (
+    <div data-testid="scenario-io-view">
+      {/* ── Export Section ───────────────────────────────────── */}
+      <div style={cardStyle}>
+        <h3 style={{ fontSize: 14, fontWeight: 700, marginBottom: 8 }}>📤 Export Scenario Definition</h3>
+        <p style={{ fontSize: 12, color: '#888', marginBottom: 12, lineHeight: 1.5 }}>
+          Export the current world state as a reusable scenario definition (JSON).
+          This captures nation states, relationships, military structures, technology,
+          and all other parameters — ready to be imported and replayed.
+        </p>
+        {currentTurn > 0 && (
+          <div style={{ fontSize: 11, color: '#f59e0b', marginBottom: 10, padding: '6px 10px', background: 'rgba(245,158,11,0.08)', borderRadius: 4, border: '1px solid rgba(245,158,11,0.2)' }}>
+            ⚠️ Exporting at turn {currentTurn} — the scenario will reflect the <strong>current</strong> world state, not the original starting conditions.
+          </div>
+        )}
+        <button
+          data-testid="export-scenario-btn"
+          onClick={handleExportScenario}
+          style={{
+            padding: '8px 20px',
+            backgroundColor: 'rgba(76,175,80,0.1)',
+            border: '1px solid #4caf50',
+            borderRadius: 4,
+            color: '#4caf50',
+            cursor: 'pointer',
+            fontSize: 12,
+            fontWeight: 600,
+            fontFamily: 'inherit',
+          }}
+        >
+          📤 Export Scenario as JSON
+        </button>
+        {scenarioMeta?.id && (
+          <div style={{ fontSize: 10, color: '#555', marginTop: 8 }}>
+            Current: {scenarioMeta.name} (v{scenarioMeta.version})
+          </div>
+        )}
+      </div>
+
+      {/* ── Import Section ───────────────────────────────────── */}
+      <div style={cardStyle}>
+        <h3 style={{ fontSize: 14, fontWeight: 700, marginBottom: 8 }}>📥 Import Scenario Definition</h3>
+        <p style={{ fontSize: 12, color: '#888', marginBottom: 12, lineHeight: 1.5 }}>
+          Load a previously exported scenario JSON file to start a new simulation.
+          Choose your faction after importing, then launch.
+        </p>
+
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".json"
+          data-testid="import-file-input"
+          onChange={handleFileSelect}
+          style={{ display: 'none' }}
+        />
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <button
+            data-testid="import-browse-btn"
+            onClick={() => fileInputRef.current?.click()}
+            style={{
+              padding: '8px 20px',
+              backgroundColor: 'rgba(33,150,243,0.1)',
+              border: '1px solid #2196f3',
+              borderRadius: 4,
+              color: '#2196f3',
+              cursor: 'pointer',
+              fontSize: 12,
+              fontWeight: 600,
+              fontFamily: 'inherit',
+            }}
+          >
+            📁 Browse for Scenario File
+          </button>
+          {previewData && (
+            <button
+              data-testid="import-clear-btn"
+              onClick={handleClearImport}
+              style={{
+                padding: '8px 12px',
+                backgroundColor: 'transparent',
+                border: '1px solid #444',
+                borderRadius: 4,
+                color: '#888',
+                cursor: 'pointer',
+                fontSize: 11,
+                fontFamily: 'inherit',
+              }}
+            >
+              ✕ Clear
+            </button>
+          )}
+        </div>
+
+        {/* Status Message */}
+        {importStatus && (
+          <div
+            data-testid="import-status"
+            style={{
+              marginTop: 10,
+              padding: '8px 12px',
+              borderRadius: 4,
+              fontSize: 12,
+              color: importStatus.type === 'error' ? '#ef9a9a' : '#81c784',
+              background: importStatus.type === 'error' ? 'rgba(244,67,54,0.08)' : 'rgba(76,175,80,0.08)',
+              border: `1px solid ${importStatus.type === 'error' ? 'rgba(244,67,54,0.3)' : 'rgba(76,175,80,0.3)'}`,
+            }}
+          >
+            {importStatus.type === 'error' ? '❌' : '✅'} {importStatus.message}
+          </div>
+        )}
+
+        {/* Preview + Faction Select */}
+        {previewData && (
+          <div style={{ marginTop: 12 }}>
+            <div style={{
+              padding: '10px 12px',
+              background: 'rgba(255,255,255,0.02)',
+              borderRadius: 4,
+              border: '1px solid #222',
+              marginBottom: 12,
+            }}>
+              <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 4 }}>{previewData.meta.name}</div>
+              <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>
+                <span>v{previewData.meta.version}</span>
+                {' · '}
+                <span>{previewData.meta.author}</span>
+                {' · '}
+                <span>{previewData.meta.maxTurns} turns</span>
+              </div>
+              {previewData.meta.description && (
+                <div style={{ fontSize: 11, color: '#666', marginTop: 6, lineHeight: 1.4, fontStyle: 'italic' }}>
+                  {previewData.meta.description}
+                </div>
+              )}
+            </div>
+
+            <div style={{ fontSize: 12, fontWeight: 600, marginBottom: 8 }}>Select Faction:</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+              {previewData.factions.map((fid) => {
+                const isActive = selectedFaction === fid;
+                return (
+                  <button
+                    key={fid}
+                    data-testid={`import-faction-${fid}`}
+                    onClick={() => setSelectedFaction(fid)}
+                    style={{
+                      padding: '6px 14px',
+                      background: isActive ? 'rgba(76,175,80,0.15)' : '#111',
+                      border: isActive ? '1px solid #4caf50' : '1px solid #333',
+                      borderRadius: 4,
+                      color: isActive ? '#4caf50' : '#aaa',
+                      cursor: 'pointer',
+                      fontSize: 11,
+                      fontWeight: isActive ? 700 : 400,
+                      fontFamily: 'inherit',
+                      textTransform: 'capitalize',
+                    }}
+                  >
+                    {fid}
+                  </button>
+                );
+              })}
+            </div>
+
+            <button
+              data-testid="import-start-btn"
+              onClick={handleStartFromImport}
+              disabled={!selectedFaction}
+              style={{
+                marginTop: 14,
+                padding: '10px 28px',
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: 1,
+                textTransform: 'uppercase',
+                border: selectedFaction ? '2px solid #4caf50' : '1px solid #333',
+                borderRadius: 5,
+                background: selectedFaction ? 'rgba(76,175,80,0.1)' : '#1a1a1a',
+                color: selectedFaction ? '#4caf50' : '#555',
+                cursor: selectedFaction ? 'pointer' : 'not-allowed',
+                fontFamily: 'inherit',
+              }}
+            >
+              🚀 Begin Simulation from Import
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default ScenarioPanel;
