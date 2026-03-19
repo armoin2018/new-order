@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "dprk",
+  "name": "Democratic People's Republic of Korea",
+  "factionId": "dprk",
+  "isoAlpha2": "KP",
+  "isoAlpha3": "PRK",
+  "currencyCode": "KPW",
+  "leaders": {
+    "activeLeaderId": "kim-jong-un",
+    "previousLeaderIds": [],
+    "successionType": "hereditary"
+  },
+  "religiousDistribution": [
+    { "religionId": "state-ideology", "percentOfPopulation": 65.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 30.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "buddhism", "percentOfPopulation": 4.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "declining" }
+  ],
+  "psychographics": {
+    "nationalism": 95,
+    "warWeariness": 5,
+    "governmentTrust": 85,
+    "economicAnxiety": 40,
+    "politicalPolarization": 5,
+    "mediaTrust": 90,
+    "foreignSentiment": {
+      "us": -95,
+      "china": 25,
+      "russia": 20,
+      "japan": -85,
+      "eu": -50,
+      "iran": 10,
+      "syria": 0
+    },
+    "socialLiberalism": 5,
+    "environmentalConcern": 5,
+    "militarismApproval": 90
+  },
+  "activePolicies": [
+    { "policyId": "nuclear-deterrence", "adoptedYear": 2006, "intensity": 100 },
+    { "policyId": "state-media-control", "adoptedYear": 1948, "intensity": 100 },
+    { "policyId": "military-conscription", "adoptedYear": 1948, "intensity": 100 },
+    { "policyId": "isolationist-policy", "adoptedYear": 1948, "intensity": 95 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2009, "intensity": 75 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "coal", "abundanceLevel": "moderate", "productionBillionsUSD": 1.5, "globalSharePercent": 0.5, "strategicImportance": "critical" },
+      { "resourceName": "iron-ore", "abundanceLevel": "moderate", "productionBillionsUSD": 0.5, "globalSharePercent": 0.3, "strategicImportance": "high" },
+      { "resourceName": "rare-earth", "abundanceLevel": "moderate", "productionBillionsUSD": 0.2, "globalSharePercent": 2.0, "strategicImportance": "high" },
+      { "resourceName": "magnesite", "abundanceLevel": "abundant", "productionBillionsUSD": 0.3, "globalSharePercent": 10.0, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "coal": 45,
+      "hydro": 40,
+      "oil": 10,
+      "renewables": 5
+    },
+    "foodSelfSufficiency": 55,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 0.14,
+    "totalImportsBillions": 0.32,
+    "tradeBalanceBillions": -0.18,
+    "topExports": [
+      { "commodity": "Coal (pre-sanctions)", "valueBillions": 0.04 },
+      { "commodity": "Textiles", "valueBillions": 0.03 },
+      { "commodity": "Minerals", "valueBillions": 0.02 }
+    ],
+    "topImports": [
+      { "commodity": "Food products", "valueBillions": 0.1 },
+      { "commodity": "Machinery", "valueBillions": 0.05 },
+      { "commodity": "Fuel", "valueBillions": 0.08 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 0.3, "relationship": "friendly" },
+      { "partnerId": "russia", "tradeBillions": 0.02, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": ["us", "eu", "japan"]
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 1280000,
+    "reservePersonnel": 6000000,
+    "defenseSpendingBillions": 4,
+    "defenseSpendingGDPPercent": 26.0,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 50,
+      "deliverySystems": ["ICBM (Hwasong-17, Hwasong-18)", "MRBM (Hwasong-12)", "SLBM (Pukguksong series)"]
+    },
+    "equipment": [],
+    "branches": {
+      "army": 1100000,
+      "navy": 60000,
+      "airForce": 110000,
+      "specialForces": 200000,
+      "cyberCommand": 7000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 26.2,
+    "growthRatePercent": 0.4,
+    "urbanizationPercent": 62.9,
+    "medianAge": 35.3,
+    "lifeExpectancy": 72.6,
+    "literacyRatePercent": 100.0,
+    "ageDistribution": {
+      "youth": 20.0,
+      "workingAge": 70.0,
+      "elderly": 10.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Korean", "percentOfPopulation": 99.8, "socialCohesion": 90 },
+      { "groupName": "Other", "percentOfPopulation": 0.2, "socialCohesion": 50 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.30,
+      "humanDevelopmentIndex": 0.590,
+      "healthcareAccessPercent": 70.0,
+      "internetPenetrationPercent": 0.1,
+      "unemploymentRatePercent": 3.0
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 35,
+      "conscriptionPool": 6.5,
+      "socialStabilityBaseline": -15,
+      "innovationPotential": 15,
+      "consumptionDemandMultiplier": 0.3
+    }
+  },
+  "tags": ["nuclear", "hermit-kingdom", "sanctioned", "juche", "totalitarian", "famine-risk"]
+}

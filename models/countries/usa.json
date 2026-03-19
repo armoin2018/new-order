@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "usa",
+  "name": "United States of America",
+  "factionId": "us",
+  "isoAlpha2": "US",
+  "isoAlpha3": "USA",
+  "currencyCode": "USD",
+  "leaders": {
+    "activeLeaderId": "us-president",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-protestant", "percentOfPopulation": 42.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 21.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 26.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "judaism", "percentOfPopulation": 2.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 1.1, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "buddhism", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "hinduism", "percentOfPopulation": 0.7, "isStateReligion": false, "trend": "growing" }
+  ],
+  "psychographics": {
+    "nationalism": 60,
+    "warWeariness": 55,
+    "governmentTrust": 30,
+    "economicAnxiety": 65,
+    "politicalPolarization": 82,
+    "mediaTrust": 32,
+    "foreignSentiment": {
+      "china": -25,
+      "russia": -40,
+      "japan": 50,
+      "eu": 45,
+      "iran": -55,
+      "dprk": -70,
+      "syria": -20
+    },
+    "socialLiberalism": 52,
+    "environmentalConcern": 45,
+    "militarismApproval": 58
+  },
+  "activePolicies": [
+    { "policyId": "nuclear-deterrence", "adoptedYear": 1945, "intensity": 90 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1945, "intensity": 65 },
+    { "policyId": "open-press-freedom", "adoptedYear": 1791, "intensity": 85 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2009, "intensity": 80 },
+    { "policyId": "defense-modernization", "adoptedYear": 2022, "intensity": 75 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2001, "intensity": 85 },
+    { "policyId": "economic-sanctions", "adoptedYear": 2014, "intensity": 70, "targetFactions": ["russia", "iran", "dprk"] },
+    { "policyId": "reciprocal-tariffs", "adoptedYear": 2025, "intensity": 80, "targetFactions": ["china"] },
+    { "policyId": "space-militarization", "adoptedYear": 2019, "intensity": 60 },
+    { "policyId": "fossil-fuel-expansion", "adoptedYear": 2025, "intensity": 65 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "abundant", "productionBillionsUSD": 250, "globalSharePercent": 18.0, "strategicImportance": "critical" },
+      { "resourceName": "natural-gas", "abundanceLevel": "abundant", "productionBillionsUSD": 180, "globalSharePercent": 23.0, "strategicImportance": "critical" },
+      { "resourceName": "coal", "abundanceLevel": "abundant", "productionBillionsUSD": 30, "globalSharePercent": 8.0, "strategicImportance": "medium" },
+      { "resourceName": "rare-earth", "abundanceLevel": "limited", "productionBillionsUSD": 0.8, "globalSharePercent": 14.0, "strategicImportance": "critical" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "dominant", "productionBillionsUSD": 200, "globalSharePercent": 10.0, "strategicImportance": "high" },
+      { "resourceName": "timber", "abundanceLevel": "abundant", "productionBillionsUSD": 25, "globalSharePercent": 8.0, "strategicImportance": "medium" },
+      { "resourceName": "freshwater", "abundanceLevel": "abundant", "productionBillionsUSD": 0, "globalSharePercent": 8.0, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "oil": 36,
+      "naturalGas": 34,
+      "coal": 10,
+      "nuclear": 8,
+      "renewables": 8,
+      "hydro": 4
+    },
+    "foodSelfSufficiency": 92,
+    "waterStress": "low"
+  },
+  "trade": {
+    "totalExportsBillions": 2065,
+    "totalImportsBillions": 3277,
+    "tradeBalanceBillions": -1212,
+    "topExports": [
+      { "commodity": "Refined petroleum", "valueBillions": 120, "globalRankExporter": 1 },
+      { "commodity": "Semiconductor equipment", "valueBillions": 55, "globalRankExporter": 1 },
+      { "commodity": "Aircraft & parts", "valueBillions": 90, "globalRankExporter": 1 },
+      { "commodity": "Soybeans/agricultural", "valueBillions": 30, "globalRankExporter": 1 },
+      { "commodity": "LNG", "valueBillions": 40, "globalRankExporter": 1 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 65, "globalRankExporter": 2 }
+    ],
+    "topImports": [
+      { "commodity": "Consumer electronics", "valueBillions": 200 },
+      { "commodity": "Vehicles & parts", "valueBillions": 180 },
+      { "commodity": "Crude petroleum", "valueBillions": 140 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 165 },
+      { "commodity": "Machinery", "valueBillions": 150 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 582, "relationship": "strained" },
+      { "partnerId": "eu", "tradeBillions": 870, "relationship": "allied" },
+      { "partnerId": "japan", "tradeBillions": 218, "relationship": "allied" }
+    ],
+    "sanctionsActive": ["russia", "iran", "dprk", "syria"],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 1390000,
+    "reservePersonnel": 845000,
+    "defenseSpendingBillions": 886,
+    "defenseSpendingGDPPercent": 3.4,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 5500,
+      "deliverySystems": ["ICBM (Minuteman III)", "SLBM (Trident II)", "Strategic bombers (B-2, B-52, B-21)"]
+    },
+    "equipment": [
+      { "equipmentId": "f-35a-lightning", "quantity": 600, "readinessPercent": 72, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "f-22-raptor", "quantity": 186, "readinessPercent": 50, "modernizationStatus": "modern" },
+      { "equipmentId": "m1a2-abrams", "quantity": 2500, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "b-21-raider", "quantity": 6, "readinessPercent": 95, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "patriot-pac3", "quantity": 60, "readinessPercent": 90, "modernizationStatus": "modern" },
+      { "equipmentId": "mq-9-reaper", "quantity": 300, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "himars-mlrs", "quantity": 500, "readinessPercent": 88, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 485000,
+      "navy": 340000,
+      "airForce": 325000,
+      "specialForces": 70000,
+      "cyberCommand": 6200,
+      "spaceForce": 16000
+    },
+    "powerProjection": "global"
+  },
+  "population": {
+    "populationMillions": 334.9,
+    "growthRatePercent": 0.5,
+    "urbanizationPercent": 83.3,
+    "medianAge": 38.9,
+    "lifeExpectancy": 77.5,
+    "literacyRatePercent": 99.0,
+    "ageDistribution": {
+      "youth": 18.0,
+      "workingAge": 65.0,
+      "elderly": 17.0
+    },
+    "ethnicComposition": [
+      { "groupName": "White", "percentOfPopulation": 57.8, "socialCohesion": 70 },
+      { "groupName": "Hispanic/Latino", "percentOfPopulation": 19.1, "socialCohesion": 65 },
+      { "groupName": "Black/African American", "percentOfPopulation": 12.6, "socialCohesion": 60 },
+      { "groupName": "Asian/Other", "percentOfPopulation": 10.5, "socialCohesion": 72 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.39,
+      "humanDevelopmentIndex": 0.921,
+      "healthcareAccessPercent": 91.4,
+      "internetPenetrationPercent": 92.0,
+      "unemploymentRatePercent": 3.7
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 82,
+      "conscriptionPool": 60.0,
+      "socialStabilityBaseline": 10,
+      "innovationPotential": 92,
+      "consumptionDemandMultiplier": 3.8
+    }
+  },
+  "tags": ["superpower", "nato-leader", "nuclear", "g7", "unsc-permanent", "innovation-leader"]
+}

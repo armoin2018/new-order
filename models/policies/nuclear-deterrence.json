@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "nuclear-deterrence",
+  "name": "Nuclear Deterrence Doctrine",
+  "category": "military",
+  "subcategory": "strategic",
+  "description": "Maintenance and modernization of nuclear weapons arsenal as a strategic deterrent. Ensures second-strike capability and MAD (Mutually Assured Destruction) credibility.",
+  "scope": "domestic",
+  "implementationTurns": 0,
+  "annualCostBillions": 30.0,
+  "effects": {
+    "militaryReadinessModifier": 5,
+    "diplomaticModifier": -3,
+    "stabilityModifier": 5,
+    "popularityModifier": 2
+  },
+  "prerequisites": [
+    { "type": "technology", "value": "nuclear-weapons", "minimumLevel": 1 }
+  ],
+  "historicalExamples": [
+    "US nuclear triad modernization",
+    "Russian Poseidon/Sarmat programs",
+    "French Force de Frappe",
+    "UK Trident renewal"
+  ],
+  "tags": ["nuclear", "deterrence", "strategic", "expensive"]
+}

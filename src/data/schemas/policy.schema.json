@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/policy.schema.json",
+  "title": "Policy Model",
+  "description": "JSON Schema for national policy model files (DR-191). Defines domestic and foreign policies that nations can adopt, covering economic, military, diplomatic, social, and technology domains.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "policyId",
+    "name",
+    "category",
+    "description",
+    "effects"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "policyId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique policy identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the policy"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "economic",
+        "military",
+        "diplomatic",
+        "social",
+        "technology",
+        "intelligence",
+        "environmental",
+        "trade",
+        "sanctions"
+      ],
+      "description": "Primary policy domain"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "More specific classification"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the policy and its real-world context"
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["domestic", "foreign", "bilateral", "multilateral"],
+      "description": "Whether the policy targets domestic or international affairs"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "value"],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["policy", "technology", "stability", "gdp", "political-system", "alliance"],
+            "description": "Type of prerequisite"
+          },
+          "value": {
+            "type": "string",
+            "description": "Required value (policyId, techId, minimum value, etc.)"
+          },
+          "minimumLevel": {
+            "type": "number",
+            "description": "Minimum threshold (for numeric prerequisites)"
+          }
+        }
+      },
+      "description": "Requirements that must be met to adopt this policy"
+    },
+    "exclusiveWith": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Policy IDs that are mutually exclusive with this policy"
+    },
+    "implementationTurns": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of turns required to fully implement"
+    },
+    "annualCostBillions": {
+      "type": "number",
+      "description": "Annual cost in billions USD to maintain this policy"
+    },
+    "effects": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "stabilityModifier": {
+          "type": "number",
+          "minimum": -50,
+          "maximum": 50,
+          "description": "Impact on national stability"
+        },
+        "gdpGrowthModifier": {
+          "type": "number",
+          "minimum": -10,
+          "maximum": 10,
+          "description": "Impact on GDP growth rate"
+        },
+        "inflationModifier": {
+          "type": "number",
+          "minimum": -10,
+          "maximum": 20,
+          "description": "Impact on inflation rate"
+        },
+        "tradeModifier": {
+          "type": "number",
+          "minimum": -50,
+          "maximum": 50,
+          "description": "Impact on trade balance"
+        },
+        "militaryReadinessModifier": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Impact on military readiness"
+        },
+        "diplomaticModifier": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Impact on diplomatic influence"
+        },
+        "popularityModifier": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Impact on government popularity"
+        },
+        "techModifier": {
+          "type": "number",
+          "minimum": -20,
+          "maximum": 20,
+          "description": "Impact on technology advancement"
+        },
+        "civilUnrestModifier": {
+          "type": "number",
+          "minimum": -30,
+          "maximum": 30,
+          "description": "Impact on civil unrest levels"
+        },
+        "softPowerModifier": {
+          "type": "number",
+          "minimum": -20,
+          "maximum": 20,
+          "description": "Impact on soft power / cultural influence"
+        },
+        "espionageModifier": {
+          "type": "number",
+          "minimum": -20,
+          "maximum": 20,
+          "description": "Impact on intelligence capabilities"
+        },
+        "targetEffects": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "targetGdpModifier": { "type": "number" },
+            "targetStabilityModifier": { "type": "number" },
+            "targetTradeModifier": { "type": "number" },
+            "targetInflationModifier": { "type": "number" }
+          },
+          "description": "Effects imposed on target factions (for sanctions, embargoes, etc.)"
+        }
+      }
+    },
+    "historicalExamples": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Real-world historical examples of this policy type"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Freeform tags for filtering and categorization"
+    }
+  }
+}

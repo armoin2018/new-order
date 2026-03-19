@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "india",
+  "name": "Republic of India",
+  "factionId": "india",
+  "isoAlpha2": "IN",
+  "isoAlpha3": "IND",
+  "currencyCode": "INR",
+  "leaders": {
+    "activeLeaderId": "narendra-modi",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "hinduism", "percentOfPopulation": 79.8, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 14.2, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 2.3, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "sikhism", "percentOfPopulation": 1.7, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "buddhism", "percentOfPopulation": 0.7, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "jainism", "percentOfPopulation": 0.4, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 72,
+    "warWeariness": 25,
+    "governmentTrust": 55,
+    "economicAnxiety": 70,
+    "politicalPolarization": 68,
+    "mediaTrust": 40,
+    "foreignSentiment": {
+      "us": 35,
+      "china": -45,
+      "russia": 30,
+      "japan": 40,
+      "eu": 25,
+      "iran": -5,
+      "dprk": -30,
+      "pakistan": -60
+    },
+    "socialLiberalism": 35,
+    "environmentalConcern": 40,
+    "militarismApproval": 65
+  },
+  "activePolicies": [
+    { "policyId": "nuclear-deterrence", "adoptedYear": 1998, "intensity": 70 },
+    { "policyId": "defense-modernization", "adoptedYear": 2020, "intensity": 75 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1947, "intensity": 60 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 70 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2021, "intensity": 50 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2020, "intensity": 55 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2015, "intensity": 60 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2022, "intensity": 55 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "coal", "abundanceLevel": "abundant", "productionBillionsUSD": 45, "globalSharePercent": 10.0, "strategicImportance": "high" },
+      { "resourceName": "iron-ore", "abundanceLevel": "abundant", "productionBillionsUSD": 18, "globalSharePercent": 8.5, "strategicImportance": "high" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 280, "globalSharePercent": 9.0, "strategicImportance": "critical" },
+      { "resourceName": "rare-earth", "abundanceLevel": "moderate", "productionBillionsUSD": 0.4, "globalSharePercent": 6.0, "strategicImportance": "high" },
+      { "resourceName": "freshwater", "abundanceLevel": "moderate", "productionBillionsUSD": 0, "globalSharePercent": 4.0, "strategicImportance": "critical" },
+      { "resourceName": "thorium", "abundanceLevel": "dominant", "productionBillionsUSD": 0.1, "globalSharePercent": 25.0, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "coal": 55,
+      "oil": 22,
+      "naturalGas": 6,
+      "renewables": 10,
+      "nuclear": 3,
+      "hydro": 4
+    },
+    "foodSelfSufficiency": 85,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 451,
+    "totalImportsBillions": 714,
+    "tradeBalanceBillions": -263,
+    "topExports": [
+      { "commodity": "Refined petroleum", "valueBillions": 65, "globalRankExporter": 4 },
+      { "commodity": "IT services", "valueBillions": 100, "globalRankExporter": 1 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 25, "globalRankExporter": 3 },
+      { "commodity": "Gems & jewelry", "valueBillions": 35, "globalRankExporter": 2 },
+      { "commodity": "Rice/agricultural", "valueBillions": 12, "globalRankExporter": 1 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 155 },
+      { "commodity": "Gold", "valueBillions": 45 },
+      { "commodity": "Electronics", "valueBillions": 60 },
+      { "commodity": "Coal", "valueBillions": 35 },
+      { "commodity": "Machinery", "valueBillions": 55 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 128, "relationship": "friendly" },
+      { "partnerId": "china", "tradeBillions": 136, "relationship": "strained" },
+      { "partnerId": "eu", "tradeBillions": 115, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 1455550,
+    "reservePersonnel": 1155000,
+    "defenseSpendingBillions": 83,
+    "defenseSpendingGDPPercent": 2.4,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 172,
+      "deliverySystems": ["ICBM (Agni-V)", "SLBM (K-4/K-5)", "Tactical (Prithvi/BrahMos)"]
+    },
+    "equipment": [
+      { "equipmentId": "su-30mki-flanker", "quantity": 270, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "rafale-f3r", "quantity": 36, "readinessPercent": 90, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "t-90s-bhishma", "quantity": 1100, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "ins-vikrant-carrier", "quantity": 2, "readinessPercent": 75, "modernizationStatus": "modern" },
+      { "equipmentId": "s-400-triumf", "quantity": 5, "readinessPercent": 85, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "brahmos-cruise-missile", "quantity": 200, "readinessPercent": 90, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "army": 1237000,
+      "navy": 67000,
+      "airForce": 140000,
+      "specialForces": 10000,
+      "cyberCommand": 1500
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 1441.7,
+    "growthRatePercent": 0.9,
+    "urbanizationPercent": 36.0,
+    "medianAge": 28.2,
+    "lifeExpectancy": 70.8,
+    "literacyRatePercent": 77.7,
+    "ageDistribution": {
+      "youth": 26.0,
+      "workingAge": 67.0,
+      "elderly": 7.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Indo-Aryan", "percentOfPopulation": 72.0, "socialCohesion": 65 },
+      { "groupName": "Dravidian", "percentOfPopulation": 25.0, "socialCohesion": 60 },
+      { "groupName": "Mongoloid/Other", "percentOfPopulation": 3.0, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.35,
+      "humanDevelopmentIndex": 0.644,
+      "healthcareAccessPercent": 55.0,
+      "internetPenetrationPercent": 52.0,
+      "unemploymentRatePercent": 7.8
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 50,
+      "conscriptionPool": 250.0,
+      "socialStabilityBaseline": 0,
+      "innovationPotential": 65,
+      "consumptionDemandMultiplier": 1.8
+    }
+  },
+  "tags": ["nuclear", "emerging-superpower", "demographic-dividend", "non-aligned", "tech-hub", "brics"]
+}

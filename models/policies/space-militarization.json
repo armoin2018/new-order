@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "space-militarization",
+  "name": "Space Militarization Program",
+  "category": "military",
+  "subcategory": "space-domain",
+  "description": "Development of anti-satellite weapons, space-based surveillance, and orbital warfare capabilities. Establishes space as a contested military domain.",
+  "scope": "domestic",
+  "implementationTurns": 4,
+  "annualCostBillions": 12.0,
+  "effects": {
+    "militaryReadinessModifier": 5,
+    "techModifier": 8,
+    "espionageModifier": 5,
+    "diplomaticModifier": -5,
+    "softPowerModifier": -3,
+    "stabilityModifier": 2
+  },
+  "prerequisites": [
+    { "type": "technology", "value": "space-launch", "minimumLevel": 2 }
+  ],
+  "historicalExamples": [
+    "US Space Force (2019-present)",
+    "China ASAT tests (2007, 2021)",
+    "Russia Nudol ASAT program",
+    "India Mission Shakti ASAT test (2019)"
+  ],
+  "tags": ["space", "military", "advanced", "arms-race"]
+}

@@ -752,6 +752,371 @@ export interface TechModuleDiscoveryEntry {
 }
 
 // ---------------------------------------------------------------------------
+// FR-3700 — Country Model (DR-190)
+// ---------------------------------------------------------------------------
+
+/** Succession type for leadership transitions. */
+export type SuccessionType =
+  | 'election'
+  | 'hereditary'
+  | 'party-appointment'
+  | 'military-coup'
+  | 'revolution'
+  | 'undefined';
+
+/** Leader references within a country model. */
+export interface CountryLeaderRefs {
+  /** Active leader's leaderId (from models/leaders/). */
+  readonly activeLeaderId: string;
+  /** Historical leader references. */
+  readonly previousLeaderIds?: readonly string[];
+  /** How power transitions. */
+  readonly successionType?: SuccessionType;
+}
+
+/** Religious adherence entry within a country. */
+export interface CountryReligiousEntry {
+  /** Reference to religion model religionId. */
+  readonly religionId: string;
+  /** Percentage of population adhering to this religion. */
+  readonly percentOfPopulation: number;
+  /** Whether this is an official state religion. */
+  readonly isStateReligion?: boolean;
+  /** Trend of this religion's adherence. */
+  readonly trend?: 'growing' | 'stable' | 'declining';
+}
+
+/** Population psychographic profile. */
+export interface CountryPsychographics {
+  /** National pride / nationalist sentiment (0–100). */
+  readonly nationalism: number;
+  /** Population fatigue from conflict (0=hawkish, 100=strongly opposed). */
+  readonly warWeariness: number;
+  /** Trust in government institutions (0–100). */
+  readonly governmentTrust: number;
+  /** Concern over personal economic wellbeing (0–100). */
+  readonly economicAnxiety: number;
+  /** Degree of left-right political division (0–100). */
+  readonly politicalPolarization?: number;
+  /** Trust in mainstream media sources (0–100). */
+  readonly mediaTrust?: number;
+  /** Public sentiment toward other factions (-100=hostile, 100=friendly). */
+  readonly foreignSentiment?: Readonly<Record<string, number>>;
+  /** Progressive vs. traditional social values (0–100). */
+  readonly socialLiberalism?: number;
+  /** Priority placed on environmental issues (0–100). */
+  readonly environmentalConcern?: number;
+  /** Public approval of military spending / intervention (0–100). */
+  readonly militarismApproval?: number;
+}
+
+/** An active policy reference within a country. */
+export interface CountryPolicyRef {
+  /** Reference to policy model policyId. */
+  readonly policyId: string;
+  /** Year this policy was adopted. */
+  readonly adoptedYear?: number;
+  /** How aggressively the policy is enforced (0–100). */
+  readonly intensity?: number;
+  /** Factions targeted by this policy (if applicable). */
+  readonly targetFactions?: readonly string[];
+}
+
+/** Resource abundance level. */
+export type ResourceAbundance = 'scarce' | 'limited' | 'moderate' | 'abundant' | 'dominant';
+
+/** Strategic importance level. */
+export type StrategicImportance = 'low' | 'medium' | 'high' | 'critical';
+
+/** A single natural resource entry. */
+export interface NaturalResourceEntry {
+  /** Resource name (e.g., 'crude-oil', 'natural-gas', 'rare-earth'). */
+  readonly resourceName: string;
+  /** Relative abundance level. */
+  readonly abundanceLevel: ResourceAbundance;
+  /** Annual production value in billions USD. */
+  readonly productionBillionsUSD?: number;
+  /** Country's share of global production (%). */
+  readonly globalSharePercent?: number;
+  /** Strategic importance to national economy and security. */
+  readonly strategicImportance?: StrategicImportance;
+}
+
+/** Country resource profile. */
+export interface CountryResources {
+  /** Natural resource inventory. */
+  readonly naturalResources: readonly NaturalResourceEntry[];
+  /** Energy source mix percentages (keyed by source name). */
+  readonly energyMix?: Readonly<Record<string, number>>;
+  /** Percentage of food needs produced domestically (0–100). */
+  readonly foodSelfSufficiency?: number;
+  /** Level of water scarcity. */
+  readonly waterStress?: 'low' | 'medium' | 'high' | 'extreme';
+}
+
+/** Trade commodity entry (export or import). */
+export interface TradeCommodityEntry {
+  readonly commodity: string;
+  readonly valueBillions: number;
+  readonly globalRankExporter?: number;
+}
+
+/** Major trading partner entry. */
+export interface TradingPartnerEntry {
+  /** FactionId or country name. */
+  readonly partnerId: string;
+  /** Bilateral trade volume in billions USD. */
+  readonly tradeBillions: number;
+  /** Diplomatic relationship quality. */
+  readonly relationship?: 'allied' | 'friendly' | 'neutral' | 'strained' | 'hostile';
+}
+
+/** Country trade profile. */
+export interface CountryTradeProfile {
+  /** Total annual exports in billions USD. */
+  readonly totalExportsBillions: number;
+  /** Total annual imports in billions USD. */
+  readonly totalImportsBillions: number;
+  /** Trade balance (exports - imports), negative = deficit. */
+  readonly tradeBalanceBillions: number;
+  /** Top exported commodities/categories. */
+  readonly topExports?: readonly TradeCommodityEntry[];
+  /** Top imported commodities/categories. */
+  readonly topImports?: readonly TradeCommodityEntry[];
+  /** Major trading partners with bilateral trade volumes. */
+  readonly majorTradingPartners?: readonly TradingPartnerEntry[];
+  /** FactionIds of nations this country has sanctions on. */
+  readonly sanctionsActive?: readonly string[];
+  /** FactionIds of nations sanctioning this country. */
+  readonly sanctionedBy?: readonly string[];
+}
+
+/** Equipment modernization status. */
+export type ModernizationStatus = 'cutting-edge' | 'modern' | 'aging' | 'obsolete';
+
+/** Military equipment inventory entry. */
+export interface MilitaryEquipmentEntry {
+  /** Reference to military equipment model equipmentId. */
+  readonly equipmentId: string;
+  /** Number of units in service. */
+  readonly quantity: number;
+  /** Operational readiness percentage (0–100). */
+  readonly readinessPercent?: number;
+  /** Current modernization state. */
+  readonly modernizationStatus?: ModernizationStatus;
+}
+
+/** Nuclear capability profile. */
+export interface NuclearCapability {
+  readonly hasNuclearWeapons: boolean;
+  readonly estimatedWarheads?: number;
+  readonly deliverySystems?: readonly string[];
+}
+
+/** Military branch personnel counts. */
+export interface MilitaryBranches {
+  readonly army?: number;
+  readonly navy?: number;
+  readonly airForce?: number;
+  readonly specialForces?: number;
+  readonly cyberCommand?: number;
+  readonly spaceForce?: number;
+}
+
+/** Power projection capability. */
+export type PowerProjection = 'global' | 'regional' | 'continental' | 'local' | 'minimal';
+
+/** Country military breakdown. */
+export interface CountryMilitaryBreakdown {
+  /** Total active military personnel. */
+  readonly totalPersonnel: number;
+  /** Total reserve/paramilitary personnel. */
+  readonly reservePersonnel?: number;
+  /** Annual defense budget in billions USD. */
+  readonly defenseSpendingBillions: number;
+  /** Defense spending as percentage of GDP. */
+  readonly defenseSpendingGDPPercent: number;
+  /** Nuclear weapons capability. */
+  readonly nuclearCapability?: NuclearCapability;
+  /** Equipment inventory with quantities. */
+  readonly equipment?: readonly MilitaryEquipmentEntry[];
+  /** Personnel by branch. */
+  readonly branches?: MilitaryBranches;
+  /** Ability to project military force abroad. */
+  readonly powerProjection?: PowerProjection;
+}
+
+// ── Population demographics (DR-190) ──────────────────────────────────────
+
+/** Age distribution breakdown (percentages summing to ~100). */
+export interface AgeDistribution {
+  /** Percentage aged 0–14. */
+  readonly youth: number;
+  /** Percentage aged 15–64. */
+  readonly workingAge: number;
+  /** Percentage aged 65+. */
+  readonly elderly: number;
+}
+
+/** A single ethnic/national group entry. */
+export interface EthnicGroupEntry {
+  /** Name of the ethnic or national group. */
+  readonly groupName: string;
+  /** Percentage of total population. */
+  readonly percentOfPopulation: number;
+  /** Integration/cohesion with broader society (0=isolated, 100=integrated). */
+  readonly socialCohesion?: number;
+}
+
+/** Socioeconomic development indicators. */
+export interface PopulationSocialIndicators {
+  /** Income inequality index (0=equality, 1=inequality). */
+  readonly giniCoefficient?: number;
+  /** UNDP Human Development Index score. */
+  readonly humanDevelopmentIndex?: number;
+  /** Percentage of population with healthcare access. */
+  readonly healthcareAccessPercent?: number;
+  /** Percentage of population with internet access. */
+  readonly internetPenetrationPercent?: number;
+  /** Unemployment rate percentage. */
+  readonly unemploymentRatePercent?: number;
+}
+
+/** Derived gameplay modifiers from population data. */
+export interface PopulationGameplayModifiers {
+  /** Overall workforce quality score (education, skills, productivity). */
+  readonly workforceQuality?: number;
+  /** Available military conscription pool in millions. */
+  readonly conscriptionPool?: number;
+  /** Baseline social stability modifier (negative = unstable). */
+  readonly socialStabilityBaseline?: number;
+  /** Innovation capacity score. */
+  readonly innovationPotential?: number;
+  /** Domestic consumer demand multiplier. */
+  readonly consumptionDemandMultiplier?: number;
+}
+
+/** Country population demographics (integrated into CountryModel). */
+export interface CountryPopulation {
+  /** Total population in millions. */
+  readonly populationMillions: number;
+  /** Annual population growth rate percentage (negative = declining). */
+  readonly growthRatePercent: number;
+  /** Percentage of population living in urban areas. */
+  readonly urbanizationPercent: number;
+  /** Median age of the population. */
+  readonly medianAge: number;
+  /** Average life expectancy in years. */
+  readonly lifeExpectancy: number;
+  /** Percentage of population that is literate. */
+  readonly literacyRatePercent?: number;
+  /** Population breakdown by age group. */
+  readonly ageDistribution: AgeDistribution;
+  /** Ethnic/national group breakdown. */
+  readonly ethnicComposition: readonly EthnicGroupEntry[];
+  /** Socioeconomic development indicators. */
+  readonly socialIndicators?: PopulationSocialIndicators;
+  /** Derived gameplay modifiers. */
+  readonly gameplayModifiers?: PopulationGameplayModifiers;
+}
+
+/**
+ * Comprehensive country model (models/countries/*.json).
+ * Consolidates leader relationships, religious distributions, psychographics,
+ * active policies, natural resources, trade data, military breakdown,
+ * and population demographics.
+ */
+export interface CountryModel {
+  readonly schemaVersion: SchemaVersion;
+  readonly countryId: string;
+  readonly name: string;
+  readonly factionId: string;
+  readonly isoAlpha2?: string;
+  readonly isoAlpha3?: string;
+  readonly currencyCode?: string;
+  readonly leaders: CountryLeaderRefs;
+  readonly religiousDistribution: readonly CountryReligiousEntry[];
+  readonly psychographics: CountryPsychographics;
+  readonly activePolicies: readonly CountryPolicyRef[];
+  readonly resources: CountryResources;
+  readonly trade: CountryTradeProfile;
+  readonly militaryBreakdown: CountryMilitaryBreakdown;
+  readonly population: CountryPopulation;
+  readonly tags?: readonly string[];
+}
+
+// ---------------------------------------------------------------------------
+// FR-3800 — Policy Model (DR-191)
+// ---------------------------------------------------------------------------
+
+/** Policy domain category. */
+export type PolicyCategory =
+  | 'economic'
+  | 'military'
+  | 'diplomatic'
+  | 'social'
+  | 'technology'
+  | 'intelligence'
+  | 'environmental'
+  | 'trade'
+  | 'sanctions';
+
+/** Policy scope (domestic vs. foreign). */
+export type PolicyScope = 'domestic' | 'foreign' | 'bilateral' | 'multilateral';
+
+/** Effects imposed on target factions (for sanctions, embargoes, etc.). */
+export interface PolicyTargetEffects {
+  readonly targetGdpModifier?: number;
+  readonly targetStabilityModifier?: number;
+  readonly targetTradeModifier?: number;
+  readonly targetInflationModifier?: number;
+}
+
+/** Policy effects on the adopting nation. */
+export interface PolicyEffects {
+  readonly stabilityModifier?: number;
+  readonly gdpGrowthModifier?: number;
+  readonly inflationModifier?: number;
+  readonly tradeModifier?: number;
+  readonly militaryReadinessModifier?: number;
+  readonly diplomaticModifier?: number;
+  readonly popularityModifier?: number;
+  readonly techModifier?: number;
+  readonly civilUnrestModifier?: number;
+  readonly softPowerModifier?: number;
+  readonly espionageModifier?: number;
+  readonly targetEffects?: PolicyTargetEffects;
+}
+
+/** Policy prerequisite. */
+export interface PolicyPrerequisite {
+  readonly type: 'policy' | 'technology' | 'stability' | 'gdp' | 'political-system' | 'alliance';
+  readonly value: string;
+  readonly minimumLevel?: number;
+}
+
+/**
+ * National policy model (models/policies/*.json).
+ * Defines domestic and foreign policies that nations can adopt.
+ */
+export interface PolicyModel {
+  readonly schemaVersion: SchemaVersion;
+  readonly policyId: string;
+  readonly name: string;
+  readonly category: PolicyCategory;
+  readonly subcategory?: string;
+  readonly description: string;
+  readonly scope?: PolicyScope;
+  readonly prerequisites?: readonly PolicyPrerequisite[];
+  readonly exclusiveWith?: readonly string[];
+  readonly implementationTurns?: number;
+  readonly annualCostBillions?: number;
+  readonly effects: PolicyEffects;
+  readonly historicalExamples?: readonly string[];
+  readonly tags?: readonly string[];
+}
+
+// ---------------------------------------------------------------------------
 // Union type for any model
 // ---------------------------------------------------------------------------
 
@@ -767,7 +1132,9 @@ export type AnyModel =
   | ExtendedLeaderProfile
   | StockExchangeModel
   | NationTickerSet
-  | MarketIndexModel;
+  | MarketIndexModel
+  | CountryModel
+  | PolicyModel;
 
 /** Model collection type identifiers. */
 export type ModelCollectionType =
@@ -781,7 +1148,9 @@ export type ModelCollectionType =
   | 'leader'
   | 'stock-exchange'
   | 'stock-ticker'
-  | 'market-index';
+  | 'market-index'
+  | 'country'
+  | 'policy';
 
 /** Maps collection type to its model interface. */
 export interface ModelTypeMap {
@@ -796,4 +1165,6 @@ export interface ModelTypeMap {
   'stock-exchange': StockExchangeModel;
   'stock-ticker': NationTickerSet;
   'market-index': MarketIndexModel;
+  'country': CountryModel;
+  'policy': PolicyModel;
 }

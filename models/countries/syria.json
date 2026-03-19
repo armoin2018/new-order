@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "syria",
+  "name": "Syrian Arab Republic",
+  "factionId": "syria",
+  "isoAlpha2": "SY",
+  "isoAlpha3": "SYR",
+  "currencyCode": "SYP",
+  "leaders": {
+    "activeLeaderId": "lebanon-post-crisis",
+    "previousLeaderIds": [],
+    "successionType": "undefined"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 68.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-shia", "percentOfPopulation": 13.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-orthodox", "percentOfPopulation": 8.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 2.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 3.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 35,
+    "warWeariness": 95,
+    "governmentTrust": 15,
+    "economicAnxiety": 95,
+    "politicalPolarization": 85,
+    "mediaTrust": 15,
+    "foreignSentiment": {
+      "us": -40,
+      "china": 5,
+      "russia": 10,
+      "japan": 0,
+      "eu": -10,
+      "iran": -10,
+      "dprk": 0
+    },
+    "socialLiberalism": 20,
+    "environmentalConcern": 10,
+    "militarismApproval": 20
+  },
+  "activePolicies": [
+    { "policyId": "state-media-control", "adoptedYear": 1963, "intensity": 60 },
+    { "policyId": "military-conscription", "adoptedYear": 1946, "intensity": 40 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "limited", "productionBillionsUSD": 0.5, "globalSharePercent": 0.04, "strategicImportance": "critical" },
+      { "resourceName": "natural-gas", "abundanceLevel": "limited", "productionBillionsUSD": 0.2, "globalSharePercent": 0.1, "strategicImportance": "high" },
+      { "resourceName": "phosphates", "abundanceLevel": "moderate", "productionBillionsUSD": 0.1, "globalSharePercent": 0.3, "strategicImportance": "medium" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "limited", "productionBillionsUSD": 2, "globalSharePercent": 0.1, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "oil": 50,
+      "naturalGas": 35,
+      "hydro": 10,
+      "renewables": 5
+    },
+    "foodSelfSufficiency": 35,
+    "waterStress": "extreme"
+  },
+  "trade": {
+    "totalExportsBillions": 0.7,
+    "totalImportsBillions": 5.2,
+    "tradeBalanceBillions": -4.5,
+    "topExports": [
+      { "commodity": "Agricultural products", "valueBillions": 0.3 },
+      { "commodity": "Textiles", "valueBillions": 0.15 },
+      { "commodity": "Phosphates", "valueBillions": 0.1 }
+    ],
+    "topImports": [
+      { "commodity": "Food products", "valueBillions": 1.5 },
+      { "commodity": "Fuel", "valueBillions": 1.0 },
+      { "commodity": "Medical supplies", "valueBillions": 0.5 },
+      { "commodity": "Construction materials", "valueBillions": 0.8 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "iran", "tradeBillions": 1.5, "relationship": "friendly" },
+      { "partnerId": "russia", "tradeBillions": 0.5, "relationship": "friendly" },
+      { "partnerId": "china", "tradeBillions": 0.8, "relationship": "neutral" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": ["us", "eu"]
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 170000,
+    "reservePersonnel": 50000,
+    "defenseSpendingBillions": 1.8,
+    "defenseSpendingGDPPercent": 9.0,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false,
+      "estimatedWarheads": 0,
+      "deliverySystems": []
+    },
+    "equipment": [],
+    "branches": {
+      "army": 130000,
+      "navy": 5000,
+      "airForce": 25000,
+      "specialForces": 10000
+    },
+    "powerProjection": "minimal"
+  },
+  "population": {
+    "populationMillions": 23.2,
+    "growthRatePercent": -2.3,
+    "urbanizationPercent": 56.8,
+    "medianAge": 25.1,
+    "lifeExpectancy": 64.5,
+    "literacyRatePercent": 86.4,
+    "ageDistribution": {
+      "youth": 30.0,
+      "workingAge": 64.0,
+      "elderly": 6.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Arab", "percentOfPopulation": 74.0, "socialCohesion": 55 },
+      { "groupName": "Kurdish", "percentOfPopulation": 10.0, "socialCohesion": 30 },
+      { "groupName": "Alawite", "percentOfPopulation": 8.0, "socialCohesion": 40 },
+      { "groupName": "Druze/Turkmen/Other", "percentOfPopulation": 8.0, "socialCohesion": 35 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.55,
+      "humanDevelopmentIndex": 0.577,
+      "healthcareAccessPercent": 42.0,
+      "internetPenetrationPercent": 34.0,
+      "unemploymentRatePercent": 50.0
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 20,
+      "conscriptionPool": 4.5,
+      "socialStabilityBaseline": -30,
+      "innovationPotential": 8,
+      "consumptionDemandMultiplier": 0.2
+    }
+  },
+  "tags": ["civil-war", "failed-state", "sanctioned", "humanitarian-crisis", "proxy-battleground"]
+}

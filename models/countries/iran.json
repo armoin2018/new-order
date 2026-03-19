@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "iran",
+  "name": "Islamic Republic of Iran",
+  "factionId": "iran",
+  "isoAlpha2": "IR",
+  "isoAlpha3": "IRN",
+  "currencyCode": "IRR",
+  "leaders": {
+    "activeLeaderId": "ali-khamenei",
+    "previousLeaderIds": [],
+    "successionType": "hereditary"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-shia", "percentOfPopulation": 90.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 8.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 1.5, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-orthodox", "percentOfPopulation": 0.3, "isStateReligion": false, "trend": "declining" }
+  ],
+  "psychographics": {
+    "nationalism": 80,
+    "warWeariness": 40,
+    "governmentTrust": 30,
+    "economicAnxiety": 85,
+    "politicalPolarization": 70,
+    "mediaTrust": 25,
+    "foreignSentiment": {
+      "us": -80,
+      "china": 15,
+      "russia": 20,
+      "japan": 5,
+      "eu": -25,
+      "dprk": 5,
+      "syria": 40
+    },
+    "socialLiberalism": 25,
+    "environmentalConcern": 20,
+    "militarismApproval": 50
+  },
+  "activePolicies": [
+    { "policyId": "state-media-control", "adoptedYear": 1979, "intensity": 95 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2010, "intensity": 70 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 1979, "intensity": 80 },
+    { "policyId": "fossil-fuel-expansion", "adoptedYear": 2000, "intensity": 85 },
+    { "policyId": "military-conscription", "adoptedYear": 1979, "intensity": 60 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "abundant", "productionBillionsUSD": 55, "globalSharePercent": 4.0, "strategicImportance": "critical" },
+      { "resourceName": "natural-gas", "abundanceLevel": "dominant", "productionBillionsUSD": 35, "globalSharePercent": 6.5, "strategicImportance": "critical" },
+      { "resourceName": "copper", "abundanceLevel": "moderate", "productionBillionsUSD": 3, "globalSharePercent": 2.0, "strategicImportance": "medium" },
+      { "resourceName": "zinc", "abundanceLevel": "moderate", "productionBillionsUSD": 2, "globalSharePercent": 3.0, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "naturalGas": 62,
+      "oil": 32,
+      "hydro": 3,
+      "nuclear": 2,
+      "renewables": 1
+    },
+    "foodSelfSufficiency": 75,
+    "waterStress": "extreme"
+  },
+  "trade": {
+    "totalExportsBillions": 100,
+    "totalImportsBillions": 75,
+    "tradeBalanceBillions": 25,
+    "topExports": [
+      { "commodity": "Crude petroleum", "valueBillions": 50, "globalRankExporter": 7 },
+      { "commodity": "Natural gas condensates", "valueBillions": 12 },
+      { "commodity": "Petrochemicals", "valueBillions": 10, "globalRankExporter": 10 },
+      { "commodity": "Iron & steel", "valueBillions": 5 }
+    ],
+    "topImports": [
+      { "commodity": "Machinery & equipment", "valueBillions": 15 },
+      { "commodity": "Electronics", "valueBillions": 10 },
+      { "commodity": "Vehicles", "valueBillions": 5 },
+      { "commodity": "Food products", "valueBillions": 12 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 30, "relationship": "friendly" },
+      { "partnerId": "russia", "tradeBillions": 5, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": ["us", "eu"]
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 610000,
+    "reservePersonnel": 350000,
+    "defenseSpendingBillions": 25,
+    "defenseSpendingGDPPercent": 5.9,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false,
+      "estimatedWarheads": 0,
+      "deliverySystems": []
+    },
+    "equipment": [],
+    "branches": {
+      "army": 400000,
+      "navy": 28000,
+      "airForce": 37000,
+      "specialForces": 125000,
+      "cyberCommand": 5000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 88.6,
+    "growthRatePercent": 0.7,
+    "urbanizationPercent": 76.4,
+    "medianAge": 32.7,
+    "lifeExpectancy": 76.7,
+    "literacyRatePercent": 88.7,
+    "ageDistribution": {
+      "youth": 24.0,
+      "workingAge": 70.0,
+      "elderly": 6.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Persian", "percentOfPopulation": 54.0, "socialCohesion": 80 },
+      { "groupName": "Azerbaijani", "percentOfPopulation": 16.0, "socialCohesion": 60 },
+      { "groupName": "Kurdish/Luri", "percentOfPopulation": 17.0, "socialCohesion": 45 },
+      { "groupName": "Arab/Baloch/Other", "percentOfPopulation": 13.0, "socialCohesion": 40 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.40,
+      "humanDevelopmentIndex": 0.774,
+      "healthcareAccessPercent": 82.0,
+      "internetPenetrationPercent": 78.0,
+      "unemploymentRatePercent": 9.5
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 55,
+      "conscriptionPool": 18.0,
+      "socialStabilityBaseline": -10,
+      "innovationPotential": 45,
+      "consumptionDemandMultiplier": 1.2
+    }
+  },
+  "tags": ["theocracy", "opec", "sanctioned", "proxy-warfare", "missile-program"]
+}

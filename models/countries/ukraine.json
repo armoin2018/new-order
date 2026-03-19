@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "ukraine",
+  "name": "Ukraine",
+  "factionId": "ukraine",
+  "isoAlpha2": "UA",
+  "isoAlpha3": "UKR",
+  "currencyCode": "UAH",
+  "leaders": {
+    "activeLeaderId": "volodymyr-zelenskyy",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-orthodox", "percentOfPopulation": 72.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-greek-catholic", "percentOfPopulation": 10.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 2.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "unaffiliated", "percentOfPopulation": 14.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "other", "percentOfPopulation": 2.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 95,
+    "warWeariness": 65,
+    "governmentTrust": 55,
+    "economicAnxiety": 85,
+    "politicalPolarization": 30,
+    "mediaTrust": 40,
+    "foreignSentiment": {
+      "us": 70,
+      "china": -15,
+      "russia": -95,
+      "eu": 75,
+      "iran": -50,
+      "india": -10
+    },
+    "socialLiberalism": 40,
+    "environmentalConcern": 22,
+    "militarismApproval": 92
+  },
+  "activePolicies": [
+    { "policyId": "total-mobilization", "adoptedYear": 2022, "intensity": 95 },
+    { "policyId": "defense-modernization", "adoptedYear": 2022, "intensity": 95 },
+    { "policyId": "counter-terrorism", "adoptedYear": 2014, "intensity": 80 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2022, "intensity": 50 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 2014, "intensity": 90 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2014, "intensity": 85 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 25, "globalSharePercent": 3.5, "strategicImportance": "critical" },
+      { "resourceName": "iron-ore", "abundanceLevel": "abundant", "productionBillionsUSD": 4, "globalSharePercent": 3.0, "strategicImportance": "high" },
+      { "resourceName": "coal", "abundanceLevel": "moderate", "productionBillionsUSD": 2, "globalSharePercent": 0.4, "strategicImportance": "medium" },
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 3, "globalSharePercent": 0.5, "strategicImportance": "high" },
+      { "resourceName": "titanium", "abundanceLevel": "abundant", "productionBillionsUSD": 0.8, "globalSharePercent": 5.0, "strategicImportance": "high" },
+      { "resourceName": "sunflower-oil", "abundanceLevel": "dominant", "productionBillionsUSD": 6, "globalSharePercent": 46.0, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "nuclear": 55,
+      "naturalGas": 18,
+      "coal": 10,
+      "renewables": 10,
+      "hydro": 5,
+      "oil": 2
+    },
+    "foodSelfSufficiency": 120,
+    "waterStress": "low"
+  },
+  "trade": {
+    "totalExportsBillions": 38,
+    "totalImportsBillions": 55,
+    "tradeBalanceBillions": -17,
+    "topExports": [
+      { "commodity": "Cereals & grains", "valueBillions": 9, "globalRankExporter": 5 },
+      { "commodity": "Iron & steel", "valueBillions": 6, "globalRankExporter": 12 },
+      { "commodity": "Sunflower oil", "valueBillions": 5, "globalRankExporter": 1 },
+      { "commodity": "Ores & slag", "valueBillions": 4, "globalRankExporter": 8 },
+      { "commodity": "Electrical machinery", "valueBillions": 3, "globalRankExporter": 30 }
+    ],
+    "topImports": [
+      { "commodity": "Petroleum & gas", "valueBillions": 10 },
+      { "commodity": "Machinery", "valueBillions": 8 },
+      { "commodity": "Vehicles", "valueBillions": 5 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 4 },
+      { "commodity": "Defense equipment (Western aid)", "valueBillions": 12 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "eu", "tradeBillions": 45, "relationship": "allied" },
+      { "partnerId": "china", "tradeBillions": 8, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 5, "relationship": "allied" }
+    ],
+    "sanctionsActive": [
+      { "targetId": "russia", "type": "comprehensive", "since": 2022 }
+    ],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 900000,
+    "reservePersonnel": 400000,
+    "defenseSpendingBillions": 43.0,
+    "defenseSpendingGDPPercent": 26.0,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "leopard-2a6", "quantity": 70, "readinessPercent": 72, "modernizationStatus": "modern" },
+      { "equipmentId": "challenger-2", "quantity": 14, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "m2-bradley", "quantity": 200, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "f-16a-b-fighting-falcon", "quantity": 20, "readinessPercent": 75, "modernizationStatus": "modern" },
+      { "equipmentId": "himars", "quantity": 39, "readinessPercent": 90, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "bayraktar-tb2", "quantity": 50, "readinessPercent": 80, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "patriot-pac-3", "quantity": 3, "readinessPercent": 85, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "t-64bv-t-72-mixed", "quantity": 600, "readinessPercent": 55, "modernizationStatus": "aging" },
+      { "equipmentId": "neptune-cruise-missile", "quantity": 50, "readinessPercent": 88, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "army": 500000,
+      "navy": 15000,
+      "airForce": 45000,
+      "territorialDefense": 130000,
+      "nationalGuard": 60000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 37.0,
+    "growthRatePercent": -1.5,
+    "urbanizationPercent": 70.0,
+    "medianAge": 41.2,
+    "lifeExpectancy": 73.5,
+    "literacyRatePercent": 99.8,
+    "ageDistribution": {
+      "youth": 15.0,
+      "workingAge": 66.0,
+      "elderly": 19.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Ukrainian", "percentOfPopulation": 87.0, "socialCohesion": 92 },
+      { "groupName": "Russian", "percentOfPopulation": 8.0, "socialCohesion": 35 },
+      { "groupName": "Other (Romanian/Belarusian/Crimean Tatar)", "percentOfPopulation": 5.0, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.26,
+      "humanDevelopmentIndex": 0.773,
+      "healthcareAccessPercent": 58.0,
+      "internetPenetrationPercent": 75.0,
+      "unemploymentRatePercent": 25.0
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 60,
+      "conscriptionPool": 6.0,
+      "socialStabilityBaseline": -20,
+      "innovationPotential": 50,
+      "consumptionDemandMultiplier": 0.6
+    }
+  },
+  "tags": ["active-war", "russian-invasion", "western-aid", "grain-exporter", "nato-aspirant", "territorial-dispute", "nuclear-disarmed", "drone-warfare"]
+}

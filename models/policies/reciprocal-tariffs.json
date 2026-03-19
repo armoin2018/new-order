@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "reciprocal-tariffs",
+  "name": "Reciprocal Tariffs",
+  "category": "trade",
+  "subcategory": "protectionist",
+  "description": "Tariffs imposed to match or exceed those charged by trading partners. Designed to create leverage for trade negotiations while protecting domestic industries from unfair competition.",
+  "scope": "bilateral",
+  "implementationTurns": 1,
+  "annualCostBillions": 0.2,
+  "effects": {
+    "tradeModifier": -8,
+    "gdpGrowthModifier": -0.5,
+    "inflationModifier": 1.5,
+    "popularityModifier": 5,
+    "diplomaticModifier": -5,
+    "targetEffects": {
+      "targetGdpModifier": -1.0,
+      "targetTradeModifier": -12,
+      "targetInflationModifier": 1.0
+    }
+  },
+  "historicalExamples": [
+    "US-China trade war tariffs (2018-present)",
+    "Smoot-Hawley Tariff Act (1930)",
+    "EU retaliatory tariffs on US steel (2018)"
+  ],
+  "tags": ["protectionist", "trade-war", "negotiation-leverage"]
+}

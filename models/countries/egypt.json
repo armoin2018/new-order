@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "egypt",
+  "name": "Arab Republic of Egypt",
+  "factionId": "egypt",
+  "isoAlpha2": "EG",
+  "isoAlpha3": "EGY",
+  "currencyCode": "EGP",
+  "leaders": {
+    "activeLeaderId": "abdel-fattah-el-sisi",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 90.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "christianity-coptic", "percentOfPopulation": 9.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "other", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 72,
+    "warWeariness": 40,
+    "governmentTrust": 40,
+    "economicAnxiety": 80,
+    "politicalPolarization": 55,
+    "mediaTrust": 32,
+    "foreignSentiment": {
+      "us": 5,
+      "china": 15,
+      "russia": 20,
+      "eu": 10,
+      "iran": -30,
+      "israel": -55,
+      "india": 10
+    },
+    "socialLiberalism": 18,
+    "environmentalConcern": 30,
+    "militarismApproval": 72
+  },
+  "activePolicies": [
+    { "policyId": "defense-modernization", "adoptedYear": 2020, "intensity": 70 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 55 },
+    { "policyId": "austerity-measures", "adoptedYear": 2022, "intensity": 65 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2014, "intensity": 72 },
+    { "policyId": "state-media-control", "adoptedYear": 2014, "intensity": 70 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1922, "intensity": 60 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "natural-gas", "abundanceLevel": "abundant", "productionBillionsUSD": 12, "globalSharePercent": 1.5, "strategicImportance": "critical" },
+      { "resourceName": "crude-oil", "abundanceLevel": "moderate", "productionBillionsUSD": 15, "globalSharePercent": 0.7, "strategicImportance": "high" },
+      { "resourceName": "phosphates", "abundanceLevel": "abundant", "productionBillionsUSD": 2, "globalSharePercent": 4.0, "strategicImportance": "medium" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "limited", "productionBillionsUSD": 22, "globalSharePercent": 0.5, "strategicImportance": "critical" },
+      { "resourceName": "suez-canal-transit", "abundanceLevel": "dominant", "productionBillionsUSD": 9, "globalSharePercent": 100.0, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "naturalGas": 55,
+      "oil": 28,
+      "renewables": 8,
+      "hydro": 6,
+      "coal": 2,
+      "nuclear": 1
+    },
+    "foodSelfSufficiency": 52,
+    "waterStress": "extreme"
+  },
+  "trade": {
+    "totalExportsBillions": 42,
+    "totalImportsBillions": 79,
+    "tradeBalanceBillions": -37,
+    "topExports": [
+      { "commodity": "Natural gas & LNG", "valueBillions": 10, "globalRankExporter": 12 },
+      { "commodity": "Petroleum products", "valueBillions": 8, "globalRankExporter": 18 },
+      { "commodity": "Suez Canal revenues", "valueBillions": 9, "globalRankExporter": 1 },
+      { "commodity": "Textiles & clothing", "valueBillions": 4, "globalRankExporter": 12 },
+      { "commodity": "Fertilizers", "valueBillions": 2.5, "globalRankExporter": 8 }
+    ],
+    "topImports": [
+      { "commodity": "Wheat", "valueBillions": 5 },
+      { "commodity": "Petroleum products", "valueBillions": 10 },
+      { "commodity": "Machinery", "valueBillions": 12 },
+      { "commodity": "Iron & steel", "valueBillions": 5 },
+      { "commodity": "Vehicles", "valueBillions": 6 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "eu", "tradeBillions": 30, "relationship": "friendly" },
+      { "partnerId": "china", "tradeBillions": 18, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 9, "relationship": "allied" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 438500,
+    "reservePersonnel": 479000,
+    "defenseSpendingBillions": 4.5,
+    "defenseSpendingGDPPercent": 1.2,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-16c-fighting-falcon", "quantity": 220, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "rafale-f3r", "quantity": 24, "readinessPercent": 90, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "m1a1-abrams", "quantity": 1130, "readinessPercent": 60, "modernizationStatus": "modern" },
+      { "equipmentId": "mistral-class-lhd", "quantity": 2, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "s-300vm", "quantity": 4, "readinessPercent": 75, "modernizationStatus": "modern" },
+      { "equipmentId": "ka-52-alligator", "quantity": 46, "readinessPercent": 80, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 310000,
+      "navy": 18500,
+      "airForce": 30000,
+      "airDefense": 80000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 105.0,
+    "growthRatePercent": 1.7,
+    "urbanizationPercent": 43.0,
+    "medianAge": 24.1,
+    "lifeExpectancy": 72.0,
+    "literacyRatePercent": 73.0,
+    "ageDistribution": {
+      "youth": 33.0,
+      "workingAge": 61.0,
+      "elderly": 6.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Egyptian Arab", "percentOfPopulation": 91.0, "socialCohesion": 80 },
+      { "groupName": "Coptic", "percentOfPopulation": 6.0, "socialCohesion": 60 },
+      { "groupName": "Nubian/Bedouin/Other", "percentOfPopulation": 3.0, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.31,
+      "humanDevelopmentIndex": 0.731,
+      "healthcareAccessPercent": 62.0,
+      "internetPenetrationPercent": 72.0,
+      "unemploymentRatePercent": 7.2
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 38,
+      "conscriptionPool": 22.0,
+      "socialStabilityBaseline": -5,
+      "innovationPotential": 30,
+      "consumptionDemandMultiplier": 1.0
+    }
+  },
+  "tags": ["suez-chokepoint", "military-led", "imf-dependent", "arab-world-leader", "water-crisis", "us-ally"]
+}

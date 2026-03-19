@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "taiwan",
+  "name": "Republic of China (Taiwan)",
+  "factionId": "taiwan",
+  "isoAlpha2": "TW",
+  "isoAlpha3": "TWN",
+  "currencyCode": "TWD",
+  "leaders": {
+    "activeLeaderId": "lai-ching-te",
+    "previousLeaderIds": ["tsai-ing-wen"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "buddhism", "percentOfPopulation": 28.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 27.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "taoism", "percentOfPopulation": 24.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "folk-religion", "percentOfPopulation": 14.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 5.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 2.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 55,
+    "warWeariness": 25,
+    "governmentTrust": 45,
+    "economicAnxiety": 45,
+    "politicalPolarization": 70,
+    "mediaTrust": 35,
+    "foreignSentiment": {
+      "china": -60,
+      "us": 60,
+      "japan": 55,
+      "eu": 35,
+      "south-korea": 25,
+      "russia": -25
+    },
+    "socialLiberalism": 65,
+    "environmentalConcern": 55,
+    "militarismApproval": 50
+  },
+  "activePolicies": [
+    { "policyId": "defense-modernization", "adoptedYear": 2023, "intensity": 85 },
+    { "policyId": "military-conscription", "adoptedYear": 2024, "intensity": 75 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2017, "intensity": 70 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2002, "intensity": 70 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1971, "intensity": 55 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2016, "intensity": 50 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2000, "intensity": 70 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "marble", "abundanceLevel": "moderate", "productionBillionsUSD": 0.2, "globalSharePercent": 1.0, "strategicImportance": "low" },
+      { "resourceName": "natural-gas", "abundanceLevel": "limited", "productionBillionsUSD": 0.1, "globalSharePercent": 0.01, "strategicImportance": "medium" },
+      { "resourceName": "fisheries", "abundanceLevel": "moderate", "productionBillionsUSD": 2.5, "globalSharePercent": 1.0, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "coal": 33,
+      "naturalGas": 35,
+      "nuclear": 10,
+      "oil": 12,
+      "renewables": 8,
+      "hydro": 2
+    },
+    "foodSelfSufficiency": 32,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 641,
+    "totalImportsBillions": 479,
+    "tradeBalanceBillions": 162,
+    "topExports": [
+      { "commodity": "Integrated circuits & semiconductors", "valueBillions": 220, "globalRankExporter": 1 },
+      { "commodity": "Display panels", "valueBillions": 20, "globalRankExporter": 3 },
+      { "commodity": "Electronic components", "valueBillions": 40, "globalRankExporter": 4 },
+      { "commodity": "Machinery", "valueBillions": 25, "globalRankExporter": 12 },
+      { "commodity": "Plastics & chemicals", "valueBillions": 18 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 50 },
+      { "commodity": "Semiconductor equipment", "valueBillions": 40 },
+      { "commodity": "Natural gas (LNG)", "valueBillions": 25 },
+      { "commodity": "Machinery", "valueBillions": 30 },
+      { "commodity": "Iron & steel", "valueBillions": 15 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 200, "relationship": "strained" },
+      { "partnerId": "us", "tradeBillions": 120, "relationship": "allied" },
+      { "partnerId": "japan", "tradeBillions": 70, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 140000,
+    "reservePersonnel": 1500000,
+    "defenseSpendingBillions": 20.1,
+    "defenseSpendingGDPPercent": 2.5,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-16v-viper", "quantity": 140, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "m1a2t-abrams", "quantity": 108, "readinessPercent": 90, "modernizationStatus": "modern" },
+      { "equipmentId": "cm-32-yunpao-ifv", "quantity": 284, "readinessPercent": 80, "modernizationStatus": "modern" },
+      { "equipmentId": "hsiung-feng-iii-ascm", "quantity": 200, "readinessPercent": 88, "modernizationStatus": "modern" },
+      { "equipmentId": "patriot-pac3", "quantity": 6, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "tuo-chiang-corvette", "quantity": 6, "readinessPercent": 90, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "army": 88000,
+      "navy": 30000,
+      "airForce": 22000,
+      "marineCorp": 10000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 23.3,
+    "growthRatePercent": -0.18,
+    "urbanizationPercent": 79.0,
+    "medianAge": 43.0,
+    "lifeExpectancy": 81.0,
+    "literacyRatePercent": 99.0,
+    "ageDistribution": {
+      "youth": 12.0,
+      "workingAge": 70.0,
+      "elderly": 18.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Han Chinese (Hoklo)", "percentOfPopulation": 70.0, "socialCohesion": 85 },
+      { "groupName": "Han Chinese (Hakka)", "percentOfPopulation": 14.0, "socialCohesion": 80 },
+      { "groupName": "Mainlander", "percentOfPopulation": 12.0, "socialCohesion": 70 },
+      { "groupName": "Indigenous Austronesian", "percentOfPopulation": 2.5, "socialCohesion": 60 },
+      { "groupName": "Other", "percentOfPopulation": 1.5, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.34,
+      "humanDevelopmentIndex": 0.926,
+      "healthcareAccessPercent": 99.9,
+      "internetPenetrationPercent": 92.0,
+      "unemploymentRatePercent": 3.4
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 90,
+      "conscriptionPool": 5.0,
+      "socialStabilityBaseline": 20,
+      "innovationPotential": 95,
+      "consumptionDemandMultiplier": 1.0
+    }
+  },
+  "tags": ["semiconductor-hub", "china-threat", "us-aligned", "major-non-nato-ally", "tsmc", "conscription", "disputed-sovereignty"]
+}

@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "canada",
+  "name": "Canada",
+  "factionId": "canada",
+  "isoAlpha2": "CA",
+  "isoAlpha3": "CAN",
+  "currencyCode": "CAD",
+  "leaders": {
+    "activeLeaderId": "mark-carney",
+    "previousLeaderIds": ["justin-trudeau"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-catholic", "percentOfPopulation": 29.9, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 34.6, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 18.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 4.9, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-other", "percentOfPopulation": 5.4, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "hinduism", "percentOfPopulation": 2.3, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "sikhism", "percentOfPopulation": 2.1, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "buddhism", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "judaism", "percentOfPopulation": 0.9, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "other", "percentOfPopulation": 0.9, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 50,
+    "warWeariness": 30,
+    "governmentTrust": 35,
+    "economicAnxiety": 55,
+    "politicalPolarization": 50,
+    "mediaTrust": 35,
+    "foreignSentiment": {
+      "us": 15,
+      "china": -20,
+      "eu": 45,
+      "uk": 50,
+      "russia": -40,
+      "japan": 30,
+      "india": 15
+    },
+    "socialLiberalism": 70,
+    "environmentalConcern": 60,
+    "militarismApproval": 35
+  },
+  "activePolicies": [
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1945, "intensity": 75 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2020, "intensity": 80 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2016, "intensity": 65 },
+    { "policyId": "defense-modernization", "adoptedYear": 2024, "intensity": 70 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 1984, "intensity": 65 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2018, "intensity": 55 },
+    { "policyId": "open-press-freedom", "adoptedYear": 1982, "intensity": 80 },
+    { "policyId": "economic-sanctions", "adoptedYear": 2014, "intensity": 65, "targetFactions": ["russia", "iran", "dprk"] }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "dominant", "productionBillionsUSD": 100, "globalSharePercent": 5.5, "strategicImportance": "critical" },
+      { "resourceName": "natural-gas", "abundanceLevel": "abundant", "productionBillionsUSD": 25, "globalSharePercent": 4.5, "strategicImportance": "critical" },
+      { "resourceName": "potash", "abundanceLevel": "dominant", "productionBillionsUSD": 10, "globalSharePercent": 31.0, "strategicImportance": "high" },
+      { "resourceName": "uranium", "abundanceLevel": "abundant", "productionBillionsUSD": 1.5, "globalSharePercent": 13.0, "strategicImportance": "high" },
+      { "resourceName": "timber", "abundanceLevel": "abundant", "productionBillionsUSD": 25, "globalSharePercent": 6.0, "strategicImportance": "medium" },
+      { "resourceName": "freshwater", "abundanceLevel": "dominant", "productionBillionsUSD": 0, "globalSharePercent": 7.0, "strategicImportance": "high" },
+      { "resourceName": "nickel", "abundanceLevel": "abundant", "productionBillionsUSD": 6, "globalSharePercent": 5.0, "strategicImportance": "high" },
+      { "resourceName": "gold", "abundanceLevel": "moderate", "productionBillionsUSD": 8, "globalSharePercent": 4.5, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "oil": 24,
+      "naturalGas": 34,
+      "hydro": 25,
+      "nuclear": 8,
+      "renewables": 7,
+      "coal": 2
+    },
+    "foodSelfSufficiency": 95,
+    "waterStress": "low"
+  },
+  "trade": {
+    "totalExportsBillions": 637,
+    "totalImportsBillions": 631,
+    "tradeBalanceBillions": 6,
+    "topExports": [
+      { "commodity": "Crude petroleum & bitumen", "valueBillions": 120, "globalRankExporter": 4 },
+      { "commodity": "Vehicles & auto parts", "valueBillions": 65, "globalRankExporter": 8 },
+      { "commodity": "Gold", "valueBillions": 22, "globalRankExporter": 5 },
+      { "commodity": "Natural gas", "valueBillions": 18, "globalRankExporter": 5 },
+      { "commodity": "Agricultural products (wheat/canola)", "valueBillions": 35, "globalRankExporter": 3 },
+      { "commodity": "Potash & fertilizers", "valueBillions": 12, "globalRankExporter": 1 }
+    ],
+    "topImports": [
+      { "commodity": "Vehicles & auto parts", "valueBillions": 70 },
+      { "commodity": "Machinery", "valueBillions": 55 },
+      { "commodity": "Electronics", "valueBillions": 45 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 20 },
+      { "commodity": "Crude petroleum", "valueBillions": 15 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 750, "relationship": "strained" },
+      { "partnerId": "china", "tradeBillions": 100, "relationship": "strained" },
+      { "partnerId": "eu", "tradeBillions": 80, "relationship": "friendly" }
+    ],
+    "sanctionsActive": ["russia", "iran", "dprk"],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 67000,
+    "reservePersonnel": 37000,
+    "defenseSpendingBillions": 37.75,
+    "defenseSpendingGDPPercent": 1.6,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "cf-18-hornet", "quantity": 76, "readinessPercent": 55, "modernizationStatus": "aging" },
+      { "equipmentId": "f-35a-lightning", "quantity": 0, "readinessPercent": 0, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "leopard-2a6m", "quantity": 82, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "halifax-class-frigate", "quantity": 12, "readinessPercent": 50, "modernizationStatus": "aging" },
+      { "equipmentId": "cp-140-aurora", "quantity": 14, "readinessPercent": 55, "modernizationStatus": "aging" },
+      { "equipmentId": "lav-6-ifv", "quantity": 550, "readinessPercent": 70, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "navy": 13500,
+      "army": 46500,
+      "airForce": 15400,
+      "specialForces": 5600,
+      "canadianRangers": 5000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 41.6,
+    "growthRatePercent": 2.7,
+    "urbanizationPercent": 82.0,
+    "medianAge": 41.9,
+    "lifeExpectancy": 81.1,
+    "literacyRatePercent": 99.0,
+    "ageDistribution": {
+      "youth": 16.0,
+      "workingAge": 66.0,
+      "elderly": 18.0
+    },
+    "ethnicComposition": [
+      { "groupName": "White (European descent)", "percentOfPopulation": 69.8, "socialCohesion": 75 },
+      { "groupName": "South Asian", "percentOfPopulation": 7.1, "socialCohesion": 65 },
+      { "groupName": "Indigenous (First Nations/Métis/Inuit)", "percentOfPopulation": 5.0, "socialCohesion": 45 },
+      { "groupName": "Chinese", "percentOfPopulation": 4.7, "socialCohesion": 62 },
+      { "groupName": "Black", "percentOfPopulation": 4.3, "socialCohesion": 60 },
+      { "groupName": "Filipino", "percentOfPopulation": 2.6, "socialCohesion": 68 },
+      { "groupName": "Other visible minority", "percentOfPopulation": 6.5, "socialCohesion": 62 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.292,
+      "humanDevelopmentIndex": 0.939,
+      "healthcareAccessPercent": 99.0,
+      "internetPenetrationPercent": 96.0,
+      "unemploymentRatePercent": 6.2
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 78,
+      "conscriptionPool": 8.0,
+      "socialStabilityBaseline": 20,
+      "innovationPotential": 72,
+      "consumptionDemandMultiplier": 1.5
+    }
+  },
+  "tags": ["nato", "g7", "five-eyes", "usmca", "energy-exporter", "g20", "commonwealth", "peacekeeping", "norad", "arctic-sovereignty"]
+}

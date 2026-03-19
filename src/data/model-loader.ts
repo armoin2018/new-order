@@ -11,6 +11,9 @@ import type {
   StockExchangeModel,
   NationTickerSet,
   MarketIndexModel,
+  ExtendedLeaderProfile,
+  CountryModel,
+  PolicyModel,
 } from './types';
 
 // ─── Raw glob imports (eager, resolved at build time) ──────────────
@@ -55,6 +58,21 @@ const religionGlob = import.meta.glob<{ default: Record<string, unknown> }>(
   { eager: true },
 );
 
+const leaderGlob = import.meta.glob<{ default: ExtendedLeaderProfile }>(
+  '../../models/leaders/*.json',
+  { eager: true },
+);
+
+const countryGlob = import.meta.glob<{ default: CountryModel }>(
+  '../../models/countries/*.json',
+  { eager: true },
+);
+
+const policyGlob = import.meta.glob<{ default: PolicyModel }>(
+  '../../models/policies/*.json',
+  { eager: true },
+);
+
 const sentimentBaselineGlob = import.meta.glob<{ default: Record<string, unknown> }>(
   '../../models/markets/sentiment-baseline.json',
   { eager: true },
@@ -94,6 +112,18 @@ export const POPULATION_MODELS: readonly Record<string, unknown>[] = collect(pop
 
 /** All religion/belief system profiles (models/religion/*.json). */
 export const RELIGION_MODELS: readonly Record<string, unknown>[] = collect(religionGlob);
+
+/** All leader profiles (models/leaders/*.json). */
+export const LEADER_MODELS: readonly ExtendedLeaderProfile[] =
+  collect<ExtendedLeaderProfile>(leaderGlob as unknown as Record<string, { default: ExtendedLeaderProfile }>);
+
+/** All comprehensive country models (models/countries/*.json). */
+export const COUNTRY_MODELS: readonly CountryModel[] =
+  collect<CountryModel>(countryGlob as unknown as Record<string, { default: CountryModel }>);
+
+/** All policy models (models/policies/*.json). */
+export const POLICY_MODELS: readonly PolicyModel[] =
+  collect<PolicyModel>(policyGlob as unknown as Record<string, { default: PolicyModel }>);
 
 // ─── Sentiment Baseline ─────────────────────────────────────────────
 

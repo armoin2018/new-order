@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "diplomatic-engagement",
+  "name": "Active Diplomatic Engagement",
+  "category": "diplomatic",
+  "subcategory": "multilateralism",
+  "description": "Proactive participation in international organizations, bilateral negotiations, and multilateral agreements. Prioritizes soft power, alliance building, and conflict resolution through diplomacy.",
+  "scope": "multilateral",
+  "implementationTurns": 1,
+  "annualCostBillions": 2.0,
+  "effects": {
+    "diplomaticModifier": 15,
+    "softPowerModifier": 8,
+    "stabilityModifier": 3,
+    "popularityModifier": 3,
+    "militaryReadinessModifier": -2
+  },
+  "exclusiveWith": ["isolationist-policy"],
+  "historicalExamples": [
+    "US post-WWII multilateralism",
+    "EU diplomatic mediation",
+    "Japan economic diplomacy in Southeast Asia"
+  ],
+  "tags": ["diplomacy", "soft-power", "multilateral", "alliance"]
+}

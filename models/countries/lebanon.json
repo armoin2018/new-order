@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "lebanon",
+  "name": "Lebanese Republic",
+  "factionId": "lebanon",
+  "isoAlpha2": "LB",
+  "isoAlpha3": "LBN",
+  "currencyCode": "LBP",
+  "leaders": {
+    "activeLeaderId": "lebanon-post-crisis",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 31.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-shia", "percentOfPopulation": 31.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-maronite", "percentOfPopulation": 21.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-orthodox", "percentOfPopulation": 8.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "druze", "percentOfPopulation": 5.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "other", "percentOfPopulation": 4.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 40,
+    "warWeariness": 90,
+    "governmentTrust": 8,
+    "economicAnxiety": 98,
+    "politicalPolarization": 88,
+    "mediaTrust": 18,
+    "foreignSentiment": {
+      "us": -10,
+      "china": 0,
+      "russia": -5,
+      "eu": 15,
+      "iran": -20,
+      "israel": -75,
+      "india": 0
+    },
+    "socialLiberalism": 45,
+    "environmentalConcern": 25,
+    "militarismApproval": 35
+  },
+  "activePolicies": [
+    { "policyId": "austerity-measures", "adoptedYear": 2020, "intensity": 90 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1943, "intensity": 40 },
+    { "policyId": "refugee-integration", "adoptedYear": 2012, "intensity": 30 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 25 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "agricultural-land", "abundanceLevel": "limited", "productionBillionsUSD": 1.5, "globalSharePercent": 0.03, "strategicImportance": "medium" },
+      { "resourceName": "offshore-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 0, "globalSharePercent": 0.0, "strategicImportance": "high" },
+      { "resourceName": "limestone", "abundanceLevel": "moderate", "productionBillionsUSD": 0.3, "globalSharePercent": 0.1, "strategicImportance": "low" }
+    ],
+    "energyMix": {
+      "oil": 92,
+      "renewables": 4,
+      "hydro": 3,
+      "naturalGas": 1,
+      "coal": 0,
+      "nuclear": 0
+    },
+    "foodSelfSufficiency": 20,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 3.5,
+    "totalImportsBillions": 13.0,
+    "tradeBalanceBillions": -9.5,
+    "topExports": [
+      { "commodity": "Gold & precious metals", "valueBillions": 0.8, "globalRankExporter": 40 },
+      { "commodity": "Chemicals & pharmaceuticals", "valueBillions": 0.5, "globalRankExporter": 50 },
+      { "commodity": "Foodstuffs & beverages", "valueBillions": 0.4, "globalRankExporter": 55 },
+      { "commodity": "Jewelry", "valueBillions": 0.5, "globalRankExporter": 15 },
+      { "commodity": "Machinery & electrical", "valueBillions": 0.3, "globalRankExporter": 60 }
+    ],
+    "topImports": [
+      { "commodity": "Petroleum products", "valueBillions": 3.5 },
+      { "commodity": "Machinery", "valueBillions": 2.0 },
+      { "commodity": "Vehicles", "valueBillions": 1.5 },
+      { "commodity": "Foodstuffs", "valueBillions": 2.0 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 1.0 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "eu", "tradeBillions": 4, "relationship": "friendly" },
+      { "partnerId": "china", "tradeBillions": 2.5, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 1.5, "relationship": "neutral" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 80000,
+    "reservePersonnel": 20000,
+    "defenseSpendingBillions": 2.5,
+    "defenseSpendingGDPPercent": 4.5,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "m60a3-patton", "quantity": 200, "readinessPercent": 35, "modernizationStatus": "obsolete" },
+      { "equipmentId": "m113-apc", "quantity": 1200, "readinessPercent": 30, "modernizationStatus": "obsolete" },
+      { "equipmentId": "cessna-ac-208-combat-caravan", "quantity": 6, "readinessPercent": 55, "modernizationStatus": "modern" },
+      { "equipmentId": "sa-342-gazelle", "quantity": 8, "readinessPercent": 30, "modernizationStatus": "obsolete" },
+      { "equipmentId": "m198-howitzer", "quantity": 36, "readinessPercent": 40, "modernizationStatus": "aging" }
+    ],
+    "branches": {
+      "army": 70000,
+      "navy": 2500,
+      "airForce": 7500
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 5.5,
+    "growthRatePercent": -0.5,
+    "urbanizationPercent": 89.0,
+    "medianAge": 30.0,
+    "lifeExpectancy": 78.0,
+    "literacyRatePercent": 95.0,
+    "ageDistribution": {
+      "youth": 24.0,
+      "workingAge": 67.0,
+      "elderly": 9.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Arab (Lebanese)", "percentOfPopulation": 83.0, "socialCohesion": 35 },
+      { "groupName": "Syrian refugees", "percentOfPopulation": 10.0, "socialCohesion": 15 },
+      { "groupName": "Palestinian refugees", "percentOfPopulation": 4.0, "socialCohesion": 20 },
+      { "groupName": "Armenian/Other", "percentOfPopulation": 3.0, "socialCohesion": 50 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.49,
+      "humanDevelopmentIndex": 0.706,
+      "healthcareAccessPercent": 48.0,
+      "internetPenetrationPercent": 78.0,
+      "unemploymentRatePercent": 30.0
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 55,
+      "conscriptionPool": 1.0,
+      "socialStabilityBaseline": -30,
+      "innovationPotential": 35,
+      "consumptionDemandMultiplier": 0.4
+    }
+  },
+  "tags": ["hezbollah", "sectarian", "economic-collapse", "refugee-host", "iranian-proxy", "confessional-system", "failed-state-risk", "diaspora-dependent"]
+}

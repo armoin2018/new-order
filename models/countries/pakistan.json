@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "pakistan",
+  "name": "Islamic Republic of Pakistan",
+  "factionId": "pakistan",
+  "isoAlpha2": "PK",
+  "isoAlpha3": "PAK",
+  "currencyCode": "PKR",
+  "leaders": {
+    "activeLeaderId": "asif-ali-zardari",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 82.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "islam-shia", "percentOfPopulation": 15.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "hinduism", "percentOfPopulation": 1.6, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 75,
+    "warWeariness": 55,
+    "governmentTrust": 25,
+    "economicAnxiety": 82,
+    "politicalPolarization": 72,
+    "mediaTrust": 28,
+    "foreignSentiment": {
+      "us": -30,
+      "china": 55,
+      "russia": 15,
+      "india": -70,
+      "iran": 20,
+      "eu": -5,
+      "dprk": 5
+    },
+    "socialLiberalism": 15,
+    "environmentalConcern": 20,
+    "militarismApproval": 72
+  },
+  "activePolicies": [
+    { "policyId": "nuclear-deterrence", "adoptedYear": 1998, "intensity": 85 },
+    { "policyId": "defense-modernization", "adoptedYear": 2020, "intensity": 60 },
+    { "policyId": "austerity-measures", "adoptedYear": 2023, "intensity": 65 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2001, "intensity": 70 },
+    { "policyId": "state-media-control", "adoptedYear": 2018, "intensity": 55 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1947, "intensity": 40 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 5, "globalSharePercent": 0.5, "strategicImportance": "high" },
+      { "resourceName": "coal", "abundanceLevel": "moderate", "productionBillionsUSD": 3, "globalSharePercent": 0.5, "strategicImportance": "medium" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "moderate", "productionBillionsUSD": 60, "globalSharePercent": 2.5, "strategicImportance": "critical" },
+      { "resourceName": "copper", "abundanceLevel": "moderate", "productionBillionsUSD": 1.5, "globalSharePercent": 2.0, "strategicImportance": "medium" },
+      { "resourceName": "freshwater", "abundanceLevel": "limited", "productionBillionsUSD": 0, "globalSharePercent": 1.0, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "naturalGas": 34,
+      "oil": 29,
+      "hydro": 16,
+      "coal": 10,
+      "nuclear": 6,
+      "renewables": 5
+    },
+    "foodSelfSufficiency": 70,
+    "waterStress": "extreme"
+  },
+  "trade": {
+    "totalExportsBillions": 31,
+    "totalImportsBillions": 60,
+    "tradeBalanceBillions": -29,
+    "topExports": [
+      { "commodity": "Textiles & garments", "valueBillions": 16, "globalRankExporter": 5 },
+      { "commodity": "Rice", "valueBillions": 3, "globalRankExporter": 4 },
+      { "commodity": "Leather goods", "valueBillions": 1.5, "globalRankExporter": 6 },
+      { "commodity": "Surgical instruments", "valueBillions": 0.5, "globalRankExporter": 3 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 15 },
+      { "commodity": "LNG", "valueBillions": 5 },
+      { "commodity": "Machinery", "valueBillions": 8 },
+      { "commodity": "Iron & steel", "valueBillions": 4 },
+      { "commodity": "Electronics", "valueBillions": 5 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 24, "relationship": "allied" },
+      { "partnerId": "eu", "tradeBillions": 12, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 8, "relationship": "strained" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 654000,
+    "reservePersonnel": 550000,
+    "defenseSpendingBillions": 10,
+    "defenseSpendingGDPPercent": 3.0,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 170,
+      "deliverySystems": ["MRBM (Shaheen-III)", "SRBM (Nasr/Babur)", "Aircraft delivery (JF-17)"]
+    },
+    "equipment": [
+      { "equipmentId": "jf-17-thunder", "quantity": 135, "readinessPercent": 75, "modernizationStatus": "modern" },
+      { "equipmentId": "f-16c-fighting-falcon", "quantity": 76, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "j-10c-vigorous-dragon", "quantity": 36, "readinessPercent": 85, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "al-khalid-mbt", "quantity": 350, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "type-054a-frigate", "quantity": 4, "readinessPercent": 80, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 560000,
+      "navy": 30000,
+      "airForce": 60000,
+      "specialForces": 4000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 230.0,
+    "growthRatePercent": 1.9,
+    "urbanizationPercent": 37.0,
+    "medianAge": 22.8,
+    "lifeExpectancy": 67.3,
+    "literacyRatePercent": 58.0,
+    "ageDistribution": {
+      "youth": 35.0,
+      "workingAge": 60.0,
+      "elderly": 5.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Punjabi", "percentOfPopulation": 44.7, "socialCohesion": 75 },
+      { "groupName": "Pashtun", "percentOfPopulation": 15.4, "socialCohesion": 50 },
+      { "groupName": "Sindhi", "percentOfPopulation": 14.1, "socialCohesion": 55 },
+      { "groupName": "Saraiki/Muhajir/Baloch/Other", "percentOfPopulation": 25.8, "socialCohesion": 45 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.33,
+      "humanDevelopmentIndex": 0.544,
+      "healthcareAccessPercent": 45.0,
+      "internetPenetrationPercent": 36.0,
+      "unemploymentRatePercent": 6.5
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 30,
+      "conscriptionPool": 42.0,
+      "socialStabilityBaseline": -15,
+      "innovationPotential": 25,
+      "consumptionDemandMultiplier": 0.9
+    }
+  },
+  "tags": ["nuclear", "china-allied", "india-rival", "imf-dependent", "terrorism-risk", "water-crisis"]
+}

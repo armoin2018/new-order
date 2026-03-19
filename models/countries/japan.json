@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "japan",
+  "name": "Japan",
+  "factionId": "japan",
+  "isoAlpha2": "JP",
+  "isoAlpha3": "JPN",
+  "currencyCode": "JPY",
+  "leaders": {
+    "activeLeaderId": "fumio-kishida",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "buddhism", "percentOfPopulation": 36.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 57.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 1.5, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 0.5, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 55,
+    "warWeariness": 5,
+    "governmentTrust": 45,
+    "economicAnxiety": 55,
+    "politicalPolarization": 30,
+    "mediaTrust": 55,
+    "foreignSentiment": {
+      "us": 55,
+      "china": -45,
+      "russia": -35,
+      "eu": 45,
+      "iran": -15,
+      "dprk": -70,
+      "syria": -5
+    },
+    "socialLiberalism": 45,
+    "environmentalConcern": 60,
+    "militarismApproval": 55
+  },
+  "activePolicies": [
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1952, "intensity": 80 },
+    { "policyId": "open-press-freedom", "adoptedYear": 1947, "intensity": 80 },
+    { "policyId": "defense-modernization", "adoptedYear": 2022, "intensity": 85 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2018, "intensity": 60 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2018, "intensity": 75 },
+    { "policyId": "economic-sanctions", "adoptedYear": 2022, "intensity": 60, "targetFactions": ["russia"] },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2020, "intensity": 55 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2020, "intensity": 60 },
+    { "policyId": "foreign-aid-program", "adoptedYear": 1954, "intensity": 70 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "fisheries", "abundanceLevel": "abundant", "productionBillionsUSD": 15, "globalSharePercent": 4.0, "strategicImportance": "high" },
+      { "resourceName": "timber", "abundanceLevel": "moderate", "productionBillionsUSD": 4, "globalSharePercent": 1.0, "strategicImportance": "low" },
+      { "resourceName": "geothermal", "abundanceLevel": "moderate", "productionBillionsUSD": 2, "globalSharePercent": 3.0, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "oil": 37,
+      "naturalGas": 22,
+      "coal": 26,
+      "nuclear": 7,
+      "renewables": 5,
+      "hydro": 3
+    },
+    "foodSelfSufficiency": 38,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 756,
+    "totalImportsBillions": 897,
+    "tradeBalanceBillions": -141,
+    "topExports": [
+      { "commodity": "Vehicles & parts", "valueBillions": 160, "globalRankExporter": 2 },
+      { "commodity": "Semiconductor equipment", "valueBillions": 55, "globalRankExporter": 2 },
+      { "commodity": "Machinery", "valueBillions": 95, "globalRankExporter": 3 },
+      { "commodity": "Electronics", "valueBillions": 65, "globalRankExporter": 4 },
+      { "commodity": "Steel & metals", "valueBillions": 35, "globalRankExporter": 5 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 95 },
+      { "commodity": "LNG", "valueBillions": 55 },
+      { "commodity": "Electronics", "valueBillions": 70 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 30 },
+      { "commodity": "Food products", "valueBillions": 55 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 218, "relationship": "allied" },
+      { "partnerId": "china", "tradeBillions": 310, "relationship": "strained" },
+      { "partnerId": "eu", "tradeBillions": 140, "relationship": "friendly" }
+    ],
+    "sanctionsActive": ["russia"],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 247000,
+    "reservePersonnel": 56000,
+    "defenseSpendingBillions": 53,
+    "defenseSpendingGDPPercent": 1.3,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false,
+      "estimatedWarheads": 0,
+      "deliverySystems": []
+    },
+    "equipment": [
+      { "equipmentId": "f-35a-lightning", "quantity": 42, "readinessPercent": 85, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "patriot-pac3", "quantity": 24, "readinessPercent": 92, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 150000,
+      "navy": 45000,
+      "airForce": 47000,
+      "specialForces": 5000,
+      "cyberCommand": 2500
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 123.3,
+    "growthRatePercent": -0.5,
+    "urbanizationPercent": 91.9,
+    "medianAge": 49.1,
+    "lifeExpectancy": 84.8,
+    "literacyRatePercent": 99.0,
+    "ageDistribution": {
+      "youth": 12.0,
+      "workingAge": 59.0,
+      "elderly": 29.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Japanese", "percentOfPopulation": 97.5, "socialCohesion": 95 },
+      { "groupName": "Korean/Chinese/Other", "percentOfPopulation": 2.5, "socialCohesion": 60 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.33,
+      "humanDevelopmentIndex": 0.920,
+      "healthcareAccessPercent": 100.0,
+      "internetPenetrationPercent": 93.0,
+      "unemploymentRatePercent": 2.6
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 88,
+      "conscriptionPool": 12.0,
+      "socialStabilityBaseline": 20,
+      "innovationPotential": 85,
+      "consumptionDemandMultiplier": 2.8
+    }
+  },
+  "tags": ["g7", "us-allied", "technology-leader", "pacifist-constitution", "aging-population"]
+}

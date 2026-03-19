@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "belt-and-road-initiative",
+  "name": "Infrastructure Investment Initiative",
+  "category": "diplomatic",
+  "subcategory": "economic-statecraft",
+  "description": "Large-scale international infrastructure investment program creating economic dependency and strategic leverage. Funds ports, railways, roads, and digital infrastructure in partner nations.",
+  "scope": "multilateral",
+  "implementationTurns": 5,
+  "annualCostBillions": 40.0,
+  "effects": {
+    "diplomaticModifier": 12,
+    "tradeModifier": 10,
+    "softPowerModifier": 8,
+    "gdpGrowthModifier": 0.5,
+    "popularityModifier": -3,
+    "espionageModifier": 5
+  },
+  "exclusiveWith": ["isolationist-policy", "austerity-measures"],
+  "historicalExamples": [
+    "China Belt and Road Initiative (2013-present)",
+    "US Marshall Plan (1948-1952)",
+    "Japan infrastructure investment in ASEAN"
+  ],
+  "tags": ["infrastructure", "economic-statecraft", "influence", "debt-trap"]
+}

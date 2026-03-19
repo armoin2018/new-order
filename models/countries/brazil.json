@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "brazil",
+  "name": "Federative Republic of Brazil",
+  "factionId": "brazil",
+  "isoAlpha2": "BR",
+  "isoAlpha3": "BRA",
+  "currencyCode": "BRL",
+  "leaders": {
+    "activeLeaderId": "lula-da-silva",
+    "previousLeaderIds": ["jair-bolsonaro"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-catholic", "percentOfPopulation": 55.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 31.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "unaffiliated", "percentOfPopulation": 8.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "spiritism", "percentOfPopulation": 3.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "afro-brazilian", "percentOfPopulation": 2.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 55,
+    "warWeariness": 15,
+    "governmentTrust": 28,
+    "economicAnxiety": 68,
+    "politicalPolarization": 78,
+    "mediaTrust": 30,
+    "foreignSentiment": {
+      "us": 10,
+      "china": 15,
+      "russia": 10,
+      "eu": 25,
+      "india": 15,
+      "japan": 20
+    },
+    "socialLiberalism": 48,
+    "environmentalConcern": 55,
+    "militarismApproval": 30
+  },
+  "activePolicies": [
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 70 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2023, "intensity": 60 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1822, "intensity": 65 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 1991, "intensity": 55 },
+    { "policyId": "defense-modernization", "adoptedYear": 2022, "intensity": 40 },
+    { "policyId": "social-welfare-expansion", "adoptedYear": 2023, "intensity": 70 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "abundant", "productionBillionsUSD": 60, "globalSharePercent": 3.5, "strategicImportance": "critical" },
+      { "resourceName": "iron-ore", "abundanceLevel": "dominant", "productionBillionsUSD": 40, "globalSharePercent": 18.0, "strategicImportance": "high" },
+      { "resourceName": "soybeans", "abundanceLevel": "dominant", "productionBillionsUSD": 55, "globalSharePercent": 32.0, "strategicImportance": "high" },
+      { "resourceName": "freshwater", "abundanceLevel": "dominant", "productionBillionsUSD": 0, "globalSharePercent": 12.0, "strategicImportance": "critical" },
+      { "resourceName": "timber", "abundanceLevel": "dominant", "productionBillionsUSD": 18, "globalSharePercent": 10.0, "strategicImportance": "medium" },
+      { "resourceName": "niobium", "abundanceLevel": "dominant", "productionBillionsUSD": 3, "globalSharePercent": 88.0, "strategicImportance": "critical" },
+      { "resourceName": "lithium", "abundanceLevel": "moderate", "productionBillionsUSD": 1, "globalSharePercent": 2.0, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "hydro": 56,
+      "oil": 17,
+      "naturalGas": 8,
+      "renewables": 12,
+      "nuclear": 2,
+      "coal": 5
+    },
+    "foodSelfSufficiency": 115,
+    "waterStress": "low"
+  },
+  "trade": {
+    "totalExportsBillions": 340,
+    "totalImportsBillions": 274,
+    "tradeBalanceBillions": 66,
+    "topExports": [
+      { "commodity": "Soybeans", "valueBillions": 56, "globalRankExporter": 1 },
+      { "commodity": "Crude petroleum", "valueBillions": 44, "globalRankExporter": 8 },
+      { "commodity": "Iron ore", "valueBillions": 35, "globalRankExporter": 2 },
+      { "commodity": "Beef/poultry", "valueBillions": 22, "globalRankExporter": 1 },
+      { "commodity": "Sugar", "valueBillions": 14, "globalRankExporter": 1 }
+    ],
+    "topImports": [
+      { "commodity": "Refined petroleum", "valueBillions": 18 },
+      { "commodity": "Electronics", "valueBillions": 24 },
+      { "commodity": "Machinery", "valueBillions": 30 },
+      { "commodity": "Vehicles & parts", "valueBillions": 18 },
+      { "commodity": "Fertilizers", "valueBillions": 15 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 150, "relationship": "friendly" },
+      { "partnerId": "us", "tradeBillions": 80, "relationship": "neutral" },
+      { "partnerId": "eu", "tradeBillions": 72, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 366500,
+    "reservePersonnel": 1340000,
+    "defenseSpendingBillions": 20,
+    "defenseSpendingGDPPercent": 1.1,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "gripen-e-f", "quantity": 36, "readinessPercent": 90, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "leopard-1a5", "quantity": 220, "readinessPercent": 55, "modernizationStatus": "aging" },
+      { "equipmentId": "scorpene-submarine", "quantity": 4, "readinessPercent": 80, "modernizationStatus": "modern" },
+      { "equipmentId": "embraer-kc-390", "quantity": 22, "readinessPercent": 90, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "nae-sao-paulo-carrier", "quantity": 0, "readinessPercent": 0, "modernizationStatus": "legacy" }
+    ],
+    "branches": {
+      "army": 235000,
+      "navy": 80000,
+      "airForce": 50000,
+      "specialForces": 1500
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 215.3,
+    "growthRatePercent": 0.5,
+    "urbanizationPercent": 87.6,
+    "medianAge": 33.2,
+    "lifeExpectancy": 76.0,
+    "literacyRatePercent": 93.2,
+    "ageDistribution": {
+      "youth": 20.0,
+      "workingAge": 69.0,
+      "elderly": 11.0
+    },
+    "ethnicComposition": [
+      { "groupName": "White/European descent", "percentOfPopulation": 43.5, "socialCohesion": 70 },
+      { "groupName": "Mixed (Pardo)", "percentOfPopulation": 46.5, "socialCohesion": 65 },
+      { "groupName": "Black (Preto)", "percentOfPopulation": 8.0, "socialCohesion": 50 },
+      { "groupName": "Asian/Indigenous/Other", "percentOfPopulation": 2.0, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.53,
+      "humanDevelopmentIndex": 0.754,
+      "healthcareAccessPercent": 75.0,
+      "internetPenetrationPercent": 84.0,
+      "unemploymentRatePercent": 7.9
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 45,
+      "conscriptionPool": 40.0,
+      "socialStabilityBaseline": -5,
+      "innovationPotential": 45,
+      "consumptionDemandMultiplier": 1.5
+    }
+  },
+  "tags": ["brics", "agricultural-superpower", "amazon-custodian", "niobium-dominant", "g20", "emerging-market"]
+}

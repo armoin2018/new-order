@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "fossil-fuel-expansion",
+  "name": "Fossil Fuel Expansion",
+  "category": "economic",
+  "subcategory": "energy-independence",
+  "description": "Expansion of domestic oil, gas, and coal production. Prioritizes energy independence and economic growth over environmental concerns. Reduces import dependency.",
+  "scope": "domestic",
+  "implementationTurns": 2,
+  "annualCostBillions": 5.0,
+  "effects": {
+    "gdpGrowthModifier": 1.0,
+    "tradeModifier": 5,
+    "inflationModifier": -0.5,
+    "softPowerModifier": -5,
+    "diplomaticModifier": -3,
+    "popularityModifier": 5,
+    "stabilityModifier": 3
+  },
+  "exclusiveWith": ["green-energy-transition"],
+  "historicalExamples": [
+    "US 'Drill Baby Drill' policies",
+    "Russia Gazprom/Rosneft expansion",
+    "Saudi Aramco production increases"
+  ],
+  "tags": ["energy", "carbon", "independence", "short-term"]
+}

@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "indonesia",
+  "name": "Republic of Indonesia",
+  "factionId": "indonesia",
+  "isoAlpha2": "ID",
+  "isoAlpha3": "IDN",
+  "currencyCode": "IDR",
+  "leaders": {
+    "activeLeaderId": "prabowo-subianto",
+    "previousLeaderIds": ["joko-widodo"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 87.2, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 7.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 2.9, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "hinduism", "percentOfPopulation": 1.7, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "buddhism", "percentOfPopulation": 0.7, "isStateReligion": false, "trend": "declining" }
+  ],
+  "psychographics": {
+    "nationalism": 65,
+    "warWeariness": 20,
+    "governmentTrust": 55,
+    "economicAnxiety": 55,
+    "politicalPolarization": 50,
+    "mediaTrust": 45,
+    "foreignSentiment": {
+      "us": 20,
+      "china": -15,
+      "russia": 5,
+      "japan": 15,
+      "eu": 15,
+      "india": 15,
+      "australia": -10
+    },
+    "socialLiberalism": 25,
+    "environmentalConcern": 35,
+    "militarismApproval": 50
+  },
+  "activePolicies": [
+    { "policyId": "defense-modernization", "adoptedYear": 2024, "intensity": 65 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1945, "intensity": 55 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 65 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2020, "intensity": 60 },
+    { "policyId": "fossil-fuel-expansion", "adoptedYear": 2022, "intensity": 55 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2022, "intensity": 40 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "coal", "abundanceLevel": "abundant", "productionBillionsUSD": 38, "globalSharePercent": 9.0, "strategicImportance": "high" },
+      { "resourceName": "crude-oil", "abundanceLevel": "moderate", "productionBillionsUSD": 18, "globalSharePercent": 1.0, "strategicImportance": "high" },
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 12, "globalSharePercent": 1.5, "strategicImportance": "high" },
+      { "resourceName": "palm-oil", "abundanceLevel": "dominant", "productionBillionsUSD": 22, "globalSharePercent": 58.0, "strategicImportance": "high" },
+      { "resourceName": "nickel", "abundanceLevel": "dominant", "productionBillionsUSD": 15, "globalSharePercent": 48.0, "strategicImportance": "critical" },
+      { "resourceName": "tin", "abundanceLevel": "abundant", "productionBillionsUSD": 3, "globalSharePercent": 20.0, "strategicImportance": "medium" },
+      { "resourceName": "timber", "abundanceLevel": "abundant", "productionBillionsUSD": 10, "globalSharePercent": 6.0, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "coal": 38,
+      "oil": 32,
+      "naturalGas": 15,
+      "renewables": 8,
+      "hydro": 5,
+      "geothermal": 2
+    },
+    "foodSelfSufficiency": 80,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 292,
+    "totalImportsBillions": 229,
+    "tradeBalanceBillions": 63,
+    "topExports": [
+      { "commodity": "Palm oil", "valueBillions": 26, "globalRankExporter": 1 },
+      { "commodity": "Coal", "valueBillions": 38, "globalRankExporter": 1 },
+      { "commodity": "Nickel & ferronickel", "valueBillions": 18, "globalRankExporter": 1 },
+      { "commodity": "Rubber", "valueBillions": 6, "globalRankExporter": 2 },
+      { "commodity": "Textiles & footwear", "valueBillions": 13, "globalRankExporter": 5 }
+    ],
+    "topImports": [
+      { "commodity": "Refined petroleum", "valueBillions": 25 },
+      { "commodity": "Electronics", "valueBillions": 22 },
+      { "commodity": "Machinery", "valueBillions": 30 },
+      { "commodity": "Iron & steel", "valueBillions": 12 },
+      { "commodity": "Vehicles", "valueBillions": 10 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 124, "relationship": "neutral" },
+      { "partnerId": "japan", "tradeBillions": 40, "relationship": "friendly" },
+      { "partnerId": "us", "tradeBillions": 38, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 395500,
+    "reservePersonnel": 400000,
+    "defenseSpendingBillions": 25,
+    "defenseSpendingGDPPercent": 1.8,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-16c-fighting-falcon", "quantity": 33, "readinessPercent": 60, "modernizationStatus": "aging" },
+      { "equipmentId": "su-27-flanker", "quantity": 16, "readinessPercent": 55, "modernizationStatus": "aging" },
+      { "equipmentId": "rafale-f3r", "quantity": 42, "readinessPercent": 95, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "leopard-2a4", "quantity": 100, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "sigma-class-corvette", "quantity": 4, "readinessPercent": 80, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 300000,
+      "navy": 65000,
+      "airForce": 30000,
+      "specialForces": 5000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 277.5,
+    "growthRatePercent": 0.9,
+    "urbanizationPercent": 58.2,
+    "medianAge": 30.2,
+    "lifeExpectancy": 71.9,
+    "literacyRatePercent": 96.0,
+    "ageDistribution": {
+      "youth": 24.0,
+      "workingAge": 68.0,
+      "elderly": 8.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Javanese", "percentOfPopulation": 40.1, "socialCohesion": 80 },
+      { "groupName": "Sundanese", "percentOfPopulation": 15.5, "socialCohesion": 75 },
+      { "groupName": "Malay", "percentOfPopulation": 3.7, "socialCohesion": 70 },
+      { "groupName": "Batak/Madurese/Other", "percentOfPopulation": 40.7, "socialCohesion": 60 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.38,
+      "humanDevelopmentIndex": 0.713,
+      "healthcareAccessPercent": 72.0,
+      "internetPenetrationPercent": 77.0,
+      "unemploymentRatePercent": 5.5
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 48,
+      "conscriptionPool": 55.0,
+      "socialStabilityBaseline": 5,
+      "innovationPotential": 40,
+      "consumptionDemandMultiplier": 1.6
+    }
+  },
+  "tags": ["asean-leader", "archipelago", "g20", "nickel-dominant", "emerging-market", "non-aligned"]
+}

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "bangladesh",
+  "name": "People's Republic of Bangladesh",
+  "factionId": "bangladesh",
+  "isoAlpha2": "BD",
+  "isoAlpha3": "BGD",
+  "currencyCode": "BDT",
+  "leaders": {
+    "activeLeaderId": "muhammad-yunus",
+    "previousLeaderIds": ["sheikh-hasina"],
+    "successionType": "interim"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 90.4, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "hinduism", "percentOfPopulation": 8.5, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "buddhism", "percentOfPopulation": 0.6, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 0.3, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 60,
+    "warWeariness": 30,
+    "governmentTrust": 22,
+    "economicAnxiety": 72,
+    "politicalPolarization": 75,
+    "mediaTrust": 25,
+    "foreignSentiment": {
+      "us": 15,
+      "china": 20,
+      "india": -20,
+      "eu": 20,
+      "japan": 25,
+      "russia": 0
+    },
+    "socialLiberalism": 20,
+    "environmentalConcern": 60,
+    "militarismApproval": 35
+  },
+  "activePolicies": [
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 60 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2020, "intensity": 65 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2022, "intensity": 35 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1971, "intensity": 50 },
+    { "policyId": "social-welfare-expansion", "adoptedYear": 2020, "intensity": 45 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 5, "globalSharePercent": 0.5, "strategicImportance": "high" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "moderate", "productionBillionsUSD": 45, "globalSharePercent": 1.5, "strategicImportance": "critical" },
+      { "resourceName": "freshwater", "abundanceLevel": "abundant", "productionBillionsUSD": 0, "globalSharePercent": 2.0, "strategicImportance": "critical" },
+      { "resourceName": "fisheries", "abundanceLevel": "abundant", "productionBillionsUSD": 8, "globalSharePercent": 3.0, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "naturalGas": 55,
+      "oil": 20,
+      "coal": 10,
+      "renewables": 5,
+      "hydro": 3,
+      "nuclear": 7
+    },
+    "foodSelfSufficiency": 85,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 55,
+    "totalImportsBillions": 72,
+    "tradeBalanceBillions": -17,
+    "topExports": [
+      { "commodity": "Ready-made garments", "valueBillions": 42, "globalRankExporter": 2 },
+      { "commodity": "Knitwear", "valueBillions": 7, "globalRankExporter": 3 },
+      { "commodity": "Shrimp", "valueBillions": 0.5, "globalRankExporter": 5 },
+      { "commodity": "Jute products", "valueBillions": 1.2, "globalRankExporter": 1 }
+    ],
+    "topImports": [
+      { "commodity": "Crude & refined petroleum", "valueBillions": 10 },
+      { "commodity": "Cotton", "valueBillions": 8 },
+      { "commodity": "Machinery", "valueBillions": 7 },
+      { "commodity": "Iron & steel", "valueBillions": 5 },
+      { "commodity": "Electronics", "valueBillions": 6 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 25, "relationship": "friendly" },
+      { "partnerId": "india", "tradeBillions": 14, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 10, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 163000,
+    "reservePersonnel": 63000,
+    "defenseSpendingBillions": 4.5,
+    "defenseSpendingGDPPercent": 1.0,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "mig-29-fulcrum", "quantity": 8, "readinessPercent": 50, "modernizationStatus": "aging" },
+      { "equipmentId": "f-7bgi", "quantity": 36, "readinessPercent": 45, "modernizationStatus": "legacy" },
+      { "equipmentId": "type-59-mbt", "quantity": 274, "readinessPercent": 40, "modernizationStatus": "legacy" },
+      { "equipmentId": "vt-5-light-tank", "quantity": 44, "readinessPercent": 85, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 130000,
+      "navy": 16000,
+      "airForce": 14000,
+      "specialForces": 3000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 170.0,
+    "growthRatePercent": 1.0,
+    "urbanizationPercent": 40.0,
+    "medianAge": 27.6,
+    "lifeExpectancy": 73.0,
+    "literacyRatePercent": 74.7,
+    "ageDistribution": {
+      "youth": 27.0,
+      "workingAge": 67.0,
+      "elderly": 6.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Bengali", "percentOfPopulation": 98.0, "socialCohesion": 85 },
+      { "groupName": "Indigenous/Other", "percentOfPopulation": 2.0, "socialCohesion": 45 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.32,
+      "humanDevelopmentIndex": 0.661,
+      "healthcareAccessPercent": 55.0,
+      "internetPenetrationPercent": 40.0,
+      "unemploymentRatePercent": 5.2
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 35,
+      "conscriptionPool": 30.0,
+      "socialStabilityBaseline": -10,
+      "innovationPotential": 28,
+      "consumptionDemandMultiplier": 0.7
+    }
+  },
+  "tags": ["garment-hub", "climate-vulnerable", "densely-populated", "un-peacekeeping", "emerging-market", "delta-nation"]
+}

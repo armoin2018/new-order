@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "defense-modernization",
+  "name": "Defense Modernization Program",
+  "category": "military",
+  "subcategory": "procurement",
+  "description": "Comprehensive military modernization replacing aging equipment with next-generation systems. Prioritizes advanced weapons platforms, networked warfare, and emerging technologies.",
+  "scope": "domestic",
+  "implementationTurns": 4,
+  "annualCostBillions": 15.0,
+  "effects": {
+    "militaryReadinessModifier": 10,
+    "techModifier": 5,
+    "gdpGrowthModifier": 0.3,
+    "popularityModifier": 2,
+    "stabilityModifier": 2
+  },
+  "historicalExamples": [
+    "China PLA modernization (2015-present)",
+    "Japan defense buildup post-2022",
+    "Saudi Vision 2030 military component"
+  ],
+  "tags": ["modernization", "procurement", "long-term"]
+}

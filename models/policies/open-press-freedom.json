@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "open-press-freedom",
+  "name": "Open Press Freedom",
+  "category": "social",
+  "subcategory": "media-liberalization",
+  "description": "Constitutional protections for free press and media independence. Prevents government censorship and enables investigative journalism, boosting soft power but reducing narrative control.",
+  "scope": "domestic",
+  "implementationTurns": 1,
+  "annualCostBillions": 0.5,
+  "effects": {
+    "softPowerModifier": 10,
+    "diplomaticModifier": 5,
+    "popularityModifier": 3,
+    "stabilityModifier": -3,
+    "civilUnrestModifier": 3,
+    "espionageModifier": -2
+  },
+  "exclusiveWith": ["state-media-control"],
+  "historicalExamples": [
+    "US First Amendment protections",
+    "Scandinavian press freedom models",
+    "Japan Article 21 press freedom"
+  ],
+  "tags": ["democratic", "transparency", "civil-liberties"]
+}

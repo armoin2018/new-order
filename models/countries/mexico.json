@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "mexico",
+  "name": "United Mexican States",
+  "factionId": "mexico",
+  "isoAlpha2": "MX",
+  "isoAlpha3": "MEX",
+  "currencyCode": "MXN",
+  "leaders": {
+    "activeLeaderId": "claudia-sheinbaum",
+    "previousLeaderIds": ["andres-manuel-lopez-obrador"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-catholic", "percentOfPopulation": 72.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 11.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "unaffiliated", "percentOfPopulation": 14.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "other", "percentOfPopulation": 3.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 62,
+    "warWeariness": 55,
+    "governmentTrust": 22,
+    "economicAnxiety": 72,
+    "politicalPolarization": 65,
+    "mediaTrust": 20,
+    "foreignSentiment": {
+      "us": -15,
+      "china": 0,
+      "eu": 15,
+      "russia": -5,
+      "japan": 15,
+      "india": 5
+    },
+    "socialLiberalism": 50,
+    "environmentalConcern": 45,
+    "militarismApproval": 30
+  },
+  "activePolicies": [
+    { "policyId": "economic-stimulus", "adoptedYear": 2024, "intensity": 65 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2020, "intensity": 80 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2024, "intensity": 50 },
+    { "policyId": "social-welfare-expansion", "adoptedYear": 2019, "intensity": 70 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1821, "intensity": 50 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2018, "intensity": 55 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "abundant", "productionBillionsUSD": 30, "globalSharePercent": 2.0, "strategicImportance": "critical" },
+      { "resourceName": "silver", "abundanceLevel": "dominant", "productionBillionsUSD": 6, "globalSharePercent": 24.0, "strategicImportance": "high" },
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 5, "globalSharePercent": 0.6, "strategicImportance": "high" },
+      { "resourceName": "copper", "abundanceLevel": "moderate", "productionBillionsUSD": 5, "globalSharePercent": 3.5, "strategicImportance": "medium" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 42, "globalSharePercent": 2.0, "strategicImportance": "high" },
+      { "resourceName": "lithium", "abundanceLevel": "moderate", "productionBillionsUSD": 0.5, "globalSharePercent": 1.5, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "oil": 44,
+      "naturalGas": 36,
+      "hydro": 4,
+      "renewables": 8,
+      "coal": 5,
+      "nuclear": 3
+    },
+    "foodSelfSufficiency": 78,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 593,
+    "totalImportsBillions": 604,
+    "tradeBalanceBillions": -11,
+    "topExports": [
+      { "commodity": "Vehicles & auto parts", "valueBillions": 135, "globalRankExporter": 4 },
+      { "commodity": "Electronics & computers", "valueBillions": 95, "globalRankExporter": 6 },
+      { "commodity": "Machinery", "valueBillions": 50, "globalRankExporter": 8 },
+      { "commodity": "Crude petroleum", "valueBillions": 32, "globalRankExporter": 14 },
+      { "commodity": "Agricultural products", "valueBillions": 45, "globalRankExporter": 7 }
+    ],
+    "topImports": [
+      { "commodity": "Electronics & semiconductors", "valueBillions": 75 },
+      { "commodity": "Refined petroleum", "valueBillions": 45 },
+      { "commodity": "Auto parts", "valueBillions": 55 },
+      { "commodity": "Machinery", "valueBillions": 60 },
+      { "commodity": "Plastics", "valueBillions": 25 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 780, "relationship": "integrated" },
+      { "partnerId": "china", "tradeBillions": 120, "relationship": "neutral" },
+      { "partnerId": "eu", "tradeBillions": 75, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 277000,
+    "reservePersonnel": 82000,
+    "defenseSpendingBillions": 8,
+    "defenseSpendingGDPPercent": 0.6,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-5e-tiger", "quantity": 10, "readinessPercent": 40, "modernizationStatus": "legacy" },
+      { "equipmentId": "uh-60-blackhawk", "quantity": 24, "readinessPercent": 75, "modernizationStatus": "modern" },
+      { "equipmentId": "dn-xi-apc", "quantity": 200, "readinessPercent": 60, "modernizationStatus": "aging" },
+      { "equipmentId": "arm-class-patrol", "quantity": 12, "readinessPercent": 70, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 183000,
+      "navy": 60000,
+      "airForce": 12000,
+      "nationalGuard": 115000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 130.0,
+    "growthRatePercent": 0.7,
+    "urbanizationPercent": 81.0,
+    "medianAge": 29.0,
+    "lifeExpectancy": 75.1,
+    "literacyRatePercent": 95.4,
+    "ageDistribution": {
+      "youth": 25.0,
+      "workingAge": 66.0,
+      "elderly": 9.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Mestizo", "percentOfPopulation": 62.0, "socialCohesion": 75 },
+      { "groupName": "Indigenous", "percentOfPopulation": 21.0, "socialCohesion": 50 },
+      { "groupName": "European descent", "percentOfPopulation": 12.0, "socialCohesion": 70 },
+      { "groupName": "Afro-Mexican/Other", "percentOfPopulation": 5.0, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.45,
+      "humanDevelopmentIndex": 0.758,
+      "healthcareAccessPercent": 72.0,
+      "internetPenetrationPercent": 76.0,
+      "unemploymentRatePercent": 3.3
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 50,
+      "conscriptionPool": 22.0,
+      "socialStabilityBaseline": -10,
+      "innovationPotential": 40,
+      "consumptionDemandMultiplier": 1.3
+    }
+  },
+  "tags": ["usmca", "nearshoring-hub", "cartel-risk", "silver-dominant", "g20", "latin-america-leader"]
+}

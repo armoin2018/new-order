@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "isolationist-policy",
+  "name": "Isolationist Policy",
+  "category": "diplomatic",
+  "subcategory": "non-interventionism",
+  "description": "Withdrawal from international commitments, alliances, and foreign entanglements. Focuses resources inward, reducing foreign aid and military deployments abroad.",
+  "scope": "domestic",
+  "implementationTurns": 2,
+  "annualCostBillions": -5.0,
+  "effects": {
+    "diplomaticModifier": -20,
+    "tradeModifier": -10,
+    "popularityModifier": 8,
+    "stabilityModifier": 5,
+    "militaryReadinessModifier": 5,
+    "softPowerModifier": -15
+  },
+  "exclusiveWith": ["diplomatic-engagement", "free-trade-agreement", "foreign-aid-program", "belt-and-road-initiative"],
+  "historicalExamples": [
+    "US interwar isolationism (1920s-1930s)",
+    "Japan Sakoku period (1633-1853)",
+    "North Korea Juche ideology"
+  ],
+  "tags": ["isolationism", "non-intervention", "inward-focus"]
+}

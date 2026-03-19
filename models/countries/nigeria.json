@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "nigeria",
+  "name": "Federal Republic of Nigeria",
+  "factionId": "nigeria",
+  "isoAlpha2": "NG",
+  "isoAlpha3": "NGA",
+  "currencyCode": "NGN",
+  "leaders": {
+    "activeLeaderId": "bola-tinubu",
+    "previousLeaderIds": ["muhammadu-buhari"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 53.5, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 30.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 10.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "traditional-african", "percentOfPopulation": 5.5, "isStateReligion": false, "trend": "declining" }
+  ],
+  "psychographics": {
+    "nationalism": 50,
+    "warWeariness": 45,
+    "governmentTrust": 18,
+    "economicAnxiety": 85,
+    "politicalPolarization": 65,
+    "mediaTrust": 30,
+    "foreignSentiment": {
+      "us": 25,
+      "china": 15,
+      "russia": 5,
+      "eu": 20,
+      "india": 10,
+      "iran": -10
+    },
+    "socialLiberalism": 20,
+    "environmentalConcern": 25,
+    "militarismApproval": 55
+  },
+  "activePolicies": [
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 55 },
+    { "policyId": "fossil-fuel-expansion", "adoptedYear": 2022, "intensity": 70 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1960, "intensity": 45 },
+    { "policyId": "defense-modernization", "adoptedYear": 2022, "intensity": 50 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2015, "intensity": 55 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "crude-oil", "abundanceLevel": "abundant", "productionBillionsUSD": 50, "globalSharePercent": 2.5, "strategicImportance": "critical" },
+      { "resourceName": "natural-gas", "abundanceLevel": "abundant", "productionBillionsUSD": 8, "globalSharePercent": 2.8, "strategicImportance": "high" },
+      { "resourceName": "tin", "abundanceLevel": "moderate", "productionBillionsUSD": 0.5, "globalSharePercent": 3.0, "strategicImportance": "medium" },
+      { "resourceName": "columbite", "abundanceLevel": "abundant", "productionBillionsUSD": 0.3, "globalSharePercent": 40.0, "strategicImportance": "high" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 55, "globalSharePercent": 2.0, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "oil": 12,
+      "naturalGas": 65,
+      "hydro": 15,
+      "coal": 3,
+      "renewables": 5
+    },
+    "foodSelfSufficiency": 60,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 55,
+    "totalImportsBillions": 53,
+    "tradeBalanceBillions": 2,
+    "topExports": [
+      { "commodity": "Crude petroleum", "valueBillions": 38, "globalRankExporter": 11 },
+      { "commodity": "LNG", "valueBillions": 8, "globalRankExporter": 6 },
+      { "commodity": "Cocoa", "valueBillions": 1.5, "globalRankExporter": 4 },
+      { "commodity": "Sesame seeds", "valueBillions": 0.8, "globalRankExporter": 2 }
+    ],
+    "topImports": [
+      { "commodity": "Refined petroleum", "valueBillions": 14 },
+      { "commodity": "Vehicles", "valueBillions": 5 },
+      { "commodity": "Machinery", "valueBillions": 6 },
+      { "commodity": "Wheat", "valueBillions": 3 },
+      { "commodity": "Electronics", "valueBillions": 4 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "india", "tradeBillions": 15, "relationship": "friendly" },
+      { "partnerId": "china", "tradeBillions": 14, "relationship": "neutral" },
+      { "partnerId": "eu", "tradeBillions": 16, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 223000,
+    "reservePersonnel": 32000,
+    "defenseSpendingBillions": 3,
+    "defenseSpendingGDPPercent": 0.7,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "jf-17-thunder", "quantity": 12, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "t-72b-mbt", "quantity": 200, "readinessPercent": 45, "modernizationStatus": "aging" },
+      { "equipmentId": "mi-35-hind", "quantity": 12, "readinessPercent": 55, "modernizationStatus": "aging" }
+    ],
+    "branches": {
+      "army": 185000,
+      "navy": 18000,
+      "airForce": 18000,
+      "specialForces": 2000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 223.8,
+    "growthRatePercent": 2.4,
+    "urbanizationPercent": 54.0,
+    "medianAge": 18.1,
+    "lifeExpectancy": 54.7,
+    "literacyRatePercent": 62.0,
+    "ageDistribution": {
+      "youth": 43.0,
+      "workingAge": 54.0,
+      "elderly": 3.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Hausa/Fulani", "percentOfPopulation": 29.0, "socialCohesion": 55 },
+      { "groupName": "Yoruba", "percentOfPopulation": 21.0, "socialCohesion": 60 },
+      { "groupName": "Igbo", "percentOfPopulation": 18.0, "socialCohesion": 55 },
+      { "groupName": "Ijaw/Kanuri/Other", "percentOfPopulation": 32.0, "socialCohesion": 40 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.35,
+      "humanDevelopmentIndex": 0.535,
+      "healthcareAccessPercent": 38.0,
+      "internetPenetrationPercent": 55.0,
+      "unemploymentRatePercent": 33.3
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 25,
+      "conscriptionPool": 38.0,
+      "socialStabilityBaseline": -20,
+      "innovationPotential": 30,
+      "consumptionDemandMultiplier": 0.8
+    }
+  },
+  "tags": ["opec", "africa-largest-economy", "youth-bulge", "insurgency-risk", "oil-dependent", "ecowas-leader"]
+}

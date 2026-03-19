@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "economic-stimulus",
+  "name": "Economic Stimulus Package",
+  "category": "economic",
+  "subcategory": "expansionary",
+  "description": "Government spending increases, tax cuts, and monetary easing to stimulate economic growth. Boosts GDP and popularity but risks inflation and increases national debt.",
+  "scope": "domestic",
+  "implementationTurns": 1,
+  "annualCostBillions": 50.0,
+  "effects": {
+    "gdpGrowthModifier": 2.0,
+    "inflationModifier": 1.5,
+    "popularityModifier": 10,
+    "civilUnrestModifier": -5,
+    "stabilityModifier": 5,
+    "diplomaticModifier": -2
+  },
+  "exclusiveWith": ["austerity-measures"],
+  "historicalExamples": [
+    "US CARES Act / American Rescue Plan (2020-2021)",
+    "China 4-trillion-yuan stimulus (2008)",
+    "Japan Abenomics (2012-2020)"
+  ],
+  "tags": ["fiscal", "popular", "inflationary", "growth"]
+}

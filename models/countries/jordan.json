@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "jordan",
+  "name": "Hashemite Kingdom of Jordan",
+  "factionId": "jordan",
+  "isoAlpha2": "JO",
+  "isoAlpha3": "JOR",
+  "currencyCode": "JOD",
+  "leaders": {
+    "activeLeaderId": "king-abdullah-ii",
+    "previousLeaderIds": [],
+    "successionType": "hereditary"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 95.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "christianity", "percentOfPopulation": 4.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "other", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 65,
+    "warWeariness": 50,
+    "governmentTrust": 45,
+    "economicAnxiety": 75,
+    "politicalPolarization": 45,
+    "mediaTrust": 35,
+    "foreignSentiment": {
+      "us": 15,
+      "china": 5,
+      "russia": -5,
+      "eu": 20,
+      "iran": -35,
+      "israel": -40,
+      "india": 5
+    },
+    "socialLiberalism": 22,
+    "environmentalConcern": 35,
+    "militarismApproval": 60
+  },
+  "activePolicies": [
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1994, "intensity": 80 },
+    { "policyId": "austerity-measures", "adoptedYear": 2019, "intensity": 65 },
+    { "policyId": "counter-terrorism", "adoptedYear": 2014, "intensity": 72 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2022, "intensity": 50 },
+    { "policyId": "refugee-integration", "adoptedYear": 2012, "intensity": 55 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "phosphates", "abundanceLevel": "abundant", "productionBillionsUSD": 2.5, "globalSharePercent": 5.0, "strategicImportance": "high" },
+      { "resourceName": "potash", "abundanceLevel": "abundant", "productionBillionsUSD": 1.5, "globalSharePercent": 3.0, "strategicImportance": "medium" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "scarce", "productionBillionsUSD": 1, "globalSharePercent": 0.02, "strategicImportance": "medium" },
+      { "resourceName": "natural-gas", "abundanceLevel": "negligible", "productionBillionsUSD": 0.1, "globalSharePercent": 0.01, "strategicImportance": "low" }
+    ],
+    "energyMix": {
+      "naturalGas": 60,
+      "oil": 20,
+      "renewables": 15,
+      "hydro": 1,
+      "coal": 3,
+      "nuclear": 1
+    },
+    "foodSelfSufficiency": 35,
+    "waterStress": "extreme"
+  },
+  "trade": {
+    "totalExportsBillions": 10.5,
+    "totalImportsBillions": 22.0,
+    "tradeBalanceBillions": -11.5,
+    "topExports": [
+      { "commodity": "Phosphates & fertilizers", "valueBillions": 2.5, "globalRankExporter": 6 },
+      { "commodity": "Potash", "valueBillions": 1.5, "globalRankExporter": 5 },
+      { "commodity": "Textiles & garments", "valueBillions": 2.0, "globalRankExporter": 30 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 1.2, "globalRankExporter": 35 },
+      { "commodity": "Vegetables & fruits", "valueBillions": 0.8, "globalRankExporter": 40 }
+    ],
+    "topImports": [
+      { "commodity": "Crude oil & petroleum", "valueBillions": 4 },
+      { "commodity": "Machinery", "valueBillions": 3.5 },
+      { "commodity": "Vehicles", "valueBillions": 2.5 },
+      { "commodity": "Iron & steel", "valueBillions": 1.5 },
+      { "commodity": "Cereals", "valueBillions": 1.2 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 4.5, "relationship": "allied" },
+      { "partnerId": "eu", "tradeBillions": 5, "relationship": "friendly" },
+      { "partnerId": "china", "tradeBillions": 5, "relationship": "neutral" },
+      { "partnerId": "india", "tradeBillions": 3, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 114500,
+    "reservePersonnel": 100000,
+    "defenseSpendingBillions": 5.0,
+    "defenseSpendingGDPPercent": 6.5,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-16a-b-fighting-falcon", "quantity": 58, "readinessPercent": 72, "modernizationStatus": "modern" },
+      { "equipmentId": "challenger-1-al-hussein", "quantity": 390, "readinessPercent": 55, "modernizationStatus": "aging" },
+      { "equipmentId": "ah-1f-cobra", "quantity": 25, "readinessPercent": 60, "modernizationStatus": "aging" },
+      { "equipmentId": "m113-apc", "quantity": 800, "readinessPercent": 50, "modernizationStatus": "aging" },
+      { "equipmentId": "caiman-mrap", "quantity": 200, "readinessPercent": 80, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 90000,
+      "navy": 1500,
+      "airForce": 15000,
+      "specialOperations": 8000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 11.5,
+    "growthRatePercent": 0.8,
+    "urbanizationPercent": 84.0,
+    "medianAge": 24.5,
+    "lifeExpectancy": 75.5,
+    "literacyRatePercent": 98.2,
+    "ageDistribution": {
+      "youth": 33.0,
+      "workingAge": 62.0,
+      "elderly": 5.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Arab", "percentOfPopulation": 95.0, "socialCohesion": 72 },
+      { "groupName": "Circassian/Chechen", "percentOfPopulation": 3.0, "socialCohesion": 65 },
+      { "groupName": "Armenian/Other", "percentOfPopulation": 2.0, "socialCohesion": 60 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.354,
+      "humanDevelopmentIndex": 0.754,
+      "healthcareAccessPercent": 68.0,
+      "internetPenetrationPercent": 67.0,
+      "unemploymentRatePercent": 22.0
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 50,
+      "conscriptionPool": 2.5,
+      "socialStabilityBaseline": -8,
+      "innovationPotential": 28,
+      "consumptionDemandMultiplier": 0.6
+    }
+  },
+  "tags": ["monarchy", "us-ally", "refugee-host", "water-crisis", "buffer-state", "phosphate-producer", "aid-dependent", "special-forces"]
+}

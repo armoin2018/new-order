@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "russia",
+  "name": "Russian Federation",
+  "factionId": "russia",
+  "isoAlpha2": "RU",
+  "isoAlpha3": "RUS",
+  "currencyCode": "RUB",
+  "leaders": {
+    "activeLeaderId": "vladimir-putin",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-orthodox", "percentOfPopulation": 71.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 10.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 15.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "buddhism", "percentOfPopulation": 1.5, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 78,
+    "warWeariness": 72,
+    "governmentTrust": 50,
+    "economicAnxiety": 72,
+    "politicalPolarization": 35,
+    "mediaTrust": 48,
+    "foreignSentiment": {
+      "us": -60,
+      "china": 40,
+      "india": 20,
+      "japan": -15,
+      "eu": -50,
+      "iran": 20,
+      "dprk": 15,
+      "syria": 20
+    },
+    "socialLiberalism": 22,
+    "environmentalConcern": 15,
+    "militarismApproval": 58
+  },
+  "activePolicies": [
+    { "policyId": "nuclear-deterrence", "adoptedYear": 1949, "intensity": 95 },
+    { "policyId": "state-media-control", "adoptedYear": 2000, "intensity": 90 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2013, "intensity": 85 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2000, "intensity": 80 },
+    { "policyId": "fossil-fuel-expansion", "adoptedYear": 2000, "intensity": 90 },
+    { "policyId": "military-conscription", "adoptedYear": 2022, "intensity": 60 },
+    { "policyId": "defense-modernization", "adoptedYear": 2010, "intensity": 75 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "natural-gas", "abundanceLevel": "dominant", "productionBillionsUSD": 120, "globalSharePercent": 17.0, "strategicImportance": "critical" },
+      { "resourceName": "crude-oil", "abundanceLevel": "abundant", "productionBillionsUSD": 200, "globalSharePercent": 12.0, "strategicImportance": "critical" },
+      { "resourceName": "coal", "abundanceLevel": "abundant", "productionBillionsUSD": 25, "globalSharePercent": 5.5, "strategicImportance": "medium" },
+      { "resourceName": "nickel", "abundanceLevel": "abundant", "productionBillionsUSD": 8, "globalSharePercent": 10.0, "strategicImportance": "high" },
+      { "resourceName": "timber", "abundanceLevel": "dominant", "productionBillionsUSD": 12, "globalSharePercent": 20.0, "strategicImportance": "medium" },
+      { "resourceName": "uranium", "abundanceLevel": "abundant", "productionBillionsUSD": 3, "globalSharePercent": 6.0, "strategicImportance": "high" },
+      { "resourceName": "diamonds", "abundanceLevel": "abundant", "productionBillionsUSD": 4, "globalSharePercent": 30.0, "strategicImportance": "low" }
+    ],
+    "energyMix": {
+      "naturalGas": 47,
+      "oil": 22,
+      "coal": 12,
+      "nuclear": 11,
+      "hydro": 7,
+      "renewables": 1
+    },
+    "foodSelfSufficiency": 85,
+    "waterStress": "low"
+  },
+  "trade": {
+    "totalExportsBillions": 374,
+    "totalImportsBillions": 201,
+    "tradeBalanceBillions": 173,
+    "topExports": [
+      { "commodity": "Crude petroleum", "valueBillions": 105, "globalRankExporter": 2 },
+      { "commodity": "Natural gas (pipeline & LNG)", "valueBillions": 45, "globalRankExporter": 2 },
+      { "commodity": "Refined petroleum", "valueBillions": 38, "globalRankExporter": 3 },
+      { "commodity": "Wheat", "valueBillions": 14, "globalRankExporter": 1 },
+      { "commodity": "Metals (steel, nickel, aluminum)", "valueBillions": 28, "globalRankExporter": 5 },
+      { "commodity": "Arms & military equipment", "valueBillions": 5, "globalRankExporter": 3 }
+    ],
+    "topImports": [
+      { "commodity": "Machinery & equipment", "valueBillions": 40 },
+      { "commodity": "Electronics", "valueBillions": 35 },
+      { "commodity": "Vehicles & parts", "valueBillions": 22 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 14 },
+      { "commodity": "Packaged medicines", "valueBillions": 8 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 245, "relationship": "allied" },
+      { "partnerId": "india", "tradeBillions": 66, "relationship": "friendly" },
+      { "partnerId": "eu", "tradeBillions": 55, "relationship": "hostile" },
+      { "partnerId": "turkey", "tradeBillions": 38, "relationship": "neutral" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": ["us", "eu", "japan", "uk", "canada", "australia"]
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 1100000,
+    "reservePersonnel": 1500000,
+    "defenseSpendingBillions": 149,
+    "defenseSpendingGDPPercent": 7.1,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 5580,
+      "deliverySystems": ["ICBM (Sarmat, Yars, Topol-M)", "SLBM (Bulava)", "Strategic bombers (Tu-160M, Tu-95MSM)", "Hypersonic (Avangard, Kinzhal, Zircon)"]
+    },
+    "equipment": [
+      { "equipmentId": "su-57-felon", "quantity": 32, "readinessPercent": 65, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "t-14-armata", "quantity": 20, "readinessPercent": 50, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "s-400-triumf", "quantity": 56, "readinessPercent": 80, "modernizationStatus": "modern" },
+      { "equipmentId": "tu-160m-blackjack", "quantity": 17, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "lancet-loitering-munition", "quantity": 5000, "readinessPercent": 90, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "army": 550000,
+      "navy": 150000,
+      "airForce": 165000,
+      "specialForces": 35000,
+      "unmannedSystemsForces": 15000,
+      "cyberCommand": 10000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 146.0,
+    "growthRatePercent": -0.4,
+    "urbanizationPercent": 75.0,
+    "medianAge": 40.3,
+    "lifeExpectancy": 73.0,
+    "literacyRatePercent": 99.7,
+    "ageDistribution": {
+      "youth": 18.0,
+      "workingAge": 65.0,
+      "elderly": 17.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Russian", "percentOfPopulation": 77.7, "socialCohesion": 80 },
+      { "groupName": "Tatar/Bashkir", "percentOfPopulation": 5.6, "socialCohesion": 65 },
+      { "groupName": "Chechen/Caucasian", "percentOfPopulation": 3.2, "socialCohesion": 40 },
+      { "groupName": "Other Minorities", "percentOfPopulation": 13.5, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.36,
+      "humanDevelopmentIndex": 0.832,
+      "healthcareAccessPercent": 76.0,
+      "internetPenetrationPercent": 88.0,
+      "unemploymentRatePercent": 2.6
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 62,
+      "conscriptionPool": 28.0,
+      "socialStabilityBaseline": -10,
+      "innovationPotential": 50,
+      "consumptionDemandMultiplier": 1.4
+    }
+  },
+  "tags": ["nuclear-superpower", "unsc-permanent", "energy-exporter", "sanctioned", "authoritarian", "war-economy", "ukraine-conflict", "brics"]
+}

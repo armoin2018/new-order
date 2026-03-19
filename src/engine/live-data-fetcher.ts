@@ -26,6 +26,7 @@ import type {
   MarketDataPoint,
   DiplomaticDataPoint,
   TechnologyDataPoint,
+  LeaderDataPoint,
   LiveDataResult,
   CategoryFetchResult,
   LiveDataConfig,
@@ -38,6 +39,12 @@ import {
   WORLD_BANK_INDICATORS,
   liveDataConfig,
 } from '@/engine/config/live-data';
+import { LEADER_MODELS } from '@/data/model-loader';
+import {
+  resolveModelFactionId,
+  buildLeaderDataPoint,
+} from '@/engine/leader-data-mapper';
+import type { ScenarioDefinition } from '@/data/types/scenario.types';
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -208,6 +215,8 @@ export async function fetchTechnologyData(
 
 /**
  * Fetch exchange rate data from ExchangeRate-API.
+ * Also triggers a server-side market data refresh when the API server
+ * is available (extends stored 10-year OHLCV data in `data/markets/`).
  * @see FR-4405
  */
 export async function fetchMarketData(
@@ -234,6 +243,60 @@ export async function fetchMarketData(
     });
   }
 
+  // Try to trigger server-side OHLCV data refresh (fire-and-forget).
+  // This extends the stored market data files with latest weekly points.
+  // Fails silently if the server isn't running.
+  triggerMarketDataRefresh(timeoutMs);
+
+  return results;
+}
+
+/**
+ * Fire-and-forget request to the local API server to refresh stored
+ * OHLCV market data. This is non-blocking — if the server isn't
+ * running (dev mode without server), it simply does nothing.
+ */
+function triggerMarketDataRefresh(timeoutMs: number): void {
+  const baseUrl = typeof window !== 'undefined'
+    ? `${window.location.protocol}//${window.location.hostname}:3000`
+    : 'http://localhost:3000';
+
+  fetchJson(`${baseUrl}/api/v1/market-data/refresh`, timeoutMs * 4)
+    .catch(() => { /* non-critical */ });
+}
+
+// ── Leader Data Fetcher ─────────────────────────────────────────────────────
+
+/**
+ * Load leader profile data from the model JSONs.
+ *
+ * Unlike other fetchers that call external APIs, this loads data from
+ * the pre-built `LEADER_MODELS` array (imported from `models/leaders/*.json`
+ * at build time). The models represent the latest real-world leader data.
+ *
+ * Compares model leader names against the scenario's current leaders
+ * to detect leadership changes.
+ *
+ * @param scenario - The current scenario to compare leaders against.
+ * @returns Leader data points for factions that have matching model data.
+ * @see FR-4406
+ */
+export function fetchLeaderData(
+  scenario: ScenarioDefinition,
+): LeaderDataPoint[] {
+  const results: LeaderDataPoint[] = [];
+
+  for (const model of LEADER_MODELS) {
+    const factionId = resolveModelFactionId(model.factionId);
+    if (!factionId) continue; // Skip leaders for non-game factions (india, etc.)
+
+    const scenarioProfile = scenario.aiProfiles[factionId];
+    if (!scenarioProfile) continue;
+
+    const scenarioLeaderName = scenarioProfile.leader.identity.name;
+    results.push(buildLeaderDataPoint(model, factionId, scenarioLeaderName));
+  }
+
   return results;
 }
 
@@ -247,12 +310,14 @@ export async function fetchMarketData(
  *
  * @param config    - User configuration (which categories are enabled, timeout, etc.)
  * @param onProgress - Optional progress callback for UI updates.
+ * @param scenario   - Optional scenario for leader comparison (needed for leader data).
  * @returns A complete {@link LiveDataResult} with all fetched data.
  * @see FR-4400
  */
 export async function fetchAllLiveData(
   config: LiveDataConfig = liveDataConfig.defaults,
   onProgress?: (progress: LiveDataProgress) => void,
+  scenario?: ScenarioDefinition,
 ): Promise<LiveDataResult> {
   const startTime = Date.now();
   const categories: CategoryFetchResult[] = [];
@@ -261,6 +326,7 @@ export async function fetchAllLiveData(
   let diplomatic: DiplomaticDataPoint[] = [];
   let technology: TechnologyDataPoint[] = [];
   let markets: MarketDataPoint[] = [];
+  let leaders: LeaderDataPoint[] = [];
 
   const fetchCategory = async <T>(
     category: LiveDataCategory,
@@ -297,6 +363,26 @@ export async function fetchAllLiveData(
   technology = await fetchCategory('technology', fetchTechnologyData);
   markets = await fetchCategory('markets', fetchMarketData);
 
+  // Leader data is loaded from local model files (no network I/O)
+  if (config.categories.leaders && scenario) {
+    const catStart = Date.now();
+    onProgress?.({ category: 'leaders', status: 'fetching', progressPct: 0, message: 'Loading leader profiles...' });
+    try {
+      leaders = fetchLeaderData(scenario);
+      const durationMs = Date.now() - catStart;
+      categories.push({ category: 'leaders', status: 'complete', durationMs, dataPointCount: leaders.length });
+      onProgress?.({ category: 'leaders', status: 'complete', progressPct: 100, message: `leaders: ${leaders.length} profiles loaded` });
+    } catch (err) {
+      const durationMs = Date.now() - catStart;
+      const errorMsg = err instanceof Error ? err.message : 'Unknown error';
+      categories.push({ category: 'leaders', status: 'error', durationMs, error: errorMsg, dataPointCount: 0 });
+      onProgress?.({ category: 'leaders', status: 'error', progressPct: 100, message: `leaders: ${errorMsg}` });
+    }
+  } else if (!config.categories.leaders) {
+    categories.push({ category: 'leaders', status: 'skipped', durationMs: 0, dataPointCount: 0 });
+    onProgress?.({ category: 'leaders', status: 'skipped', progressPct: 100, message: 'leaders: skipped' });
+  }
+
   const totalDurationMs = Date.now() - startTime;
   const hasErrors = categories.some((c) => c.status === 'error');
   const allSkipped = categories.every((c) => c.status === 'skipped');
@@ -309,6 +395,7 @@ export async function fetchAllLiveData(
     diplomatic,
     technology,
     markets,
+    leaders,
     overallStatus: allSkipped ? 'skipped' : hasErrors ? 'error' : 'complete',
     totalDurationMs,
   };

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "foreign-aid-program",
+  "name": "Foreign Aid Program",
+  "category": "diplomatic",
+  "subcategory": "development-assistance",
+  "description": "Provision of economic, military, or humanitarian aid to developing nations and allies. Builds diplomatic influence, soft power, and strategic partnerships.",
+  "scope": "multilateral",
+  "implementationTurns": 1,
+  "annualCostBillions": 15.0,
+  "effects": {
+    "diplomaticModifier": 10,
+    "softPowerModifier": 12,
+    "popularityModifier": -3,
+    "stabilityModifier": 2,
+    "tradeModifier": 3
+  },
+  "exclusiveWith": ["isolationist-policy"],
+  "historicalExamples": [
+    "US USAID programs",
+    "Japan ODA to Southeast Asia",
+    "EU development cooperation"
+  ],
+  "tags": ["aid", "soft-power", "development", "alliance-building"]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "green-energy-transition",
+  "name": "Green Energy Transition",
+  "category": "environmental",
+  "subcategory": "decarbonization",
+  "description": "National commitment to transition from fossil fuels to renewable energy sources. Includes subsidies for solar, wind, and nuclear power, carbon pricing, and EV mandates.",
+  "scope": "domestic",
+  "implementationTurns": 5,
+  "annualCostBillions": 25.0,
+  "effects": {
+    "gdpGrowthModifier": -0.3,
+    "techModifier": 5,
+    "softPowerModifier": 8,
+    "diplomaticModifier": 5,
+    "popularityModifier": 3,
+    "stabilityModifier": 2
+  },
+  "exclusiveWith": ["fossil-fuel-expansion"],
+  "historicalExamples": [
+    "EU Green Deal (2019-present)",
+    "US Inflation Reduction Act (2022)",
+    "China carbon neutrality pledge 2060"
+  ],
+  "tags": ["climate", "energy", "long-term", "investment"]
+}

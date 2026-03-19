@@ -1465,6 +1465,7 @@ import {
   cacheLiveData,
   createDefaultLiveDataConfig,
 } from '@/engine/live-data-engine';
+import { LEADER_MODELS } from '@/data/model-loader';
 import type { LiveDataProgress, LiveDataResult } from '@/data/types/live-data.types';
 import type { LiveDataPatchSummary } from '@/engine/live-data-engine';
 
@@ -1506,7 +1507,7 @@ const StartScreen: FC = () => {
     const cached = getCachedLiveData(config.cacheHours);
     if (cached && cached.overallStatus === 'complete') {
       liveDataResultRef.current = cached;
-      const { summaries } = applyLiveDataToScenario(MARCH_2026_SCENARIO, cached, config);
+      const { summaries } = applyLiveDataToScenario(MARCH_2026_SCENARIO, cached, config, LEADER_MODELS);
       setPatchSummaries(summaries);
       setLiveDataReady(true);
       setIsFetching(false);
@@ -1524,12 +1525,12 @@ const StartScreen: FC = () => {
           }
           return [...prev, progress];
         });
-      });
+      }, MARCH_2026_SCENARIO);
 
       liveDataResultRef.current = result;
       cacheLiveData(result);
 
-      const { summaries } = applyLiveDataToScenario(MARCH_2026_SCENARIO, result, config);
+      const { summaries } = applyLiveDataToScenario(MARCH_2026_SCENARIO, result, config, LEADER_MODELS);
       setPatchSummaries(summaries);
       setLiveDataReady(true);
     } catch (err) {
@@ -1564,6 +1565,7 @@ const StartScreen: FC = () => {
         MARCH_2026_SCENARIO,
         liveDataResultRef.current,
         config,
+        LEADER_MODELS,
       );
       scenario = patched;
     }
@@ -1576,7 +1578,7 @@ const StartScreen: FC = () => {
     if (!liveDataReady || !liveDataResultRef.current) return MARCH_2026_SCENARIO;
     const config = createDefaultLiveDataConfig();
     config.enabled = true;
-    return applyLiveDataToScenario(MARCH_2026_SCENARIO, liveDataResultRef.current, config).scenario;
+    return applyLiveDataToScenario(MARCH_2026_SCENARIO, liveDataResultRef.current, config, LEADER_MODELS).scenario;
   }, [liveDataReady]);
 
   return (

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "economic-sanctions",
+  "name": "Economic Sanctions",
+  "category": "sanctions",
+  "subcategory": "comprehensive",
+  "description": "Comprehensive economic sanctions targeting a nation's financial system, trade, and key industries. Restricts banking, investment, and commercial transactions to pressure policy changes.",
+  "scope": "foreign",
+  "implementationTurns": 1,
+  "annualCostBillions": 0.5,
+  "effects": {
+    "tradeModifier": -5,
+    "diplomaticModifier": -10,
+    "popularityModifier": 3,
+    "targetEffects": {
+      "targetGdpModifier": -2.5,
+      "targetStabilityModifier": -5,
+      "targetTradeModifier": -20,
+      "targetInflationModifier": 3
+    }
+  },
+  "historicalExamples": [
+    "US sanctions on Iran (2018-present)",
+    "EU sanctions on Russia (2014-present)",
+    "UN sanctions on North Korea"
+  ],
+  "tags": ["coercive", "economic-warfare", "foreign-policy"]
+}

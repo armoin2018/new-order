@@ -35,6 +35,8 @@ import leaderProfileSchema from '@/data/schemas/leader-profile.schema.json';
 import stockExchangeSchema from '@/data/schemas/stock-exchange.schema.json';
 import stockTickerSchema from '@/data/schemas/stock-ticker.schema.json';
 import marketIndexSchema from '@/data/schemas/market-index.schema.json';
+import countrySchema from '@/data/schemas/country.schema.json';
+import policySchema from '@/data/schemas/policy.schema.json';
 
 // ---------------------------------------------------------------------------
 // AJV Instance (Draft 2020-12)
@@ -55,6 +57,8 @@ const validators: Record<ModelCollectionType, ReturnType<typeof ajv.compile>> = 
   'stock-exchange': ajv.compile(stockExchangeSchema),
   'stock-ticker': ajv.compile(stockTickerSchema),
   'market-index': ajv.compile(marketIndexSchema),
+  'country': ajv.compile(countrySchema),
+  'policy': ajv.compile(policySchema),
 };
 
 // ---------------------------------------------------------------------------
@@ -115,6 +119,8 @@ const COLLECTION_DIRS: Record<ModelCollectionType, string> = {
   'stock-exchange': 'markets/exchanges',
   'stock-ticker': 'markets/tickers',
   'market-index': 'markets/indexes',
+  'country': 'countries',
+  'policy': 'policies',
 };
 
 // ---------------------------------------------------------------------------

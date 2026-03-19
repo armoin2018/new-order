@@ -1,0 +1,595 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neworder.dev/schemas/country.schema.json",
+  "title": "Country Model",
+  "description": "JSON Schema for comprehensive country model files (DR-190). Consolidates leader relationships, religious distributions, psychographics, active policies, natural resources, trade data, and military breakdown into a single per-country reference file.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "countryId",
+    "name",
+    "factionId",
+    "leaders",
+    "religiousDistribution",
+    "psychographics",
+    "activePolicies",
+    "resources",
+    "trade",
+    "militaryBreakdown",
+    "population"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "countryId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Country identifier matching FactionId (e.g., 'usa', 'china')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full display name of the country"
+    },
+    "factionId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Matching FactionId enum value"
+    },
+    "isoAlpha2": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 code"
+    },
+    "isoAlpha3": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "ISO 3166-1 alpha-3 code"
+    },
+    "currencyCode": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "ISO 4217 currency code"
+    },
+    "leaders": {
+      "type": "object",
+      "required": ["activeLeaderId"],
+      "additionalProperties": false,
+      "properties": {
+        "activeLeaderId": {
+          "type": "string",
+          "description": "Reference to leader model leaderId"
+        },
+        "previousLeaderIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Historical leader references"
+        },
+        "successionType": {
+          "type": "string",
+          "enum": ["election", "hereditary", "party-appointment", "military-coup", "revolution", "undefined"],
+          "description": "How power transitions"
+        }
+      }
+    },
+    "religiousDistribution": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["religionId", "percentOfPopulation"],
+        "additionalProperties": false,
+        "properties": {
+          "religionId": {
+            "type": "string",
+            "description": "Reference to religion model religionId"
+          },
+          "percentOfPopulation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Percentage of population adhering to this religion"
+          },
+          "isStateReligion": {
+            "type": "boolean",
+            "description": "Whether this is an official state religion"
+          },
+          "trend": {
+            "type": "string",
+            "enum": ["growing", "stable", "declining"],
+            "description": "Population trend for this religion"
+          }
+        }
+      },
+      "description": "Distribution of religious adherence by population"
+    },
+    "psychographics": {
+      "type": "object",
+      "required": ["nationalism", "warWeariness", "governmentTrust", "economicAnxiety"],
+      "additionalProperties": false,
+      "properties": {
+        "nationalism": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "National pride / nationalist sentiment (0=none, 100=extreme)"
+        },
+        "warWeariness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Population fatigue from conflict (0=hawkish, 100=strongly opposed)"
+        },
+        "governmentTrust": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Trust in government institutions"
+        },
+        "economicAnxiety": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Concern over personal economic wellbeing"
+        },
+        "politicalPolarization": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Degree of left-right political division"
+        },
+        "mediaTrust": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Trust in mainstream media sources"
+        },
+        "foreignSentiment": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": -100,
+            "maximum": 100
+          },
+          "description": "Public sentiment toward other factions (-100=hostile, 100=friendly)"
+        },
+        "socialLiberalism": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Progressive vs. traditional social values"
+        },
+        "environmentalConcern": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Priority placed on environmental issues"
+        },
+        "militarismApproval": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Public approval of military spending and intervention"
+        }
+      }
+    },
+    "activePolicies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["policyId"],
+        "additionalProperties": false,
+        "properties": {
+          "policyId": {
+            "type": "string",
+            "description": "Reference to policy model policyId"
+          },
+          "adoptedYear": {
+            "type": "integer",
+            "description": "Year this policy was adopted"
+          },
+          "intensity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "How aggressively the policy is enforced (0=lax, 100=maximum)"
+          },
+          "targetFactions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Factions targeted by this policy (if applicable)"
+          }
+        }
+      },
+      "description": "Currently active domestic and foreign policies"
+    },
+    "resources": {
+      "type": "object",
+      "required": ["naturalResources"],
+      "additionalProperties": false,
+      "properties": {
+        "naturalResources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["resourceName", "abundanceLevel"],
+            "additionalProperties": false,
+            "properties": {
+              "resourceName": {
+                "type": "string",
+                "description": "Name of the resource (e.g., 'crude-oil', 'natural-gas', 'rare-earth')"
+              },
+              "abundanceLevel": {
+                "type": "string",
+                "enum": ["scarce", "limited", "moderate", "abundant", "dominant"],
+                "description": "Relative abundance level"
+              },
+              "productionBillionsUSD": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Annual production value in billions USD"
+              },
+              "globalSharePercent": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Country's share of global production"
+              },
+              "strategicImportance": {
+                "type": "string",
+                "enum": ["low", "medium", "high", "critical"],
+                "description": "Strategic importance to national economy and security"
+              }
+            }
+          }
+        },
+        "energyMix": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "description": "Energy source percentages (oil, gas, coal, nuclear, renewables, hydro)"
+        },
+        "foodSelfSufficiency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of food needs produced domestically"
+        },
+        "waterStress": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "extreme"],
+          "description": "Level of water scarcity"
+        }
+      }
+    },
+    "trade": {
+      "type": "object",
+      "required": ["totalExportsBillions", "totalImportsBillions", "tradeBalanceBillions"],
+      "additionalProperties": false,
+      "properties": {
+        "totalExportsBillions": {
+          "type": "number",
+          "description": "Total annual exports in billions USD"
+        },
+        "totalImportsBillions": {
+          "type": "number",
+          "description": "Total annual imports in billions USD"
+        },
+        "tradeBalanceBillions": {
+          "type": "number",
+          "description": "Trade balance (exports - imports), negative = deficit"
+        },
+        "topExports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["commodity", "valueBillions"],
+            "additionalProperties": false,
+            "properties": {
+              "commodity": { "type": "string" },
+              "valueBillions": { "type": "number", "minimum": 0 },
+              "globalRankExporter": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "description": "Top exported commodities/categories"
+        },
+        "topImports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["commodity", "valueBillions"],
+            "additionalProperties": false,
+            "properties": {
+              "commodity": { "type": "string" },
+              "valueBillions": { "type": "number", "minimum": 0 }
+            }
+          },
+          "description": "Top imported commodities/categories"
+        },
+        "majorTradingPartners": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["partnerId", "tradeBillions"],
+            "additionalProperties": false,
+            "properties": {
+              "partnerId": { "type": "string", "description": "FactionId or country name" },
+              "tradeBillions": { "type": "number", "minimum": 0 },
+              "relationship": {
+                "type": "string",
+                "enum": ["allied", "friendly", "neutral", "strained", "hostile"]
+              }
+            }
+          },
+          "description": "Major trading partners with bilateral trade volumes"
+        },
+        "sanctionsActive": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "FactionIds of nations this country has sanctions on"
+        },
+        "sanctionedBy": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "FactionIds of nations sanctioning this country"
+        }
+      }
+    },
+    "militaryBreakdown": {
+      "type": "object",
+      "required": ["totalPersonnel", "defenseSpendingBillions", "defenseSpendingGDPPercent"],
+      "additionalProperties": false,
+      "properties": {
+        "totalPersonnel": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total active military personnel"
+        },
+        "reservePersonnel": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total reserve/paramilitary personnel"
+        },
+        "defenseSpendingBillions": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Annual defense budget in billions USD"
+        },
+        "defenseSpendingGDPPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 50,
+          "description": "Defense spending as percentage of GDP"
+        },
+        "nuclearCapability": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hasNuclearWeapons": { "type": "boolean" },
+            "estimatedWarheads": { "type": "integer", "minimum": 0 },
+            "deliverySystems": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "equipment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["equipmentId", "quantity"],
+            "additionalProperties": false,
+            "properties": {
+              "equipmentId": {
+                "type": "string",
+                "description": "Reference to military equipment model equipmentId"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Number of units in service"
+              },
+              "readinessPercent": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Operational readiness of this equipment class"
+              },
+              "modernizationStatus": {
+                "type": "string",
+                "enum": ["cutting-edge", "modern", "aging", "obsolete"],
+                "description": "Current modernization state"
+              }
+            }
+          },
+          "description": "Military equipment inventory with quantities"
+        },
+        "branches": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "army": { "type": "integer", "minimum": 0, "description": "Army personnel count" },
+            "navy": { "type": "integer", "minimum": 0, "description": "Navy personnel count" },
+            "airForce": { "type": "integer", "minimum": 0, "description": "Air force personnel count" },
+            "specialForces": { "type": "integer", "minimum": 0, "description": "Special operations personnel" },
+            "cyberCommand": { "type": "integer", "minimum": 0, "description": "Cyber operations personnel" },
+            "spaceForce": { "type": "integer", "minimum": 0, "description": "Space operations personnel" }
+          }
+        },
+        "powerProjection": {
+          "type": "string",
+          "enum": ["global", "regional", "continental", "local", "minimal"],
+          "description": "Ability to project military force abroad"
+        }
+      }
+    },
+    "population": {
+      "type": "object",
+      "required": ["populationMillions", "growthRatePercent", "urbanizationPercent", "medianAge", "lifeExpectancy", "ageDistribution", "ethnicComposition"],
+      "additionalProperties": false,
+      "description": "Demographic data including population size, growth, age distribution, ethnic composition, and social indicators",
+      "properties": {
+        "populationMillions": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total population in millions"
+        },
+        "growthRatePercent": {
+          "type": "number",
+          "description": "Annual population growth rate as percentage (negative = declining)"
+        },
+        "urbanizationPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of population living in urban areas"
+        },
+        "medianAge": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Median age of the population"
+        },
+        "lifeExpectancy": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Average life expectancy in years"
+        },
+        "literacyRatePercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of population that is literate"
+        },
+        "ageDistribution": {
+          "type": "object",
+          "required": ["youth", "workingAge", "elderly"],
+          "additionalProperties": false,
+          "description": "Population breakdown by age group (percentages summing to ~100)",
+          "properties": {
+            "youth": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage aged 0–14"
+            },
+            "workingAge": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage aged 15–64"
+            },
+            "elderly": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage aged 65+"
+            }
+          }
+        },
+        "ethnicComposition": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["groupName", "percentOfPopulation"],
+            "additionalProperties": false,
+            "properties": {
+              "groupName": {
+                "type": "string",
+                "description": "Name of the ethnic or national group"
+              },
+              "percentOfPopulation": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Percentage of total population"
+              },
+              "socialCohesion": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Integration/cohesion with the broader society (0=isolated/hostile, 100=fully integrated)"
+              }
+            }
+          },
+          "description": "Ethnic/national group breakdown of the population"
+        },
+        "socialIndicators": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Socioeconomic development indicators",
+          "properties": {
+            "giniCoefficient": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Income inequality index (0=perfect equality, 1=maximum inequality)"
+            },
+            "humanDevelopmentIndex": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "UNDP Human Development Index score"
+            },
+            "healthcareAccessPercent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage of population with healthcare access"
+            },
+            "internetPenetrationPercent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage of population with internet access"
+            },
+            "unemploymentRatePercent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Unemployment rate as percentage"
+            }
+          }
+        },
+        "gameplayModifiers": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Derived gameplay modifiers from population data",
+          "properties": {
+            "workforceQuality": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Overall workforce quality score (education, skills, productivity)"
+            },
+            "conscriptionPool": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Available military conscription pool in millions"
+            },
+            "socialStabilityBaseline": {
+              "type": "number",
+              "description": "Baseline social stability modifier (negative = unstable)"
+            },
+            "innovationPotential": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Innovation capacity score"
+            },
+            "consumptionDemandMultiplier": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Domestic consumer demand multiplier"
+            }
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Freeform tags for filtering and categorization"
+    }
+  }
+}

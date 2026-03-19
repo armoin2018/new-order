@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "state-media-control",
+  "name": "State Media Control",
+  "category": "social",
+  "subcategory": "information-control",
+  "description": "Government control over major media outlets and internet censorship. Enables narrative control and propaganda but generates domestic and international backlash.",
+  "scope": "domestic",
+  "implementationTurns": 1,
+  "annualCostBillions": 1.5,
+  "effects": {
+    "stabilityModifier": 8,
+    "popularityModifier": 5,
+    "civilUnrestModifier": -5,
+    "softPowerModifier": -10,
+    "diplomaticModifier": -5,
+    "espionageModifier": 3
+  },
+  "exclusiveWith": ["open-press-freedom"],
+  "historicalExamples": [
+    "China Great Firewall / CCTV monopoly",
+    "Russia RT / media consolidation",
+    "North Korea KCNA state media",
+    "Iran IRIB broadcasting monopoly"
+  ],
+  "tags": ["authoritarian", "censorship", "propaganda", "information-control"]
+}

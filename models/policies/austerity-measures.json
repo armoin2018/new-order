@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "austerity-measures",
+  "name": "Austerity Measures",
+  "category": "economic",
+  "subcategory": "fiscal-consolidation",
+  "description": "Reduction in government spending, public sector wages, and social programs to reduce national debt and fiscal deficits. Improves long-term fiscal health at the cost of short-term popularity.",
+  "scope": "domestic",
+  "implementationTurns": 1,
+  "annualCostBillions": -20.0,
+  "effects": {
+    "gdpGrowthModifier": -1.5,
+    "inflationModifier": -1.0,
+    "popularityModifier": -15,
+    "civilUnrestModifier": 10,
+    "stabilityModifier": -5,
+    "diplomaticModifier": 3
+  },
+  "exclusiveWith": ["economic-stimulus"],
+  "historicalExamples": [
+    "Greek austerity (2010-2018)",
+    "UK austerity under Cameron (2010-2016)",
+    "Argentina IMF austerity packages"
+  ],
+  "tags": ["fiscal", "unpopular", "debt-reduction"]
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "afghanistan",
+  "name": "Islamic Emirate of Afghanistan",
+  "factionId": "afghanistan",
+  "isoAlpha2": "AF",
+  "isoAlpha3": "AFG",
+  "currencyCode": "AFN",
+  "leaders": {
+    "activeLeaderId": "hibatullah-akhundzada",
+    "previousLeaderIds": ["ashraf-ghani"],
+    "successionType": "hereditary"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 90.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "islam-shia", "percentOfPopulation": 7.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "other", "percentOfPopulation": 3.0, "isStateReligion": false, "trend": "declining" }
+  ],
+  "psychographics": {
+    "nationalism": 40,
+    "warWeariness": 95,
+    "governmentTrust": 15,
+    "economicAnxiety": 95,
+    "politicalPolarization": 80,
+    "mediaTrust": 10,
+    "foreignSentiment": {
+      "us": -70,
+      "china": 5,
+      "russia": -20,
+      "pakistan": -10,
+      "iran": 0,
+      "india": -5
+    },
+    "socialLiberalism": 5,
+    "environmentalConcern": 10,
+    "militarismApproval": 45
+  },
+  "activePolicies": [
+    { "policyId": "isolationist-policy", "adoptedYear": 2021, "intensity": 80 },
+    { "policyId": "state-media-control", "adoptedYear": 2021, "intensity": 90 },
+    { "policyId": "religious-governance", "adoptedYear": 2021, "intensity": 100 },
+    { "policyId": "counter-narcotics", "adoptedYear": 2022, "intensity": 65 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "rare-earth", "abundanceLevel": "abundant", "productionBillionsUSD": 0.01, "globalSharePercent": 0.01, "strategicImportance": "critical" },
+      { "resourceName": "lithium", "abundanceLevel": "abundant", "productionBillionsUSD": 0.0, "globalSharePercent": 0.0, "strategicImportance": "critical" },
+      { "resourceName": "copper", "abundanceLevel": "abundant", "productionBillionsUSD": 0.01, "globalSharePercent": 0.01, "strategicImportance": "high" },
+      { "resourceName": "iron-ore", "abundanceLevel": "abundant", "productionBillionsUSD": 0.01, "globalSharePercent": 0.01, "strategicImportance": "high" },
+      { "resourceName": "lapis-lazuli", "abundanceLevel": "dominant", "productionBillionsUSD": 0.02, "globalSharePercent": 90.0, "strategicImportance": "low" },
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 0.1, "globalSharePercent": 0.01, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "hydro": 35,
+      "oil": 25,
+      "coal": 15,
+      "naturalGas": 10,
+      "renewables": 5,
+      "biomass": 10
+    },
+    "foodSelfSufficiency": 40,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 2.0,
+    "totalImportsBillions": 7.0,
+    "tradeBalanceBillions": -5.0,
+    "topExports": [
+      { "commodity": "Dried fruits & nuts", "valueBillions": 0.6 },
+      { "commodity": "Carpets & rugs", "valueBillions": 0.15 },
+      { "commodity": "Precious stones", "valueBillions": 0.1 },
+      { "commodity": "Spices (saffron)", "valueBillions": 0.08 },
+      { "commodity": "Minerals & ores", "valueBillions": 0.05 }
+    ],
+    "topImports": [
+      { "commodity": "Food products (wheat/flour)", "valueBillions": 2.5 },
+      { "commodity": "Petroleum products", "valueBillions": 1.5 },
+      { "commodity": "Machinery", "valueBillions": 0.5 },
+      { "commodity": "Textiles & clothing", "valueBillions": 0.4 },
+      { "commodity": "Vehicles", "valueBillions": 0.3 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "pakistan", "tradeBillions": 2.5, "relationship": "strained" },
+      { "partnerId": "iran", "tradeBillions": 1.5, "relationship": "neutral" },
+      { "partnerId": "china", "tradeBillions": 1.0, "relationship": "neutral" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": ["us", "eu"]
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 80000,
+    "reservePersonnel": 20000,
+    "defenseSpendingBillions": 0.5,
+    "defenseSpendingGDPPercent": 2.9,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "captured-humvee", "quantity": 8000, "readinessPercent": 30, "modernizationStatus": "aging" },
+      { "equipmentId": "captured-m16-m4", "quantity": 50000, "readinessPercent": 35, "modernizationStatus": "aging" },
+      { "equipmentId": "captured-md530-helicopter", "quantity": 5, "readinessPercent": 10, "modernizationStatus": "aging" },
+      { "equipmentId": "captured-blackhawk", "quantity": 4, "readinessPercent": 5, "modernizationStatus": "aging" }
+    ],
+    "branches": {
+      "army": 70000,
+      "specialForces": 10000
+    },
+    "powerProjection": "local"
+  },
+  "population": {
+    "populationMillions": 42.0,
+    "growthRatePercent": 2.3,
+    "urbanizationPercent": 26.0,
+    "medianAge": 18.4,
+    "lifeExpectancy": 60.0,
+    "literacyRatePercent": 43.0,
+    "ageDistribution": {
+      "youth": 46.0,
+      "workingAge": 50.0,
+      "elderly": 4.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Pashtun", "percentOfPopulation": 42.0, "socialCohesion": 55 },
+      { "groupName": "Tajik", "percentOfPopulation": 27.0, "socialCohesion": 50 },
+      { "groupName": "Hazara", "percentOfPopulation": 9.0, "socialCohesion": 35 },
+      { "groupName": "Uzbek", "percentOfPopulation": 9.0, "socialCohesion": 45 },
+      { "groupName": "Aimak", "percentOfPopulation": 4.0, "socialCohesion": 40 },
+      { "groupName": "Other", "percentOfPopulation": 9.0, "socialCohesion": 35 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.30,
+      "humanDevelopmentIndex": 0.496,
+      "healthcareAccessPercent": 30.0,
+      "internetPenetrationPercent": 18.0,
+      "unemploymentRatePercent": 25.0
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 15,
+      "conscriptionPool": 8.0,
+      "socialStabilityBaseline": -40,
+      "innovationPotential": 5,
+      "consumptionDemandMultiplier": 0.2
+    }
+  },
+  "tags": ["taliban-controlled", "failed-state", "humanitarian-crisis", "mineral-wealth", "sanctions-frozen-assets", "opium-economy", "landlocked"]
+}

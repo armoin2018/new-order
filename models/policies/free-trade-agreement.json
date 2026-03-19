@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "free-trade-agreement",
+  "name": "Free Trade Agreement",
+  "category": "trade",
+  "subcategory": "liberalization",
+  "description": "Bilateral or multilateral agreement to reduce or eliminate tariffs, quotas, and trade barriers between signatories. Promotes economic integration and mutual prosperity.",
+  "scope": "multilateral",
+  "implementationTurns": 3,
+  "annualCostBillions": 0.1,
+  "effects": {
+    "tradeModifier": 15,
+    "gdpGrowthModifier": 0.8,
+    "inflationModifier": -0.3,
+    "diplomaticModifier": 10,
+    "popularityModifier": -2
+  },
+  "exclusiveWith": ["trade-embargo", "isolationist-policy"],
+  "historicalExamples": [
+    "USMCA (2020)",
+    "EU Single Market",
+    "RCEP (2022)",
+    "CPTPP (2018)"
+  ],
+  "tags": ["liberal", "globalization", "cooperation"]
+}

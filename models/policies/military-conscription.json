@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "military-conscription",
+  "name": "Military Conscription",
+  "category": "military",
+  "subcategory": "manpower",
+  "description": "Mandatory military service for eligible citizens. Significantly expands available military personnel but reduces workforce productivity and can generate civil unrest.",
+  "scope": "domestic",
+  "implementationTurns": 2,
+  "annualCostBillions": 5.0,
+  "effects": {
+    "militaryReadinessModifier": 15,
+    "popularityModifier": -10,
+    "civilUnrestModifier": 8,
+    "gdpGrowthModifier": -0.5,
+    "stabilityModifier": -3
+  },
+  "historicalExamples": [
+    "South Korean mandatory service (ongoing)",
+    "Israeli IDF conscription (ongoing)",
+    "Russian partial mobilization (2022)",
+    "US draft (Vietnam War era)"
+  ],
+  "tags": ["mobilization", "wartime", "unpopular"]
+}

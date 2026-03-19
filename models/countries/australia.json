@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "australia",
+  "name": "Commonwealth of Australia",
+  "factionId": "australia",
+  "isoAlpha2": "AU",
+  "isoAlpha3": "AUS",
+  "currencyCode": "AUD",
+  "leaders": {
+    "activeLeaderId": "anthony-albanese",
+    "previousLeaderIds": ["scott-morrison"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-catholic", "percentOfPopulation": 20.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 15.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 38.9, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-other", "percentOfPopulation": 8.9, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 3.2, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "hinduism", "percentOfPopulation": 2.7, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "buddhism", "percentOfPopulation": 2.4, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "other", "percentOfPopulation": 8.9, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 55,
+    "warWeariness": 35,
+    "governmentTrust": 35,
+    "economicAnxiety": 50,
+    "politicalPolarization": 50,
+    "mediaTrust": 30,
+    "foreignSentiment": {
+      "us": 50,
+      "china": -30,
+      "japan": 40,
+      "eu": 35,
+      "uk": 55,
+      "india": 20,
+      "indonesia": 10
+    },
+    "socialLiberalism": 60,
+    "environmentalConcern": 60,
+    "militarismApproval": 50
+  },
+  "activePolicies": [
+    { "policyId": "defense-modernization", "adoptedYear": 2021, "intensity": 80 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1945, "intensity": 70 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2005, "intensity": 75 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 1949, "intensity": 75 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2022, "intensity": 65 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2016, "intensity": 65 },
+    { "policyId": "economic-sanctions", "adoptedYear": 2014, "intensity": 65, "targetFactions": ["russia", "iran", "dprk"] }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "iron-ore", "abundanceLevel": "dominant", "productionBillionsUSD": 120, "globalSharePercent": 37.0, "strategicImportance": "critical" },
+      { "resourceName": "coal", "abundanceLevel": "dominant", "productionBillionsUSD": 80, "globalSharePercent": 6.5, "strategicImportance": "high" },
+      { "resourceName": "natural-gas", "abundanceLevel": "abundant", "productionBillionsUSD": 50, "globalSharePercent": 6.0, "strategicImportance": "critical" },
+      { "resourceName": "gold", "abundanceLevel": "abundant", "productionBillionsUSD": 18, "globalSharePercent": 9.0, "strategicImportance": "high" },
+      { "resourceName": "bauxite", "abundanceLevel": "dominant", "productionBillionsUSD": 8, "globalSharePercent": 27.0, "strategicImportance": "high" },
+      { "resourceName": "uranium", "abundanceLevel": "abundant", "productionBillionsUSD": 0.8, "globalSharePercent": 9.0, "strategicImportance": "high" },
+      { "resourceName": "lithium", "abundanceLevel": "abundant", "productionBillionsUSD": 5.0, "globalSharePercent": 6.0, "strategicImportance": "critical" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 45, "globalSharePercent": 2.5, "strategicImportance": "high" }
+    ],
+    "energyMix": {
+      "coal": 30,
+      "naturalGas": 24,
+      "renewables": 28,
+      "oil": 10,
+      "hydro": 6,
+      "nuclear": 0,
+      "biomass": 2
+    },
+    "foodSelfSufficiency": 90,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 410,
+    "totalImportsBillions": 340,
+    "tradeBalanceBillions": 70,
+    "topExports": [
+      { "commodity": "Iron ore", "valueBillions": 110, "globalRankExporter": 1 },
+      { "commodity": "Coal", "valueBillions": 65, "globalRankExporter": 2 },
+      { "commodity": "Natural gas (LNG)", "valueBillions": 55, "globalRankExporter": 2 },
+      { "commodity": "Gold", "valueBillions": 20, "globalRankExporter": 3 },
+      { "commodity": "Agricultural products (beef/wheat)", "valueBillions": 30, "globalRankExporter": 5 }
+    ],
+    "topImports": [
+      { "commodity": "Vehicles & auto parts", "valueBillions": 35 },
+      { "commodity": "Refined petroleum", "valueBillions": 30 },
+      { "commodity": "Machinery", "valueBillions": 25 },
+      { "commodity": "Electronics", "valueBillions": 30 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 15 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 230, "relationship": "strained" },
+      { "partnerId": "japan", "tradeBillions": 70, "relationship": "allied" },
+      { "partnerId": "us", "tradeBillions": 55, "relationship": "allied" },
+      { "partnerId": "south-korea", "tradeBillions": 40, "relationship": "friendly" }
+    ],
+    "sanctionsActive": ["russia", "iran", "dprk"],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 59000,
+    "reservePersonnel": 33000,
+    "defenseSpendingBillions": 36.8,
+    "defenseSpendingGDPPercent": 2.02,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-35a-lightning", "quantity": 72, "readinessPercent": 80, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "m1a1-abrams", "quantity": 59, "readinessPercent": 75, "modernizationStatus": "modern" },
+      { "equipmentId": "boxer-crv", "quantity": 211, "readinessPercent": 85, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "hunter-class-frigate", "quantity": 0, "readinessPercent": 0, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "hobart-class-destroyer", "quantity": 3, "readinessPercent": 80, "modernizationStatus": "modern" },
+      { "equipmentId": "mq-28-ghost-bat", "quantity": 3, "readinessPercent": 70, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "navy": 20000,
+      "army": 50000,
+      "airForce": 22000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 27.8,
+    "growthRatePercent": 1.3,
+    "urbanizationPercent": 80.0,
+    "medianAge": 39.0,
+    "lifeExpectancy": 83.0,
+    "literacyRatePercent": 99.0,
+    "ageDistribution": {
+      "youth": 18.0,
+      "workingAge": 65.0,
+      "elderly": 17.0
+    },
+    "ethnicComposition": [
+      { "groupName": "European descent", "percentOfPopulation": 57.2, "socialCohesion": 78 },
+      { "groupName": "Oceanian", "percentOfPopulation": 16.4, "socialCohesion": 72 },
+      { "groupName": "Asian", "percentOfPopulation": 17.4, "socialCohesion": 65 },
+      { "groupName": "Indigenous (Aboriginal/Torres Strait)", "percentOfPopulation": 3.8, "socialCohesion": 45 },
+      { "groupName": "Other", "percentOfPopulation": 5.2, "socialCohesion": 62 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.324,
+      "humanDevelopmentIndex": 0.958,
+      "healthcareAccessPercent": 99.0,
+      "internetPenetrationPercent": 96.0,
+      "unemploymentRatePercent": 4.1
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 78,
+      "conscriptionPool": 5.5,
+      "socialStabilityBaseline": 20,
+      "innovationPotential": 72,
+      "consumptionDemandMultiplier": 1.2
+    }
+  },
+  "tags": ["aukus", "five-eyes", "us-allied", "minerals-exporter", "g20", "commonwealth", "middle-power", "indo-pacific"]
+}

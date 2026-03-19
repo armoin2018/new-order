@@ -1,0 +1,27 @@
+{
+  "collection": "policies",
+  "description": "National policy models — domestic and foreign policies that nations can adopt",
+  "schemaVersion": "1.0.0",
+  "files": [
+    "economic-sanctions.json",
+    "trade-embargo.json",
+    "reciprocal-tariffs.json",
+    "free-trade-agreement.json",
+    "military-conscription.json",
+    "nuclear-deterrence.json",
+    "defense-modernization.json",
+    "cyber-warfare-doctrine.json",
+    "diplomatic-engagement.json",
+    "isolationist-policy.json",
+    "state-media-control.json",
+    "open-press-freedom.json",
+    "austerity-measures.json",
+    "economic-stimulus.json",
+    "green-energy-transition.json",
+    "fossil-fuel-expansion.json",
+    "intelligence-expansion.json",
+    "foreign-aid-program.json",
+    "belt-and-road-initiative.json",
+    "space-militarization.json"
+  ]
+}

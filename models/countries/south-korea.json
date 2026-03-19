@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "south-korea",
+  "name": "Republic of Korea",
+  "factionId": "south-korea",
+  "isoAlpha2": "KR",
+  "isoAlpha3": "KOR",
+  "currencyCode": "KRW",
+  "leaders": {
+    "activeLeaderId": "lee-jae-myung",
+    "previousLeaderIds": ["yoon-suk-yeol"],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "secular-atheism", "percentOfPopulation": 51.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 20.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "buddhism", "percentOfPopulation": 17.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 11.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "other", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 65,
+    "warWeariness": 30,
+    "governmentTrust": 35,
+    "economicAnxiety": 60,
+    "politicalPolarization": 75,
+    "mediaTrust": 30,
+    "foreignSentiment": {
+      "us": 55,
+      "japan": -20,
+      "china": -35,
+      "dprk": -75,
+      "eu": 30,
+      "russia": -30
+    },
+    "socialLiberalism": 55,
+    "environmentalConcern": 50,
+    "militarismApproval": 60
+  },
+  "activePolicies": [
+    { "policyId": "military-conscription", "adoptedYear": 1957, "intensity": 85 },
+    { "policyId": "defense-modernization", "adoptedYear": 2020, "intensity": 80 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 2004, "intensity": 75 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2010, "intensity": 70 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1991, "intensity": 65 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2020, "intensity": 55 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 1961, "intensity": 75 },
+    { "policyId": "economic-sanctions", "adoptedYear": 2010, "intensity": 70, "targetFactions": ["dprk"] }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "tungsten", "abundanceLevel": "moderate", "productionBillionsUSD": 0.5, "globalSharePercent": 3.0, "strategicImportance": "medium" },
+      { "resourceName": "graphite", "abundanceLevel": "moderate", "productionBillionsUSD": 0.3, "globalSharePercent": 2.0, "strategicImportance": "medium" },
+      { "resourceName": "coal", "abundanceLevel": "limited", "productionBillionsUSD": 0.1, "globalSharePercent": 0.01, "strategicImportance": "low" },
+      { "resourceName": "fisheries", "abundanceLevel": "moderate", "productionBillionsUSD": 4.0, "globalSharePercent": 1.5, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "nuclear": 29,
+      "naturalGas": 28,
+      "coal": 23,
+      "oil": 8,
+      "renewables": 10,
+      "hydro": 2
+    },
+    "foodSelfSufficiency": 45,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 709,
+    "totalImportsBillions": 632,
+    "tradeBalanceBillions": 77,
+    "topExports": [
+      { "commodity": "Integrated circuits & semiconductors", "valueBillions": 120, "globalRankExporter": 2 },
+      { "commodity": "Vehicles & auto parts", "valueBillions": 75, "globalRankExporter": 5 },
+      { "commodity": "Refined petroleum", "valueBillions": 50, "globalRankExporter": 5 },
+      { "commodity": "Ships & vessels", "valueBillions": 30, "globalRankExporter": 1 },
+      { "commodity": "Display panels & electronics", "valueBillions": 25, "globalRankExporter": 2 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 90 },
+      { "commodity": "Semiconductor equipment", "valueBillions": 45 },
+      { "commodity": "Natural gas (LNG)", "valueBillions": 40 },
+      { "commodity": "Coal", "valueBillions": 20 },
+      { "commodity": "Machinery", "valueBillions": 30 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 230, "relationship": "strained" },
+      { "partnerId": "us", "tradeBillions": 170, "relationship": "allied" },
+      { "partnerId": "japan", "tradeBillions": 85, "relationship": "strained" }
+    ],
+    "sanctionsActive": ["dprk"],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 500000,
+    "reservePersonnel": 3100000,
+    "defenseSpendingBillions": 46.3,
+    "defenseSpendingGDPPercent": 2.32,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "k2-black-panther", "quantity": 260, "readinessPercent": 92, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "f-35a-lightning", "quantity": 60, "readinessPercent": 88, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "kf-21-boramae", "quantity": 6, "readinessPercent": 90, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "sejong-destroyer", "quantity": 3, "readinessPercent": 90, "modernizationStatus": "modern" },
+      { "equipmentId": "k9-thunder-sph", "quantity": 1100, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "patriot-pac3", "quantity": 8, "readinessPercent": 85, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 365000,
+      "navy": 70000,
+      "airForce": 65000,
+      "marineCorp": 29000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 52.08,
+    "growthRatePercent": -0.05,
+    "urbanizationPercent": 81.0,
+    "medianAge": 44.0,
+    "lifeExpectancy": 83.5,
+    "literacyRatePercent": 98.0,
+    "ageDistribution": {
+      "youth": 12.0,
+      "workingAge": 71.0,
+      "elderly": 17.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Korean", "percentOfPopulation": 96.0, "socialCohesion": 88 },
+      { "groupName": "Chinese", "percentOfPopulation": 2.0, "socialCohesion": 60 },
+      { "groupName": "Other", "percentOfPopulation": 2.0, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.31,
+      "humanDevelopmentIndex": 0.929,
+      "healthcareAccessPercent": 100.0,
+      "internetPenetrationPercent": 98.0,
+      "unemploymentRatePercent": 2.8
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 88,
+      "conscriptionPool": 12.0,
+      "socialStabilityBaseline": 15,
+      "innovationPotential": 90,
+      "consumptionDemandMultiplier": 1.6
+    }
+  },
+  "tags": ["us-allied", "technology-leader", "semiconductor", "k-wave", "conscription", "dprk-threat", "g20", "oecd"]
+}

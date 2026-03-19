@@ -19,6 +19,7 @@ import { errorHandler, notFoundHandler } from './middleware/error-handler.js';
 import { correlationId } from './middleware/correlation-id.js';
 import { registerModuleRoutes } from './routes/modules.js';
 import { registerScenarioRoutes } from './routes/scenarios.js';
+import { registerMarketDataRoutes } from './routes/market-data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -91,6 +92,7 @@ export async function buildServer(opts: ServerOptions = {}) {
         { name: 'religion', description: 'Religious profiles' },
         { name: 'scenarios', description: 'Game scenarios' },
         { name: 'markets', description: 'Financial market data' },
+        { name: 'market-data', description: 'Historical OHLCV market data' },
         { name: 'jobs', description: 'Scenario execution jobs' },
       ],
     },
@@ -147,6 +149,10 @@ export async function buildServer(opts: ServerOptions = {}) {
 
   // ── Scenario execution routes ──
   registerScenarioRoutes(app, modelsDir);
+
+  // ── Market data routes (OHLCV historical data) ──
+  const dataDir = resolve(ROOT, 'data', 'markets');
+  registerMarketDataRoutes(app, dataDir);
 
   return app;
 }

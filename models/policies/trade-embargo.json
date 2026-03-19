@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "trade-embargo",
+  "name": "Trade Embargo",
+  "category": "trade",
+  "subcategory": "total-restriction",
+  "description": "Complete prohibition of trade with a target nation or bloc. Bans all imports and exports, cutting off economic ties entirely. More severe than targeted sanctions.",
+  "scope": "foreign",
+  "implementationTurns": 1,
+  "annualCostBillions": 2.0,
+  "effects": {
+    "tradeModifier": -10,
+    "diplomaticModifier": -15,
+    "popularityModifier": -2,
+    "gdpGrowthModifier": -0.3,
+    "targetEffects": {
+      "targetGdpModifier": -4.0,
+      "targetStabilityModifier": -8,
+      "targetTradeModifier": -35,
+      "targetInflationModifier": 5
+    }
+  },
+  "exclusiveWith": ["free-trade-agreement"],
+  "historicalExamples": [
+    "US embargo on Cuba (1962-present)",
+    "Arab oil embargo (1973)",
+    "UN embargo on Iraq (1990-2003)"
+  ],
+  "tags": ["coercive", "economic-warfare", "extreme"]
+}

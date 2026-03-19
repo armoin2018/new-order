@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "turkey",
+  "name": "Republic of Türkiye",
+  "factionId": "turkey",
+  "isoAlpha2": "TR",
+  "isoAlpha3": "TUR",
+  "currencyCode": "TRY",
+  "leaders": {
+    "activeLeaderId": "recep-tayyip-erdogan",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "islam-sunni", "percentOfPopulation": 77.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-alevi", "percentOfPopulation": 20.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "other", "percentOfPopulation": 3.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 82,
+    "warWeariness": 35,
+    "governmentTrust": 42,
+    "economicAnxiety": 78,
+    "politicalPolarization": 75,
+    "mediaTrust": 28,
+    "foreignSentiment": {
+      "us": -15,
+      "china": 5,
+      "russia": 10,
+      "eu": -10,
+      "iran": -5,
+      "israel": -60,
+      "india": 5
+    },
+    "socialLiberalism": 30,
+    "environmentalConcern": 28,
+    "militarismApproval": 78
+  },
+  "activePolicies": [
+    { "policyId": "defense-modernization", "adoptedYear": 2018, "intensity": 80 },
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 60 },
+    { "policyId": "counter-terrorism", "adoptedYear": 2015, "intensity": 85 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2016, "intensity": 78 },
+    { "policyId": "state-media-control", "adoptedYear": 2016, "intensity": 75 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 2002, "intensity": 65 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "coal", "abundanceLevel": "moderate", "productionBillionsUSD": 4, "globalSharePercent": 1.2, "strategicImportance": "medium" },
+      { "resourceName": "chromium", "abundanceLevel": "abundant", "productionBillionsUSD": 1.5, "globalSharePercent": 8.0, "strategicImportance": "medium" },
+      { "resourceName": "boron", "abundanceLevel": "dominant", "productionBillionsUSD": 2, "globalSharePercent": 73.0, "strategicImportance": "high" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 55, "globalSharePercent": 1.5, "strategicImportance": "high" },
+      { "resourceName": "bosporus-strait-transit", "abundanceLevel": "dominant", "productionBillionsUSD": 3, "globalSharePercent": 100.0, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "naturalGas": 33,
+      "coal": 28,
+      "renewables": 18,
+      "hydro": 12,
+      "oil": 8,
+      "nuclear": 1
+    },
+    "foodSelfSufficiency": 82,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 256,
+    "totalImportsBillions": 362,
+    "tradeBalanceBillions": -106,
+    "topExports": [
+      { "commodity": "Motor vehicles & parts", "valueBillions": 32, "globalRankExporter": 14 },
+      { "commodity": "Steel & iron", "valueBillions": 18, "globalRankExporter": 8 },
+      { "commodity": "Machinery & electronics", "valueBillions": 22, "globalRankExporter": 15 },
+      { "commodity": "Textiles & clothing", "valueBillions": 20, "globalRankExporter": 5 },
+      { "commodity": "Defense & aerospace", "valueBillions": 10, "globalRankExporter": 12 }
+    ],
+    "topImports": [
+      { "commodity": "Crude oil & natural gas", "valueBillions": 50 },
+      { "commodity": "Machinery", "valueBillions": 40 },
+      { "commodity": "Gold", "valueBillions": 25 },
+      { "commodity": "Chemicals", "valueBillions": 20 },
+      { "commodity": "Electronics", "valueBillions": 18 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "eu", "tradeBillions": 160, "relationship": "strained" },
+      { "partnerId": "russia", "tradeBillions": 68, "relationship": "neutral" },
+      { "partnerId": "china", "tradeBillions": 45, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 30, "relationship": "strained" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 481000,
+    "reservePersonnel": 380000,
+    "defenseSpendingBillions": 25.0,
+    "defenseSpendingGDPPercent": 2.09,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-16c-d-fighting-falcon", "quantity": 245, "readinessPercent": 70, "modernizationStatus": "modern" },
+      { "equipmentId": "bayraktar-tb2", "quantity": 200, "readinessPercent": 95, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "bayraktar-akinci", "quantity": 30, "readinessPercent": 92, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "leopard-2a4", "quantity": 354, "readinessPercent": 65, "modernizationStatus": "aging" },
+      { "equipmentId": "altay-mbt", "quantity": 10, "readinessPercent": 85, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "meko-class-frigate", "quantity": 8, "readinessPercent": 72, "modernizationStatus": "modern" },
+      { "equipmentId": "s-400-triumf", "quantity": 2, "readinessPercent": 80, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "army": 280000,
+      "navy": 55000,
+      "airForce": 60000,
+      "gendarmerie": 86000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 85.4,
+    "growthRatePercent": 0.1,
+    "urbanizationPercent": 93.0,
+    "medianAge": 33.5,
+    "lifeExpectancy": 78.6,
+    "literacyRatePercent": 96.7,
+    "ageDistribution": {
+      "youth": 21.4,
+      "workingAge": 68.3,
+      "elderly": 10.2
+    },
+    "ethnicComposition": [
+      { "groupName": "Turkish", "percentOfPopulation": 75.0, "socialCohesion": 82 },
+      { "groupName": "Kurdish", "percentOfPopulation": 18.0, "socialCohesion": 40 },
+      { "groupName": "Other (Arab/Laz/Circassian)", "percentOfPopulation": 7.0, "socialCohesion": 60 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.445,
+      "humanDevelopmentIndex": 0.853,
+      "healthcareAccessPercent": 78.0,
+      "internetPenetrationPercent": 83.0,
+      "unemploymentRatePercent": 10.4
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 55,
+      "conscriptionPool": 18.0,
+      "socialStabilityBaseline": -10,
+      "innovationPotential": 50,
+      "consumptionDemandMultiplier": 1.3
+    }
+  },
+  "tags": ["nato", "g20", "middle-power", "kurdish-conflict", "bosporus-chokepoint", "refugee-host", "drone-power", "eu-candidate", "authoritarian-drift"]
+}

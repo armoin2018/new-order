@@ -24,13 +24,14 @@ export type LiveDataStatus =
   | 'error'
   | 'skipped';
 
-/** Category of live data being fetched. @see FR-4401–FR-4405 */
+/** Category of live data being fetched. @see FR-4401–FR-4406 */
 export type LiveDataCategory =
   | 'economic'
   | 'military'
   | 'diplomatic'
   | 'technology'
-  | 'markets';
+  | 'markets'
+  | 'leaders';
 
 /** Constant array of all live data categories. */
 export const LIVE_DATA_CATEGORIES: readonly LiveDataCategory[] = [
@@ -39,6 +40,7 @@ export const LIVE_DATA_CATEGORIES: readonly LiveDataCategory[] = [
   'diplomatic',
   'technology',
   'markets',
+  'leaders',
 ] as const;
 
 // ── Fetched data points ─────────────────────────────────────────────────────
@@ -93,6 +95,45 @@ export interface TechnologyDataPoint {
   readonly globalInnovationIndex: number | null;
 }
 
+/** Leader model data for one faction. @see FR-4406 */
+export interface LeaderDataPoint {
+  readonly factionId: FactionId;
+  readonly leaderId: string;
+  readonly name: string;
+  readonly title: string;
+  /** Whether this leader differs from the scenario's current leader. */
+  readonly isNewLeader: boolean;
+  /** Psychology scores from the model JSON (0–100 range). */
+  readonly psychology: {
+    readonly decisionStyle: string;
+    readonly stressResponse: string;
+    readonly riskTolerance: number;
+    readonly paranoia: number;
+    readonly narcissism: number;
+    readonly pragmatism: number;
+    readonly patience: number;
+    readonly vengefulIndex: number;
+  };
+  /** Power base indicators from the model JSON. */
+  readonly powerBase: {
+    readonly source: string;
+    readonly consolidation: number;
+    readonly legitimacy: number;
+  };
+  /** Vulnerability indicators from the model JSON. */
+  readonly vulnerabilities: {
+    readonly health: number;
+    readonly internalOpposition: number;
+    readonly externalPressure: number;
+  };
+  /** MBTI type code (e.g. "INTJ"). */
+  readonly mbtiType: string;
+  /** Optional biography text. */
+  readonly biography: string | null;
+  /** Optional tags. */
+  readonly tags: readonly string[];
+}
+
 // ── Aggregate result ────────────────────────────────────────────────────────
 
 /** A single category fetch result. */
@@ -113,6 +154,7 @@ export interface LiveDataResult {
   readonly diplomatic: DiplomaticDataPoint[];
   readonly technology: TechnologyDataPoint[];
   readonly markets: MarketDataPoint[];
+  readonly leaders: LeaderDataPoint[];
   readonly overallStatus: LiveDataStatus;
   readonly totalDurationMs: number;
 }

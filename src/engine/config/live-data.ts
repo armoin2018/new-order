@@ -77,6 +77,7 @@ export const liveDataConfig = {
       diplomatic: true,
       technology: true,
       markets: true,
+      leaders: true,
     },
     timeoutMs: 15_000,
     blendFactor: 0.7,

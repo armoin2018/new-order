@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "eu",
+  "name": "European Union",
+  "factionId": "eu",
+  "isoAlpha2": "EU",
+  "isoAlpha3": "EUR",
+  "currencyCode": "EUR",
+  "leaders": {
+    "activeLeaderId": "eu-chancellor",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "christianity-catholic", "percentOfPopulation": 41.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 12.0, "isStateReligion": false, "trend": "declining" },
+    { "religionId": "christianity-orthodox", "percentOfPopulation": 5.0, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "secular-atheism", "percentOfPopulation": 30.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 5.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "judaism", "percentOfPopulation": 0.3, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 40,
+    "warWeariness": 30,
+    "governmentTrust": 42,
+    "economicAnxiety": 55,
+    "politicalPolarization": 60,
+    "mediaTrust": 48,
+    "foreignSentiment": {
+      "us": 40,
+      "china": -10,
+      "russia": -55,
+      "japan": 40,
+      "iran": -30,
+      "dprk": -50,
+      "syria": -15
+    },
+    "socialLiberalism": 65,
+    "environmentalConcern": 70,
+    "militarismApproval": 40
+  },
+  "activePolicies": [
+    { "policyId": "diplomatic-engagement", "adoptedYear": 1957, "intensity": 90 },
+    { "policyId": "open-press-freedom", "adoptedYear": 1957, "intensity": 90 },
+    { "policyId": "free-trade-agreement", "adoptedYear": 1993, "intensity": 95 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2019, "intensity": 80 },
+    { "policyId": "economic-sanctions", "adoptedYear": 2014, "intensity": 75, "targetFactions": ["russia"] },
+    { "policyId": "foreign-aid-program", "adoptedYear": 1957, "intensity": 80 },
+    { "policyId": "defense-modernization", "adoptedYear": 2022, "intensity": 55 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2020, "intensity": 50 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 350, "globalSharePercent": 7.0, "strategicImportance": "high" },
+      { "resourceName": "natural-gas", "abundanceLevel": "limited", "productionBillionsUSD": 15, "globalSharePercent": 1.5, "strategicImportance": "critical" },
+      { "resourceName": "coal", "abundanceLevel": "moderate", "productionBillionsUSD": 8, "globalSharePercent": 2.0, "strategicImportance": "medium" },
+      { "resourceName": "timber", "abundanceLevel": "moderate", "productionBillionsUSD": 20, "globalSharePercent": 5.0, "strategicImportance": "medium" },
+      { "resourceName": "fisheries", "abundanceLevel": "moderate", "productionBillionsUSD": 12, "globalSharePercent": 3.0, "strategicImportance": "medium" }
+    ],
+    "energyMix": {
+      "nuclear": 25,
+      "naturalGas": 22,
+      "renewables": 20,
+      "oil": 15,
+      "coal": 12,
+      "hydro": 6
+    },
+    "foodSelfSufficiency": 88,
+    "waterStress": "medium"
+  },
+  "trade": {
+    "totalExportsBillions": 6100,
+    "totalImportsBillions": 5900,
+    "tradeBalanceBillions": 200,
+    "topExports": [
+      { "commodity": "Machinery & equipment", "valueBillions": 1100, "globalRankExporter": 1 },
+      { "commodity": "Vehicles & parts", "valueBillions": 850, "globalRankExporter": 1 },
+      { "commodity": "Pharmaceuticals", "valueBillions": 600, "globalRankExporter": 1 },
+      { "commodity": "Chemicals", "valueBillions": 550, "globalRankExporter": 1 },
+      { "commodity": "Luxury goods", "valueBillions": 250, "globalRankExporter": 1 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 400 },
+      { "commodity": "Natural gas", "valueBillions": 200 },
+      { "commodity": "Electronics", "valueBillions": 450 },
+      { "commodity": "Vehicles & parts", "valueBillions": 200 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 870, "relationship": "allied" },
+      { "partnerId": "china", "tradeBillions": 780, "relationship": "neutral" },
+      { "partnerId": "japan", "tradeBillions": 140, "relationship": "friendly" }
+    ],
+    "sanctionsActive": ["russia"],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 1400000,
+    "reservePersonnel": 2200000,
+    "defenseSpendingBillions": 350,
+    "defenseSpendingGDPPercent": 2.1,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 510,
+      "deliverySystems": ["SLBM (France M51)", "ICBM (France M51)", "Strategic bombers (France Rafale)", "UK Trident II"]
+    },
+    "equipment": [
+      { "equipmentId": "eurofighter-typhoon", "quantity": 550, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "leopard-2a7", "quantity": 900, "readinessPercent": 55, "modernizationStatus": "modern" },
+      { "equipmentId": "f-35a-lightning", "quantity": 80, "readinessPercent": 75, "modernizationStatus": "cutting-edge" }
+    ],
+    "branches": {
+      "army": 750000,
+      "navy": 250000,
+      "airForce": 300000,
+      "specialForces": 40000,
+      "cyberCommand": 15000
+    },
+    "powerProjection": "continental"
+  },
+  "population": {
+    "populationMillions": 448.4,
+    "growthRatePercent": 0.1,
+    "urbanizationPercent": 75.5,
+    "medianAge": 44.4,
+    "lifeExpectancy": 80.1,
+    "literacyRatePercent": 99.2,
+    "ageDistribution": {
+      "youth": 15.0,
+      "workingAge": 64.0,
+      "elderly": 21.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Western European", "percentOfPopulation": 45.0, "socialCohesion": 80 },
+      { "groupName": "Eastern European", "percentOfPopulation": 30.0, "socialCohesion": 72 },
+      { "groupName": "Southern European", "percentOfPopulation": 18.0, "socialCohesion": 75 },
+      { "groupName": "Immigrant/Other", "percentOfPopulation": 7.0, "socialCohesion": 50 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.30,
+      "humanDevelopmentIndex": 0.896,
+      "healthcareAccessPercent": 97.0,
+      "internetPenetrationPercent": 90.0,
+      "unemploymentRatePercent": 6.1
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 80,
+      "conscriptionPool": 55.0,
+      "socialStabilityBaseline": 15,
+      "innovationPotential": 80,
+      "consumptionDemandMultiplier": 3.0
+    }
+  },
+  "tags": ["nato", "g7", "nuclear", "single-market", "regulatory-superpower", "energy-dependent"]
+}

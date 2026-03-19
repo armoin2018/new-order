@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "intelligence-expansion",
+  "name": "Intelligence Community Expansion",
+  "category": "intelligence",
+  "subcategory": "capacity-building",
+  "description": "Major investment in intelligence agencies, HUMINT networks, SIGINT capabilities, and counterintelligence. Expands espionage capabilities and threat detection.",
+  "scope": "domestic",
+  "implementationTurns": 3,
+  "annualCostBillions": 10.0,
+  "effects": {
+    "espionageModifier": 15,
+    "stabilityModifier": 3,
+    "militaryReadinessModifier": 3,
+    "diplomaticModifier": -3,
+    "civilUnrestModifier": 3,
+    "popularityModifier": -2
+  },
+  "historicalExamples": [
+    "US intelligence community post-9/11 expansion",
+    "China MSS modernization",
+    "Israel Mossad/Shin Bet operations",
+    "UK GCHQ expansion"
+  ],
+  "tags": ["intelligence", "espionage", "security"]
+}

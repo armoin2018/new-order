@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "thailand",
+  "name": "Kingdom of Thailand",
+  "factionId": "thailand",
+  "isoAlpha2": "TH",
+  "isoAlpha3": "THA",
+  "currencyCode": "THB",
+  "leaders": {
+    "activeLeaderId": "paetongtarn-shinawatra",
+    "previousLeaderIds": [],
+    "successionType": "election"
+  },
+  "religiousDistribution": [
+    { "religionId": "buddhism-theravada", "percentOfPopulation": 93.5, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 4.3, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "christianity", "percentOfPopulation": 1.2, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "other", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 70,
+    "warWeariness": 30,
+    "governmentTrust": 35,
+    "economicAnxiety": 55,
+    "politicalPolarization": 72,
+    "mediaTrust": 30,
+    "foreignSentiment": {
+      "us": 25,
+      "china": 10,
+      "russia": 0,
+      "eu": 15,
+      "japan": 40,
+      "india": 10,
+      "iran": -5
+    },
+    "socialLiberalism": 42,
+    "environmentalConcern": 38,
+    "militarismApproval": 50
+  },
+  "activePolicies": [
+    { "policyId": "economic-stimulus", "adoptedYear": 2023, "intensity": 65 },
+    { "policyId": "diplomatic-engagement", "adoptedYear": 2001, "intensity": 70 },
+    { "policyId": "counter-terrorism", "adoptedYear": 2004, "intensity": 55, "targetFactions": ["southern-insurgency"] },
+    { "policyId": "defense-modernization", "adoptedYear": 2020, "intensity": 45 },
+    { "policyId": "state-media-control", "adoptedYear": 2014, "intensity": 55 }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 8, "globalSharePercent": 0.5, "strategicImportance": "high" },
+      { "resourceName": "tin", "abundanceLevel": "moderate", "productionBillionsUSD": 0.5, "globalSharePercent": 3.0, "strategicImportance": "medium" },
+      { "resourceName": "rubber", "abundanceLevel": "abundant", "productionBillionsUSD": 5, "globalSharePercent": 33.0, "strategicImportance": "high" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 42, "globalSharePercent": 2.0, "strategicImportance": "critical" },
+      { "resourceName": "rice", "abundanceLevel": "abundant", "productionBillionsUSD": 10, "globalSharePercent": 6.0, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "naturalGas": 56,
+      "coal": 18,
+      "oil": 10,
+      "renewables": 10,
+      "hydro": 5,
+      "nuclear": 1
+    },
+    "foodSelfSufficiency": 110,
+    "waterStress": "moderate"
+  },
+  "trade": {
+    "totalExportsBillions": 290,
+    "totalImportsBillions": 260,
+    "tradeBalanceBillions": 30,
+    "topExports": [
+      { "commodity": "Electronics & computer parts", "valueBillions": 50, "globalRankExporter": 12 },
+      { "commodity": "Motor vehicles & parts", "valueBillions": 30, "globalRankExporter": 12 },
+      { "commodity": "Rubber & rubber products", "valueBillions": 15, "globalRankExporter": 1 },
+      { "commodity": "Rice", "valueBillions": 5, "globalRankExporter": 2 },
+      { "commodity": "Gems & jewelry", "valueBillions": 12, "globalRankExporter": 5 }
+    ],
+    "topImports": [
+      { "commodity": "Crude oil", "valueBillions": 35 },
+      { "commodity": "Machinery & parts", "valueBillions": 30 },
+      { "commodity": "Electronics & components", "valueBillions": 25 },
+      { "commodity": "Iron & steel", "valueBillions": 12 },
+      { "commodity": "Chemicals", "valueBillions": 15 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "china", "tradeBillions": 95, "relationship": "neutral" },
+      { "partnerId": "us", "tradeBillions": 55, "relationship": "allied" },
+      { "partnerId": "japan", "tradeBillions": 50, "relationship": "friendly" },
+      { "partnerId": "eu", "tradeBillions": 40, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": []
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 360850,
+    "reservePersonnel": 245000,
+    "defenseSpendingBillions": 8.3,
+    "defenseSpendingGDPPercent": 1.5,
+    "nuclearCapability": {
+      "hasNuclearWeapons": false
+    },
+    "equipment": [
+      { "equipmentId": "f-16a-b-fighting-falcon", "quantity": 49, "readinessPercent": 65, "modernizationStatus": "modern" },
+      { "equipmentId": "jas-39-gripen", "quantity": 12, "readinessPercent": 80, "modernizationStatus": "modern" },
+      { "equipmentId": "vt-4-mbt", "quantity": 49, "readinessPercent": 82, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "htms-chakri-naruebet-cvl", "quantity": 1, "readinessPercent": 30, "modernizationStatus": "aging" },
+      { "equipmentId": "type-071e-lpd", "quantity": 1, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "stingray-light-tank", "quantity": 106, "readinessPercent": 50, "modernizationStatus": "aging" }
+    ],
+    "branches": {
+      "army": 245000,
+      "navy": 69850,
+      "airForce": 46000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 71.8,
+    "growthRatePercent": 0.15,
+    "urbanizationPercent": 53.0,
+    "medianAge": 40.1,
+    "lifeExpectancy": 78.7,
+    "literacyRatePercent": 94.0,
+    "ageDistribution": {
+      "youth": 16.5,
+      "workingAge": 69.5,
+      "elderly": 14.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Thai", "percentOfPopulation": 85.0, "socialCohesion": 80 },
+      { "groupName": "Chinese-Thai", "percentOfPopulation": 10.0, "socialCohesion": 75 },
+      { "groupName": "Malay", "percentOfPopulation": 3.0, "socialCohesion": 40 },
+      { "groupName": "Other (Karen/Khmer/Other)", "percentOfPopulation": 2.0, "socialCohesion": 50 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.35,
+      "humanDevelopmentIndex": 0.803,
+      "healthcareAccessPercent": 82.0,
+      "internetPenetrationPercent": 78.0,
+      "unemploymentRatePercent": 1.2
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 50,
+      "conscriptionPool": 12.0,
+      "socialStabilityBaseline": -5,
+      "innovationPotential": 38,
+      "consumptionDemandMultiplier": 1.1
+    }
+  },
+  "tags": ["monarchy", "asean", "tourism-dependent", "lese-majeste", "military-influence", "rubber-producer", "rice-exporter", "south-insurgency"]
+}

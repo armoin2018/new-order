@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.0.0",
+  "countryId": "china",
+  "name": "People's Republic of China",
+  "factionId": "china",
+  "isoAlpha2": "CN",
+  "isoAlpha3": "CHN",
+  "currencyCode": "CNY",
+  "leaders": {
+    "activeLeaderId": "xi-jinping",
+    "previousLeaderIds": [],
+    "successionType": "party-appointment"
+  },
+  "religiousDistribution": [
+    { "religionId": "secular-atheism", "percentOfPopulation": 52.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "buddhism", "percentOfPopulation": 18.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "state-ideology", "percentOfPopulation": 10.0, "isStateReligion": true, "trend": "stable" },
+    { "religionId": "christianity-protestant", "percentOfPopulation": 5.0, "isStateReligion": false, "trend": "growing" },
+    { "religionId": "islam-sunni", "percentOfPopulation": 1.8, "isStateReligion": false, "trend": "stable" },
+    { "religionId": "christianity-catholic", "percentOfPopulation": 1.0, "isStateReligion": false, "trend": "stable" }
+  ],
+  "psychographics": {
+    "nationalism": 78,
+    "warWeariness": 15,
+    "governmentTrust": 72,
+    "economicAnxiety": 55,
+    "politicalPolarization": 20,
+    "mediaTrust": 65,
+    "foreignSentiment": {
+      "us": -30,
+      "russia": 35,
+      "japan": -50,
+      "eu": 10,
+      "iran": 15,
+      "dprk": 10,
+      "syria": 5
+    },
+    "socialLiberalism": 30,
+    "environmentalConcern": 45,
+    "militarismApproval": 72
+  },
+  "activePolicies": [
+    { "policyId": "nuclear-deterrence", "adoptedYear": 1964, "intensity": 75 },
+    { "policyId": "state-media-control", "adoptedYear": 1949, "intensity": 95 },
+    { "policyId": "defense-modernization", "adoptedYear": 2015, "intensity": 90 },
+    { "policyId": "cyber-warfare-doctrine", "adoptedYear": 2015, "intensity": 90 },
+    { "policyId": "belt-and-road-initiative", "adoptedYear": 2013, "intensity": 80 },
+    { "policyId": "intelligence-expansion", "adoptedYear": 2010, "intensity": 85 },
+    { "policyId": "space-militarization", "adoptedYear": 2015, "intensity": 75 },
+    { "policyId": "green-energy-transition", "adoptedYear": 2020, "intensity": 50 },
+    { "policyId": "reciprocal-tariffs", "adoptedYear": 2025, "intensity": 70, "targetFactions": ["us"] }
+  ],
+  "resources": {
+    "naturalResources": [
+      { "resourceName": "rare-earth", "abundanceLevel": "dominant", "productionBillionsUSD": 8.0, "globalSharePercent": 60.0, "strategicImportance": "critical" },
+      { "resourceName": "coal", "abundanceLevel": "abundant", "productionBillionsUSD": 200, "globalSharePercent": 50.0, "strategicImportance": "high" },
+      { "resourceName": "crude-oil", "abundanceLevel": "moderate", "productionBillionsUSD": 120, "globalSharePercent": 5.0, "strategicImportance": "critical" },
+      { "resourceName": "natural-gas", "abundanceLevel": "moderate", "productionBillionsUSD": 45, "globalSharePercent": 4.5, "strategicImportance": "high" },
+      { "resourceName": "steel", "abundanceLevel": "dominant", "productionBillionsUSD": 150, "globalSharePercent": 54.0, "strategicImportance": "high" },
+      { "resourceName": "agricultural-land", "abundanceLevel": "abundant", "productionBillionsUSD": 280, "globalSharePercent": 8.0, "strategicImportance": "critical" }
+    ],
+    "energyMix": {
+      "coal": 56,
+      "oil": 18,
+      "naturalGas": 8,
+      "hydro": 8,
+      "nuclear": 5,
+      "renewables": 5
+    },
+    "foodSelfSufficiency": 80,
+    "waterStress": "high"
+  },
+  "trade": {
+    "totalExportsBillions": 3593,
+    "totalImportsBillions": 2716,
+    "tradeBalanceBillions": 877,
+    "topExports": [
+      { "commodity": "Electronics & semiconductors", "valueBillions": 850, "globalRankExporter": 1 },
+      { "commodity": "Machinery & equipment", "valueBillions": 600, "globalRankExporter": 1 },
+      { "commodity": "Textiles & apparel", "valueBillions": 280, "globalRankExporter": 1 },
+      { "commodity": "Electric vehicles & batteries", "valueBillions": 120, "globalRankExporter": 1 },
+      { "commodity": "Solar panels", "valueBillions": 50, "globalRankExporter": 1 },
+      { "commodity": "Steel & aluminum", "valueBillions": 90, "globalRankExporter": 1 }
+    ],
+    "topImports": [
+      { "commodity": "Crude petroleum", "valueBillions": 330 },
+      { "commodity": "Semiconductor equipment", "valueBillions": 150 },
+      { "commodity": "Iron ore", "valueBillions": 120 },
+      { "commodity": "Soybeans", "valueBillions": 55 },
+      { "commodity": "Natural gas (LNG)", "valueBillions": 65 }
+    ],
+    "majorTradingPartners": [
+      { "partnerId": "us", "tradeBillions": 582, "relationship": "strained" },
+      { "partnerId": "eu", "tradeBillions": 780, "relationship": "neutral" },
+      { "partnerId": "japan", "tradeBillions": 310, "relationship": "strained" },
+      { "partnerId": "russia", "tradeBillions": 240, "relationship": "friendly" }
+    ],
+    "sanctionsActive": [],
+    "sanctionedBy": ["us"]
+  },
+  "militaryBreakdown": {
+    "totalPersonnel": 2035000,
+    "reservePersonnel": 510000,
+    "defenseSpendingBillions": 296,
+    "defenseSpendingGDPPercent": 1.6,
+    "nuclearCapability": {
+      "hasNuclearWeapons": true,
+      "estimatedWarheads": 500,
+      "deliverySystems": ["ICBM (DF-41, DF-5)", "SLBM (JL-3)", "Strategic bombers (H-6N, H-20)"]
+    },
+    "equipment": [
+      { "equipmentId": "j-20-mighty-dragon", "quantity": 250, "readinessPercent": 80, "modernizationStatus": "cutting-edge" },
+      { "equipmentId": "type-99a-tank", "quantity": 1200, "readinessPercent": 85, "modernizationStatus": "modern" },
+      { "equipmentId": "s-400-triumf", "quantity": 6, "readinessPercent": 90, "modernizationStatus": "modern" }
+    ],
+    "branches": {
+      "army": 975000,
+      "navy": 350000,
+      "airForce": 395000,
+      "specialForces": 45000,
+      "cyberCommand": 50000,
+      "spaceForce": 20000
+    },
+    "powerProjection": "regional"
+  },
+  "population": {
+    "populationMillions": 1425.7,
+    "growthRatePercent": -0.02,
+    "urbanizationPercent": 65.2,
+    "medianAge": 39.0,
+    "lifeExpectancy": 78.2,
+    "literacyRatePercent": 96.8,
+    "ageDistribution": {
+      "youth": 17.0,
+      "workingAge": 70.0,
+      "elderly": 13.0
+    },
+    "ethnicComposition": [
+      { "groupName": "Han Chinese", "percentOfPopulation": 91.1, "socialCohesion": 85 },
+      { "groupName": "Zhuang/Manchu/Hui", "percentOfPopulation": 5.4, "socialCohesion": 60 },
+      { "groupName": "Uyghur/Tibetan", "percentOfPopulation": 1.8, "socialCohesion": 30 },
+      { "groupName": "Other Minorities", "percentOfPopulation": 1.7, "socialCohesion": 55 }
+    ],
+    "socialIndicators": {
+      "giniCoefficient": 0.38,
+      "humanDevelopmentIndex": 0.768,
+      "healthcareAccessPercent": 95.0,
+      "internetPenetrationPercent": 73.0,
+      "unemploymentRatePercent": 5.2
+    },
+    "gameplayModifiers": {
+      "workforceQuality": 70,
+      "conscriptionPool": 215.0,
+      "socialStabilityBaseline": 5,
+      "innovationPotential": 78,
+      "consumptionDemandMultiplier": 2.5
+    }
+  },
+  "tags": ["superpower", "nuclear", "unsc-permanent", "manufacturing-leader", "one-party-state"]
+}

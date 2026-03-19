@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "cyber-warfare-doctrine",
+  "name": "Cyber Warfare Doctrine",
+  "category": "intelligence",
+  "subcategory": "cyber-operations",
+  "description": "Formal doctrine establishing offensive and defensive cyber capabilities as a core military domain. Funds APT groups, critical infrastructure defense, and information warfare operations.",
+  "scope": "domestic",
+  "implementationTurns": 2,
+  "annualCostBillions": 8.0,
+  "effects": {
+    "techModifier": 5,
+    "espionageModifier": 10,
+    "militaryReadinessModifier": 3,
+    "diplomaticModifier": -3,
+    "stabilityModifier": 2
+  },
+  "historicalExamples": [
+    "US Cyber Command operations",
+    "China Unit 61398 / APT groups",
+    "Russia GRU cyber operations",
+    "Israel Unit 8200"
+  ],
+  "tags": ["cyber", "offensive", "intelligence", "modern-warfare"]
+}

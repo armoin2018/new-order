@@ -16,6 +16,7 @@
  */
 
 import type { ScenarioDefinition } from '@/data/types/scenario.types';
+import type { AIProfileConfig } from '@/data/types/scenario.types';
 import type { NationState } from '@/data/types/nation.types';
 import type { FactionId } from '@/data/types/enums';
 import { ALL_FACTIONS } from '@/data/types';
@@ -25,10 +26,16 @@ import type {
   MilitaryDataPoint,
   TechnologyDataPoint,
   MarketDataPoint,
+  LeaderDataPoint,
   LiveDataConfig,
 } from '@/data/types/live-data.types';
 import type { CurrencyState } from '@/data/types/currency.types';
 import { liveDataConfig } from '@/engine/config/live-data';
+import {
+  buildAIProfileFromModel,
+  mapModelToLeaderProfile,
+} from '@/engine/leader-data-mapper';
+import type { ExtendedLeaderProfile } from '@/data/types/model.types';
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -201,6 +208,96 @@ export function applyCurrencyData(
   return result;
 }
 
+// ── Leader Data Application ─────────────────────────────────────────────────
+
+/**
+ * Apply leader model data to scenario AI profiles.
+ *
+ * For each faction with a matching leader model:
+ * - If the model leader differs from the scenario leader (name mismatch),
+ *   a complete new AIProfileConfig is generated from the model.
+ * - If the same leader, blends numeric psychology values and updates
+ *   power base / vulnerabilities using the model data.
+ *
+ * @param aiProfiles     - Current AI profiles from the scenario.
+ * @param leaderData     - Leader data points from the fetcher.
+ * @param leaderModels   - Full ExtendedLeaderProfile models for new leader generation.
+ * @param blend          - Blend factor (0–1).
+ * @returns Updated AI profiles with leader data blended in.
+ * @see FR-4406
+ */
+export function applyLeaderData(
+  aiProfiles: Record<FactionId, AIProfileConfig>,
+  leaderData: readonly LeaderDataPoint[],
+  leaderModels: readonly ExtendedLeaderProfile[],
+  blend: number,
+): Record<FactionId, AIProfileConfig> {
+  const result = structuredClone(aiProfiles);
+
+  // Build a lookup for full models by factionId
+  const modelMap = new Map<string, ExtendedLeaderProfile>();
+  for (const m of leaderModels) {
+    modelMap.set(m.leaderId, m);
+  }
+
+  for (const dp of leaderData) {
+    const profile = result[dp.factionId];
+    if (!profile) continue;
+
+    const model = modelMap.get(dp.leaderId);
+
+    if (dp.isNewLeader && model) {
+      // New leader detected — generate a complete new AI profile
+      const newProfile = buildAIProfileFromModel(model, dp.factionId);
+
+      // Preserve the age from the scenario if the model doesn't have it
+      if (newProfile.leader.identity.age === 0 && profile.leader.identity.age > 0) {
+        newProfile.leader.identity.age = profile.leader.identity.age;
+      }
+
+      // Preserve historicalAnalog from scenario if model doesn't have one
+      if (!newProfile.leader.historicalAnalog && profile.leader.historicalAnalog) {
+        newProfile.leader.historicalAnalog = profile.leader.historicalAnalog;
+      }
+
+      result[dp.factionId] = newProfile;
+    } else {
+      // Same leader — blend numeric psychology values
+      const leader = profile.leader;
+      const psych = leader.psychology;
+
+      psych.riskTolerance = blendValue(psych.riskTolerance, dp.psychology.riskTolerance, blend);
+      psych.paranoia = blendValue(psych.paranoia, dp.psychology.paranoia, blend);
+      psych.narcissism = blendValue(psych.narcissism, dp.psychology.narcissism, blend);
+      psych.pragmatism = blendValue(psych.pragmatism, dp.psychology.pragmatism, blend);
+      psych.patience = blendValue(psych.patience, dp.psychology.patience, blend);
+      psych.vengefulIndex = blendValue(psych.vengefulIndex, dp.psychology.vengefulIndex, blend);
+
+      // Blend vulnerability data if we have a model
+      if (model) {
+        const gameProfile = mapModelToLeaderProfile(model, dp.factionId);
+        const v = leader.vulnerabilities;
+        v.healthRisk = blendValue(v.healthRisk, gameProfile.vulnerabilities.healthRisk, blend);
+        v.successionClarity = blendValue(v.successionClarity, gameProfile.vulnerabilities.successionClarity, blend);
+        v.coupRisk = blendValue(v.coupRisk, gameProfile.vulnerabilities.coupRisk, blend);
+        v.personalScandal = blendValue(v.personalScandal, gameProfile.vulnerabilities.personalScandal, blend);
+
+        // Blend power base
+        const pb = leader.powerBase;
+        const mpb = gameProfile.powerBase;
+        pb.military = blendValue(pb.military, mpb.military, blend);
+        pb.oligarchs = blendValue(pb.oligarchs, mpb.oligarchs, blend);
+        pb.party = blendValue(pb.party, mpb.party, blend);
+        pb.clergy = blendValue(pb.clergy, mpb.clergy, blend);
+        pb.public = blendValue(pb.public, mpb.public, blend);
+        pb.securityServices = blendValue(pb.securityServices, mpb.securityServices, blend);
+      }
+    }
+  }
+
+  return result;
+}
+
 // ── Composite Application ───────────────────────────────────────────────────
 
 /**
@@ -223,9 +320,10 @@ export interface LiveDataPatchSummary {
  * It clones the scenario, applies each data category using the blend
  * factor, and returns the modified scenario plus a patch summary.
  *
- * @param scenario  - Original scenario definition.
- * @param liveData  - Complete live data result from fetcher.
- * @param config    - Live data configuration (blend factor, enabled categories).
+ * @param scenario      - Original scenario definition.
+ * @param liveData      - Complete live data result from fetcher.
+ * @param config        - Live data configuration (blend factor, enabled categories).
+ * @param leaderModels  - Optional leader model data for leader profile updates.
  * @returns Patched scenario and summary of changes.
  * @see FR-4400
  */
@@ -233,6 +331,7 @@ export function applyLiveDataToScenario(
   scenario: ScenarioDefinition,
   liveData: LiveDataResult,
   config: LiveDataConfig = liveDataConfig.defaults,
+  leaderModels: readonly ExtendedLeaderProfile[] = [],
 ): {
   scenario: ScenarioDefinition;
   summaries: LiveDataPatchSummary[];
@@ -272,6 +371,19 @@ export function applyLiveDataToScenario(
     );
   }
 
+  // Capture original leader data for summary
+  const origProfiles = structuredClone(scenario.aiProfiles);
+
+  // Apply leader data
+  if (config.categories.leaders && liveData.leaders.length > 0 && leaderModels.length > 0) {
+    patched.aiProfiles = applyLeaderData(
+      patched.aiProfiles,
+      liveData.leaders,
+      leaderModels,
+      blend,
+    );
+  }
+
   // Build summaries per faction
   for (const factionId of ALL_FACTIONS) {
     const orig = origNS[factionId];
@@ -292,6 +404,33 @@ export function applyLiveDataToScenario(
       const after = updated[field] as number;
       if (before !== after) {
         changes.push({ field, before, after, source });
+      }
+    }
+
+    // Track leader profile changes
+    const origLeader = origProfiles[factionId]?.leader;
+    const updatedLeader = patched.aiProfiles[factionId]?.leader;
+    if (origLeader && updatedLeader) {
+      // Check for leader change (name swap)
+      if (origLeader.identity.name !== updatedLeader.identity.name) {
+        changes.push({
+          field: 'leader',
+          before: 0,
+          after: 1,
+          source: `leaders (new: ${updatedLeader.identity.name})`,
+        });
+      }
+
+      // Track psychology changes
+      const psychFields: Array<keyof typeof origLeader.psychology> = [
+        'riskTolerance', 'paranoia', 'narcissism', 'pragmatism', 'patience', 'vengefulIndex',
+      ];
+      for (const field of psychFields) {
+        const before = origLeader.psychology[field] as number;
+        const after = updatedLeader.psychology[field] as number;
+        if (typeof before === 'number' && typeof after === 'number' && before !== after) {
+          changes.push({ field: `leader.${field}`, before, after, source: 'leaders' });
+        }
       }
     }
 
